@@ -1,0 +1,18 @@
+name: img-fetch
+on:
+  push:
+    branches: [img-fetch]
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install requests && python cand.py
+      - run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add c
+          git commit -m "fetched images" || echo nothing
+          git push
