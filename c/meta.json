@@ -1,218 +1,38 @@
 {
- "kuromon_0": {
-  "title": "File:Kuromon Ichiba Market at LaLaport Kadoma4.jpg",
-  "artist": "Mr.ちゅらさん",
-  "license": "CC BY-SA 4.0",
-  "url": "https://commons.wikimedia.org/wiki/File:Kuromon_Ichiba_Market_at_LaLaport_Kadoma4.jpg"
- },
- "kuromon_1": {
-  "title": "File:Kuromon Ichiba Market at Lalaport Kadoma2.jpg",
-  "artist": "Mr.ちゅらさん",
-  "license": "CC BY-SA 4.0",
-  "url": "https://commons.wikimedia.org/wiki/File:Kuromon_Ichiba_Market_at_Lalaport_Kadoma2.jpg"
- },
- "kuromon_2": {
-  "title": "File:Kuromon Ichiba Market at Lalaport Kadoma1.jpg",
-  "artist": "Mr.ちゅらさん",
-  "license": "CC BY-SA 4.0",
-  "url": "https://commons.wikimedia.org/wiki/File:Kuromon_Ichiba_Market_at_Lalaport_Kadoma1.jpg"
- },
- "kuromon_3": {
-  "title": "File:Kuromon Ichiba Market at Lalaport Kadoma3.jpg",
-  "artist": "Mr.ちゅらさん",
-  "license": "CC BY-SA 4.0",
-  "url": "https://commons.wikimedia.org/wiki/File:Kuromon_Ichiba_Market_at_Lalaport_Kadoma3.jpg"
- },
- "kuromon_4": {
-  "title": "File:Kuromon-ichiba in 201408.JPG",
-  "artist": "Mc681",
-  "license": "CC BY-SA 4.0",
-  "url": "https://commons.wikimedia.org/wiki/File:Kuromon-ichiba_in_201408.JPG"
- },
- "kuromon_5": {
-  "title": "File:Kuromon Ichiba Market Paper Lantern at LaLaport Kadoma.jpg",
-  "artist": "Mr.ちゅらさん",
-  "license": "CC BY-SA 4.0",
-  "url": "https://commons.wikimedia.org/wiki/File:Kuromon_Ichiba_Market_Paper_Lantern_at_LaLaport_Kadoma.jpg"
- },
- "okutan_0": {
-  "title": "File:Billyfoodmabodofu3.jpg",
-  "artist": "Archon6812",
-  "license": "CC BY-SA 3.0",
-  "url": "https://commons.wikimedia.org/wiki/File:Billyfoodmabodofu3.jpg"
- },
- "okutan_1": {
-  "title": "File:Yudōfu 001.jpg",
-  "artist": "Flickr user cobacco(hiro kobashi)",
-  "license": "CC BY 2.0",
-  "url": "https://commons.wikimedia.org/wiki/File:Yud%C5%8Dfu_001.jpg"
- },
- "okutan_2": {
-  "title": "File:Japanese SilkyTofu (Kinugoshi Tofu).JPG",
-  "artist": "DryPot",
-  "license": "CC BY-SA 3.0",
-  "url": "https://commons.wikimedia.org/wiki/File:Japanese_SilkyTofu_(Kinugoshi_Tofu).JPG"
- },
- "okutan_3": {
-  "title": "File:Yudofu from Nogawa Tofu at Ginzan Onsen.jpg",
-  "artist": "さかおり",
-  "license": "CC BY-SA 4.0",
-  "url": "https://commons.wikimedia.org/wiki/File:Yudofu_from_Nogawa_Tofu_at_Ginzan_Onsen.jpg"
- },
- "okutan_4": {
-  "title": "File:Tofu Sisig.jpg",
-  "artist": "Louiesemendez",
-  "license": "CC BY-SA 4.0",
-  "url": "https://commons.wikimedia.org/wiki/File:Tofu_Sisig.jpg"
- },
- "okutan_5": {
-  "title": "File:Making Tofu - 20170206 - Spliting.jpg",
-  "artist": "DragonSamYU",
-  "license": "CC BY-SA 4.0",
-  "url": "https://commons.wikimedia.org/wiki/File:Making_Tofu_-_20170206_-_Spliting.jpg"
- },
- "ikeda_0": {
-  "title": "File:Lake Ikeda (152624734).jpg",
-  "artist": "David Lisbona from Haifa, Israel",
-  "license": "CC BY 2.0",
-  "url": "https://commons.wikimedia.org/wiki/File:Lake_Ikeda_(152624734).jpg"
- },
- "ikeda_1": {
-  "title": "File:Green field near Lake Ikeda - panoramio.jpg",
-  "artist": "BirdsEyeLV",
-  "license": "CC BY-SA 3.0",
-  "url": "https://commons.wikimedia.org/wiki/File:Green_field_near_Lake_Ikeda_-_panoramio.jpg"
- },
- "ikeda_2": {
-  "title": "File:Ibusuki Volcanoes.jpg",
-  "artist": "Ray_go",
-  "license": "CC BY-SA 4.0",
-  "url": "https://commons.wikimedia.org/wiki/File:Ibusuki_Volcanoes.jpg"
- },
- "ikeda_3": {
-  "title": "File:Ibusuki Volcanoes J.jpg",
-  "artist": "Ray_go",
-  "license": "CC BY-SA 4.0",
-  "url": "https://commons.wikimedia.org/wiki/File:Ibusuki_Volcanoes_J.jpg"
- },
- "ikeda_4": {
-  "title": "File:Ibusuki montage.png",
-  "artist": "Trinida\nKzaral\nTam0031\nRay_go\nupload and montage maked by Sakoppi",
-  "license": "CC BY-SA 3.0",
-  "url": "https://commons.wikimedia.org/wiki/File:Ibusuki_montage.png"
- },
- "ikeda_5": {
-  "title": "File:Ikedako.jpg",
-  "artist": "Ans",
-  "license": "CC BY-SA 3.0",
-  "url": "https://commons.wikimedia.org/wiki/File:Ikedako.jpg"
- },
- "gion_0": {
-  "title": "File:Wooden and bamboo facades of dwellings with sudare in a cobbled street of Gion, perspective effect with vanishing point, Kyoto, Japan.jpg",
+ "mujaki_0": {
+  "title": "File:Macha kakigori snow cone.jpg",
   "artist": "",
+  "license": "CC BY-SA 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Macha_kakigori_snow_cone.jpg"
+ },
+ "mujaki_1": {
+  "title": "File:Kakigoori-Shaved Ice (2).jpg",
+  "artist": "Mr.ちゅらさん",
   "license": "CC BY-SA 4.0",
-  "url": "https://commons.wikimedia.org/wiki/File:Wooden_and_bamboo_facades_of_dwellings_with_sudare_in_a_cobbled_street_of_Gion,_perspective_effect_with_vanishing_point,_Kyoto,_Japan.jpg"
+  "url": "https://commons.wikimedia.org/wiki/File:Kakigoori-Shaved_Ice_(2).jpg"
  },
- "gion_1": {
-  "title": "File:Facade of a dwelling with sudare, wooden balustrades and yellow lamp, Shinbashi-dori, Gion, Kyoto, Japan.jpg",
-  "artist": "Basile Morin",
+ "mujaki_2": {
+  "title": "File:Kakigoori-Shaved Ice (1).jpg",
+  "artist": "Mr.ちゅらさん",
   "license": "CC BY-SA 4.0",
-  "url": "https://commons.wikimedia.org/wiki/File:Facade_of_a_dwelling_with_sudare,_wooden_balustrades_and_yellow_lamp,_Shinbashi-dori,_Gion,_Kyoto,_Japan.jpg"
+  "url": "https://commons.wikimedia.org/wiki/File:Kakigoori-Shaved_Ice_(1).jpg"
  },
- "gion_2": {
-  "title": "File:Streets of Gion, Kyoto - Gion7709.jpg",
-  "artist": "lumoplank",
-  "license": "CC0",
-  "url": "https://commons.wikimedia.org/wiki/File:Streets_of_Gion,_Kyoto_-_Gion7709.jpg"
- },
- "gion_3": {
-  "title": "File:Portrait photograph of a walking woman wearing a red yukata with an oil-paper umbrella, in Gion, Kyoto, Japan.jpg",
-  "artist": "Basile Morin",
-  "license": "CC BY-SA 4.0",
-  "url": "https://commons.wikimedia.org/wiki/File:Portrait_photograph_of_a_walking_woman_wearing_a_red_yukata_with_an_oil-paper_umbrella,_in_Gion,_Kyoto,_Japan.jpg"
- },
- "gion_4": {
-  "title": "File:Street in Gion, Kyoto, 2024.jpg",
-  "artist": "Smiley.toerist",
-  "license": "CC BY-SA 4.0",
-  "url": "https://commons.wikimedia.org/wiki/File:Street_in_Gion,_Kyoto,_2024.jpg"
- },
- "gion_5": {
-  "title": "File:Shijō Street in Gion, Kyoto, 2024 1.jpg",
-  "artist": "Smiley.toerist",
-  "license": "CC BY-SA 4.0",
-  "url": "https://commons.wikimedia.org/wiki/File:Shij%C5%8D_Street_in_Gion,_Kyoto,_2024_1.jpg"
- },
- "fukuya_0": {
-  "title": "File:Alaska pollack liver roe milt.jpg",
-  "artist": "yoyo",
+ "mujaki_3": {
+  "title": "File:Shaved Ice Flag at Namba Walk.jpg",
+  "artist": "Mr.ちゅらさん",
   "license": "CC BY 4.0",
-  "url": "https://commons.wikimedia.org/wiki/File:Alaska_pollack_liver_roe_milt.jpg"
+  "url": "https://commons.wikimedia.org/wiki/File:Shaved_Ice_Flag_at_Namba_Walk.jpg"
  },
- "fukuya_1": {
-  "title": "File:Freshippo pollack roe baguette.jpg",
-  "artist": "Fumikas Sagisavas",
+ "mujaki_4": {
+  "title": "File:Kakigōri in Brighton and Hove Japanese Club Open Day 2023.jpg",
+  "artist": "Andy Li",
   "license": "CC0",
-  "url": "https://commons.wikimedia.org/wiki/File:Freshippo_pollack_roe_baguette.jpg"
+  "url": "https://commons.wikimedia.org/wiki/File:Kakig%C5%8Dri_in_Brighton_and_Hove_Japanese_Club_Open_Day_2023.jpg"
  },
- "fukuya_2": {
-  "title": "File:Myeongnan-jeot-muchim.jpg",
-  "artist": "도맛네",
-  "license": "CC BY 4.0",
-  "url": "https://commons.wikimedia.org/wiki/File:Myeongnan-jeot-muchim.jpg"
- },
- "fukuya_3": {
-  "title": "File:Myeongnanjeot (salted pollock roe).jpg",
-  "artist": "hee17670",
-  "license": "CC0",
-  "url": "https://commons.wikimedia.org/wiki/File:Myeongnanjeot_(salted_pollock_roe).jpg"
- },
- "fukuya_4": {
-  "title": "File:Myeongnan-jeot-gyeran-mari.jpg",
-  "artist": "쑤기언니",
-  "license": "CC BY 4.0",
-  "url": "https://commons.wikimedia.org/wiki/File:Myeongnan-jeot-gyeran-mari.jpg"
- },
- "fukuya_5": {
-  "title": "File:Myeongnanjeot pizza (pollock roe).jpg",
-  "artist": "알언니",
-  "license": "CC BY 2.5",
-  "url": "https://commons.wikimedia.org/wiki/File:Myeongnanjeot_pizza_(pollock_roe).jpg"
- },
- "toys_0": {
-  "title": "File:141108 Gekkoen Yugetsusanso Arima Onsen Kobe Japan02bs3.jpg",
-  "artist": "663highland",
-  "license": "CC BY-SA 4.0",
-  "url": "https://commons.wikimedia.org/wiki/File:141108_Gekkoen_Yugetsusanso_Arima_Onsen_Kobe_Japan02bs3.jpg"
- },
- "toys_1": {
-  "title": "File:141108 Gekkoen Yugetsusanso Arima Onsen Kobe Japan03bs3.jpg",
-  "artist": "663highland",
-  "license": "CC BY-SA 4.0",
-  "url": "https://commons.wikimedia.org/wiki/File:141108_Gekkoen_Yugetsusanso_Arima_Onsen_Kobe_Japan03bs3.jpg"
- },
- "toys_2": {
-  "title": "File:141108 Gekkoen Yugetsusanso Arima Onsen Kobe Japan04bs3.jpg",
-  "artist": "663highland",
-  "license": "CC BY-SA 4.0",
-  "url": "https://commons.wikimedia.org/wiki/File:141108_Gekkoen_Yugetsusanso_Arima_Onsen_Kobe_Japan04bs3.jpg"
- },
- "toys_3": {
-  "title": "File:Arima-Onsen Station Sign.jpg",
-  "artist": "そらみみ",
-  "license": "CC BY-SA 4.0",
-  "url": "https://commons.wikimedia.org/wiki/File:Arima-Onsen_Station_Sign.jpg"
- },
- "toys_4": {
-  "title": "File:141108 Gekkoen Yugetsusanso Arima Onsen Kobe Japan01bs3.jpg",
-  "artist": "663highland",
-  "license": "CC BY-SA 4.0",
-  "url": "https://commons.wikimedia.org/wiki/File:141108_Gekkoen_Yugetsusanso_Arima_Onsen_Kobe_Japan01bs3.jpg"
- },
- "toys_5": {
-  "title": "File:170811 Gin-no-yu Arima Onsen Kobe Japan01bs.jpg",
-  "artist": "663highland",
-  "license": "CC BY 2.5",
-  "url": "https://commons.wikimedia.org/wiki/File:170811_Gin-no-yu_Arima_Onsen_Kobe_Japan01bs.jpg"
+ "mujaki_5": {
+  "title": "File:Multi flavor kakigori - 2014.jpg",
+  "artist": "nesnad",
+  "license": "CC BY 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Multi_flavor_kakigori_-_2014.jpg"
  }
 }
