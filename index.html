@@ -6,7 +6,7 @@
 <title>TRIPBOOK · 엄마랑 일본 온천</title>
 <meta name="description" content="엄마랑 12월 일본 온천 여행 · 규슈 / 오사카·아리마 / 가고시마·이부스키 / 마쓰야마·도고">
 <meta property="og:title" content="엄마랑 일본 온천 여행">
-<meta property="og:description" content="12월 4일 밤 ~ 14일 · 3~4박 · 코스 4가지">
+<meta property="og:description" content="12월 5일 ~ 14일 사이 · 3~4박 · 코스 4가지">
 <meta property="og:image" content="img/hero.jpg">
 <meta name="theme-color" content="#f4f5f8">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
@@ -248,10 +248,10 @@ footer a{color:var(--muted)}
 
   <header class="hero">
     <img src="img/hero.jpg" alt="밤에 등불이 켜진 쿠로카와 온천 거리">
-    <div class="badge" id="badge"><b>D-?</b><small>12/4~14</small></div>
+    <div class="badge" id="badge"><b>D-?</b><small>12/8 출발</small></div>
     <div class="kicker">엄마랑 일본 온천 · 3~4박</div>
     <h1>엄마랑 뜨끈하게,<br>일본 온천 여행</h1>
-    <div class="pills"><span class="pill">12/4 금 밤부터 출발 가능</span><span class="pill">12/14 월까지 귀국</span><span class="pill ok">엄마 여권 일본 OK</span></div>
+    <div class="pills"><span class="pill">12/5 토부터 출발 가능</span><span class="pill">12/14 월까지 귀국</span><span class="pill ok">엄마 여권 일본 OK</span></div>
     <div class="conv">
       <div class="conv-h">🇯🇵 JPY → 🇰🇷 KRW <span id="rateSrc">100엔 ≈ 845원</span></div>
       <label for="yen">일본 엔(JPY)</label>
@@ -798,8 +798,8 @@ function openH(k){const h=H[k];if(!h)return;const map='https://www.google.com/ma
 function closeP(){mb.classList.remove('on');document.body.style.overflow=''}
 document.addEventListener('click',e=>{const hb=e.target.closest('[data-h]');if(hb){e.stopPropagation();openH(hb.dataset.h);return}const b=e.target.closest('[data-p]');if(b){e.stopPropagation();openP(b.dataset.p);return}if(e.target===mb||e.target.closest('.x,.x2'))closeP()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeP()});
-// D-day (12/4 기준)
-(function(){const now=new Date(),k=new Date(now.getTime()+(now.getTimezoneOffset()+540)*6e4);const t=Date.UTC(k.getFullYear(),k.getMonth(),k.getDate()),s=Date.UTC(2026,11,4),e=Date.UTC(2026,11,14);const n=Math.round((s-t)/864e5);Q('#badge').innerHTML=n>0?'<b>D-'+n+'</b><small>12/4부터</small>':t<=e?'<b>ON</b><small>여행 기간</small>':'<b>END</b><small>다녀왔어요</small>'})();
+// D-day (12/8 출발 기준)
+(function(){const now=new Date(),k=new Date(now.getTime()+(now.getTimezoneOffset()+540)*6e4);const t=Date.UTC(k.getFullYear(),k.getMonth(),k.getDate()),s=Date.UTC(2026,11,8),e=Date.UTC(2026,11,14);const n=Math.round((s-t)/864e5);Q('#badge').innerHTML=n>0?'<b>D-'+n+'</b><small>12/8 출발</small>':t<=e?'<b>ON</b><small>여행 기간</small>':'<b>END</b><small>다녀왔어요</small>'})();
 // 환율 계산기
 const yen=Q('#yen'),won=Q('#won');
 function calc(){const v=Number(String(yen.value).replace(/[^0-9]/g,''))||0;won.textContent=Math.round(v*RATE).toLocaleString('ko-KR')+'원'}
