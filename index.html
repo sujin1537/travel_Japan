@@ -202,7 +202,7 @@ footer a{color:var(--muted)}
   <nav><div class="chips" id="chips">
     <button data-v="all" class="on">한눈에</button>
     <button data-v="kyushu">① 규슈 히타·유후인</button>
-    <button data-v="arima">② 오사카·아리마</button>
+    <button data-v="arima">② 오사카·교토·아리마</button>
     <button data-v="ibusuki">③ 가고시마·이부스키</button>
     <button data-v="dogo">④ 마쓰야마·도고</button>
     <button data-v="stay">🏨 숙소</button>
@@ -215,7 +215,7 @@ footer a{color:var(--muted)}
     <p class="lead">모두 3박 4일 기준이에요. 엄마가 힘들지 않게 숙소 이동은 한두 번으로 줄였고, 료칸 밤에는 가이세키 저녁을 넣었어요. 카드를 누르면 코스가 열려요.</p>
     <div class="cards">
       <button class="cc" data-go="kyushu"><img src="img/hita.jpg" alt=""><div class="in"><div class="tagrow"><span class="tag rec">추천</span><span class="tag">료칸 2박</span><span class="tag">옛 거리</span></div><b>① 후쿠오카 · 히타 · 유후인</b><p>히타 옛 거리 구경하고, 유후인 료칸 가이세키로 2박 푹 쉬기</p><div class="nums"><span>직항 왕복<strong>33.9만</strong></span><span>료칸 1인<strong>¥23,281~</strong></span><span>이동<strong>보통</strong></span></div></div></button>
-      <button class="cc" data-go="arima"><img src="img/arima.jpg" alt=""><div class="in"><div class="tagrow"><span class="tag">항공 가장 쌈</span><span class="tag">도시+온천</span></div><b>② 오사카 · 아리마 온천</b><p>오사카 구경·쇼핑에 금탕·은탕 온천 1박</p><div class="nums"><span>직항 왕복<strong>28.1만</strong></span><span>료칸 1인<strong>¥15,400~</strong></span><span>이동<strong>쉬움</strong></span></div></div></button>
+      <button class="cc" data-go="arima"><img src="img/arima.jpg" alt=""><div class="in"><div class="tagrow"><span class="tag">항공 가장 쌈</span><span class="tag">교토 포함</span></div><b>② 오사카 · 교토 · 아리마</b><p>교토 당일치기, 오사카 쇼핑, 금탕·은탕 온천 1박</p><div class="nums"><span>직항 왕복<strong>28.1만</strong></span><span>료칸 1인<strong>¥15,400~</strong></span><span>이동<strong>쉬움</strong></span></div></div></button>
       <button class="cc" data-go="ibusuki"><img src="img/ibusuki.jpg" alt=""><div class="in"><div class="tagrow"><span class="tag">본토에서 따뜻</span><span class="tag">모래찜질</span></div><b>③ 가고시마 · 이부스키</b><p>바닷가 모래찜질, 화산섬 사쿠라지마, 흑돼지</p><div class="nums"><span>직항 왕복<strong>40.0만</strong></span><span>료칸 1인<strong>¥9,700~</strong></span><span>이동<strong>보통</strong></span></div></div></button>
       <button class="cc" data-go="dogo"><img src="img/dogo.jpg" alt=""><div class="in"><div class="tagrow"><span class="tag">숙소 이동 0번</span><span class="tag">공항 가까움</span></div><b>④ 마쓰야마 · 도고 온천</b><p>센과 치히로 목욕탕의 모티브, 일본에서 가장 오래된 온천 마을</p><div class="nums"><span>직항 왕복<strong>38.1만</strong></span><span>료칸 1인<strong>¥14,300~</strong></span><span>이동<strong>쉬움</strong></span></div></div></button>
     </div>
@@ -225,7 +225,7 @@ footer a{color:var(--muted)}
       <thead><tr><th>코스</th><th class="r">직항 왕복</th><th class="r">료칸 1인 1박 2식</th><th>엄마 체력</th></tr></thead>
       <tbody>
         <tr><td><b>① 히타·유후인</b><small>후쿠오카 · 공항→유후인 버스 2시간</small></td><td class="r">339,600<small>경유 280,832</small></td><td class="r">¥23,281~</td><td>보통<small>열차 이동 1번</small></td></tr>
-        <tr><td><b>② 아리마</b><small>오사카 · 우메다→아리마 버스 1시간</small></td><td class="r best">281,358</td><td class="r">¥15,400~</td><td>쉬움<small>오사카에서 걷는 양 조절</small></td></tr>
+        <tr><td><b>② 교토·아리마</b><small>오사카 · 교토 JR 30분 · 아리마 버스 1시간</small></td><td class="r best">281,358</td><td class="r">¥15,400~</td><td>쉬움<small>오사카에서 걷는 양 조절</small></td></tr>
         <tr><td><b>③ 이부스키</b><small>가고시마 · 시내→이부스키 JR 1시간 25분</small></td><td class="r">399,500<small>경유 270,534</small></td><td class="r">¥9,700~</td><td>보통<small>열차 왕복</small></td></tr>
         <tr><td><b>④ 도고</b><small>마쓰야마 · 공항→도고 35~50분</small></td><td class="r">381,100</td><td class="r">¥14,300~</td><td>가장 쉬움<small>숙소 고정</small></td></tr>
       </tbody>
@@ -329,38 +329,53 @@ footer a{color:var(--muted)}
 
   <!-- ================= ② 아리마 ================= -->
   <section class="view" id="v-arima">
-    <div class="cover"><img src="img/arima.jpg" alt="아리마 온천"><div class="cap"><b>② 오사카 · 아리마 온천</b><span>3박 4일 · 오사카 2박 + 아리마 료칸 1박</span></div></div>
-    <div class="facts"><div><small>직항 왕복</small><strong>28.1만원</strong></div><div><small>숙소 이동</small><strong>2번</strong></div><div><small>1인 예산</small><strong>60만~85만</strong></div></div>
-    <div class="why"><b>이 코스가 좋은 이유</b><ul><li>항공권이 가장 싸고 직항 편이 많아요</li><li>오사카 우메다에서 버스 한 번이면 온천</li><li>온천은 하루, 나머지는 오사카 구경·쇼핑으로 나눠서 지루하지 않아요</li></ul></div>
+    <div class="cover"><img src="img/arima.jpg" alt="아리마 온천"><div class="cap"><b>② 오사카 · 교토 · 아리마 온천</b><span>4박 5일 · 우메다 2박(교토 당일) + 아리마 료칸 1박 + 난바 1박</span></div></div>
+    <div class="facts"><div><small>직항 왕복</small><strong>28.1만원</strong></div><div><small>숙소 이동</small><strong>2번</strong></div><div><small>1인 예산</small><strong>75만~100만</strong></div></div>
+    <div class="why"><b>이 코스가 좋은 이유</b><ul><li>항공권이 가장 싸고 직항 편이 많아요</li><li>오사카 우메다에서 버스 한 번이면 온천</li><li>교토가 열차로 30분이라 기요미즈데라·옛 골목·유도후까지 하루에</li><li>온천 하루, 교토 하루, 오사카 쇼핑 하루로 나눠서 지루하지 않아요</li></ul></div>
 
-    <h3>일정</h3>
-    <div class="daynav" data-for="arima"><button data-d="all" class="on">모두 펼치기</button><button data-d="1">D1</button><button data-d="2">D2</button><button data-d="3">D3</button><button data-d="4">D4</button></div>
+    <h3>일정 · 교토 포함 4박 5일</h3>
+    <p class="lead">오사카 우메다 호텔에 2박 하면서 교토는 열차 30분 당일치기로 다녀와요. 짐 들고 다니는 날은 아리마 가는 날 하루뿐이에요. 3박이면 DAY 4를 빼면 돼요.</p>
+    <div class="daynav" data-for="arima"><button data-d="all" class="on">모두 펼치기</button><button data-d="1">D1</button><button data-d="2">D2</button><button data-d="3">D3</button><button data-d="4">D4</button><button data-d="5">D5</button></div>
 
-    <article class="day" data-c="arima" data-d="1"><button class="day-top"><div class="th"><i>DAY 1</i></div><div class="di"><span class="d">도착 · 오사카</span><b>인천 → 우메다</b><span>우메다 호텔 · 백화점 식품관 · 공중정원 야경</span></div><div class="chev">›</div></button>
+    <article class="day" data-c="arima" data-d="1"><button class="day-top"><div class="th"><i>DAY 1</i></div><div class="di"><span class="d">도착 · 오사카</span><b>우메다 호텔 · 스시 저녁</b><span>우메다 2박 · 하루코마 스시 · 공중정원 야경</span></div><div class="chev">›</div></button>
       <div class="db"><ul class="tl">
         <li><span class="t">오후</span><div><b>간사이공항 → 우메다</b><span>공항 리무진버스가 짐 싣기 편해요</span></div></li>
-        <li><span class="t">체크인</span><div><b>우메다(오사카역) 근처 호텔</b><span>다음 날 아리마 버스를 우메다에서 타요</span></div></li>
-        <li><span class="t">저녁</span><div><b>공중정원 전망대 야경</b><span>40층 원형 전망대, 밤 10시 반까지</span><br><button class="pl" data-p="sky">우메다 스카이빌딩</button></div></li>
+        <li><span class="t">체크인</span><div><b>우메다(오사카역) 근처 호텔 2박</b><span>교토 열차, 아리마 버스 모두 여기서 타요</span></div></li>
+        <li><span class="t">18:00</span><div><b>저녁 · 스시</b><span>우메다에서 가까운 텐진바시의 현지인 스시집</span><br><button class="pl" data-p="harukoma">하루코마 스시</button></div></li>
+        <li><span class="t">20:00</span><div><span class="opt">선택</span><b>공중정원 전망대 야경</b><br><button class="pl" data-p="sky">우메다 스카이빌딩</button></div></li>
       </ul></div></article>
 
-    <article class="day" data-c="arima" data-d="2"><button class="day-top"><div class="th"><img src="img/arima.jpg" alt=""><i>DAY 2</i></div><div class="di"><span class="d on">아리마 ♨</span><b>금탕 · 은탕 · 료칸</b><span>버스 1시간 · 킨노유 · 탄산 센베이 · 가이세키</span></div><div class="chev">›</div></button>
+    <article class="day" data-c="arima" data-d="2"><button class="day-top"><div class="th"><i>DAY 2</i></div><div class="di"><span class="d on">교토 당일</span><b>기요미즈데라 · 옛 골목 · 유도후</b><span>JR 30분 · 언덕길은 택시로 · 두부 정식 · 레트로 카페</span></div><div class="chev">›</div></button>
+      <div class="db"><ul class="tl">
+        <li><span class="t">09:00</span><div><b>오사카역 → 교토역 JR 신쾌속 약 30분</b><span>교토역에서 기요미즈데라까지는 택시가 편해요. 언덕 위까지 올라가 달라고 하면 걷는 양이 확 줄어요</span></div></li>
+        <li><span class="t">10:00</span><div><b>기요미즈데라</b><span>나무 무대에서 교토 시내가 내려다보이는 절</span><br><button class="pl" data-p="kiyomizu">기요미즈데라</button></div></li>
+        <li><span class="t">11:00</span><div><b>산넨자카 · 니넨자카 내리막 산책</b><span>절에서 내려오는 길이라 내리막이에요. 옛 가게·찻집 구경</span><br><button class="pl" data-p="ninenzaka">니넨자카</button></div></li>
+        <li><span class="t">12:00</span><div><b>점심 · 유도후 (두부 정식)</b><span>300년 넘은 두부 요리집, 정원 보이는 다다미방</span><br><button class="pl" data-p="okutan">오쿠탄 기요미즈</button></div></li>
+        <li><span class="t">14:00</span><div><b>기온 하나미코지 → 니시키 시장</b><span>옛 찻집 거리 산책, 시장에서 교토 반찬·간식 구경</span><br><button class="pl" data-p="gion">기온 하나미코지</button><button class="pl" data-p="nishiki">니시키 시장</button></div></li>
+        <li><span class="t">16:00</span><div><b>카페 · 이노다 커피 본점</b><span>정원이 보이는 레트로 다방, 다리 쉬어가기</span><br><button class="pl" data-p="inoda">이노다 커피</button></div></li>
+        <li><span class="t">18:00</span><div><b>교토 → 오사카 · 호텔에서 쉬기</b></div></li>
+        <li><span class="t">대신</span><div><span class="opt">선택</span><b>아라시야마 코스</b><span>대나무숲은 평지라 걷기 쉬워요. 덴류지 정원, 강가 % 아라비카 커피</span><br><button class="pl" data-p="arashiyama">대나무숲</button><button class="pl" data-p="tenryuji">덴류지</button><button class="pl" data-p="arabica">% 아라비카</button></div></li>
+      </ul></div></article>
+
+    <article class="day" data-c="arima" data-d="3"><button class="day-top"><div class="th"><img src="img/arima.jpg" alt=""><i>DAY 3</i></div><div class="di"><span class="d on">아리마 ♨</span><b>금탕 · 은탕 · 료칸</b><span>버스 1시간 · 탄산 센베이 · 가이세키</span></div><div class="chev">›</div></button>
       <div class="db"><ul class="tl">
         <li><span class="t">10:00</span><div><b>우메다 → 아리마 온천 버스 약 1시간</b><span>편도 ¥1,400</span></div></li>
-        <li><span class="t">11:30</span><div><b>유모토자카 거리 산책 · 군것질</b><span>언덕길을 따라 가게와 작은 신사가 이어져요</span><br><button class="pl" data-p="yumoto">유모토자카</button><button class="pl" data-p="tansan">탄산 센베이</button><button class="pl" data-p="toys">장난감 박물관</button></div></li>
-        <li><span class="t">13:30</span><div><b>공중탕 킨노유 (금탕)</b><span>철분 때문에 붉은 갈색 온천. 료칸 체크인 전에 한 번</span><br><button class="pl" data-p="kinnoyu">킨노유</button><button class="pl" data-p="ginnoyu">긴노유</button></div></li>
-        <li><span class="t">15:00</span><div><b>료칸 체크인 · 가이세키</b><span>금천·은천 둘 다 있는 료칸이면 나가지 않아도 돼요</span></div></li>
+        <li><span class="t">11:30</span><div><b>유모토자카 거리 산책 · 군것질</b><br><button class="pl" data-p="yumoto">유모토자카</button><button class="pl" data-p="tansan">탄산 센베이</button><button class="pl" data-p="toys">장난감 박물관</button></div></li>
+        <li><span class="t">13:30</span><div><b>공중탕 킨노유 (금탕)</b><span>철분 때문에 붉은 갈색 온천</span><br><button class="pl" data-p="kinnoyu">킨노유</button><button class="pl" data-p="ginnoyu">긴노유</button></div></li>
+        <li><span class="t">15:00</span><div><b>료칸 체크인 · 낮잠 · 가이세키</b></div></li>
       </ul></div></article>
 
-    <article class="day" data-c="arima" data-d="3"><button class="day-top"><div class="th"><i>DAY 3</i></div><div class="di"><span class="d">오사카</span><b>오사카 구경 · 쇼핑</b><span>오사카성 · 구로몬 시장 · 도톤보리 · 신사이바시</span></div><div class="chev">›</div></button>
+    <article class="day" data-c="arima" data-d="4"><button class="day-top"><div class="th"><i>DAY 4</i></div><div class="di"><span class="d">오사카</span><b>시장 · 쇼핑 · 맛집</b><span>구로몬 시장 · 도톤보리 · 신사이바시 · 난바 1박</span></div><div class="chev">›</div></button>
       <div class="db"><ul class="tl">
-        <li><span class="t">10:00</span><div><b>아리마 → 오사카</b><span>짐은 호텔에 먼저 맡기기</span></div></li>
-        <li><span class="t">12:00</span><div><b>점심 · 스시 또는 구로몬 시장</b><span>현지인 가성비 스시집 하루코마, 또는 시장에서 조금씩</span><br><button class="pl" data-p="harukoma">하루코마 스시</button><button class="pl" data-p="kuromon">구로몬 시장</button></div></li>
-        <li><span class="t">14:00</span><div><span class="opt">선택</span><b>오사카성 공원</b><span>천수각 안까지 안 들어가도 정원 산책만으로 충분</span><br><button class="pl" data-p="osakajo">오사카성</button></div></li>
-        <li><span class="t">17:00</span><div><b>도톤보리 · 신사이바시 쇼핑</b><span>글리코 간판, 타코야키, 상점가·드럭스토어</span><br><button class="pl" data-p="dotonbori">도톤보리</button></div></li>
+        <li><span class="t">10:00</span><div><b>아리마 → 오사카 난바 호텔</b><span>짐 먼저 맡기기</span></div></li>
+        <li><span class="t">12:00</span><div><b>구로몬 시장 점심</b><span>회·꼬치·과일을 조금씩</span><br><button class="pl" data-p="kuromon">구로몬 시장</button></div></li>
+        <li><span class="t">14:00</span><div><b>신사이바시 · 도톤보리</b><span>지붕 있는 상점가라 편해요. 드럭스토어·백화점</span><br><button class="pl" data-p="dotonbori">도톤보리</button></div></li>
+        <li><span class="t">16:00</span><div><b>호텔에서 쉬기</b></div></li>
+        <li><span class="t">저녁</span><div><b>도톤보리 야경 · 오코노미야키</b></div></li>
       </ul></div></article>
 
-    <article class="day" data-c="arima" data-d="4"><button class="day-top"><div class="th"><i>DAY 4</i></div><div class="di"><span class="d">귀국</span><b>오사카 → 인천</b><span>백화점 식품관에서 선물 사고 공항으로</span></div><div class="chev">›</div></button>
-      <div class="db"><ul class="tl"><li><span class="t">오전</span><div><b>우메다 백화점 지하 식품관</b><span>과자 선물은 여기서 한 번에</span></div></li><li><span class="t">오후</span><div><b>간사이공항 → 인천</b></div></li></ul></div></article>
+    <article class="day" data-c="arima" data-d="5"><button class="day-top"><div class="th"><i>DAY 5</i></div><div class="di"><span class="d">귀국</span><b>오사카 → 인천</b><span>난바에서 공항 열차 한 번</span></div><div class="chev">›</div></button>
+      <div class="db"><ul class="tl"><li><span class="t">오전</span><div><span class="opt">선택</span><b>오사카성 공원 산책</b><br><button class="pl" data-p="osakajo">오사카성</button></div></li><li><span class="t">오후</span><div><b>간사이공항 → 인천</b></div></li></ul></div></article>
 
     <h3>가이세키 료칸 · 아리마</h3>
     <div class="tw"><table><thead><tr><th>료칸</th><th class="r">1인 1박 2식</th></tr></thead><tbody>
@@ -559,6 +574,16 @@ footer a{color:var(--muted)}
 
 <script>
 const P={
+ kiyomizu:{n:'기요미즈데라',k:'교토 · 절',d:'절벽 위 나무 무대에서 교토 시내가 내려다보이는 절. 교토에서 가장 유명한 곳.',h:'6:00~18:00',tip:'입장 ¥500 · 택시에 "서비스 도로로 위까지" 부탁하면 거의 꼭대기까지 가요 · 평일 오전이 덜 붐벼요',q:'Kiyomizu-dera'},
+ ninenzaka:{n:'산넨자카 · 니넨자카',k:'교토 · 옛 골목',d:'돌계단과 목조 상가가 이어진 옛 골목. 기요미즈데라에서 내려오는 길이라 내리막으로 걸으면 편해요.',tip:'계단이 몇 군데 있어요. 천천히.',q:'Ninenzaka Kyoto'},
+ okutan:{n:'오쿠탄 기요미즈',k:'교토 · 유도후',d:'300년 넘은 두부 요리집. 정원이 보이는 다다미방에서 유도후(따뜻한 두부) 코스를 먹어요.',h:'11:00~16:00 무렵 (요일·시즌마다 다르고 목요일 휴무가 많음)',tip:'출발 전 영업일 확인 필수.',q:'Okutan Kiyomizu'},
+ gion:{n:'기온 하나미코지',k:'교토 · 산책',d:'옛 찻집과 요정이 늘어선 기온의 대표 거리. 저녁엔 등불이 켜져요.',tip:'사유지 골목 사진 촬영 금지 표지판이 있어요.',q:'Hanamikoji Kyoto'},
+ nishiki:{n:'니시키 시장',k:'교토 · 시장',d:'"교토의 부엌". 교토 채소 절임, 두부 도넛, 꼬치, 디저트를 조금씩 맛보는 좁은 시장 골목.',tip:'오후엔 아주 붐벼요. 가게는 저녁 5~6시면 닫는 곳이 많아요.',q:'Nishiki Market'},
+ inoda:{n:'이노다 커피 본점',k:'교토 · 카페',d:'1940년대부터 이어온 교토 대표 레트로 다방. 정원이 보이는 자리, 진한 핸드드립과 클럽 샌드위치.',h:'7:00~18:00 · 매일',tip:'아침이나 오후 늦게가 덜 기다려요.',q:'Inoda Coffee Honten'},
+ arashiyama:{n:'아라시야마 대나무숲',k:'교토 · 산책',d:'키 큰 대나무가 양옆으로 선 짧은 평지 길. 무료, 24시간.',tip:'오전 일찍이 덜 붐벼요. 덴류지·도게쓰교와 묶어서.',q:'Arashiyama Bamboo Grove'},
+ tenryuji:{n:'덴류지',k:'교토 · 절 정원',d:'산을 배경으로 한 연못 정원이 아름다운 아라시야마의 큰 절. 대나무숲 바로 옆.',h:'8:30~17:00',q:'Tenryu-ji'},
+ arabica:{n:'% 아라비카 아라시야마',k:'교토 · 카페',d:'도게쓰교 다리와 강이 보이는 하얀 커피 스탠드. 라테가 유명해요.',h:'9:00~18:00',tip:'앉을 자리가 거의 없어 테이크아웃해서 강가 벤치에서.',q:'% ARABICA Kyoto Arashiyama'},
+
  uogashi:{n:'하카타 우오가시',k:'후쿠오카 · 스시',d:'하카타역 지하 회전초밥. 레일에 돌지 않고 주문하면 바로 쥐어줘요. QR로 한국어·영어 주문.',h:'11:00~21:30 · 매일',tip:'줄이 생기니 식사시간 조금 피해서.',q:'博多魚がし 博多駅'},
  hana:{n:'스시 하카타 하나',k:'후쿠오카 · 스시 코스',d:'하카타역 동쪽 작은 스시집. 코스 3가지 중 고르고 1시간 반쯤 천천히 먹어요. 영어 메뉴, 무알콜 맥주 있음.',h:'평일 16:00~23:30 · 주말 12:00~23:30',tip:'자리가 적어 예약 추천.',q:'Sushi Hakata Hana'},
  hyotan:{n:'효탄 회전초밥 (텐진)',k:'후쿠오카 · 스시',d:'현지인이 줄 서는 회전초밥. 신선하고 메뉴가 많아요. QR로 영어 주문.',h:'11:00~20:00 · 매일',tip:'오픈 전이나 오후 3~4시가 덜 기다려요.',q:'ひょうたんの回転寿司 天神'},
