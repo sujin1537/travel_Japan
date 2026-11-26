@@ -152,24 +152,28 @@ td small{display:block;color:var(--muted);font-size:11.5px}
 
 
 /* 숙소 카드 */
-.hg{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-@media (min-width:620px){.hg{grid-template-columns:repeat(3,1fr)}}
-.hc{background:var(--paper);border-radius:14px;box-shadow:var(--shadow);overflow:hidden;border:0;padding:0;text-align:left;font:inherit;color:inherit;cursor:pointer;width:100%;display:flex;flex-direction:column}
-.hc img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
-.hc .in{padding:9px 10px 11px}
+.hg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;align-items:stretch}
+@media (min-width:620px){.hg{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.hcw{position:relative;display:flex;min-width:0}
+.hc{background:var(--paper);border-radius:14px;box-shadow:var(--shadow);overflow:hidden;border:0;padding:0;text-align:left;font:inherit;color:inherit;cursor:pointer;width:100%;display:flex;flex-direction:column;flex:1}
+.hc img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;flex:none}
+.hc .in{padding:9px 10px 11px;display:flex;flex-direction:column;flex:1}
 .hc .rt{font-size:11.5px;font-weight:800;color:var(--muted)}
 .hc .rt i{font-style:normal;color:#e0a100}
-.hc b{display:block;font-size:14px;font-weight:900;line-height:1.3;margin:2px 0 4px;letter-spacing:-.02em}
-.hc .pr{font-size:13.5px;font-weight:900}
+.hc .rt small{font-weight:700}
+.hc b{display:block;font-size:14px;font-weight:900;line-height:1.3;margin:2px 0 4px;letter-spacing:-.02em;min-height:2.6em}
+.hc .pr{font-size:13.5px;font-weight:900;line-height:1.35}
 .hc .pr small{font-weight:700;color:var(--muted);font-size:11px}
-.hc .mt{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.hc .pr .yw{display:block;font-size:11.5px}
+.hc .ml{display:block;font-size:11px;font-weight:800;color:var(--muted);margin-top:4px}
+.hc .ml.ok{color:var(--good)}
+.hc .mt{display:flex;flex-wrap:wrap;gap:4px;margin-top:auto;padding-top:6px}
 .hc .mt span{font-size:10.5px;font-weight:800;border-radius:5px;padding:1px 6px;background:var(--accent-bg);color:var(--accent)}
-.hc.pick{outline:2.5px solid var(--yuzu)}
-.hc .pk{position:absolute;margin:8px;background:var(--yuzu);color:#3a2d00;font-size:11px;font-weight:900;border-radius:6px;padding:2px 7px}
-.hcw{position:relative}
+.hc.pick{outline:2.5px solid var(--yuzu);outline-offset:-2.5px}
+.pk{position:absolute;top:8px;left:8px;z-index:2;background:var(--yuzu);color:#3a2d00;font-size:11px;font-weight:900;border-radius:6px;padding:2px 7px;pointer-events:none}
 .rgn{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin:22px 2px 8px}
 .rgn h3{margin:0}
-.rgn small{font-size:12px;color:var(--muted);font-weight:700}
+.rgn small{font-size:12px;color:var(--muted);font-weight:700;text-align:right}
 .md .acts{flex-wrap:wrap}
 .hacts>*{flex:1 1 28%!important}.hacts a:first-child{flex-basis:100%!important}
 .md .acts a.alt{background:var(--soft);color:var(--soft-ink)}
@@ -252,20 +256,20 @@ footer a{color:var(--muted)}
     <h2>어디로 갈까</h2>
     <p class="lead">모두 3박 4일 기준이에요. 엄마가 힘들지 않게 숙소 이동은 한두 번으로 줄였고, 료칸 밤에는 가이세키 저녁을 넣었어요. 카드를 누르면 코스가 열려요.</p>
     <div class="cards">
-      <button class="cc" data-go="kyushu"><img src="img/hita.jpg" alt=""><div class="in"><div class="tagrow"><span class="tag rec">추천</span><span class="tag">료칸 2박</span><span class="tag">옛 거리</span></div><b>① 후쿠오카 · 히타 · 유후인</b><p>히타 옛 거리 구경하고, 유후인 료칸 가이세키로 2박 푹 쉬기</p><div class="nums"><span>직항 왕복<strong>33.9만</strong></span><span>료칸 1인<strong>¥23,281~</strong></span><span>이동<strong>보통</strong></span></div></div></button>
-      <button class="cc" data-go="arima"><img src="img/arima.jpg" alt=""><div class="in"><div class="tagrow"><span class="tag">항공 가장 쌈</span><span class="tag">교토 포함</span></div><b>② 오사카 · 교토 · 아리마</b><p>교토 당일치기, 오사카 쇼핑, 금탕·은탕 온천 1박</p><div class="nums"><span>직항 왕복<strong>28.1만</strong></span><span>료칸 1인<strong>¥15,400~</strong></span><span>이동<strong>쉬움</strong></span></div></div></button>
-      <button class="cc" data-go="ibusuki"><img src="img/ibusuki.jpg" alt=""><div class="in"><div class="tagrow"><span class="tag">본토에서 따뜻</span><span class="tag">모래찜질</span></div><b>③ 가고시마 · 이부스키</b><p>바닷가 모래찜질, 화산섬 사쿠라지마, 흑돼지</p><div class="nums"><span>직항 왕복<strong>40.0만</strong></span><span>료칸 1인<strong>¥9,700~</strong></span><span>이동<strong>보통</strong></span></div></div></button>
-      <button class="cc" data-go="dogo"><img src="img/dogo.jpg" alt=""><div class="in"><div class="tagrow"><span class="tag">숙소 이동 0번</span><span class="tag">공항 가까움</span></div><b>④ 마쓰야마 · 도고 온천</b><p>센과 치히로 목욕탕의 모티브, 일본에서 가장 오래된 온천 마을</p><div class="nums"><span>직항 왕복<strong>38.1만</strong></span><span>료칸 1인<strong>¥14,300~</strong></span><span>이동<strong>쉬움</strong></span></div></div></button>
+      <button class="cc" data-go="kyushu"><img src="img/hita.jpg" alt=""><div class="in"><div class="tagrow"><span class="tag rec">추천</span><span class="tag">료칸 2박</span><span class="tag">옛 거리</span></div><b>① 후쿠오카 · 히타 · 유후인</b><p>히타 옛 거리 구경하고, 유후인 료칸 가이세키로 2박 푹 쉬기</p><div class="nums"><span>직항 왕복<strong>33.9만</strong></span><span>료칸 1인<strong>¥13,750~</strong></span><span>이동<strong>보통</strong></span></div></div></button>
+      <button class="cc" data-go="arima"><img src="img/arima.jpg" alt=""><div class="in"><div class="tagrow"><span class="tag">항공 가장 쌈</span><span class="tag">교토 포함</span></div><b>② 오사카 · 교토 · 아리마</b><p>교토 당일치기, 오사카 쇼핑, 금탕·은탕 온천 1박</p><div class="nums"><span>직항 왕복<strong>28.1만</strong></span><span>료칸 1인<strong>¥17,050~</strong></span><span>이동<strong>쉬움</strong></span></div></div></button>
+      <button class="cc" data-go="ibusuki"><img src="img/ibusuki.jpg" alt=""><div class="in"><div class="tagrow"><span class="tag">본토에서 따뜻</span><span class="tag">모래찜질</span></div><b>③ 가고시마 · 이부스키</b><p>바닷가 모래찜질, 화산섬 사쿠라지마, 흑돼지</p><div class="nums"><span>직항 왕복<strong>40.0만</strong></span><span>료칸 1인<strong>¥15,817~</strong></span><span>이동<strong>보통</strong></span></div></div></button>
+      <button class="cc" data-go="dogo"><img src="img/dogo.jpg" alt=""><div class="in"><div class="tagrow"><span class="tag">숙소 이동 0번</span><span class="tag">공항 가까움</span></div><b>④ 마쓰야마 · 도고 온천</b><p>센과 치히로 목욕탕의 모티브, 일본에서 가장 오래된 온천 마을</p><div class="nums"><span>직항 왕복<strong>38.1만</strong></span><span>료칸 1인<strong>¥13,534~</strong></span><span>이동<strong>쉬움</strong></span></div></div></button>
     </div>
 
     <h3>한눈에 비교</h3>
     <div class="tw"><table>
-      <thead><tr><th>코스</th><th class="r">직항 왕복</th><th class="r">료칸 1인 1박 2식</th><th>엄마 체력</th></tr></thead>
+      <thead><tr><th>코스</th><th class="r">직항 왕복</th><th class="r">료칸 1인 1박 2식<small>쟈란 12월 날짜</small></th><th>엄마 체력</th></tr></thead>
       <tbody>
-        <tr><td><b>① 히타·유후인</b><small>후쿠오카 · 공항→유후인 버스 2시간</small></td><td class="r">339,600<small>경유 280,832</small></td><td class="r">¥23,281~</td><td>보통<small>열차 이동 1번</small></td></tr>
-        <tr><td><b>② 교토·아리마</b><small>오사카 · 교토 JR 30분 · 아리마 버스 1시간</small></td><td class="r best">281,358</td><td class="r">¥15,400~</td><td>쉬움<small>오사카에서 걷는 양 조절</small></td></tr>
-        <tr><td><b>③ 이부스키</b><small>가고시마 · 시내→이부스키 JR 1시간 25분</small></td><td class="r">399,500<small>경유 270,534</small></td><td class="r">¥9,700~</td><td>보통<small>열차 왕복</small></td></tr>
-        <tr><td><b>④ 도고</b><small>마쓰야마 · 공항→도고 35~50분</small></td><td class="r">381,100</td><td class="r">¥14,300~</td><td>가장 쉬움<small>숙소 고정</small></td></tr>
+        <tr><td><b>① 히타·유후인</b><small>후쿠오카 · 공항→유후인 버스 2시간</small></td><td class="r">339,600<small>경유 280,832</small></td><td class="r">¥13,750~</td><td>보통<small>열차 이동 1번</small></td></tr>
+        <tr><td><b>② 교토·아리마</b><small>오사카 · 교토 JR 30분 · 아리마 버스 1시간</small></td><td class="r best">281,358</td><td class="r">¥17,050~</td><td>쉬움<small>오사카에서 걷는 양 조절</small></td></tr>
+        <tr><td><b>③ 이부스키</b><small>가고시마 · 시내→이부스키 JR 1시간 25분</small></td><td class="r">399,500<small>경유 270,534</small></td><td class="r">¥15,817~</td><td>보통<small>열차 왕복</small></td></tr>
+        <tr><td><b>④ 도고</b><small>마쓰야마 · 공항→도고 35~50분</small></td><td class="r">381,100</td><td class="r">¥13,534~</td><td>가장 쉬움<small>숙소 고정</small></td></tr>
       </tbody>
     </table></div>
     <p class="note">항공: 12/8 화~11 금 3박, 성인 1명, Google 항공편 11/25 조회. 날짜를 하루만 바꿔도 10만원 가까이 달라질 수 있고, 일요일 밤~화요일 출발이 대체로 싸요. 료칸: 각 코스 '가이세키 료칸' 표 참고.</p>
@@ -331,13 +335,8 @@ footer a{color:var(--muted)}
       </ul></div></article>
 
     <h3>가이세키 료칸 · 유후인</h3>
-    <div class="tw"><table><thead><tr><th>료칸</th><th class="r">1인 1박 2식</th></tr></thead><tbody>
-      <tr><td><b>유후인 바이엔 由布院 梅園</b><small>원천 그대로 흘려보내는 온천</small></td><td class="r">¥23,281~</td></tr>
-      <tr><td><b>유후인 겟토안 ゆふいん月燈庵</b><small>18채 모두 노천탕 딸린 별채</small></td><td class="r">¥25,786~</td></tr>
-      <tr><td><b>유토리노야도 잇코텐 一壺天</b><small>반노천탕 딸린 별채 10채</small></td><td class="r">¥33,895~</td></tr>
-      <tr><td><b>아사기리노 미에루 야도 가유 花由</b><small>오이타 식재료 가이세키 · 노천탕 별채</small></td><td class="r">¥43,637~</td></tr>
-      <tr><td><b>히타 기잔테이 호텔 亀山亭</b><small>히타에서 1박 할 때 · 사계절 가이세키 · 쟈란 4.3 (930건)</small></td><td class="r">2인 ¥26,520~</td></tr>
-    </tbody></table></div>
+    <p class="note" style="margin-top:0">12/9(수)~11(금) 2박 · 2인 1실 · <b>저녁·아침 포함</b> 1박 가격 (쟈란 11/26 조회, 1박 45만원 이하만)</p>
+    <div class="tw"><table><thead><tr><th>료칸</th><th class="r">2인 1박 2식</th></tr></thead><tbody><tr><td><b>유후인 하나무라 <span style="font-weight:600">かほりの郷 はな村</span></b><small>침대 방 · 유노쓰보 거리 · 여성 인기 · 쟈란 4.8(557)</small></td><td class="r">¥53,000</td></tr><tr><td><b>와노야도 사기리테이 <span style="font-weight:600">和の宿 狭霧亭</span></b><small>온천 딸린 별채 · 어른 전용 · 체크아웃 12시 · 쟈란 4.4(1,330)</small></td><td class="r">¥53,000</td></tr><tr><td><b>KOU 미야비노사토 <span style="font-weight:600">ＫＯＵ雅之郷</span></b><small>전세탕 3곳 · 4실뿐 · 가성비 · 쟈란 4.8(276)</small></td><td class="r">¥29,260</td></tr><tr><td><b>다이키치 료칸 <span style="font-weight:600">大吉旅館</span></b><small>가성비 · 저녁 평 좋음 · 쟈란 4.8(61)</small></td><td class="r">¥27,500</td></tr><tr><td><b>유후인 가든 호텔 <span style="font-weight:600">湯布院ガーデンホテル</span></b><small>뷔페 · 유후다케 뷰 · 쟈란 4.5(53)</small></td><td class="r">¥45,100</td></tr><tr><td><b>유후인 고토부키 하나노쇼 <span style="font-weight:600">由布院ことぶき花の庄</span></b><small>역 걸어서 5분 · 넓은 정원 · 쟈란 3.9(550)</small></td><td class="r">¥44,154</td></tr></tbody></table></div>
     <button class="morelink" data-go2="stay">🏨 숙소 사진 · 예약 링크 보기</button>
     <p class="note">유후인은 icotto 1인 참고가, 히타는 쟈란 표시가. 날짜·플랜마다 다르고 방에서 먹는지는 플랜마다 확인해야 해요.</p>
 
@@ -421,12 +420,8 @@ footer a{color:var(--muted)}
       <div class="db"><ul class="tl"><li><span class="t">오전</span><div><span class="opt">선택</span><b>오사카성 공원 산책</b><br><button class="pl" data-p="osakajo">오사카성</button></div></li><li><span class="t">11:50</span><div><b>간사이 → 인천 · ZE612</b><span>이스타항공 · 13:50 도착 · 난바에서 9시쯤 공항 열차</span></div></li></ul></div></article>
 
     <h3>가이세키 료칸 · 아리마</h3>
-    <div class="tw"><table><thead><tr><th>료칸</th><th class="r">1인 1박 2식</th></tr></thead><tbody>
-      <tr><td><b>메이플 아리마</b><small>실속형</small></td><td class="r">¥15,400~</td></tr>
-      <tr><td><b>네기야 료후카쿠</b><small>중급</small></td><td class="r">¥23,100~</td></tr>
-      <tr><td><b>긴스이소 조라쿠 銀水荘 兆楽</b><small>석식·조식 모두 방에서 · 금천·은천 자가 원천 · 역까지 송영</small></td><td class="r">¥38,500~55,000<small>2025.3 후기</small></td></tr>
-    </tbody></table></div>
-    <p class="note">메이플·네기야는 Japan Ryokan Guide, 긴스이소는 Gポイント 여행 후기 기준이에요.</p>
+    <p class="note" style="margin-top:0">12/10(목) 1박 · 2인 1실 · <b>저녁·아침 포함</b> 1박 가격 (쟈란 11/26 조회, 1박 45만원 이하만)</p>
+    <div class="tw"><table><thead><tr><th>료칸</th><th class="r">2인 1박 2식</th></tr></thead><tbody><tr><td><b>아리마 고토리 <span style="font-weight:600">有馬温泉 小都里 KOTORI</span></b><small>금천·은천 · 전세탕 포함 · 평점 높음 · 쟈란 4.7(375)</small></td><td class="r">¥52,030</td></tr><tr><td><b>아리마 료칸 야마토 <span style="font-weight:600">有馬温泉 旅館やまと</span></b><small>방에서 저녁 · 전세탕 · 외탕 무료권 · 쟈란 평점 없음</small></td><td class="r">¥34,100</td></tr><tr><td><b>아리마 로열 호텔 <span style="font-weight:600">有馬ロイヤルホテル</span></b><small>와규 샤부 가이세키 · 접객 평 좋음 · 쟈란 4.4(186)</small></td><td class="r">¥45,100</td></tr><tr><td><b>메르베르 아리마 <span style="font-weight:600">メルヴェール有馬</span></b><small>침대 방 · 후기 많음 · 쟈란 4.2(1,266)</small></td><td class="r">¥39,100</td></tr><tr><td><b>가메노이 호텔 아리마 <span style="font-weight:600">亀の井ホテル 有馬</span></b><small>침대 방 · 깔끔 · 쟈란 4.2(90)</small></td><td class="r">¥51,720</td></tr><tr><td><b>아리마 스미노보 <span style="font-weight:600">有馬温泉 角の坊</span></b><small>고베규 스키야키 · 쟈란 3.9(258)</small></td><td class="r">¥47,300</td></tr></tbody></table></div>
     <button class="morelink" data-go2="stay">🏨 숙소 사진 · 예약 링크 보기</button>
 
     <h3>먹을 것 · 쇼핑</h3>
@@ -478,13 +473,8 @@ footer a{color:var(--muted)}
       <div class="db"><ul class="tl"><li><span class="t">오전</span><div><b>아뮤플라자 선물 쇼핑</b><span>고구마 과자, 가루칸, 치란 녹차</span></div></li><li><span class="t">15:15</span><div><b>가고시마 → 인천 · 7C1824</b><span>제주항공 · 17:05 도착 · 공항버스 약 40분이라 13시쯤 역에서 출발</span></div></li></ul></div></article>
 
     <h3>가이세키 료칸 · 이부스키</h3>
-    <div class="tw"><table><thead><tr><th>료칸</th><th class="r">1인 1박 2식</th></tr></thead><tbody>
-      <tr><td><b>휴가무라 이부스키</b><small>실속형 · 모래찜질 있음</small></td><td class="r">¥9,700~<small>기사 기준</small></td></tr>
-      <tr><td><b>이부스키 시사이드 호텔</b><small>모래찜질 있음</small></td><td class="r">¥10,800~<small>기사 기준</small></td></tr>
-      <tr><td><b>이부스키 하쿠스이칸 白水館</b><small>관내 모래찜질</small></td><td class="r">¥19,950~<small>기사 기준</small></td></tr>
-      <tr><td><b>이부스키 슈스이엔 秀水園</b><small>해산물 가이세키로 유명 · 사라쿠 걸어서 3분 · 평점 8.9</small></td><td class="r">¥47,124~</td></tr>
-    </tbody></table></div>
-    <p class="note">슈스이엔은 Japan Ryokan Guide, 나머지는 MAPPLE 기사 가격이라 지금은 더 올랐을 수 있어요.</p>
+    <p class="note" style="margin-top:0">12/9(수) 1박 · 2인 1실 · <b>저녁·아침 포함</b> 1박 가격 (쟈란 11/26 조회, 1박 45만원 이하만)</p>
+    <div class="tw"><table><thead><tr><th>료칸</th><th class="r">2인 1박 2식</th></tr></thead><tbody><tr><td><b>료칸 쓰키미소 <span style="font-weight:600">旅館月見荘</span></b><small>쟈란 5.0 · 저녁 평 좋음 · 쟈란 5.0(848)</small></td><td class="r">¥35,200</td></tr><tr><td><b>이부스키 하쿠스이칸 <span style="font-weight:600">指宿白水館</span></b><small>관내 모래찜질 · 침대 방 · 후기 3천 · 쟈란 4.4(2,986)</small></td><td class="r">¥40,480</td></tr><tr><td><b>이부스키 고코로노야도 <span style="font-weight:600">指宿こころの宿</span></b><small>가성비 · 저녁 평 좋음 · 쟈란 4.1(1,497)</small></td><td class="r">¥31,634</td></tr><tr><td><b>이부스키 피닉스 호텔 <span style="font-weight:600">指宿フェニックスホテル</span></b><small>모래찜질권 · 음료 무료 · 쟈란 3.9(1,513)</small></td><td class="r">¥37,620</td></tr><tr><td><b>이부스키 시사이드 호텔 <span style="font-weight:600">指宿シーサイドホテル</span></b><small>모래찜질 무료 · 바다 앞 · 쟈란 3.8(1,025)</small></td><td class="r">¥33,800</td></tr></tbody></table></div>
     <button class="morelink" data-go2="stay">🏨 숙소 사진 · 예약 링크 보기</button>
 
     <h3>먹을 것 · 쇼핑</h3>
@@ -535,14 +525,8 @@ footer a{color:var(--muted)}
       <div class="db"><ul class="tl"><li><span class="t">오전</span><div><b>아침탕 · 하이카라 거리 선물</b><span>이마바리 타월, 귤 주스·귤 과자, 봇짱당고</span></div></li><li><span class="t">15:40</span><div><b>마쓰야마 → 인천 · 7C1704</b><span>제주항공 · 17:35 도착 · 더 싼 09:35편(7C1722)이면 오전 일정은 전날 저녁에</span></div></li></ul></div></article>
 
     <h3>가이세키 료칸 · 도고</h3>
-    <div class="tw"><table><thead><tr><th>료칸</th><th class="r">1인 1박 2식</th></tr></thead><tbody>
-      <tr><td><b>료칸 도키와소 常磐荘</b><small>다이쇼 시대 목조 건물 · 당일 잡은 해산물</small></td><td class="r">¥11,000~</td></tr>
-      <tr><td><b>도고 프린스 호텔</b><small>방에서 먹는 요리 · 송영버스</small></td><td class="r">¥14,300~</td></tr>
-      <tr><td><b>도고칸 道後舘</b><small>그릇에 신경 쓴 창작 가이세키를 방에서 · 노천탕 객실</small></td><td class="r">¥19,300~</td></tr>
-      <tr><td><b>야마토야 벳소 大和屋別荘</b><small>계절 가이세키를 방에서</small></td><td class="r">¥21,200~</td></tr>
-      <tr><td><b>후나야 ふなや</b><small>세토내해 가이세키 · 명물 도미밥</small></td><td class="r">¥22,000~</td></tr>
-      <tr><td><b>야치요 八千代</b><small>전 객실 노천탕 · 페이스에 맞춰 갓 만든 요리</small></td><td class="r">¥26,400~</td></tr>
-    </tbody></table></div>
+    <p class="note" style="margin-top:0">12/8(화)~11(금) 3박 · 2인 1실 · <b>저녁·아침 포함</b> 1박 가격 (쟈란 11/26 조회, 1박 45만원 이하만)</p>
+    <div class="tw"><table><thead><tr><th>료칸</th><th class="r">2인 1박 2식</th></tr></thead><tbody><tr><td><b>도고 온천 호텔 쓰바키칸 <span style="font-weight:600">道後温泉 ホテル椿館</span></b><small>뷔페 · 후기 2천 · 침대 방 · 쟈란 4.6(2,331)</small></td><td class="r">¥46,200</td></tr><tr><td><b>도고 온천 니기타쓰 회관 <span style="font-weight:600">道後温泉 にぎたつ会館</span></b><small>가이세키 · 넓은 정원 · 쟈란 4.2(1,031)</small></td><td class="r">¥35,000</td></tr><tr><td><b>올드 잉글랜드 도고 야마노테 호텔 <span style="font-weight:600">オールドイングランド道後山の手ホテル</span></b><small>침대 방 · 코스 디너 · 쟈란 4.5(114)</small></td><td class="r">¥42,000</td></tr><tr><td><b>도고 온천 하나유즈키 <span style="font-weight:600">道後温泉 花ゆづき</span></b><small>뷔페 · 후기 많음 · 쟈란 4.1(2,062)</small></td><td class="r">¥35,640</td></tr><tr><td><b>호텔 가쓰라기 <span style="font-weight:600">ホテル葛城</span></b><small>뷔페 · 가성비 · 쟈란 4.1(1,234)</small></td><td class="r">¥28,710</td></tr><tr><td><b>오에도 온센 모노가타리 도고 <span style="font-weight:600">大江戸温泉物語 道後</span></b><small>뷔페 · 최저가 · 쟈란 4.0(1,147)</small></td><td class="r">¥27,067</td></tr></tbody></table></div>
     <button class="morelink" data-go2="stay">🏨 숙소 사진 · 예약 링크 보기</button>
     <p class="note">icotto 기사 기준(2인 이용 시 1인 가격). 방에서 먹는지는 객실·플랜마다 달라요.</p>
 
@@ -565,25 +549,26 @@ footer a{color:var(--muted)}
       <li><b>연박</b> · 같은 료칸에 2박이면 짐 풀고 푹 쉬어요. 둘째 날 가이세키 메뉴를 바꿔주는 곳이 많아요</li>
     </ul></div>
 
-    <p class="note" style="margin-top:12px">카드를 누르면 사진·설명과 예약 링크가 열려요. 가격은 Google 호텔 표시가(2인 1박 최저가, 2027년 1월 13일 날짜로 표시된 값)라 12월 날짜·석식 플랜에 따라 달라져요. ⭐ 표시가 엄마랑 가기 제일 무난한 곳이에요.</p>
+    <div class="callout" style="margin-top:12px"><b>1박 2인 45만원 이하</b>만 남겼어요. 료칸은 코스 일정 날짜(12월 둘째 주 평일)에 실제로 남은 <b>저녁·아침 포함</b> 플랜 가격을 쟈란에서 조회했어요. 도시 호텔은 밥 없이 밖에서 먹는 날이라 방값(Google 참고가)이에요.</div>
+    <p class="note">카드를 누르면 사진·설명과 예약 링크가 열려요. ⭐ 표시가 엄마랑 가기 제일 무난한 곳이에요. 환율 100엔=844원 기준, ¥53,300 넘으면 45만원 초과예요.</p>
 
-    <div class="rgn"><h3>① 유후인 료칸 · 2박</h3><small>가이세키 2번</small></div>
+    <div class="rgn"><h3>① 유후인 료칸 · 2박</h3><small>12/9(수)~11(금)<br>2식 포함</small></div>
     <div class="hg" data-r="yufuin"></div>
-    <div class="rgn"><h3>① 하카타 호텔 · 첫날·넷째 날</h3><small>역 가까운 곳</small></div>
+    <div class="rgn"><h3>① 하카타 호텔 · 첫날·넷째 날</h3><small>12/8 · 12/11<br>방값만</small></div>
     <div class="hg" data-r="hakata"></div>
 
-    <div class="rgn"><h3>② 아리마 료칸 · 1박</h3><small>금탕·은탕</small></div>
+    <div class="rgn"><h3>② 아리마 료칸 · 1박</h3><small>12/10(목)<br>2식 포함</small></div>
     <div class="hg" data-r="arima"></div>
-    <div class="rgn"><h3>② 오사카 우메다 · 2박</h3><small>교토·아리마 출발점</small></div>
+    <div class="rgn"><h3>② 오사카 우메다 · 2박</h3><small>12/8~10<br>방값만</small></div>
     <div class="hg" data-r="umeda"></div>
     <p class="note">DAY 4 난바 1박은 우메다 호텔을 3박으로 늘려도 돼요(난바까지 지하철 10분). 짐 옮기는 횟수가 줄어요.</p>
 
-    <div class="rgn"><h3>③ 이부스키 료칸 · 1박</h3><small>모래찜질</small></div>
+    <div class="rgn"><h3>③ 이부스키 료칸 · 1박</h3><small>12/9(수)<br>2식 포함</small></div>
     <div class="hg" data-r="ibusuki"></div>
-    <div class="rgn"><h3>③ 가고시마 시내 · 2박</h3><small>사쿠라지마 뷰 온천</small></div>
+    <div class="rgn"><h3>③ 가고시마 시내 · 2박</h3><small>12/8 · 12/10<br>방값만</small></div>
     <div class="hg" data-r="kagoshima"></div>
 
-    <div class="rgn"><h3>④ 도고 료칸 · 3박</h3><small>방에서 가이세키</small></div>
+    <div class="rgn"><h3>④ 도고 료칸 · 3박</h3><small>12/8(화)~11(금)<br>2식 포함</small></div>
     <div class="hg" data-r="dogo"></div>
 
     <h3>💳 우리 WON트래블 비교</h3>
@@ -720,48 +705,35 @@ function openP(k){const p=P[k];if(!p)return;const map='https://www.google.com/ma
   annotate(md);mb.classList.add('on');document.body.style.overflow='hidden'}
 // 숙소 데이터 (Google 호텔 2인 1박 최저가 · 2027-01-13 표시값 · 2026-11-26 조회)
 const H={
- baien:{r:'yufuin',n:'유후인 바이엔 가든 리조트',jp:'由布院 梅園',q:'Yufuin Baien Garden Resort',g:4.6,c:'1,600',p:432254,pick:1,t:['무료 전세탕','개별 식사실','정원 산책로'],
-  d:'유후다케가 보이는 넓은 정원 안에 객실이 흩어져 있는 료칸이에요. 가족 전세탕을 무료로 쓸 수 있어 대욕장이 부담스러운 엄마도 편해요. 저녁은 개별 다이닝룸에서 먹어요.',tip:'1인 1박 2식 ¥23,281~. 원천을 그대로 흘려보내는 온천이에요.',
-  bk:'https://www.booking.com/hotel/jp/baien.ko.html',tr:'https://kr.trip.com/hotels/yufu-hotel-detail-2728211/baien/'},
- yamadaya:{r:'yufuin',n:'야마다야 료칸',jp:'旅想 ゆふいん やまだ屋',q:'Ryoso Yufuin Yamadaya',g:4.7,p:510844,pick:1,t:['한국인 인기','위치 좋음'],
-  d:'Google 호텔에 "한국 여행객에게 인기"로 표시되는 료칸이에요. 유노쓰보 거리와 긴린코 쪽으로 걸어 다니기 좋아요.',tip:'후기 많은 인기 료칸이라 12월 주말은 빨리 차요.',
-  bk:'https://www.booking.com/hotel/jp/ryoso-yufuin-yamadaya.ko.html'},
- gettoan:{r:'yufuin',n:'유후인 겟토안',jp:'ゆふいん月燈庵',q:'Yufuin Gettouan',g:4.4,p:319968,t:['노천탕 별채','프라이빗'],
-  d:'18채가 모두 노천탕 딸린 독채라 다른 손님을 거의 안 마주쳐요. 방에서 언제든 온천에 들어갈 수 있어요.',tip:'1인 1박 2식 ¥25,786~. 산자락이라 셔틀 이용이 편해요.',
-  bk:'https://www.booking.com/hotel/jp/yufuin-gettouan.ko.html'},
- hananomai:{r:'yufuin',n:'유후인 하나노마이',jp:'由布院温泉 はなの舞',q:'Yufuin Hananomai',g:4.7,p:200569,t:['가성비','송영'],
-  d:'평점은 높은데 가격이 유후인 료칸 중 낮은 편이에요. 역 송영이 있어요.',
-  tr:'https://kr.trip.com/hotels/yufu-hotel-detail-7252023/yufuin-onsen-ryokan-hananomai/'},
- yawaragi:{r:'yufuin',n:'야와라기노사토 야도야',jp:'やわらぎの郷やどや',q:'Yawaragi no Sato Yadoya Yufuin',g:4.7,p:324953,t:['단차 적음','위치 좋음'],
-  d:'휠체어 이용 가능으로 표시돼 계단·단차가 적은 편이에요. 무릎이 안 좋으시면 이런 곳이 좋아요.'},
- makiba:{r:'yufuin',n:'료소 마키바노이에',jp:'旅荘 牧場の家',q:'Ryoso Makiba no Ie Yufuin',g:4.7,p:302036,t:['노천탕','시골 분위기'],
-  d:'초가지붕 별채와 큰 노천탕이 있는 시골 분위기 료칸이에요. 휠체어 이용 가능으로 표시돼 있어요.'},
- itsuki:{r:'yufuin',n:'베테이 이츠키',jp:'別邸 樹',q:'Bettei Itsuki Yufuin',g:4.7,p:483056,t:['고급','송영'],
-  d:'조용한 고급 별채 료칸. 특별한 날 기분 내기 좋아요.'},
-
+ hanamura:{r:'yufuin',n:'유후인 하나무라',jp:'かほりの郷 はな村',q:'かほりの郷 はな村',jr:4.8,jc:'557',y:53000,ni:2,tot:106000,meal:'저녁·아침 포함',room:'트윈(침대)',dt:'12/9(수)~11(금) 2박',t:['침대 방', '유노쓰보 거리', '여성 인기'],pick:1,d:'유후인 한가운데 유노쓰보 거리에 있어 걸어서 구경 다니기 좋아요. 쟈란 4.8에 접객·청결·조식 평이 높고 "여성에게 인기"인 숙소예요.',tip:'스탠다드 2식 플랜. 침대 방(트윈)이라 바닥 이불이 불편한 엄마께 좋아요. 역에서 걸어서 10분, 택시 2분.',jl:'https://www.jalan.net/yad328454/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=2&roomCount=1&adultNum=2&mealType=3'},
+ sagiritei:{r:'yufuin',n:'와노야도 사기리테이',jp:'和の宿 狭霧亭',q:'和の宿 狭霧亭',jr:4.4,jc:'1,330',y:53000,ni:2,tot:106000,meal:'저녁·아침 포함',room:'화양실(침대)',dt:'12/9(수)~11(금) 2박',t:['온천 딸린 별채', '어른 전용', '체크아웃 12시'],pick:1,d:'10채가 모두 온천 딸린 별채예요. 방에서 언제든 온천하고, 체크아웃이 12시라 아침이 느긋해요. 목욕 후 생맥주·아이스크림이 무료예요.',tip:'오이타 와규·토종닭 숯불 가이세키 플랜. 침대 있는 화양실. 역에서 차로 5분.',jl:'https://www.jalan.net/yad315568/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=2&roomCount=1&adultNum=2&mealType=3'},
+ kotobuki:{r:'yufuin',n:'유후인 고토부키 하나노쇼',jp:'由布院ことぶき花の庄',q:'由布院ことぶき花の庄',jr:3.9,jc:'550',y:44154,ni:2,tot:88308,meal:'저녁·아침 포함',room:'화실',dt:'12/9(수)~11(금) 2박',t:['역 걸어서 5분', '넓은 정원'],pick:0,d:'유후다케가 보이는 2천 평 정원에 초가지붕 건물과 노가쿠 무대가 있어요. 역에서 걸어서 5분이라 짐 들고 이동하기 편해요.',tip:'큐슈산 흑모와규 도반야키 "제철 가이세키" 플랜.',jl:'https://www.jalan.net/yad392120/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=2&roomCount=1&adultNum=2&mealType=3'},
+ yufugarden:{r:'yufuin',n:'유후인 가든 호텔',jp:'湯布院ガーデンホテル',q:'湯布院ガーデンホテル',jr:4.5,jc:'53',y:45100,ni:2,tot:90200,meal:'저녁·아침 포함',room:'화양실(침대)',dt:'12/9(수)~11(금) 2박',t:['뷔페', '유후다케 뷰'],pick:0,d:'저녁이 와규 샤부샤부·스테이크 뷔페라 이것저것 조금씩 드시기 좋아요.',tip:'기본 플랜(석식·조식 뷔페).',jl:'https://www.jalan.net/yad356060/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=2&roomCount=1&adultNum=2&mealType=3'},
+ kou:{r:'yufuin',n:'KOU 미야비노사토',jp:'ＫＯＵ雅之郷',q:'ＫＯＵ雅之郷',jr:4.8,jc:'276',y:29260,ni:2,tot:58520,meal:'저녁·아침 포함',room:'화실',dt:'12/9(수)~11(금) 2박',t:['전세탕 3곳', '4실뿐', '가성비'],pick:0,d:'객실이 4개뿐인 작은 숙소예요. 자가 원천 온천 3곳이 모두 전세 가족탕이라 둘이서만 온천해요.',tip:'고르는 전골 2식 플랜. 스키야키 플랜은 2박 ¥70,400.',jl:'https://www.jalan.net/yad390265/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=2&roomCount=1&adultNum=2&mealType=3'},
+ daikichi:{r:'yufuin',n:'다이키치 료칸',jp:'大吉旅館',q:'大吉旅館',jr:4.8,jc:'61',y:27500,ni:2,tot:55000,meal:'저녁·아침 포함',room:'화실',dt:'12/9(수)~11(금) 2박',t:['가성비', '저녁 평 좋음'],pick:0,d:'분고규 도반야키와 산천어 소금구이가 나오는 소박한 료칸. 쟈란 4.8에 저녁·접객 평이 높아요.',tip:'스탠다드 2식 플랜.',jl:'https://www.jalan.net/yad336836/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=2&roomCount=1&adultNum=2&mealType=3'},
+ kotori:{r:'arima',n:'아리마 고토리',jp:'有馬温泉 小都里 KOTORI',q:'有馬温泉 小都里 KOTORI',jr:4.7,jc:'375',y:52030,ni:1,tot:52030,meal:'저녁·아침 포함',room:'화실',dt:'12/10(목) 1박',t:['금천·은천', '전세탕 포함', '평점 높음'],pick:1,d:'금천(갈색 온천)과 은천을 둘 다 즐기는 료칸이에요. 쟈란 4.7로 아리마에서 평이 가장 좋은 편이고, 이 플랜엔 전세탕이 들어 있어요.',tip:'"고토리 인기 No.1" 제철 가이세키 플랜 · 전세탕 포함.',jl:'https://www.jalan.net/yad355612/plan/?stayYear=2026&stayMonth=12&stayDay=10&stayCount=1&roomCount=1&adultNum=2&mealType=3'},
+ yamato:{r:'arima',n:'아리마 료칸 야마토',jp:'有馬温泉 旅館やまと',q:'有馬温泉 旅館やまと',jr:null,jc:'',y:34100,ni:1,tot:34100,meal:'저녁·아침 포함',room:'화실',dt:'12/10(목) 1박',t:['방에서 저녁', '전세탕', '외탕 무료권'],pick:1,d:'저녁을 방에서 먹는 헤야쇼쿠 플랜이에요. 전세탕과 킨노유·긴노유 외탕 무료권이 같이 있어요.',tip:'흑모와규 스키야키 냄비 · 방에서 식사 · 전세탕 · 외탕 무료권 포함.',jl:'https://www.jalan.net/yad353956/plan/?stayYear=2026&stayMonth=12&stayDay=10&stayCount=1&roomCount=1&adultNum=2&mealType=3'},
+ arimaroyal:{r:'arima',n:'아리마 로열 호텔',jp:'有馬ロイヤルホテル',q:'有馬ロイヤルホテル',jr:4.4,jc:'186',y:45100,ni:1,tot:45100,meal:'저녁·아침 포함',room:'화실',dt:'12/10(목) 1박',t:['와규 샤부 가이세키', '접객 평 좋음'],pick:0,d:'아리마 중심가 호텔식 료칸. 조식·접객·석식 평이 높아요.',tip:'흑모와규 샤부샤부 가이세키 2식.',jl:'https://www.jalan.net/yad312610/plan/?stayYear=2026&stayMonth=12&stayDay=10&stayCount=1&roomCount=1&adultNum=2&mealType=3'},
+ merveille:{r:'arima',n:'메르베르 아리마',jp:'メルヴェール有馬',q:'メルヴェール有馬',jr:4.2,jc:'1,266',y:39100,ni:1,tot:39100,meal:'저녁·아침 포함',room:'트윈(침대)',dt:'12/10(목) 1박',t:['침대 방', '후기 많음'],pick:0,d:'후기 1,200건이 넘는 숙소. 침대 방에 국산 소고기 스키야키 냄비가 나오는 가이세키예요.',tip:'"가장 인기" 1박 2식 플랜.',jl:'https://www.jalan.net/yad321801/plan/?stayYear=2026&stayMonth=12&stayDay=10&stayCount=1&roomCount=1&adultNum=2&mealType=3'},
+ suminobo:{r:'arima',n:'아리마 스미노보',jp:'有馬温泉 角の坊',q:'有馬温泉 角の坊',jr:3.9,jc:'258',y:47300,ni:1,tot:47300,meal:'저녁·아침 포함',room:'화실',dt:'12/10(목) 1박',t:['고베규 스키야키'],pick:0,d:'제철 가이세키에 고베규 스키야키 한 접시를 더한 플랜.',tip:'',jl:'https://www.jalan.net/yad335884/plan/?stayYear=2026&stayMonth=12&stayDay=10&stayCount=1&roomCount=1&adultNum=2&mealType=3'},
+ kamenoi:{r:'arima',n:'가메노이 호텔 아리마',jp:'亀の井ホテル 有馬',q:'亀の井ホテル 有馬',jr:4.2,jc:'90',y:51720,ni:1,tot:51720,meal:'저녁·아침 포함',room:'트윈(침대)',dt:'12/10(목) 1박',t:['침대 방', '깔끔'],pick:0,d:'리뉴얼한 호텔형 료칸. 조식·청결 평이 좋아요.',tip:'"토지의 은혜" 가이세키 2식.',jl:'https://www.jalan.net/yad339259/plan/?stayYear=2026&stayMonth=12&stayDay=10&stayCount=1&roomCount=1&adultNum=2&mealType=3'},
+ hakusuikan:{r:'ibusuki',n:'이부스키 하쿠스이칸',jp:'指宿白水館',q:'指宿白水館',jr:4.4,jc:'2,986',y:40480,ni:1,tot:40480,meal:'저녁·아침 포함',room:'화양실(침대)',dt:'12/9(수) 1박',t:['관내 모래찜질', '침대 방', '후기 3천'],pick:1,d:'호텔 안에 모래찜질과 큰 대욕장이 있어 밖에 안 나가도 돼요. 바닷가 소나무 정원. 쟈란 후기 3천 건에 욕장·객실 평이 높아요.',tip:'가고시마 제철 가이세키 스탠다드 플랜 · 침대 있는 화양실.',jl:'https://www.jalan.net/yad357348/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=1&roomCount=1&adultNum=2&mealType=3'},
+ tsukimiso:{r:'ibusuki',n:'료칸 쓰키미소',jp:'旅館月見荘',q:'旅館月見荘',jr:5.0,jc:'848',y:35200,ni:1,tot:35200,meal:'저녁·아침 포함',room:'화실',dt:'12/9(수) 1박',t:['쟈란 5.0', '저녁 평 좋음'],pick:1,d:'쟈란 평점 5.0(후기 848건). 조식·석식·접객 평이 모두 높은 작은 료칸이에요.',tip:'스탠다드 플랜 · 가고시마 요리.',jl:'https://www.jalan.net/yad336088/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=1&roomCount=1&adultNum=2&mealType=3'},
+ kokoro:{r:'ibusuki',n:'이부스키 고코로노야도',jp:'指宿こころの宿',q:'指宿こころの宿',jr:4.1,jc:'1,497',y:31634,ni:1,tot:31634,meal:'저녁·아침 포함',room:'기타',dt:'12/9(수) 1박',t:['가성비', '저녁 평 좋음'],pick:0,d:'제철 가이세키 평이 좋은 료칸.',tip:'스탠다드 제철 와가이세키 플랜.',jl:'https://www.jalan.net/yad362396/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=1&roomCount=1&adultNum=2&mealType=3'},
+ phoenix:{r:'ibusuki',n:'이부스키 피닉스 호텔',jp:'指宿フェニックスホテル',q:'指宿フェニックスホテル',jr:3.9,jc:'1,513',y:37620,ni:1,tot:37620,meal:'저녁·아침 포함',room:'화실',dt:'12/9(수) 1박',t:['모래찜질권', '음료 무료'],pick:0,d:'흑돼지 샤부 냄비 가이세키에 프리드링크·모래찜질권이 붙은 플랜.',tip:'',jl:'https://www.jalan.net/yad329490/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=1&roomCount=1&adultNum=2&mealType=3'},
+ seaside:{r:'ibusuki',n:'이부스키 시사이드 호텔',jp:'指宿シーサイドホテル',q:'指宿シーサイドホテル',jr:3.8,jc:'1,025',y:33800,ni:1,tot:33800,meal:'저녁·아침 포함',room:'화실',dt:'12/9(수) 1박',t:['모래찜질 무료', '바다 앞'],pick:0,d:'바닷가 호텔. 모래찜질 무료와 저녁 90분 음료 무제한 플랜.',tip:'',jl:'https://www.jalan.net/yad341097/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=1&roomCount=1&adultNum=2&mealType=3'},
+ tsubaki:{r:'dogo',n:'도고 온천 호텔 쓰바키칸',jp:'道後温泉 ホテル椿館',q:'道後温泉 ホテル椿館',jr:4.6,jc:'2,331',y:46200,ni:3,tot:138600,meal:'저녁·아침 포함',room:'화양실(침대)',dt:'12/8(화)~11(금) 3박',t:['뷔페', '후기 2천', '침대 방'],pick:1,d:'도고 본관 바로 근처, 쟈란 후기 2,300건에 평점 4.6. 3박이면 매일 고를 수 있는 뷔페가 오히려 편해요.',tip:'스탠다드 뷔페 플랜(쟈란 한정).',jl:'https://www.jalan.net/yad349770/plan/?stayYear=2026&stayMonth=12&stayDay=8&stayCount=3&roomCount=1&adultNum=2&mealType=3'},
+ nigitatsu:{r:'dogo',n:'도고 온천 니기타쓰 회관',jp:'道後温泉 にぎたつ会館',q:'道後温泉 にぎたつ会館',jr:4.2,jc:'1,031',y:35000,ni:3,tot:105000,meal:'저녁·아침 포함',room:'화실',dt:'12/8(화)~11(금) 3박',t:['가이세키', '넓은 정원'],pick:1,d:'와규 도반야키가 들어간 에히메 가이세키. 석식·접객·욕장 평이 좋아요.',tip:'와규 도반야키 가이세키 플랜.',jl:'https://www.jalan.net/yad305288/plan/?stayYear=2026&stayMonth=12&stayDay=8&stayCount=3&roomCount=1&adultNum=2&mealType=3'},
+ yamanote:{r:'dogo',n:'올드 잉글랜드 도고 야마노테 호텔',jp:'オールドイングランド道後山の手ホテル',q:'オールドイングランド道後山の手ホテル',jr:4.5,jc:'114',y:42000,ni:3,tot:126000,meal:'저녁·아침 포함',room:'트윈(침대)',dt:'12/8(화)~11(금) 3박',t:['침대 방', '코스 디너'],pick:0,d:'영국풍 작은 호텔. 이 호텔에서 가장 좋은 코스 디너 플랜이에요.',tip:'"야마노테 삼성 요리" 최상급 디너 플랜.',jl:'https://www.jalan.net/yad322184/plan/?stayYear=2026&stayMonth=12&stayDay=8&stayCount=3&roomCount=1&adultNum=2&mealType=3'},
+ hanayuzuki:{r:'dogo',n:'도고 온천 하나유즈키',jp:'道後温泉 花ゆづき',q:'道後温泉 花ゆづき',jr:4.1,jc:'2,062',y:35640,ni:3,tot:106920,meal:'저녁·아침 포함',room:'화실',dt:'12/8(화)~11(금) 3박',t:['뷔페', '후기 많음'],pick:0,d:'지역 재료로 매일 바뀌는 뷔페.',tip:'심플 뷔페 2식 플랜.',jl:'https://www.jalan.net/yad311689/plan/?stayYear=2026&stayMonth=12&stayDay=8&stayCount=3&roomCount=1&adultNum=2&mealType=3'},
+ katsuragi:{r:'dogo',n:'호텔 가쓰라기',jp:'ホテル葛城',q:'ホテル葛城',jr:4.1,jc:'1,234',y:28710,ni:3,tot:86130,meal:'저녁·아침 포함',room:'화실',dt:'12/8(화)~11(금) 3박',t:['뷔페', '가성비'],pick:0,d:'욕장·접객 평이 좋은 가성비 숙소.',tip:'심플 뷔페 2식 플랜.',jl:'https://www.jalan.net/yad301458/plan/?stayYear=2026&stayMonth=12&stayDay=8&stayCount=3&roomCount=1&adultNum=2&mealType=3'},
+ ooedo:{r:'dogo',n:'오에도 온센 모노가타리 도고',jp:'大江戸温泉物語 道後',q:'大江戸温泉物語 道後',jr:4.0,jc:'1,147',y:27067,ni:3,tot:81200,meal:'저녁·아침 포함',room:'화실',dt:'12/8(화)~11(금) 3박',t:['뷔페', '최저가'],pick:0,d:'뷔페형 대형 온천 호텔. 제일 싸요.',tip:'기본 뷔페 2식 플랜.',jl:'https://www.jalan.net/yad373116/plan/?stayYear=2026&stayMonth=12&stayDay=8&stayCount=3&roomCount=1&adultNum=2&mealType=3'},
  oriental:{r:'hakata',n:'오리엔탈 호텔 후쿠오카 하카타스테이션',q:'Oriental Hotel Fukuoka Hakata Station',g:3.9,c:'3,600',p:233078,pick:1,t:['하카타역 앞','4성급'],
   d:'하카타역 바로 앞 4성급 호텔이에요. 공항에서 지하철 두 정거장이고, 다음 날 유후인 가는 열차도 역에서 바로 타요.',tip:'Google 호텔에서 아고다 조식 포함 ₩275,344, 부킹닷컴 ₩285,594 (2인 1박)로 나와요.'},
  greenannex:{r:'hakata',n:'하카타 그린 호텔 아넥스',q:'Hakata Green Hotel Annex',p:150427,t:['역 근처','실속'],
   d:'하카타역 근처 깔끔한 비즈니스호텔. 잠만 자는 날이면 충분해요.'},
  lohas:{r:'hakata',n:'슈퍼호텔 로하스 하카타에키',q:'Super Hotel Lohas Hakataeki',p:110026,t:['역 근처','가성비'],
   d:'하카타역 근처 실속형 호텔. 가격을 아끼고 료칸에 더 쓰고 싶을 때.'},
-
- choraku:{r:'arima',n:'긴스이소 조라쿠',jp:'銀水荘 兆楽',q:'Ginsuiso Choraku Arima',g:4.3,p:397728,pick:1,t:['헤야쇼쿠','송영','금천·은천'],
-  d:'저녁·아침을 모두 방에서 먹는 료칸이에요. 금천(갈색)·은천(투명) 두 가지 온천을 자가 원천으로 갖고 있고 역까지 송영해줘요.',tip:'1인 1박 2식 ¥38,500~55,000 (2025년 3월 후기 기준).',
-  tr:'https://kr.trip.com/hotels/kobe-hotel-detail-704593/ginsuisou-choraku/'},
- goshobo:{r:'arima',n:'도센 고쇼보',jp:'陶泉 御所坊',q:'Tocen Goshoboh Arima',g:4.5,c:'724',p:438720,t:['온천가 한가운데','오래된 료칸'],
-  d:'온천 거리 한가운데 있는 오래된 료칸이라 킨노유·탄산 센베이 가게까지 걸어 다니기 좋아요.',
-  ag:'https://www.agoda.com/ko-kr/arima-onsen-tocen-goshoboh/hotel/kobe-jp.html',bk:'https://www.booking.com/hotel/jp/tosen-goshobo.ko.html'},
- tsukifune:{r:'arima',n:'츠키에노후네',jp:'有馬街道 月への舟',q:'Tsuki e no Fune Arima',g:4.7,c:'1,400',p:385353,t:['객실 온천','프라이빗'],
-  d:'방마다 전용 온천이 있는 숙소예요. 평점이 높고, 대욕장 없이 둘이서만 온천하고 싶을 때 좋아요.',
-  tr:'https://kr.trip.com/hotels/kobe-hotel-detail-91391452/tsukie-no-fune/'},
- nakanobo:{r:'arima',n:'나카노보 즈이엔',jp:'中の坊瑞苑',q:'Nakanobo Zuien Arima',g:4.5,p:466813,t:['고급','정원'],
-  d:'아리마 대표 고급 료칸 중 하나. 넓은 정원과 노천탕.'},
- negiya:{r:'arima',n:'네기야 료후카쿠',jp:'ねぎや陵楓閣',q:'Negiya Ryofukaku Arima',g:4.3,p:312554,t:['중간 가격'],
-  d:'금천 노천탕이 있는 중간 가격대 료칸.',tip:'1인 1박 2식 ¥23,100~ (Japan Ryokan Guide).'},
- hanakoyado:{r:'arima',n:'호텔 하나코야도',jp:'花小宿',q:'Hanakoyado Arima',g:4.4,p:277302,t:['작은 료칸','실속'],
-  d:'객실 수가 적은 작은 숙소. 조용하게 쉬기 좋아요.'},
-
  respire:{r:'umeda',n:'호텔 한큐 레스파이어 오사카',q:'Hotel Hankyu Respire Osaka',g:4.3,c:'4,600',p:155587,pick:1,t:['오사카역 직결','깨끗함'],
   d:'오사카역(우메다)과 이어진 건물에 있는 호텔이에요. 비 와도 우산 없이 역으로 가고, 교토 가는 JR도 바로 타요.',
   ag:'https://www.agoda.com/ko-kr/hotel-hankyu-respire-osaka/hotel/osaka-jp.html',bk:'https://www.booking.com/hotel/jp/hankyu-respire-osaka.ko.html'},
@@ -771,51 +743,35 @@ const H={
   d:'평이 좋은 우메다 호텔이에요.'},
  villafontaine:{r:'umeda',n:'빌라 퐁텐 그랜드 오사카 우메다',q:'Villa Fontaine Grand Osaka Umeda',g:4.4,p:118472,t:['우메다','가성비'],
   d:'우메다 북쪽 신축 대형 호텔. 가격 대비 평점이 좋아요.'},
-
- shusuien:{r:'ibusuki',n:'이부스키 슈스이엔',jp:'指宿 秀水園',q:'Ibusuki Syusuien',g:4.4,p:357496,pick:1,t:['해산물 가이세키','모래찜질 3분'],
-  d:'해산물 가이세키로 유명한 료칸이에요. 모래찜질 회관 사라쿠까지 걸어서 3분.',tip:'1인 1박 2식 ¥47,124~ (Japan Ryokan Guide).',
-  bk:'https://www.booking.com/hotel/jp/hotel-syusuien.ko.html',tr:'https://kr.trip.com/hotels/ibusuki-hotel-detail-704887/ibusuki-syusui-en/'},
- hakusuikan:{r:'ibusuki',n:'이부스키 하쿠스이칸',jp:'指宿 白水館',q:'Ibusuki Hakusuikan',g:4.4,c:'3,600',t:['관내 모래찜질','5성급'],
-  d:'호텔 안에 모래찜질과 큰 대욕장이 있어 밖에 안 나가도 돼요. 바닷가 소나무 정원.',tip:'1인 1박 2식 ¥19,950~ (MAPPLE 기사 기준, 지금은 더 올랐을 수 있어요). Google에 이 날짜 가격이 안 나와서 날짜 넣고 확인해야 해요.'},
- kyukamura:{r:'ibusuki',n:'큐카무라 이부스키',jp:'休暇村 指宿',q:'Kyukamura Ibusuki',p:215089,t:['모래찜질','실속'],
-  d:'국민휴가촌이라 가격이 착하고, 모래찜질이 있어요.',tip:'1인 1박 2식 ¥9,700~ (기사 기준).'},
- iburoyal:{r:'ibusuki',n:'이부스키 로열 호텔',q:'Ibusuki Royal Hotel',p:200878,t:['바다 전망'],
-  d:'바다를 보는 리조트형 호텔.'},
-
  shiroyama:{r:'kagoshima',n:'시로야마 호텔 가고시마',jp:'SHIROYAMA HOTEL kagoshima',q:'Shiroyama Hotel Kagoshima',p:147479,pick:1,t:['사쿠라지마 뷰 온천','언덕 위'],
   d:'시내가 내려다보이는 언덕 위 호텔이에요. 사쿠라지마를 보면서 들어가는 노천 온천이 유명해요. 엄마가 제일 좋아하실 시내 숙소.',
   bk:'https://www.booking.com/hotel/jp/castle-park.ko.html',tr:'https://kr.trip.com/hotels/kagoshima-hotel-detail-705443/hotel/'},
  dormykago:{r:'kagoshima',n:'도미 인 가고시마',q:'Dormy Inn Kagoshima',p:168893,t:['대욕장','시내 중심'],
   d:'체인 비즈니스호텔인데 꼭대기에 온천 대욕장이 있어요. 텐몬칸 번화가가 가까워요.'},
  sunroyal:{r:'kagoshima',n:'가고시마 선 로열 호텔',q:'Kagoshima Sun Royal Hotel',p:119653,t:['바다 전망','실속'],
-  d:'바닷가 쪽 호텔. 사쿠라지마가 보이는 대욕장.'},
-
- yamatoya:{r:'dogo',n:'도고 온천 야마토야 혼텐',jp:'大和屋本店',q:'Dogo Onsen Yamatoya Honten',g:4.3,c:'1,600',p:325950,pick:1,t:['본관 바로 앞','노가쿠 무대'],
-  d:'도고 온천 본관에서 몇 걸음 거리의 큰 료칸이에요. 관내에 노가쿠 무대가 있고 후기가 많아요.',
-  ag:'https://www.agoda.com/ko-kr/dogo-onsen-yamatoya-honten_2/hotel/matsuyama-jp.html',bk:'https://www.booking.com/hotel/jp/yamatoya-honten-matsuyama.ko.html',tr:'https://kr.trip.com/hotels/matsuyama-hotel-detail-1642078/yamatoya-honten/'},
- dogokan:{r:'dogo',n:'도고칸',jp:'道後舘',q:'Dogokan Matsuyama',g:4.4,c:'1,500',p:254476,t:['헤야쇼쿠','노천탕 객실'],
-  d:'그릇까지 신경 쓴 창작 가이세키를 방에서 먹어요. 노천탕 딸린 객실도 있어요.',tip:'1인 1박 2식 ¥19,300~.'},
- taniya:{r:'dogo',n:'따뜻한 숙소 다니야',jp:'あたたかい宿 谷屋',q:'Atatakai Yado Taniya Dogo',g:4.7,p:327529,t:['평점 높음','작은 료칸'],
-  d:'평점 4.7의 작은 료칸이에요.'},
- tokiwaso:{r:'dogo',n:'료칸 도키와소',jp:'常磐荘',q:'Ryokan Tokiwaso Dogo',g:4.7,p:255520,t:['다이쇼 목조','해산물'],
-  d:'다이쇼 시대 목조 건물 료칸. 그날 잡은 해산물로 저녁을 차려요.',tip:'1인 1박 2식 ¥11,000~.'},
- chaharu:{r:'dogo',n:'도고 차하루',jp:'道後 hotel 茶玻瑠',q:'Dogo Hotel Chaharu',p:248981,t:['옥상 노천탕'],
-  d:'본관 근처 호텔형 료칸. 옥상 노천탕.'}
+  d:'바닷가 쪽 호텔. 사쿠라지마가 보이는 대욕장.'}
 };
 const wonH=n=>'₩'+n.toLocaleString('ko-KR');
+const RG={yufuin:'① 유후인',hakata:'① 하카타',arima:'② 아리마',umeda:'② 오사카 우메다',ibusuki:'③ 이부스키',kagoshima:'③ 가고시마',dogo:'④ 도고 온천'};
 const gh=h=>'https://www.google.com/travel/search?q='+encodeURIComponent(h.q)+'&hl=ko&gl=kr&curr=KRW';
-QA('.hg').forEach(box=>{box.innerHTML=Object.entries(H).filter(([k,h])=>h.r===box.dataset.r).sort((a,b)=>(b[1].pick||0)-(a[1].pick||0)).map(([k,h])=>
-  '<div class="hcw">'+(h.pick?'<span class="pk">⭐ 추천</span>':'')+'<button class="hc'+(h.pick?' pick':'')+'" data-h="'+k+'"><img src="img/stay/'+k+'.jpg" alt="" loading="lazy"><div class="in">'+
-  (h.g?'<div class="rt"><i>★</i> '+h.g+(h.c?' ('+h.c+')':'')+'</div>':'')+'<b>'+h.n+'</b>'+
-  '<div class="pr">'+(h.p?wonH(h.p)+' <small>2인 1박</small>':'<small>날짜 넣고 확인</small>')+'</div><div class="mt">'+h.t.map(x=>'<span>'+x+'</span>').join('')+'</div></div></button></div>').join('')});
+QA('.hg').forEach(box=>{box.innerHTML=Object.entries(H).filter(([k,h])=>h.r===box.dataset.r).sort((a,b)=>(b[1].pick||0)-(a[1].pick||0)||((b[1].jr||b[1].g||0)-(a[1].jr||a[1].g||0))).map(([k,h])=>{
+  const rt=h.jr?'<i>★</i> '+h.jr+(h.jc?' <small>('+h.jc+')</small>':'')+' 쟈란':(h.g?'<i>★</i> '+h.g+(h.c?' <small>('+h.c+')</small>':'')+' 구글':'평점 없음');
+  const pr=h.y?'¥'+h.y.toLocaleString('ko-KR')+' <small>2인 1박</small>':(h.p?wonH(h.p)+' <small>2인 1박</small>':'');
+  const ml=h.y?'<span class="ml ok">🍱 저녁·아침 포함</span>':'<span class="ml">방값 · 저녁 없음</span>';
+  return '<div class="hcw">'+(h.pick?'<span class="pk">⭐ 추천</span>':'')+'<button class="hc'+(h.pick?' pick':'')+'" data-h="'+k+'"><img src="img/stay/'+k+'.jpg" alt="" loading="lazy"><div class="in"><div class="rt">'+rt+'</div><b>'+h.n+'</b><div class="pr">'+pr+'</div>'+ml+'<div class="mt">'+h.t.map(x=>'<span>'+x+'</span>').join('')+'</div></div></button></div>'}).join('')});
 function openH(k){const h=H[k];if(!h)return;const map='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(h.q);
-  const L=[['가격 비교 (Google)',gh(h),'']];
+  const L=[];
+  if(h.jl)L.push(['쟈란에서 이 날짜 플랜 보기',h.jl,'']);
+  L.push(['가격 비교 (Google)',gh(h),h.jl?'alt':'']);
   if(h.ag)L.push(['아고다',h.ag,'ag']);
-  L.push(h.bk?['부킹닷컴',h.bk,'alt']:['부킹닷컴에서 찾기','https://www.booking.com/searchresults.ko.html?ss='+encodeURIComponent(h.q),'alt']);
+  if(!h.jl)L.push(h.bk?['부킹닷컴',h.bk,'alt']:['부킹닷컴에서 찾기','https://www.booking.com/searchresults.ko.html?ss='+encodeURIComponent(h.q),'alt']);
   if(h.tr)L.push(['트립닷컴',h.tr,'alt']);
   L.push(['구글 지도',map,'alt']);
-  md.innerHTML='<button class="x" aria-label="닫기">✕</button><img src="img/stay/'+k+'.jpg" alt=""><div class="in"><div class="k">'+({yufuin:'① 유후인',hakata:'① 하카타',arima:'② 아리마',umeda:'② 오사카 우메다',ibusuki:'③ 이부스키',kagoshima:'③ 가고시마',dogo:'④ 도고 온천'}[h.r])+(h.jp?' · '+h.jp:'')+'</div><h4>'+h.n+'</h4><p>'+h.d+'</p>'+
-   '<dl>'+(h.g?'<dt>평점</dt><dd>Google ★ '+h.g+(h.c?' · 후기 '+h.c+'건':'')+'</dd>':'')+'<dt>가격</dt><dd>'+(h.p?wonH(h.p)+' (2인 1박, 1인 약 '+wonH(Math.round(h.p/2/1000)*1000)+')<br><small class="muted">2027-01-13 날짜 표시값 · 12월은 날짜 넣고 다시 확인</small>':'이 날짜 표시 가격 없음')+'</dd><dt>특징</dt><dd>'+h.t.join(' · ')+'</dd></dl>'+
+  const price=h.y?'¥'+h.y.toLocaleString('ko-KR')+' (2인 1박)<br><small class="muted">'+h.dt+(h.ni>1?' 합계 ¥'+h.tot.toLocaleString('ko-KR'):'')+' · 쟈란 11/26 조회</small>'
+    :(h.p?wonH(h.p)+' (2인 1박)<br><small class="muted">Google 최저가 참고값 · 날짜에 따라 달라져요</small>':'');
+  md.innerHTML='<button class="x" aria-label="닫기">✕</button><img src="img/stay/'+k+'.jpg" alt=""><div class="in"><div class="k">'+RG[h.r]+(h.jp?' · '+h.jp:'')+'</div><h4>'+h.n+'</h4><p>'+h.d+'</p>'+
+   '<dl>'+(h.jr?'<dt>평점</dt><dd>쟈란 ★ '+h.jr+(h.jc?' · 후기 '+h.jc+'건':'')+'</dd>':h.g?'<dt>평점</dt><dd>Google ★ '+h.g+(h.c?' · 후기 '+h.c+'건':'')+'</dd>':'')+
+   '<dt>가격</dt><dd>'+price+'</dd><dt>식사</dt><dd>'+(h.y?'<b style="color:var(--good)">저녁·아침 포함</b> (1박 2식)':'저녁 없음 · 밖에서 먹는 날 (조식은 플랜마다 달라요)')+'</dd>'+(h.room?'<dt>방</dt><dd>'+h.room+'</dd>':'')+'<dt>특징</dt><dd>'+h.t.join(' · ')+'</dd></dl>'+
    (h.tip?'<div class="tip">💡 '+h.tip+'</div>':'')+'<div class="tip" style="background:var(--best);color:#5a4500">💳 같은 날짜로 우리 WON트래블 앱 가격도 비교해 보세요. 캡처 보내주면 표에 넣어 드릴게요.</div></div>'+
    '<div class="acts hacts">'+L.map(([t,u,c])=>'<a'+(c?' class="'+c+'"':'')+' href="'+u+'" target="_blank" rel="noopener">'+t+'</a>').join('')+'<button class="x2">닫기</button></div>';
   annotate(md);mb.classList.add('on');document.body.style.overflow='hidden'}
