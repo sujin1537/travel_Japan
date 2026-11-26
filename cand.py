@@ -1,7 +1,7 @@
 import requests,json,re,time,os
 S=requests.Session();S.headers['User-Agent']='TripbookBot/1.0 (https://github.com/sujin1537)'
 os.makedirs('c',exist_ok=True);meta={}
-Q={'kuromon':'Kuromon Market Osaka','okutan':'Yudofu','mujaki':'Shirokuma dessert Kagoshima','ikeda':'Lake Ikeda Ibusuki','gion':'Gion Kyoto street','fukuya':'Mentaiko','toys':'Arima Onsen Kobe street'}
+Q={'mujaki':'Kakigori shaved ice','tenjo':'Kinrin Lake Yufuin morning'}
 for k,q in Q.items():
     r=S.get('https://commons.wikimedia.org/w/api.php',params=dict(action='query',format='json',generator='search',gsrsearch=q+' filetype:bitmap',gsrnamespace=6,gsrlimit=12,prop='imageinfo',iiprop='url|extmetadata|size',iiurlwidth=800),timeout=30).json()
     pages=sorted(r.get('query',{}).get('pages',{}).values(),key=lambda x:x['index'])
