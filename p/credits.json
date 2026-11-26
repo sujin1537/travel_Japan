@@ -48,10 +48,10 @@
   "url": "https://commons.wikimedia.org/wiki/File:Sogenchi_Garden_Tenryu-ji_temple_Kyoto_Japan_Don_Ramey_Logan.jpg"
  },
  "arabica": {
-  "title": "File:NDL1308302-Yamashiro(CRD).jpg",
-  "artist": "Utagawa Hiroshige",
-  "license": "Public domain",
-  "url": "https://commons.wikimedia.org/wiki/File:NDL1308302-Yamashiro(CRD).jpg"
+  "title": "File:ArashiyamaTogetsukyo Kyoto.jpg",
+  "artist": "Kentagon",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:ArashiyamaTogetsukyo_Kyoto.jpg"
  },
  "uogashi": {
   "title": "File:010 Sushi master in Kyoto, Japan - sushi chef 寿司職人.jpg",
@@ -108,10 +108,10 @@
   "url": "https://commons.wikimedia.org/wiki/File:Hakata_Station_20180306.jpg"
  },
  "fukuya": {
-  "title": "File:Alaska pollack liver roe milt.jpg",
-  "artist": "yoyo",
+  "title": "File:Myeongnan-jeot-muchim.jpg",
+  "artist": "도맛네",
   "license": "CC BY 4.0",
-  "url": "https://commons.wikimedia.org/wiki/File:Alaska_pollack_liver_roe_milt.jpg"
+  "url": "https://commons.wikimedia.org/wiki/File:Myeongnan-jeot-muchim.jpg"
  },
  "issou": {
   "title": "File:Tonkotsu Ramen Special, Hakata Choten, Paris 001.jpg",
@@ -192,10 +192,10 @@
   "url": "https://commons.wikimedia.org/wiki/File:%C5%8Chori_Park_The_pergola_in_Matsushima_%C5%8Chori-k%C5%8Den_Ch%C5%AB%C5%8D-ku_Fukuoka_20260514.jpg"
  },
  "sky": {
-  "title": "File:Umeda Sky Building, Osaka, November 2016 -02.jpg",
-  "artist": "Martin Falbisoner",
-  "license": "CC BY-SA 4.0",
-  "url": "https://commons.wikimedia.org/wiki/File:Umeda_Sky_Building,_Osaka,_November_2016_-02.jpg"
+  "title": "File:Osaka Japan from Kuchu Teien (Floating Garden) atop Umeda Sky building by Don Ramey Logan.jpg",
+  "artist": "Don Ramey Logan",
+  "license": "CC BY 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Osaka_Japan_from_Kuchu_Teien_(Floating_Garden)_atop_Umeda_Sky_building_by_Don_Ramey_Logan.jpg"
  },
  "tansan": {
   "title": "File:Mitsumori Tansan Senbei.jpg",
@@ -258,10 +258,10 @@
   "url": "https://commons.wikimedia.org/wiki/File:Kagoshima-nagasakibana.JPG"
  },
  "ikeda": {
-  "title": "File:Lake Ikeda Aerial photograph.2018.jpg",
-  "artist": "国土地理院",
-  "license": "Attribution",
-  "url": "https://commons.wikimedia.org/wiki/File:Lake_Ikeda_Aerial_photograph.2018.jpg"
+  "title": "File:Map of Kaimondake and Lake Ikeda.png",
+  "artist": "Edits: Krorokeroro (talk · contribs) が農研機構を加工して作成",
+  "license": "CC BY 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Map_of_Kaimondake_and_Lake_Ikeda.png"
  },
  "haikara": {
   "title": "File:Dougoonsen.jpg",
@@ -276,21 +276,39 @@
   "url": "https://commons.wikimedia.org/wiki/File:Asuka-no_yu.jpg"
  },
  "ishite": {
-  "title": "File:Ishite-ji Plan.jpg",
-  "artist": "Fraxinus2",
-  "license": "CC BY-SA 4.0",
-  "url": "https://commons.wikimedia.org/wiki/File:Ishite-ji_Plan.jpg"
+  "title": "File:Ishite-ji(Temple) Matsuyama City.JPG",
+  "artist": "Jyo81  (ja:User)",
+  "license": "CC BY 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Ishite-ji(Temple)_Matsuyama_City.JPG"
  },
  "castle": {
-  "title": "File:Bitchu Matsuyama Castle 1.JPG",
-  "artist": "by Reggaeman",
-  "license": "CC BY-SA 3.0",
-  "url": "https://commons.wikimedia.org/wiki/File:Bitchu_Matsuyama_Castle_1.JPG"
+  "title": "File:Matsuyama castle(Iyo)12.JPG",
+  "artist": "Jyo81 (ja:User)",
+  "license": "CC BY 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Matsuyama_castle(Iyo)12.JPG"
  },
  "ropeway": {
   "title": "File:Matsuyama castle Ropeway&Chairlift(Iyo).JPG",
   "artist": "Shiro4873",
   "license": "CC BY 3.0",
   "url": "https://commons.wikimedia.org/wiki/File:Matsuyama_castle_Ropeway%26Chairlift(Iyo).JPG"
+ },
+ "shimaya": {
+  "title": "File:Mamedamachi ac.jpg",
+  "artist": "Asturio Cantabrio",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Mamedamachi_ac.jpg"
+ },
+ "mujaki": {
+  "title": "File:Shirokuma Hakusei.JPG",
+  "artist": "Nissy-KITAQ",
+  "license": "CC BY-SA 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Shirokuma_Hakusei.JPG"
+ },
+ "toys": {
+  "title": "File:Arima-Onsen Station Sign.jpg",
+  "artist": "そらみみ",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Arima-Onsen_Station_Sign.jpg"
  }
 }
