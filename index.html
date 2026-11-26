@@ -6,7 +6,7 @@
 <title>TRIPBOOK · 엄마랑 일본 온천</title>
 <meta name="description" content="엄마랑 12월 일본 온천 여행 · 규슈 / 오사카·아리마 / 가고시마·이부스키 / 마쓰야마·도고">
 <meta property="og:title" content="엄마랑 일본 온천 여행">
-<meta property="og:description" content="12월 5일 ~ 13일 사이 · 3~4박">
+<meta property="og:description" content="12/7~11 엄마랑 후쿠오카·히타·유후인 온천 4박 5일">
 <meta property="og:image" content="img/hero.jpg">
 <meta name="theme-color" content="#f4f5f8">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
@@ -232,6 +232,14 @@ td small{display:block;color:var(--muted);font-size:11.5px}
 .rlist a .muted{font-size:11.5px;color:var(--muted)}
 .rlist .rr{margin-left:auto;font-weight:900}
 .rlist small{display:block;font-size:11.5px;color:var(--muted);margin-top:2px}
+/* 항공 가격 */
+.fwtop .big{font-size:26px;font-weight:900;letter-spacing:-.03em}
+.fwtop .row{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}
+.fwtop .sub{font-size:12.5px;color:var(--muted)}
+.fwt td.code b{display:block}.fwt td.code small{color:var(--muted);font-size:11px}
+.fwt tr.fwpk td{background:var(--best)}
+.up{color:var(--accent);font-weight:800}.dn{color:var(--good);font-weight:800}.eq{color:var(--muted)}
+#fwChart svg{width:100%;height:auto;display:block}
 /* modal */
 .mb{position:fixed;inset:0;background:rgba(10,12,18,.55);z-index:100;display:none;align-items:flex-end;justify-content:center}
 .mb.on{display:flex}
@@ -268,11 +276,11 @@ footer a{color:var(--muted)}
   <div class="top"><div class="brand">TRIPBOOK<span>.</span></div><div class="upd">2026-11-26 업데이트</div></div>
 
   <header class="hero">
-    <img src="img/hero.jpg" alt="밤에 등불이 켜진 쿠로카와 온천 거리">
+    <img src="img/yufu.jpg" alt="유후인 온천 마을과 유후다케">
     <div class="badge" id="badge"><b>D-?</b><small>12/7 출발</small></div>
-    <div class="kicker">엄마랑 일본 온천 · 3~4박</div>
+    <div class="kicker">엄마랑 후쿠오카 · 히타 · 유후인 · 4박 5일</div>
     <h1>엄마랑 뜨끈하게,<br>일본 온천 여행</h1>
-    <div class="pills"><span class="pill">12/5 토부터 출발 가능</span><span class="pill">12/13 일까지 귀국</span><span class="pill ok">엄마 여권 일본 OK</span></div>
+    <div class="pills"><span class="pill">12/7(월) ~ 12/11(금)</span><span class="pill">유후인 료칸 2박</span><span class="pill ok">엄마 여권 일본 OK</span></div>
     <div class="conv">
       <div class="conv-h">🇯🇵 JPY → 🇰🇷 KRW <span id="rateSrc">100엔 ≈ 845원</span></div>
       <label for="yen">일본 엔(JPY)</label>
@@ -282,53 +290,20 @@ footer a{color:var(--muted)}
   </header>
 
   <nav><div class="chips" id="chips">
-    <button data-v="all" class="on">한눈에</button>
-    <button data-v="kyushu">① 규슈 히타·유후인</button>
-    <button data-v="arima">② 오사카·교토·아리마</button>
-    <button data-v="ibusuki">③ 가고시마·이부스키</button>
-    <button data-v="dogo">④ 마쓰야마·도고</button>
-    <button data-v="ginzan">⑤ 센다이·긴잔</button>
-    <button data-v="more">🗾 다른 온천</button>
+    <button data-v="kyushu" class="on">📅 일정</button>
     <button data-v="stay">🏨 숙소</button>
+    <button data-v="fly">✈️ 항공 가격</button>
     <button data-v="prep">✅ 준비</button>
   </div></nav>
 
-  <!-- ================= 한눈에 ================= -->
-  <section class="view on" id="v-all">
-    <h2>어디로 갈까</h2>
-    <p class="lead">모두 3박 4일 기준이에요. 엄마가 힘들지 않게 숙소 이동은 한두 번으로 줄였고, 료칸 밤에는 가이세키 저녁을 넣었어요. 카드를 누르면 코스가 열려요.</p>
-    <div class="cards">
-      <button class="cc" data-go="kyushu"><img src="img/hita.jpg" alt=""><div class="in"><div class="tagrow"><span class="tag rec">추천</span><span class="tag">료칸 2박</span><span class="tag">옛 거리</span></div><b>① 후쿠오카 · 히타 · 유후인</b><p>히타 옛 거리 구경하고, 유후인 료칸 가이세키로 2박 푹 쉬기</p><div class="nums"><span>직항 1인<strong>33.3만</strong></span><span>료칸 1인<strong>¥13,750~</strong></span><span>이동<strong>보통</strong></span></div></div></button>
-      <button class="cc" data-go="arima"><img src="img/arima.jpg" alt=""><div class="in"><div class="tagrow"><span class="tag">교토 포함</span><span class="tag">쇼핑</span></div><b>② 오사카 · 교토 · 아리마</b><p>교토 당일치기, 오사카 쇼핑, 금탕·은탕 온천 1박</p><div class="nums"><span>직항 1인<strong>29.0만</strong></span><span>료칸 1인<strong>¥17,050~</strong></span><span>이동<strong>쉬움</strong></span></div></div></button>
-      <button class="cc" data-go="ibusuki"><img src="img/ibusuki.jpg" alt=""><div class="in"><div class="tagrow"><span class="tag">항공 가장 쌈</span><span class="tag">모래찜질</span></div><b>③ 가고시마 · 이부스키</b><p>바닷가 모래찜질, 화산섬 사쿠라지마, 흑돼지</p><div class="nums"><span>직항 1인<strong>24.4만</strong></span><span>료칸 1인<strong>¥15,817~</strong></span><span>이동<strong>보통</strong></span></div></div></button>
-      <button class="cc" data-go="dogo"><img src="img/dogo.jpg" alt=""><div class="in"><div class="tagrow"><span class="tag">숙소 이동 0번</span><span class="tag">공항 가까움</span></div><b>④ 마쓰야마 · 도고 온천</b><p>센과 치히로 목욕탕의 모티브, 일본에서 가장 오래된 온천 마을</p><div class="nums"><span>직항 1인<strong>41.7만</strong></span><span>료칸 1인<strong>¥13,534~</strong></span><span>이동<strong>쉬움</strong></span></div></div></button>
-      <button class="cc" data-go="ginzan"><img src="img/p/x_ginzan.jpg" alt=""><div class="in"><div class="tagrow"><span class="tag">설경·가스등</span><span class="tag">숙소 이동 0번</span></div><b>⑤ 센다이 · 덴도 · 긴잔 온천</b><p>덴도 온천 료칸 3박, 센과 치히로 분위기 긴잔 거리는 해 질 녘에</p><div class="nums"><span>직항 1인<strong>42.2만</strong></span><span>료칸 1인<strong>¥22,300~</strong></span><span>이동<strong>보통</strong></span></div></div></button>
-    </div>
-
-    <h3>한눈에 비교</h3>
-    <div class="tw"><table>
-      <thead><tr><th>코스</th><th class="r">직항 1인 최저<small>12/8 출발</small></th><th class="r">료칸 1인 1박 2식<small>쟈란 12월 날짜</small></th><th>엄마 체력</th></tr></thead>
-      <tbody>
-        <tr><td><b>① 히타·유후인</b><small>후쿠오카 · 공항→유후인 버스 2시간</small></td><td class="r">333,286<small>12/7~11 확정</small></td><td class="r">¥13,750~</td><td>보통<small>열차 이동 1번</small></td></tr>
-        <tr><td><b>② 교토·아리마</b><small>오사카 · 교토 JR 30분 · 아리마 버스 1시간</small></td><td class="r">290,162<small>편도 2장 최저</small></td><td class="r">¥17,050~</td><td>쉬움<small>오사카에서 걷는 양 조절</small></td></tr>
-        <tr><td><b>③ 이부스키</b><small>가고시마 · 시내→이부스키 JR 1시간 25분</small></td><td class="r best">243,661<small>편도 2장 최저</small></td><td class="r">¥15,817~</td><td>보통<small>열차 왕복</small></td></tr>
-        <tr><td><b>④ 도고</b><small>마쓰야마 · 공항→도고 35~50분</small></td><td class="r">416,987<small>편도 2장 최저</small></td><td class="r">¥13,534~</td><td>가장 쉬움<small>숙소 고정</small></td></tr>
-        <tr><td><b>⑤ 긴잔</b><small>센다이 · 공항→덴도 약 2시간</small></td><td class="r">421,900<small>아시아나 왕복</small></td><td class="r">¥22,300~</td><td>보통<small>숙소 고정 · 긴잔은 당일</small></td></tr>
-      </tbody>
-    </table></div>
-    <p class="note">항공: 12/8 화~11 금 3박, 성인 1명, Google 항공편 11/25 조회. 날짜를 하루만 바꿔도 10만원 가까이 달라질 수 있고, 일요일 밤~화요일 출발이 대체로 싸요. 료칸: 각 코스 '가이세키 료칸' 표 참고.</p>
-    <div class="callout">료칸에서 <b>길게 쉬고 가이세키</b> 두 번이면 ①, <b>교토까지 보고 편하게</b>면 ②, <b>항공권 가장 싸고 따뜻하게</b>면 ③, <b>숙소 안 옮기고 제일 편하게</b>면 ④예요.</div>
-
-    <h3>가이세키 · 헤야쇼쿠란?</h3>
-    <div class="kai"><b>가이세키</b>는 료칸 저녁에 나오는 코스 요리예요. 제철 재료로 만든 작은 접시가 차례로 나와요. <b>헤야쇼쿠(部屋食)</b>는 그 저녁을 방으로 가져다주는 플랜이라, 식당까지 안 가고 유카타 차림으로 천천히 먹을 수 있어요. 엄마랑 가면 헤야쇼쿠 플랜을 추천해요. 예약할 때 플랜 이름에 部屋食이 있는지 보면 돼요.</div>
-  </section>
+  
 
   <!-- ================= ① 규슈 ================= -->
-  <section class="view" id="v-kyushu">
+  <section class="view on" id="v-kyushu">
     <div class="cover"><img src="img/hita.jpg" alt="히타 마메다마치"><div class="cap"><b>① 후쿠오카 · 히타 · 유후인</b><span>12/7(월)~11(금) 4박 5일 · 하카타 1박 + 유후인 료칸 2박 + 하카타 1박</span></div></div>
-    <div class="facts"><div><small>항공 1인 (확정)</small><strong>33.3만원</strong></div><div><small>숙소 이동</small><strong>1번</strong></div><div><small>1인 예산</small><strong>95만~130만</strong></div></div>
-    <p class="note" style="margin:-4px 2px 10px">1인 예산 = 항공 33만 + 유후인 료칸 2박 23만~45만 + 하카타 호텔 2박 11만~23만 + 특급 열차 약 8만 + 식비·쇼핑 20만 안팎</p>
-    <div class="fly"><div class="hd"><b>✈️ 항공편 고르기 · 인천 ↔ 후쿠오카</b><small>직항 · 1인 편도 합계 · 11/26 조회</small></div><div class="dgrid"><b class="dh">📅 날짜별 1인 항공권 (12/5~13 안에서)</b><div class="tw"><table><thead><tr><th>날짜</th><th class="r">낮 출발 + 오전 귀국</th><th class="r">낮 출발 + 오후 귀국</th><th class="r">최저 (저녁 출발)</th></tr></thead><tbody><tr><td><b>12/5(토)<br>~9(수)</b></td><td class="r">33.4만<small>RS457 + RS434 10:30</small></td><td class="r">39.7만<small>+ RS458 17:00</small></td><td class="r">30.2만<small>ZE649 18:15 + RS434</small></td></tr><tr><td><b>12/6(일)<br>~10(목)</b></td><td class="r best">31.7만<small>7C1405 15:20 + RS434 10:00</small></td><td class="r">38.9만<small>+ RS458 17:00</small></td><td class="r">31.1만<small>ZE649 + RS434</small></td></tr><tr><td><b>12/7(월)<br>~11(금)<br><span style="color:var(--accent)">확정 일정</span></b></td><td class="r">33.3만<small>RS457 + LJ448 11:20</small></td><td class="r">38.2만<small>+ 7C1406 17:50</small></td><td class="r">30.9만<small>ZE649 + LJ448</small></td></tr><tr><td><b>12/8(화)<br>~12(토)</b></td><td class="r">36.1만<small>RS457 + ZE646 11:30</small></td><td class="r">38.0만<small>+ RS458 17:00</small></td><td class="r">32.4만<small>ZE649 + ZE646</small></td></tr><tr><td><b>12/9(수)<br>~13(일)</b></td><td class="r">35.3만<small>ZE647 12:40 + RS434 10:30</small></td><td class="r">40.2만<small>+ 7C1404 13:00</small></td><td class="r">32.2만<small>ZE649 + RS434</small></td></tr><tr><td><b>12/10(목)<br>~14(월)</b><br><small style="color:var(--accent)">월요일 출근이라 제외</small></td><td class="r">33.8만<small>RS457 + 7C1402 08:55</small></td><td class="r">36.4만<small>+ 7C1404 13:00</small></td><td class="r">33.2만<small>ZE649 + 7C1402</small></td></tr></tbody></table></div><p class="note" style="margin:4px 0 0">4박 기준. 낮 출발은 12~15시대. 날짜를 바꾸면 유후인 료칸 날짜도 바뀌어서 숙소 가격은 다시 조회해야 해요 (토요일 밤 료칸은 보통 비싸요).</p></div><div class="fo pick"><div class="ft"><b>A. 4박 5일 · 12/7(월)~12/11(금)</b><span class="bd rec">⭐ 확정 일정</span></div><div class="lg"><span class="dir">가는 편</span><span class="tm">14:25→15:55</span><span class="cd">RS457 에어서울</span><span class="dt">12/7 월</span><span class="pz">₩143,100</span></div><div class="lg"><span class="dir">오는 편</span><span class="tm">11:20→12:55</span><span class="cd">LJ448 진에어</span><span class="dt">12/11 금</span><span class="pz">₩190,186</span></div><div class="sum">1인 <b>₩333,286</b> · 2인 ₩666,572</div><ul class="im"><li class="ok">낮에 출발해 오후에 도착하고, 금요일 낮에 귀국해서 주말 이틀 쉬고 출근해요. 유후인 료칸은 12/8~10(화·수 밤).</li><li class="lose">마지막 날 오호리 공원 산책은 빠져요 (8시 반쯤 호텔에서 출발)</li></ul></div><div class="fo"><div class="ft"><b>B. 같은 날짜 · 저녁 귀국</b><span class="bd long">🌇 마지막 날 여유</span></div><div class="lg"><span class="dir">가는 편</span><span class="tm">14:25→15:55</span><span class="cd">RS457 에어서울</span><span class="dt">12/7 월</span><span class="pz">₩143,100</span></div><div class="lg"><span class="dir">오는 편</span><span class="tm">17:50→19:30</span><span class="cd">7C1406 제주항공</span><span class="dt">12/11 금</span><span class="pz">₩239,147</span></div><div class="sum">1인 <b>₩382,247</b> · 2인 ₩764,494</div><ul class="im"><li class="ok">마지막 날 오호리 공원·점심까지 하고 와요. A보다 1인 4.9만원 비싸요.</li></ul></div><div class="fo"><div class="ft"><b>C. 하루 늦게 · 12/8(화)~12/12(토)</b><span class="bd short">예전 기준</span></div><div class="lg"><span class="dir">가는 편</span><span class="tm">14:25→15:55</span><span class="cd">RS457 에어서울</span><span class="dt">12/8 화</span><span class="pz">₩128,100</span></div><div class="lg"><span class="dir">오는 편</span><span class="tm">17:00→18:35</span><span class="cd">RS458 에어서울</span><span class="dt">12/12 토</span><span class="pz">₩251,809</span></div><div class="sum">1인 <b>₩379,909</b> · 2인 ₩759,818</div><ul class="im"><li class="ok">마지막 날 오호리 공원까지 해요. 토요일 귀국이라 출근 전 쉬는 날이 하루예요.</li><li class="lose">A보다 1인 4.7만원 비싸요</li></ul></div><p class="note" style="margin:8px 0 0">같은 항공사 왕복으로 사면 몇만원 싸질 수 있으니 결제 전에 항공사 앱에서도 확인하세요. 12/13(일) 귀국은 오후편이 ₩28만 가까이라 비싸요.</p></div>
+    <div class="facts"><div><small>항공 1인 (확정)</small><strong data-fwman="out:RS457,ret:LJ448">34.3만원</strong></div><div><small>숙소 이동</small><strong>1번</strong></div><div><small>1인 예산</small><strong>95만~130만</strong></div></div>
+    <p class="note" style="margin:-4px 2px 10px">1인 예산 = 항공 약 34만 + 유후인 료칸 2박 23만~45만 + 하카타 호텔 2박 11만~23만 + 특급 열차 약 8만 + 식비·쇼핑 20만 안팎</p>
+    <div class="fly"><div class="hd"><b>✈️ 항공편 · 인천 ↔ 후쿠오카</b><small>직항 · 1인 편도 합계 · <span data-fwdate>11/27</span> 기준</small></div><div class="fo pick"><div class="ft"><b>A. 4박 5일 · 12/7(월)~12/11(금)</b><span class="bd rec">⭐ 확정 일정</span></div><div class="lg"><span class="dir">가는 편</span><span class="tm">14:25→15:55</span><span class="cd">RS457 에어서울</span><span class="dt">12/7 월</span><span class="pz" data-fw="out:RS457">₩153,100</span></div><div class="lg"><span class="dir">오는 편</span><span class="tm">11:20→12:55</span><span class="cd">LJ448 진에어</span><span class="dt">12/11 금</span><span class="pz" data-fw="ret:LJ448">₩190,140</span></div><div class="sum">1인 <b data-fwsum="out:RS457,ret:LJ448">₩343,240</b> · 2인 <span data-fwsum2="out:RS457,ret:LJ448">₩686,480</span></div><ul class="im"><li class="ok">낮에 출발해 오후에 도착하고, 금요일 낮에 귀국해서 주말 이틀 쉬고 출근해요. 유후인 료칸은 12/8~10(화·수 밤).</li><li class="lose">마지막 날 오호리 공원 산책은 빠져요 (8시 반쯤 호텔에서 출발)</li></ul></div><div class="fo"><div class="ft"><b>B. 같은 날짜 · 저녁 귀국</b><span class="bd long">🌇 마지막 날 여유</span></div><div class="lg"><span class="dir">가는 편</span><span class="tm">14:25→15:55</span><span class="cd">RS457 에어서울</span><span class="dt">12/7 월</span><span class="pz" data-fw="out:RS457">₩153,100</span></div><div class="lg"><span class="dir">오는 편</span><span class="tm">17:50→19:30</span><span class="cd">7C1406 제주항공</span><span class="dt">12/11 금</span><span class="pz" data-fw="ret:7C1406">₩239,089</span></div><div class="sum">1인 <b data-fwsum="out:RS457,ret:7C1406">₩392,189</b> · 2인 <span data-fwsum2="out:RS457,ret:7C1406">₩784,378</span></div><ul class="im"><li class="ok">마지막 날 오호리 공원·점심까지 하고 와요. A보다 1인 5만원쯤 비싸요.</li></ul></div><p class="note" style="margin:8px 0 0">가격은 매일 아침 다시 확인해서 <b>✈️ 항공 가격</b> 탭에 올려요. 결제 전에 항공사 앱에서도 한 번 더 확인하세요.</p><button class="morelink" data-go2="fly">✈️ 오늘 항공 가격 보기</button></div>
     <div class="why"><b>이 코스가 좋은 이유</b><ul><li>비행 1시간 반, 일본에서 온천 마을이 가장 많이 모인 곳</li><li>유후인 료칸에 2박 해서 짐 풀고 푹 쉬어요. 가이세키도 두 번</li><li>가는 길 중간 히타에서 에도 시대 옛 거리 구경과 쇼핑</li></ul></div>
 
     <h3>일정 · 느긋한 4박 5일</h3>
@@ -405,308 +380,33 @@ footer a{color:var(--muted)}
       <button class="card" data-p="mameda"><img src="img/hita.jpg" alt=""><div class="in"><span class="k">히타</span><b>마메다마치</b><p>간장·된장, 사케, 히타 삼나무 나막신·나무 그릇, 수제 방울</p></div></button>
       <button class="card" data-p="umijigoku"><img src="img/beppu.jpg" alt=""><div class="in"><span class="k">벳푸</span><b>지옥순례 기념품</b><p>온천 찜 푸딩, 입욕제, 대나무 공예</p></div></button>
     </div>
-
-    <h3>다른 버전 · 쿠로카와</h3>
-    <div class="grid2">
-      <button class="card" data-p="kurokawa"><img src="img/kuro.jpg" alt=""><div class="in"><span class="k">구마모토 · 산속 온천 마을</span><b>쿠로카와로 바꾸기</b><p>DAY 2를 하카타 09:53 직행버스(12:29 도착, ¥4,000)로 바꾸면 돼요. 분위기는 최고지만 버스로 3시간 가까이 걸리고 히타는 빠져요.</p></div></button>
-      <button class="card" data-p="roten"><img src="img/roten.jpg" alt=""><div class="in"><span class="k">쿠로카와</span><b>입탕 패스로 노천탕 3곳</b><p>¥1,500 · 오캬쿠야 1인 2식 ¥14,630~</p></div></button>
-    </div>
   </section>
 
-  <!-- ================= ② 아리마 ================= -->
-  <section class="view" id="v-arima">
-    <div class="cover"><img src="img/arima.jpg" alt="아리마 온천"><div class="cap"><b>② 오사카 · 교토 · 아리마 온천</b><span>4박 5일 · 우메다 2박(교토 당일) + 아리마 료칸 1박 + 난바 1박</span></div></div>
-    <div class="facts"><div><small>직항 1인 최저</small><strong>29.0만원</strong></div><div><small>숙소 이동</small><strong>2번</strong></div><div><small>1인 예산</small><strong>75만~100만</strong></div></div>
-    <div class="fly"><div class="hd"><b>✈️ 항공편 고르기 · 인천 ↔ 간사이</b><small>직항 · 1인 편도 합계 · 11/26 조회</small></div><div class="dgrid"><b class="dh">📅 날짜별 1인 항공권 (12/5~13 안에서)</b><div class="tw"><table><thead><tr><th>날짜</th><th class="r">낮 출발 + 점심 귀국</th><th class="r">낮 출발 + 저녁 귀국</th></tr></thead><tbody><tr><td><b>12/6(일)<br>~10(목)</b></td><td class="r best">30.1만<small>ZE613 15:05 + ZE612 11:50</small></td><td class="r">35.3만<small>+ MM709 18:10</small></td></tr><tr><td><b>12/7(월)<br>~11(금)</b></td><td class="r">32.4만<small>BX373 15:05 + ZE612</small></td><td class="r">35.8만<small>+ 7C1394 17:00</small></td></tr><tr><td><b>12/8(화)<br>~12(토)<br><span style="color:var(--accent)">지금 일정</span></b></td><td class="r best">29.7만<small>ZE613 15:05 + ZE612</small></td><td class="r">35.6만<small>+ ZE614 18:00</small></td></tr><tr><td><b>12/9(수)<br>~13(일)</b></td><td class="r">36.0만<small>ZE613 + ZE612</small></td><td class="r">39.3만<small>+ MM711 19:50</small></td></tr><tr><td><b>12/10(목) 출발</b></td><td class="r">15.7만<small>ZE613 가는 편만</small></td><td class="r">—</td></tr></tbody></table></div><p class="note" style="margin:4px 0 0">4박 기준. ZE613은 17:00 간사이 도착이라 첫날 스시는 19시 넘어서예요. 13:10 RS353(₩133,100)이면 지금 일정 그대로예요.</p></div><div class="fo pick"><div class="ft"><b>A. 4박 5일 · 12/8(화)~12/12(토)</b><span class="bd rec">⭐ 가성비</span></div><div class="lg"><span class="dir">가는 편</span><span class="tm">13:10→15:00</span><span class="cd">RS353 에어서울</span><span class="dt">12/8 화</span><span class="pz">₩133,100</span></div><div class="lg"><span class="dir">오는 편</span><span class="tm">11:50→13:50</span><span class="cd">ZE612 이스타</span><span class="dt">12/12 토</span><span class="pz">₩183,562</span></div><div class="sum">1인 <b>₩316,662</b> · 2인 ₩633,324</div><ul class="im"><li class="ok">일정은 그대로예요. 마지막 날은 9시쯤 난바에서 공항 열차를 타요.</li><li class="lose">마지막 날 오사카성 산책(선택 일정)은 못 해요</li></ul></div><div class="fo "><div class="ft"><b>B. 4박 5일 · 마지막 날 저녁 비행기</b><span class="bd long">🌇 끝까지 여유</span></div><div class="lg"><span class="dir">가는 편</span><span class="tm">13:10→15:00</span><span class="cd">RS353 에어서울</span><span class="dt">12/8 화</span><span class="pz">₩133,100</span></div><div class="lg"><span class="dir">오는 편</span><span class="tm">18:00→19:50</span><span class="cd">ZE614 이스타</span><span class="dt">12/12 토</span><span class="pz">₩242,574</span></div><div class="sum">1인 <b>₩375,674</b> · 2인 ₩751,348</div><ul class="im"><li class="ok">마지막 날 오사카성 산책하고 점심까지 먹고 와요. A보다 5.9만원 비싸요.</li></ul></div><div class="fo "><div class="ft"><b>C. 4박 5일 · 최저가</b><span class="bd cheap">💰 A보다 2.6만원 싸요</span></div><div class="lg"><span class="dir">가는 편</span><span class="tm">19:10→21:00</span><span class="cd">7C1395 제주항공</span><span class="dt">12/8 화</span><span class="pz">₩106,600</span></div><div class="lg"><span class="dir">오는 편</span><span class="tm">11:50→13:50</span><span class="cd">ZE612 이스타</span><span class="dt">12/12 토</span><span class="pz">₩183,562</span></div><div class="sum">1인 <b>₩290,162</b> · 2인 ₩580,324</div><ul class="im"><li class="lose">첫날 밤 10시 넘어 우메다 도착 · 하루코마 스시·공중정원 야경 못 해요</li><li class="lose">마지막 날 오사카성 산책도 못 해요</li></ul></div><div class="fo "><div class="ft"><b>D. 3박 4일 · 12/8(화)~12/11(금)</b><span class="bd short">🕐 하루 짧게</span></div><div class="lg"><span class="dir">가는 편</span><span class="tm">13:10→15:00</span><span class="cd">RS353 에어서울</span><span class="dt">12/8 화</span><span class="pz">₩133,100</span></div><div class="lg"><span class="dir">오는 편</span><span class="tm">17:00→19:10</span><span class="cd">7C1394 제주항공</span><span class="dt">12/11 금</span><span class="pz">₩205,731</span></div><div class="sum">1인 <b>₩338,831</b> · 2인 ₩677,662</div><ul class="im"><li class="ok">교토·아리마는 그대로예요. 아리마에서 체크아웃하고 난바에서 점심만 먹고 공항으로 가요.</li><li class="lose">DAY 4 구로몬 시장·도톤보리·신사이바시 쇼핑 (점심 한 끼만)</li><li class="lose">난바 1박</li><li class="lose">마지막 날 오사카성</li></ul></div><p class="note" style="margin:8px 0 0">금요일 귀국(12/11)이 토요일보다 조금 싸요(아침 ZE612 ₩172,212). 오후·저녁 귀국편은 토요일이 ₩24만~27만, 금요일이 ₩20만~23만이에요.</p></div>
-    <div class="why"><b>이 코스가 좋은 이유</b><ul><li>항공권이 가장 싸고 직항 편이 많아요</li><li>오사카 우메다에서 버스 한 번이면 온천</li><li>교토가 열차로 30분이라 기요미즈데라·옛 골목·유도후까지 하루에</li><li>온천 하루, 교토 하루, 오사카 쇼핑 하루로 나눠서 지루하지 않아요</li></ul></div>
+  
 
-    <h3>일정 · 교토 포함 4박 5일</h3>
-    <p class="lead">오사카 우메다 호텔에 2박 하면서 교토는 열차 30분 당일치기로 다녀와요. 짐 들고 다니는 날은 아리마 가는 날 하루뿐이에요. 3박이면 DAY 4를 빼면 돼요.</p>
-    <div class="daynav" data-for="arima"><button data-d="all" class="on">모두 펼치기</button><button data-d="1">D1</button><button data-d="2">D2</button><button data-d="3">D3</button><button data-d="4">D4</button><button data-d="5">D5</button></div>
+  
 
-    <article class="day" data-c="arima" data-d="1"><button class="day-top"><div class="th"><img src="img/p/sky.jpg" alt=""><i>DAY 1</i></div><div class="di"><span class="d">도착 · 오사카</span><b>우메다 호텔 · 스시 저녁</b><span>우메다 2박 · 하루코마 스시 · 공중정원 야경</span></div><div class="chev">›</div></button>
-      <div class="db"><ul class="tl">
-        <li><span class="t">13:10</span><div><b>인천 → 간사이 · RS353</b><span>에어서울 · 15:00 도착 (1시간 50분)</span></div></li>
-        <li><span class="t">16:00</span><div><b>간사이공항 → 우메다</b><span>공항 리무진버스가 짐 싣기 편해요</span></div></li>
-        <li><span class="t">체크인</span><div><b>우메다(오사카역) 근처 호텔 2박</b><span>교토 열차, 아리마 버스 모두 여기서 타요</span></div></li>
-        <li><span class="t">18:00</span><div><b>저녁 · 스시</b><span>우메다에서 가까운 텐진바시의 현지인 스시집</span><br><button class="pl" data-p="harukoma">하루코마 스시</button></div></li>
-        <li><span class="t">20:00</span><div><span class="opt">선택</span><b>공중정원 전망대 야경</b><br><button class="pl" data-p="sky">우메다 스카이빌딩</button></div></li>
-      </ul></div></article>
-
-    <article class="day" data-c="arima" data-d="2"><button class="day-top"><div class="th"><img src="img/p/kiyomizu.jpg" alt=""><i>DAY 2</i></div><div class="di"><span class="d on">교토 당일</span><b>기요미즈데라 · 옛 골목 · 유도후</b><span>JR 30분 · 언덕길은 택시로 · 두부 정식 · 레트로 카페</span></div><div class="chev">›</div></button>
-      <div class="db"><ul class="tl">
-        <li><span class="t">09:00</span><div><b>오사카역 → 교토역 JR 신쾌속 약 30분</b><span>교토역에서 기요미즈데라까지는 택시가 편해요. 언덕 위까지 올라가 달라고 하면 걷는 양이 확 줄어요</span></div></li>
-        <li><span class="t">10:00</span><div><b>기요미즈데라</b><span>나무 무대에서 교토 시내가 내려다보이는 절</span><br><button class="pl" data-p="kiyomizu">기요미즈데라</button></div></li>
-        <li><span class="t">11:00</span><div><b>산넨자카 · 니넨자카 내리막 산책</b><span>절에서 내려오는 길이라 내리막이에요. 옛 가게·찻집 구경</span><br><button class="pl" data-p="ninenzaka">니넨자카</button></div></li>
-        <li><span class="t">12:00</span><div><b>점심 · 유도후 (두부 정식)</b><span>300년 넘은 두부 요리집, 정원 보이는 다다미방</span><br><button class="pl" data-p="okutan">오쿠탄 기요미즈</button></div></li>
-        <li><span class="t">14:00</span><div><b>기온 하나미코지 → 니시키 시장</b><span>옛 찻집 거리 산책, 시장에서 교토 반찬·간식 구경</span><br><button class="pl" data-p="gion">기온 하나미코지</button><button class="pl" data-p="nishiki">니시키 시장</button></div></li>
-        <li><span class="t">16:00</span><div><b>카페 · 이노다 커피 본점</b><span>정원이 보이는 레트로 다방, 다리 쉬어가기</span><br><button class="pl" data-p="inoda">이노다 커피</button></div></li>
-        <li><span class="t">18:00</span><div><b>교토 → 오사카 · 호텔에서 쉬기</b></div></li>
-        <li><span class="t">대신</span><div><span class="opt">선택</span><b>아라시야마 코스</b><span>대나무숲은 평지라 걷기 쉬워요. 덴류지 정원, 강가 % 아라비카 커피</span><br><button class="pl" data-p="arashiyama">대나무숲</button><button class="pl" data-p="tenryuji">덴류지</button><button class="pl" data-p="arabica">% 아라비카</button></div></li>
-      </ul></div></article>
-
-    <article class="day" data-c="arima" data-d="3"><button class="day-top"><div class="th"><img src="img/arima.jpg" alt=""><i>DAY 3</i></div><div class="di"><span class="d on">아리마 ♨</span><b>금탕 · 은탕 · 료칸</b><span>버스 1시간 · 탄산 센베이 · 가이세키</span></div><div class="chev">›</div></button>
-      <div class="db"><ul class="tl">
-        <li><span class="t">10:00</span><div><b>우메다 → 아리마 온천 버스 약 1시간</b><span>편도 ¥1,400</span></div></li>
-        <li><span class="t">11:30</span><div><b>유모토자카 거리 산책 · 군것질</b><br><button class="pl" data-p="yumoto">유모토자카</button><button class="pl" data-p="tansan">탄산 센베이</button><button class="pl" data-p="toys">장난감 박물관</button></div></li>
-        <li><span class="t">13:30</span><div><b>공중탕 킨노유 (금탕)</b><span>철분 때문에 붉은 갈색 온천</span><br><button class="pl" data-p="kinnoyu">킨노유</button><button class="pl" data-p="ginnoyu">긴노유</button></div></li>
-        <li><span class="t">15:00</span><div><b>료칸 체크인 · 낮잠 · 가이세키</b></div></li>
-      </ul></div></article>
-
-    <article class="day" data-c="arima" data-d="4"><button class="day-top"><div class="th"><img src="img/p/dotonbori.jpg" alt=""><i>DAY 4</i></div><div class="di"><span class="d">오사카</span><b>시장 · 쇼핑 · 맛집</b><span>구로몬 시장 · 도톤보리 · 신사이바시 · 난바 1박</span></div><div class="chev">›</div></button>
-      <div class="db"><ul class="tl">
-        <li><span class="t">10:00</span><div><b>아리마 → 오사카 난바 호텔</b><span>짐 먼저 맡기기</span></div></li>
-        <li><span class="t">12:00</span><div><b>구로몬 시장 점심</b><span>회·꼬치·과일을 조금씩</span><br><button class="pl" data-p="kuromon">구로몬 시장</button></div></li>
-        <li><span class="t">14:00</span><div><b>신사이바시 · 도톤보리</b><span>지붕 있는 상점가라 편해요. 드럭스토어·백화점</span><br><button class="pl" data-p="dotonbori">도톤보리</button></div></li>
-        <li><span class="t">16:00</span><div><b>호텔에서 쉬기</b></div></li>
-        <li><span class="t">저녁</span><div><b>도톤보리 야경 · 오코노미야키</b></div></li>
-      </ul></div></article>
-
-    <article class="day" data-c="arima" data-d="5"><button class="day-top"><div class="th"><img src="img/p/osakajo.jpg" alt=""><i>DAY 5</i></div><div class="di"><span class="d">귀국</span><b>오사카 → 인천</b><span>난바에서 공항 열차 한 번</span></div><div class="chev">›</div></button>
-      <div class="db"><ul class="tl"><li><span class="t">오전</span><div><span class="opt">선택</span><b>오사카성 공원 산책</b><br><button class="pl" data-p="osakajo">오사카성</button></div></li><li><span class="t">11:50</span><div><b>간사이 → 인천 · ZE612</b><span>이스타항공 · 13:50 도착 · 난바에서 9시쯤 공항 열차</span></div></li></ul></div></article>
-
-    <h3>가이세키 료칸 · 아리마</h3>
-    <p class="note" style="margin-top:0">12/10(목) 1박 · 2인 1실 · <b>저녁·아침 포함</b> 1박 가격 (쟈란 11/26 조회, 1박 45만원 이하만)</p>
-    <div class="tw"><table><thead><tr><th>료칸</th><th class="r">2인 1박 2식</th></tr></thead><tbody><tr><td><b>아리마 고토리 <span style="font-weight:600">有馬温泉 小都里 KOTORI</span></b><small>금천·은천 · 전세탕 포함 · 평점 높음 · 쟈란 4.7(375)</small></td><td class="r">¥52,030</td></tr><tr><td><b>아리마 료칸 야마토 <span style="font-weight:600">有馬温泉 旅館やまと</span></b><small>방에서 저녁 · 전세탕 · 외탕 무료권 · 쟈란 평점 없음</small></td><td class="r">¥34,100</td></tr><tr><td><b>아리마 로열 호텔 <span style="font-weight:600">有馬ロイヤルホテル</span></b><small>와규 샤부 가이세키 · 접객 평 좋음 · 쟈란 4.4(186)</small></td><td class="r">¥45,100</td></tr><tr><td><b>메르베르 아리마 <span style="font-weight:600">メルヴェール有馬</span></b><small>침대 방 · 후기 많음 · 쟈란 4.2(1,266)</small></td><td class="r">¥39,100</td></tr><tr><td><b>가메노이 호텔 아리마 <span style="font-weight:600">亀の井ホテル 有馬</span></b><small>침대 방 · 깔끔 · 쟈란 4.2(90)</small></td><td class="r">¥51,720</td></tr><tr><td><b>아리마 스미노보 <span style="font-weight:600">有馬温泉 角の坊</span></b><small>고베규 스키야키 · 쟈란 3.9(258)</small></td><td class="r">¥47,300</td></tr></tbody></table></div>
-    <button class="morelink" data-go2="stay">🏨 숙소 사진 · 예약 링크 보기</button>
-
-    <h3>먹을 것 · 쇼핑</h3>
-    <div class="grid2">
-      <button class="card" data-p="tansan"><img src="img/p/tansan.jpg" alt="" loading="lazy"><div class="in"><span class="k">아리마</span><b>탄산 센베이 · 아리마 사이다</b><p>탄산 온천수로 구운 얇은 과자. 시식 가능</p></div></button>
-      <button class="card" data-p="kuromon"><img src="img/p/kuromon.jpg" alt="" loading="lazy"><div class="in"><span class="k">오사카</span><b>구로몬 시장</b><p>회·꼬치·과일, 오전에 가야 덜 붐벼요</p></div></button>
-      <button class="card" data-p="dotonbori"><img src="img/p/dotonbori.jpg" alt="" loading="lazy"><div class="in"><span class="k">오사카</span><b>도톤보리 · 신사이바시</b><p>타코야키·오코노미야키, 상점가·드럭스토어</p></div></button>
-      <button class="card" data-p="sky"><img src="img/p/sky.jpg" alt="" loading="lazy"><div class="in"><span class="k">오사카</span><b>우메다 백화점</b><p>한큐·한신 지하 식품관 과자 선물</p></div></button>
-    </div>
-  </section>
-
-  <!-- ================= ③ 이부스키 ================= -->
-  <section class="view" id="v-ibusuki">
-    <div class="cover"><img src="img/ibusuki.jpg" alt="이부스키 모래찜질 회관"><div class="cap"><b>③ 가고시마 · 이부스키</b><span>3박 4일 · 가고시마 1박 + 이부스키 료칸 1박 + 가고시마 1박</span></div></div>
-    <div class="facts"><div><small>직항 1인 최저</small><strong>24.4만원</strong></div><div><small>숙소 이동</small><strong>2번</strong></div><div><small>1인 예산</small><strong>65만~90만</strong></div></div>
-    <div class="fly"><div class="hd"><b>✈️ 항공편 고르기 · 인천 ↔ 가고시마</b><small>직항 · 1인 편도 합계 · 11/26 조회</small></div><div class="dgrid"><b class="dh">📅 날짜별 1인 항공권 (12/5~13 안에서)</b><div class="tw"><table><thead><tr><th>날짜</th><th class="r">낮 출발 (12:40)</th><th class="r">오후 출발 (15:35)</th></tr></thead><tbody><tr><td><b>12/6(일) 출발</b></td><td class="r">21.1만<small>7C1823 가는 편만</small></td><td class="r">—</td></tr><tr><td><b>12/7(월)<br>~10(목)</b></td><td class="r">35.4만<small>7C1823 12:40 + 7C1824</small></td><td class="r">36.7만<small>ZE651 15:35 + 7C1824</small></td></tr><tr><td><b>12/8(화)<br>~11(금)<br><span style="color:var(--accent)">지금 일정</span></b></td><td class="r">43.6만<small>7C1823 + 7C1824</small></td><td class="r best">24.4만<small>ZE651 + 7C1824</small></td></tr><tr><td><b>12/9(수)<br>~12(토)</b></td><td class="r">44.8만<small>7C1823 + 7C1824</small></td><td class="r">41.4만<small>ZE651 + 7C1824</small></td></tr><tr><td><b>12/10(목)<br>~13(일)</b></td><td class="r">—</td><td class="r">24.8만<small>7C1824 귀국편만</small></td></tr></tbody></table></div><p class="note" style="margin:4px 0 0">3박 기준. 가고시마는 하루 2~3편뿐이라 날짜 따라 차이가 커요. 12/8~11이 압도적으로 싸요.</p></div><div class="fo pick"><div class="ft"><b>A. 3박 4일 · 최저가</b><span class="bd rec">⭐ 19만원 싸요</span></div><div class="lg"><span class="dir">가는 편</span><span class="tm">15:35→17:15</span><span class="cd">ZE651 이스타</span><span class="dt">12/8 화</span><span class="pz">₩121,006</span></div><div class="lg"><span class="dir">오는 편</span><span class="tm">15:15→17:05</span><span class="cd">7C1824 제주항공</span><span class="dt">12/11 금</span><span class="pz">₩122,655</span></div><div class="sum">1인 <b>₩243,661</b> · 2인 ₩487,322</div><ul class="im"><li class="ok">이부스키 료칸·사쿠라지마 페리 등 나머지 일정은 그대로예요. 일정표 첫날도 이 비행기에 맞췄어요.</li><li class="lose">첫날 역 도착이 18시 반쯤이라 아뮤플라자는 잠깐만, 관람차는 마지막 날 오전에</li><li class="lose">흑돼지 저녁이 19시 15분쯤으로 조금 늦어져요</li></ul></div><div class="fo "><div class="ft"><b>B. 3박 4일 · 일정 그대로</b><span class="bd long">🕐 첫날 오후 여유</span></div><div class="lg"><span class="dir">가는 편</span><span class="tm">12:40→14:15</span><span class="cd">7C1823 제주항공</span><span class="dt">12/8 화</span><span class="pz">₩313,200</span></div><div class="lg"><span class="dir">오는 편</span><span class="tm">15:15→17:05</span><span class="cd">7C1824 제주항공</span><span class="dt">12/11 금</span><span class="pz">₩122,655</span></div><div class="sum">1인 <b>₩435,855</b> · 2인 ₩871,710</div><ul class="im"><li class="ok">첫날 오후에 도착해 관람차·쇼핑을 느긋하게 해요. A보다 19만원 비싸요. 대한항공 KE2179 14:40→16:20 ₩307,600도 비슷한 값(수하물 포함).</li></ul></div><div class="fo "><div class="ft"><b>C. 2박 3일 · 12/8(화)~12/10(목)</b><span class="bd short">🕐 하루 짧게</span></div><div class="lg"><span class="dir">가는 편</span><span class="tm">15:35→17:15</span><span class="cd">ZE651 이스타</span><span class="dt">12/8 화</span><span class="pz">₩121,006</span></div><div class="lg"><span class="dir">오는 편</span><span class="tm">15:15→17:05</span><span class="cd">7C1824 제주항공</span><span class="dt">12/10 목</span><span class="pz">₩186,821</span></div><div class="sum">1인 <b>₩307,827</b> · 2인 ₩615,654</div><ul class="im"><li class="ok">이부스키 모래찜질·료칸은 그대로예요. 오히려 A보다 6.4만원 비싸요.</li><li class="lose">DAY 3 나가사키바나·이케다호·사쿠라지마 페리 전부</li><li class="lose">가고시마 1박 · 스시 카오루 저녁</li></ul></div><p class="note" style="margin:8px 0 0">가고시마는 하루 2~3편뿐이에요. 12/12(토) 귀국은 ₩30만 넘어서 4박으로 늘리는 건 비싸요.</p></div>
-    <div class="why"><b>이 코스가 좋은 이유</b><ul><li>일본 본토 남쪽 끝이라 12월에도 다른 곳보다 따뜻한 편</li><li>모래찜질은 누워만 있으면 돼서 엄마도 편해요</li><li>료칸값이 네 곳 중 가장 싸고, 흑돼지·고구마 같은 먹거리가 많아요</li></ul></div>
-
-    <h3>일정</h3>
-    <div class="daynav" data-for="ibusuki"><button data-d="all" class="on">모두 펼치기</button><button data-d="1">D1</button><button data-d="2">D2</button><button data-d="3">D3</button><button data-d="4">D4</button></div>
-
-    <article class="day" data-c="ibusuki" data-d="1"><button class="day-top"><div class="th"><img src="img/sakura.jpg" alt=""><i>DAY 1</i></div><div class="di"><span class="d">도착 · 가고시마</span><b>인천 → 가고시마 시내</b><span>저녁 도착 · 역 쇼핑몰 · 흑돼지 샤브샤브</span></div><div class="chev">›</div></button>
-      <div class="db"><ul class="tl">
-        <li><span class="t">15:35</span><div><b>인천 → 가고시마 · ZE651</b><span>이스타항공 · 17:15 도착 (1시간 40분) · 낮 비행기 7C1823 12:40이면 오후가 더 여유로워요</span></div></li>
-        <li><span class="t">17:45</span><div><b>가고시마공항 → 가고시마중앙역</b><span>공항버스로 약 40분</span></div></li>
-        <li><span class="t">18:30</span><div><b>아뮤플라자 잠깐 구경</b><span>역과 붙은 쇼핑몰, 20시까지. 관람차는 마지막 날 오전에 타도 돼요</span><br><button class="pl" data-p="amu">아뮤플라자</button></div></li>
-        <li><span class="t">19:15</span><div><b>흑돼지 샤브샤브</b><span>기모노 입은 직원이 먹는 법을 알려줘요. 예약 권장, 수요일 휴무</span><br><button class="pl" data-p="ajimori">아지모리</button></div></li>
-        <li><span class="t">20:00</span><div><b>디저트 · 시로쿠마 빙수</b><span>흰곰 얼굴 모양 빙수의 원조 가게</span><br><button class="pl" data-p="mujaki">텐몬칸 무자키</button></div></li>
-      </ul></div></article>
-
-    <article class="day" data-c="ibusuki" data-d="2"><button class="day-top"><div class="th"><img src="img/ibusuki.jpg" alt=""><i>DAY 2</i></div><div class="di"><span class="d on">이부스키 ♨</span><b>정원 보고 모래찜질</b><span>센간엔 · JR 1시간 25분 · 사라쿠 · 가이세키</span></div><div class="chev">›</div></button>
-      <div class="db"><ul class="tl">
-        <li><span class="t">09:30</span><div><b>센간엔</b><span>바다 건너 사쿠라지마를 정원 배경으로 둔 다이묘 별장</span><br><button class="pl" data-p="sengan">센간엔</button></div></li>
-        <li><span class="t">12:30</span><div><b>가고시마중앙 → 이부스키 JR</b><span>약 1시간 25분. 바다 보며 가는 관광 특급 '이부스키노 타마테바코'도 있어요</span></div></li>
-        <li><span class="t">14:30</span><div><b>모래찜질 · 사라쿠</b><span>유카타 입고 따뜻한 모래에 10분쯤 누워 있기</span><br><button class="pl" data-p="saraku">모래찜질 회관 사라쿠</button><button class="pl" data-p="ibuinfo">이부스키 관광안내소</button></div></li>
-        <li><span class="t">16:00</span><div><b>료칸 체크인 · 가이세키</b><span>가고시마 해산물 가이세키</span></div></li>
-      </ul></div></article>
-
-    <article class="day" data-c="ibusuki" data-d="3"><button class="day-top"><div class="th"><img src="img/sakura.jpg" alt=""><i>DAY 3</i></div><div class="di"><span class="d">가고시마</span><b>바다 곶 · 사쿠라지마 페리</b><span>나가사키바나 · 이케다호 · 페리 15분</span></div><div class="chev">›</div></button>
-      <div class="db"><ul class="tl">
-        <li><span class="t">09:30</span><div><span class="opt">선택</span><b>나가사키바나 · 이케다호</b><span>가이몬다케 산이 보이는 바다 곶과 호수. 대중교통이 불편해서 관광택시나 관광버스로</span><br><button class="pl" data-p="nagasakibana">나가사키바나</button><button class="pl" data-p="ikeda">이케다호</button></div></li>
-        <li><span class="t">13:00</span><div><b>이부스키 → 가고시마</b></div></li>
-        <li><span class="t">13:30</span><div><b>늦은 점심 · 회전초밥 멧케몬</b><span>페리 터미널 근처, 가고시마 생선</span><br><button class="pl" data-p="mekkemon">멧케몬</button></div></li>
-        <li><span class="t">15:00</span><div><b>사쿠라지마 페리</b><span>15분쯤, 24시간 운항. 배 안 우동이 명물</span><br><button class="pl" data-p="ferry">사쿠라지마 페리</button></div></li>
-        <li><span class="t">저녁</span><div><b>스시 코스 저녁 · 가고시마 1박</b><span>텐몬칸 근처 작은 오마카세</span><br><button class="pl" data-p="kaoru">스시 카오루</button></div></li>
-      </ul></div></article>
-
-    <article class="day" data-c="ibusuki" data-d="4"><button class="day-top"><div class="th"><img src="img/p/amu.jpg" alt=""><i>DAY 4</i></div><div class="di"><span class="d">귀국</span><b>가고시마 → 인천</b><span>역 쇼핑몰에서 선물 · 공항</span></div><div class="chev">›</div></button>
-      <div class="db"><ul class="tl"><li><span class="t">오전</span><div><b>아뮤플라자 선물 쇼핑 · 옥상 관람차</b><span>고구마 과자, 가루칸, 치란 녹차</span></div></li><li><span class="t">15:15</span><div><b>가고시마 → 인천 · 7C1824</b><span>제주항공 · 17:05 도착 · 공항버스 약 40분이라 13시쯤 역에서 출발</span></div></li></ul></div></article>
-
-    <h3>가이세키 료칸 · 이부스키</h3>
-    <p class="note" style="margin-top:0">12/9(수) 1박 · 2인 1실 · <b>저녁·아침 포함</b> 1박 가격 (쟈란 11/26 조회, 1박 45만원 이하만)</p>
-    <div class="tw"><table><thead><tr><th>료칸</th><th class="r">2인 1박 2식</th></tr></thead><tbody><tr><td><b>료칸 쓰키미소 <span style="font-weight:600">旅館月見荘</span></b><small>쟈란 5.0 · 저녁 평 좋음 · 쟈란 5.0(848)</small></td><td class="r">¥35,200</td></tr><tr><td><b>이부스키 하쿠스이칸 <span style="font-weight:600">指宿白水館</span></b><small>관내 모래찜질 · 침대 방 · 후기 3천 · 쟈란 4.4(2,986)</small></td><td class="r">¥40,480</td></tr><tr><td><b>이부스키 고코로노야도 <span style="font-weight:600">指宿こころの宿</span></b><small>가성비 · 저녁 평 좋음 · 쟈란 4.1(1,497)</small></td><td class="r">¥31,634</td></tr><tr><td><b>이부스키 피닉스 호텔 <span style="font-weight:600">指宿フェニックスホテル</span></b><small>모래찜질권 · 음료 무료 · 쟈란 3.9(1,513)</small></td><td class="r">¥37,620</td></tr><tr><td><b>이부스키 시사이드 호텔 <span style="font-weight:600">指宿シーサイドホテル</span></b><small>모래찜질 무료 · 바다 앞 · 쟈란 3.8(1,025)</small></td><td class="r">¥33,800</td></tr></tbody></table></div>
-    <button class="morelink" data-go2="stay">🏨 숙소 사진 · 예약 링크 보기</button>
-
-    <h3>먹을 것 · 쇼핑</h3>
-    <div class="grid2">
-      <button class="card" data-p="ajimori"><img src="img/p/ajimori.jpg" alt="" loading="lazy"><div class="in"><span class="k">가고시마</span><b>흑돼지</b><p>샤브샤브·돈가스. 기름이 달고 담백해요</p></div></button>
-      <button class="card" data-p="mujaki"><img src="img/p/mujaki.jpg" alt="" loading="lazy"><div class="in"><span class="k">가고시마</span><b>시로쿠마 빙수</b><p>연유 빙수에 과일로 흰곰 얼굴</p></div></button>
-      <button class="card" data-p="amu"><img src="img/p/amu.jpg" alt="" loading="lazy"><div class="in"><span class="k">가고시마</span><b>아뮤플라자 · 텐몬칸</b><p>고구마 과자, 가루칸(찐 과자), 흑돼지 가공품, 고구마 소주, 치란 녹차</p></div></button>
-      <button class="card" data-p="sengan"><img src="img/p/sengan.jpg" alt="" loading="lazy"><div class="in"><span class="k">센간엔</span><b>정원 안 가게</b><p>사쓰마 유리 공예(사쓰마 기리코), 화과자</p></div></button>
-    </div>
-  </section>
-
-  <!-- ================= ④ 도고 ================= -->
-  <section class="view" id="v-dogo">
-    <div class="cover"><img src="img/dogo.jpg" alt="도고 온천 본관"><div class="cap"><b>④ 마쓰야마 · 도고 온천</b><span>3박 4일 · 도고 료칸에서 3박 (숙소 이동 없음)</span></div></div>
-    <div class="facts"><div><small>직항 1인 최저</small><strong>41.7만원</strong></div><div><small>숙소 이동</small><strong>0번</strong></div><div><small>공항→온천</small><strong>35~50분</strong></div></div>
-    <div class="fly"><div class="hd"><b>✈️ 항공편 고르기 · 인천 ↔ 마쓰야마</b><small>직항 · 1인 편도 합계 · 11/26 조회</small></div><div class="dgrid"><b class="dh">📅 날짜별 1인 항공권 (12/5~13 안에서)</b><div class="tw"><table><thead><tr><th>날짜</th><th class="r">아침 귀국 (09:35)</th><th class="r">오후 귀국 (15:40)</th></tr></thead><tbody><tr><td><b>12/7(월)<br>~10(목)</b></td><td class="r best">41.9만<small>7C1703 + 7C1722 09:35</small></td><td class="r">52.7만<small>+ 7C1704 15:40</small></td></tr><tr><td><b>12/8(화)<br>~11(금)<br><span style="color:var(--accent)">지금 일정</span></b></td><td class="r best">41.7만<small>7C1703 + 7C1722</small></td><td class="r">60.0만<small>+ 7C1704</small></td></tr><tr><td><b>12/10(목)<br>~13(일)</b></td><td class="r">42.3만<small>7C1703 + 7C1722</small></td><td class="r">오후편 없음</td></tr></tbody></table></div><p class="note" style="margin:4px 0 0">3박 기준. 제주항공 하루 1~2편뿐이고 12/6·12/9 출발, 12/12 귀국은 더 비싸요(편도 ₩29만~37만). 날짜를 바꿔도 41만원대 아래로는 안 내려가요.</p></div><div class="fo pick"><div class="ft"><b>A. 3박 4일 · 마지막 날 오후 귀국</b><span class="bd rec">⭐ 일정 그대로</span></div><div class="lg"><span class="dir">가는 편</span><span class="tm">13:05→14:40</span><span class="cd">7C1703 제주항공</span><span class="dt">12/8 화</span><span class="pz">₩226,800</span></div><div class="lg"><span class="dir">오는 편</span><span class="tm">15:40→17:35</span><span class="cd">7C1704 제주항공</span><span class="dt">12/11 금</span><span class="pz">₩373,367</span></div><div class="sum">1인 <b>₩600,167</b> · 2인 ₩1,200,334</div><ul class="im"><li class="ok">마지막 날 아침탕·선물 쇼핑까지 일정표 그대로예요. 엄마랑 느긋하게 가려면 이쪽이에요.</li></ul></div><div class="fo "><div class="ft"><b>B. 3박 4일 · 아침 귀국</b><span class="bd cheap">💰 18만원 싸요</span></div><div class="lg"><span class="dir">가는 편</span><span class="tm">13:05→14:40</span><span class="cd">7C1703 제주항공</span><span class="dt">12/8 화</span><span class="pz">₩226,800</span></div><div class="lg"><span class="dir">오는 편</span><span class="tm">09:35→11:20</span><span class="cd">7C1722 제주항공</span><span class="dt">12/11 금</span><span class="pz">₩190,187</span></div><div class="sum">1인 <b>₩416,987</b> · 2인 ₩833,974</div><ul class="im"><li class="ok">도고 료칸 3박, 본관·마쓰야마성은 그대로예요.</li><li class="lose">마지막 날 아침탕·하이카라 거리 선물 쇼핑 → 전날(DAY 3) 저녁에 미리</li><li class="lose">7시 반쯤 료칸에서 나와야 해요</li></ul></div><div class="fo "><div class="ft"><b>C. 2박 3일 · 12/8(화)~12/10(목)</b><span class="bd cheap">💰 가장 쌈</span></div><div class="lg"><span class="dir">가는 편</span><span class="tm">13:05→14:40</span><span class="cd">7C1703 제주항공</span><span class="dt">12/8 화</span><span class="pz">₩226,800</span></div><div class="lg"><span class="dir">오는 편</span><span class="tm">09:35→11:20</span><span class="cd">7C1722 제주항공</span><span class="dt">12/10 목</span><span class="pz">₩122,662</span></div><div class="sum">1인 <b>₩349,462</b> · 2인 ₩698,924</div><ul class="im"><li class="ok">도고 본관·아스카노유·이시테지까지는 해요. 료칸은 2박이라 다시 조회해야 해요. 오후 귀국 7C1704(₩230,719)로 하면 1인 ₩457,519이고 마지막 날 오전이 남아요.</li><li class="lose">DAY 3 마쓰야마성·로프웨이·오카이도 쇼핑·도미밥</li><li class="lose">마지막 날 아침탕·선물 쇼핑 (DAY 2 저녁에)</li></ul></div><p class="note" style="margin:8px 0 0">마쓰야마는 제주항공만 하루 1~2편 다녀요. 12/12(토) 귀국은 두 편 모두 ₩373,388이라 4박으로 늘리면 비싸요. 아침 출발 7C1721(07:00→08:35, ₩206,800)도 있지만 인천공항에 새벽 5시까지 가야 해서 엄마는 힘들어요.</p></div>
-    <div class="why"><b>이 코스가 좋은 이유</b><ul><li>숙소를 한 번도 안 옮겨요. 엄마 체력 부담이 가장 적어요</li><li>공항에서 온천 마을까지 40분 안팎</li><li>3천 년 역사라는 온천 마을, 메이지 시대 목조 목욕탕</li></ul></div>
-
-    <h3>일정</h3>
-    <div class="daynav" data-for="dogo"><button data-d="all" class="on">모두 펼치기</button><button data-d="1">D1</button><button data-d="2">D2</button><button data-d="3">D3</button><button data-d="4">D4</button></div>
-
-    <article class="day" data-c="dogo" data-d="1"><button class="day-top"><div class="th"><img src="img/dogo.jpg" alt=""><i>DAY 1</i></div><div class="di"><span class="d on">도고 ♨</span><b>인천 → 마쓰야마 → 도고</b><span>시계탑 인형극 · 무료 족욕 · 상점가 · 가이세키</span></div><div class="chev">›</div></button>
-      <div class="db"><ul class="tl">
-        <li><span class="t">13:05</span><div><b>인천 → 마쓰야마 · 7C1703</b><span>제주항공 · 14:40 도착 (1시간 35분)</span></div></li>
-        <li><span class="t">15:00</span><div><b>공항 → 도고 온천</b><span>리무진버스 + 노면전차 ¥700~900, 35~50분. 택시는 ¥3,000~4,000, 20~30분</span></div></li>
-        <li><span class="t">16:00</span><div><b>봇짱 가라쿠리 시계 · 무료 족욕</b><span>정각마다 소설 '봇짱' 인물 인형이 나와요. 바로 옆 무료 족욕</span><br><button class="pl" data-p="karakuri">봇짱 가라쿠리 시계</button></div></li>
-        <li><span class="t">16:30</span><div><b>도고 하이카라 거리 (상점가)</b><span>역에서 본관까지 이어지는 아케이드</span><br><button class="pl" data-p="haikara">하이카라 거리</button></div></li>
-        <li><span class="t">18:00</span><div><b>료칸 가이세키</b><span>세토내해 생선, 도미밥</span></div></li>
-      </ul></div></article>
-
-    <article class="day" data-c="dogo" data-d="2"><button class="day-top"><div class="th"><img src="img/dogo.jpg" alt=""><i>DAY 2</i></div><div class="di"><span class="d on">도고 ♨</span><b>본관 아침탕 · 아스카노유</b><span>본관 개인실 플랜 · 이시테지 · 밤 조명</span></div><div class="chev">›</div></button>
-      <div class="db"><ul class="tl">
-        <li><span class="t">07:00</span><div><b>도고 온천 본관 아침탕</b><span>아침이 덜 붐벼요. 3층 개인실 플랜은 90분 쉬면서 차와 봇짱당고가 나와요</span><br><button class="pl" data-p="honkan">도고 온천 본관</button></div></li>
-        <li><span class="t">11:00</span><div><span class="opt">선택</span><b>이시테지 절</b><span>시코쿠 88개 사찰 순례 51번. 본당 뒤 작은 동굴길</span><br><button class="pl" data-p="ishite">이시테지</button></div></li>
-        <li><span class="t">15:00</span><div><b>아스카노유</b><span>2017년에 지은 별관. 2층 휴게실 플랜은 유카타·차·과자 포함</span><br><button class="pl" data-p="asuka">아스카노유</button></div></li>
-        <li><span class="t">저녁</span><div><b>본관 밤 조명 구경 · 료칸 가이세키</b></div></li>
-      </ul></div></article>
-
-    <article class="day" data-c="dogo" data-d="3"><button class="day-top"><div class="th"><img src="img/p/castle.jpg" alt=""><i>DAY 3</i></div><div class="di"><span class="d">마쓰야마</span><b>마쓰야마성 · 시내 쇼핑</b><span>로프웨이·리프트 · 오카이도 · 도미밥</span></div><div class="chev">›</div></button>
-      <div class="db"><ul class="tl">
-        <li><span class="t">10:00</span><div><b>노면전차로 시내 → 마쓰야마성</b><span>로프웨이나 리프트로 올라가요. 내린 뒤 조금 걸어 올라가야 해요</span><br><button class="pl" data-p="castle">마쓰야마성</button><button class="pl" data-p="ropeway">로프웨이</button></div></li>
-        <li><span class="t">13:00</span><div><b>점심 · 도미밥(타이메시)</b><span>에히메 명물. 날 도미를 밥에 올리는 방식과 같이 짓는 방식이 있어요</span></div></li>
-        <li><span class="t">14:30</span><div><b>오카이도 · 긴텐가이 상점가</b><span>지붕 있는 아케이드라 비 와도 OK</span></div></li>
-        <li><span class="t">저녁</span><div><b>도고로 돌아와 료칸 3박째</b></div></li>
-      </ul></div></article>
-
-    <article class="day" data-c="dogo" data-d="4"><button class="day-top"><div class="th"><img src="img/p/haikara.jpg" alt=""><i>DAY 4</i></div><div class="di"><span class="d">귀국</span><b>마쓰야마 → 인천</b><span>아침탕 · 상점가에서 선물 · 공항</span></div><div class="chev">›</div></button>
-      <div class="db"><ul class="tl"><li><span class="t">오전</span><div><b>아침탕 · 하이카라 거리 선물</b><span>이마바리 타월, 귤 주스·귤 과자, 봇짱당고</span></div></li><li><span class="t">15:40</span><div><b>마쓰야마 → 인천 · 7C1704</b><span>제주항공 · 17:35 도착 · 더 싼 09:35편(7C1722)이면 오전 일정은 전날 저녁에</span></div></li></ul></div></article>
-
-    <h3>가이세키 료칸 · 도고</h3>
-    <p class="note" style="margin-top:0">12/8(화)~11(금) 3박 · 2인 1실 · <b>저녁·아침 포함</b> 1박 가격 (쟈란 11/26 조회, 1박 45만원 이하만)</p>
-    <div class="tw"><table><thead><tr><th>료칸</th><th class="r">2인 1박 2식</th></tr></thead><tbody><tr><td><b>도고 온천 호텔 쓰바키칸 <span style="font-weight:600">道後温泉 ホテル椿館</span></b><small>뷔페 · 후기 2천 · 침대 방 · 쟈란 4.6(2,331)</small></td><td class="r">¥46,200</td></tr><tr><td><b>도고 온천 니기타쓰 회관 <span style="font-weight:600">道後温泉 にぎたつ会館</span></b><small>가이세키 · 넓은 정원 · 쟈란 4.2(1,031)</small></td><td class="r">¥35,000</td></tr><tr><td><b>올드 잉글랜드 도고 야마노테 호텔 <span style="font-weight:600">オールドイングランド道後山の手ホテル</span></b><small>침대 방 · 코스 디너 · 쟈란 4.5(114)</small></td><td class="r">¥42,000</td></tr><tr><td><b>도고 온천 하나유즈키 <span style="font-weight:600">道後温泉 花ゆづき</span></b><small>뷔페 · 후기 많음 · 쟈란 4.1(2,062)</small></td><td class="r">¥35,640</td></tr><tr><td><b>호텔 가쓰라기 <span style="font-weight:600">ホテル葛城</span></b><small>뷔페 · 가성비 · 쟈란 4.1(1,234)</small></td><td class="r">¥28,710</td></tr><tr><td><b>오에도 온센 모노가타리 도고 <span style="font-weight:600">大江戸温泉物語 道後</span></b><small>뷔페 · 최저가 · 쟈란 4.0(1,147)</small></td><td class="r">¥27,067</td></tr></tbody></table></div>
-    <button class="morelink" data-go2="stay">🏨 숙소 사진 · 예약 링크 보기</button>
-    <p class="note">icotto 기사 기준(2인 이용 시 1인 가격). 방에서 먹는지는 객실·플랜마다 달라요.</p>
-
-    <h3>먹을 것 · 쇼핑</h3>
-    <div class="grid2">
-      <button class="card" data-p="haikara"><img src="img/p/haikara.jpg" alt="" loading="lazy"><div class="in"><span class="k">도고</span><b>하이카라 거리</b><p>이마바리 타월, 귤 주스·귤 젤리, 삼색 경단 봇짱당고</p></div></button>
-      <button class="card" data-p="castle"><img src="img/p/castle.jpg" alt="" loading="lazy"><div class="in"><span class="k">마쓰야마</span><b>도미밥 · 귤</b><p>에히메는 귤 산지. 12월이 귤 제철이에요</p></div></button>
-    </div>
-  </section>
+  
 
 
 
-  <!-- ================= ⑤ 긴잔 ================= -->
-  <section class="view" id="v-ginzan">
-    <div class="cover"><img src="img/p/x_ginzan.jpg" alt="긴잔 온천 야경"><div class="cap"><b>⑤ 센다이 · 덴도 · 긴잔 온천</b><span>3박 4일 · 덴도 온천 료칸 3박 (숙소 이동 없음) + 긴잔 해 질 녘 나들이</span></div></div>
-    <div class="facts"><div><small>직항 왕복 1인</small><strong>42.2만원</strong></div><div><small>숙소 이동</small><strong>0번</strong></div><div><small>공항→료칸</small><strong>약 2시간</strong></div></div>
-    <div class="callout"><b>긴잔 온천 거리 안 료칸은 12/5~13 모두 빈방이 없어요.</b> 11/27에 쟈란·부킹닷컴은 12/5~13 날짜별로, 라쿠텐 트래블(긴잔 료칸 9곳)과 아고다는 12/9~10로 확인했어요. 쟈란에 남은 건 다키미칸(2인 ¥110,352)·후지야(2인 ¥142,000)뿐이었어요. 그래서 기차·버스로 1시간 남짓 걸리는 <b>덴도 온천</b>에 3박 하고, 긴잔은 가스등이 켜지는 해 질 녘에 다녀오는 일정으로 짰어요.</div>
+  
 
-    <div class="fly"><div class="hd"><b>✈️ 항공편 · 인천 ↔ 센다이</b><small>11/26~27 조회</small></div>
-      <div class="fo pick"><div class="ft"><b>A. 3박 4일 · 12/9(수)~12/12(토)</b><span class="bd rec">⭐ 유일한 직항 조합</span></div>
-        <div class="lg"><span class="dir">가는 편</span><span class="tm">09:35→11:45</span><span class="cd">OZ152 아시아나</span><span class="dt">12/9 수</span><span class="pz"></span></div>
-        <div class="lg"><span class="dir">오는 편</span><span class="tm">12:45→15:20</span><span class="cd">OZ151 아시아나</span><span class="dt">12/12 토</span><span class="pz"></span></div>
-        <div class="sum">왕복 1인 <b>₩421,900</b> · 2인 ₩843,800</div>
-        <ul class="im"><li class="ok">대형 항공사라 수하물 포함이에요. 편도 두 장으로 사면 ₩582,496이라 꼭 왕복으로 사세요</li><li class="lose">센다이 직항은 매일 있지 않아요. 12/8은 직항이 없었어요</li></ul></div>
-      <div class="fo"><div class="ft"><b>B. 도쿄 경유 (나리타 + 신칸센)</b><span class="bd short">🚄 날짜 자유</span></div>
-        <div class="sum">나리타 왕복 1인 <b>₩313,200~</b> (12/8~11, 오후편) + 도쿄→덴도 야마가타 신칸센 약 3시간</div>
-        <ul class="im"><li class="ok">날짜를 마음대로 고를 수 있어요</li><li class="lose">나리타→도쿄역 이동 포함 하루 반나절이 기차 안이에요. 첫날은 도쿄 1박이 현실적</li></ul></div>
-      <p class="note" style="margin:8px 0 0">센다이공항→야마가타역 직행버스 약 80분, ¥1,500, 하루 4편(9·12·16·19시대). 야마가타역→덴도역은 JR로 약 20분이에요.</p>
-    </div>
+  
 
-    <div class="why"><b>이 코스가 좋은 이유</b><ul><li>센과 치히로 분위기의 눈 내린 온천 거리, 가스등 야경</li><li>덴도 온천 한 료칸에 3박이라 짐을 한 번도 안 옮겨요</li><li>야마가타 소고기, 소바, 이모니(토란 전골) 같은 동북 음식</li></ul></div>
 
-    <h3>일정 · 3박 4일</h3>
-    <div class="daynav" data-for="ginzan"><button data-d="all" class="on">모두 펼치기</button><button data-d="1">D1</button><button data-d="2">D2</button><button data-d="3">D3</button><button data-d="4">D4</button></div>
-
-    <article class="day" data-c="ginzan" data-d="1"><button class="day-top"><div class="th"><img src="img/stay/azumaso.jpg" alt=""><i>DAY 1</i></div><div class="di"><span class="d">도착 · 덴도 ♨</span><b>센다이 → 덴도 온천 료칸</b><span>공항버스 80분 · 체크인 · 가이세키</span></div><div class="chev">›</div></button>
-      <div class="db"><ul class="tl">
-        <li><span class="t">09:35</span><div><b>인천 → 센다이 · OZ152</b><span>아시아나 · 11:45 도착</span></div></li>
-        <li><span class="t">12시대</span><div><b>센다이공항 → 야마가타역 직행버스</b><span>약 80분 · ¥1,500 · 1층 1번 승강장, 현금</span></div></li>
-        <li><span class="t">14:30</span><div><b>야마가타역 → 덴도역 → 료칸</b><span>JR 약 20분, 역에서 택시로 료칸까지</span></div></li>
-        <li><span class="t">저녁</span><div><b>료칸 온천 · 가이세키</b><span>첫날은 일찍 쉬기</span></div></li>
-      </ul></div></article>
-
-    <article class="day" data-c="ginzan" data-d="2"><button class="day-top"><div class="th"><img src="img/p/x_ginzan.jpg" alt=""><i>DAY 2</i></div><div class="di"><span class="d on">긴잔 ♨</span><b>긴잔 온천 해 질 녘 산책</b><span>오이시다역 버스 · 다이쇼 거리 · 가스등 · 폭포</span></div><div class="chev">›</div></button>
-      <div class="db"><ul class="tl">
-        <li><span class="t">오전</span><div><b>료칸에서 늦잠 · 아침탕</b></div></li>
-        <li><span class="t">13:00</span><div><b>덴도역 → 오이시다역</b><span>JR(신칸센 쓰바사 또는 보통) 약 20~30분</span></div></li>
-        <li><span class="t">14:00</span><div><b>오이시다역 → 긴잔 온천 버스</b><span>하나가사 버스 약 36~40분 · ¥1,000 현금만 · 하루 몇 편뿐이라 시간표 꼭 확인</span></div></li>
-        <li><span class="t">15:00</span><div><b>온천 거리 산책 · 족욕 · 카페</b><span>강 양쪽에 3~4층 목조 료칸. 거리 끝 시로가네 폭포까지 천천히. 눈길이라 미끄럼 방지 신발</span></div></li>
-        <li><span class="t">16:30</span><div><b>가스등 점등 · 야경</b><span>12월은 4시 반쯤 해가 져요. 다리 위에서 사진</span></div></li>
-        <li><span class="t">16:35 / 18:21</span><div><b>긴잔 → 오이시다역 버스 → 덴도</b><span>18:21이 막차예요(조회 기준). 12/19부터는 당일 방문 차량 통제가 시작되지만 이 일정은 그 전이에요</span></div></li>
-      </ul></div></article>
-
-    <article class="day" data-c="ginzan" data-d="3"><button class="day-top"><div class="th"><img src="img/stay/anda.jpg" alt=""><i>DAY 3</i></div><div class="di"><span class="d">덴도 ♨ 쉬는 날</span><b>온천 · 장기말 공방 · 야마가타 소고기</b><span>선택: 야마데라 아랫절만</span></div><div class="chev">›</div></button>
-      <div class="db"><ul class="tl">
-        <li><span class="t">오전</span><div><b>료칸에서 쉬기</b></div></li>
-        <li><span class="t">점심</span><div><b>야마가타 소고기 · 소바</b><span>덴도역 주변이나 야마가타역 근처</span></div></li>
-        <li><span class="t">오후</span><div><span class="opt">선택</span><b>야마데라(릿샤쿠지)</b><span>꼭대기까지 1,015계단이라 엄마는 아래 본당까지만. JR 센잔선으로 덴도·야마가타에서 30~40분</span></div></li>
-        <li><span class="t">저녁</span><div><b>료칸 가이세키 · 장기말 기념품</b><span>덴도는 일본 장기말(쇼기 고마)의 도시예요</span></div></li>
-      </ul></div></article>
-
-    <article class="day" data-c="ginzan" data-d="4"><button class="day-top"><div class="th"><img src="img/stay/tendohotel.jpg" alt=""><i>DAY 4</i></div><div class="di"><span class="d">귀국</span><b>덴도 → 센다이공항 → 인천</b><span>아침 일찍 출발 · 공항버스</span></div><div class="chev">›</div></button>
-      <div class="db"><ul class="tl">
-        <li><span class="t">08:30</span><div><b>덴도 → 야마가타역</b><span>JR 약 20분</span></div></li>
-        <li><span class="t">9시대</span><div><b>야마가타역 → 센다이공항 직행버스</b><span>약 80분 · 놓치면 센다이역 경유(약 100분)</span></div></li>
-        <li><span class="t">12:45</span><div><b>센다이 → 인천 · OZ151</b><span>아시아나 · 15:20 도착</span></div></li>
-      </ul></div></article>
-
-    <h3>덴도·히가시네 온천 료칸</h3>
-    <p class="note" style="margin-top:0">2인 1실 · <b>저녁·아침 포함</b> · 쟈란 11/27 조회 · 1박 45만원 이하</p>
-    <div class="tw"><table><thead><tr><th>료칸</th><th class="r">2인 1박 2식</th></tr></thead><tbody>
-      <tr><td><b><a href="https://www.jalan.net/yad311870/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=3&roomCount=1&adultNum=2&mealType=3" target="_blank" rel="noopener">덴도 온천 쇼하쿠테이 아즈마소</a></b><small>松伯亭 あづま荘 · 쟈란 4.7 (888) · 청결·석식·접객 평 좋음 · 12/9~12 3박 합계 ¥138,600</small></td><td class="r">¥46,200</td></tr>
-      <tr><td><b><a href="https://www.jalan.net/yad375989/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=3&roomCount=1&adultNum=2&mealType=3" target="_blank" rel="noopener">호텔 안다노모리 야마가타 덴도</a></b><small>ホテル アンダの森 · 쟈란 4.7 (797) · 3박 합계 ¥133,800</small></td><td class="r">¥44,600</td></tr>
-      <tr><td><b><a href="https://www.jalan.net/yad352092/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=2&roomCount=1&adultNum=2&mealType=3" target="_blank" rel="noopener">비미구신노야도 덴도 호텔</a></b><small>美味求真の宿 天童ホテル · 쟈란 4.6 (906) · 요리 평 좋음 · 12/9~11 2박만 조회됨(¥74,052)</small></td><td class="r">¥37,026</td></tr>
-      <tr><td><b><a href="https://www.jalan.net/yad352235/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=2&roomCount=1&adultNum=2&mealType=3" target="_blank" rel="noopener">히가시네 온천 노노카 혼고칸</a></b><small>東根温泉 のゝか本郷館 · 쟈란 4.7 · 긴잔에 더 가까운 히가시네 · 12/9~11 2박 ¥74,800</small></td><td class="r">¥37,400</td></tr>
-    </tbody></table></div>
-    <button class="morelink" data-go2="stay">🏨 숙소 사진 · 예약 링크 보기</button>
-
-    <h3>긴잔 온천 거리 료칸 · 취소표 노리기</h3>
-    <div class="box"><p class="muted" style="margin:0 0 8px;font-size:13.5px">12월 날짜는 지금 다 차 있지만, 취소가 나면 라쿠텐·쟈란에 다시 떠요. 덴도 3박 중 하루를 긴잔으로 바꾸고 싶으면 아래 페이지에서 날짜(12/9·10·11)를 넣고 수시로 확인하세요.</p>
-    <ul class="rlist">
-      <li><a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/111234" target="_blank" rel="noopener"><b>긴잔소</b> <span class="muted">仙峡の宿 銀山荘</span></a><small>라쿠텐 후기 320 · 온천 거리 위쪽(걸어서 10분쯤) · 침대 객실 있음</small></li>
-      <li><a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/111235" target="_blank" rel="noopener"><b>고세키야 벳칸</b> <span class="muted">古勢起屋別館</span></a><small>라쿠텐 후기 315</small></li>
-      <li><a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/184539" target="_blank" rel="noopener"><b>혼칸 고세키야</b> <span class="muted">本館古勢起屋</span></a><small>라쿠텐 후기 49</small></li>
-      <li><a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/137447" target="_blank" rel="noopener"><b>고잔카쿠</b> <span class="muted">伝統の宿 古山閣</span></a><small>라쿠텐 후기 330</small></li>
-      <li><a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/52933" target="_blank" rel="noopener"><b>료칸 마쓰모토</b> <span class="muted">旅館松本</span></a><small>라쿠텐 3.98 (357) · 2명이면 방에서 저녁 · 오이시다역 송영(예약)</small></li>
-      <li><a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/68602" target="_blank" rel="noopener"><b>후지야</b> <span class="muted">旅館藤屋</span></a><small>라쿠텐 후기 191 · 쟈란 12/8 2인 ¥142,000</small></li>
-      <li><a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/176672" target="_blank" rel="noopener"><b>하타고 이토야</b> <span class="muted">旅籠いとうや</span></a><small>라쿠텐 후기 181</small></li>
-      <li><a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/135388" target="_blank" rel="noopener"><b>다키미칸</b> <span class="muted">滝と蕎麦の宿 瀧見舘</span></a><small>쟈란 12/7·10 2인 ¥110,352</small></li>
-      <li><a href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/166139" target="_blank" rel="noopener"><b>오야도 야나다야</b> <span class="muted">御宿 やなだ屋</span></a><small>라쿠텐 후기 12</small></li>
-    </ul>
-    <p class="note" style="margin:8px 0 0">노토야 료칸은 라쿠텐·쟈란에 없어요. 노토야를 포함해 각 료칸 공식 홈페이지 예약도 같이 확인해 보세요.</p></div>
-  </section>
-
-  <!-- ================= 다른 온천 ================= -->
-  <section class="view" id="v-more">
-    <h2>🗾 다른 온천 후보</h2>
-    <p class="lead">얘기 나온 쿠사츠, 긴잔, 시라카와고, 벳푸를 같은 기준(12월 둘째 주, 2인 1박 2식 45만원 이하, 엄마 체력)으로 살펴봤어요. "야마가타 긴자 온천"은 긴잔 온천(銀山温泉)과 같은 곳이에요.</p>
-    <div class="tw"><table><thead><tr><th>곳</th><th class="r">항공 1인</th><th>공항→온천</th><th>이번 12월</th></tr></thead><tbody>
-      <tr><td><b>벳푸+유후인</b><small>① 코스</small></td><td class="r best">32.4만~</td><td>1~2시간</td><td>⭕ 바로 가능</td></tr>
-      <tr><td><b>쿠사츠</b><small>나리타</small></td><td class="r">31.3만~</td><td>4.5~5시간<small>도쿄 1박 필요</small></td><td>⭕ 4박이면</td></tr>
-      <tr><td><b>시라카와고+게로</b><small>나고야</small></td><td class="r">41.0만~</td><td>2시간 반~</td><td>🔺 가능, 비쌈</td></tr>
-      <tr><td><b>긴잔</b><small>센다이 · ⑤ 코스</small></td><td class="r">42.2만</td><td>덴도까지 약 2시간</td><td>🔺 긴잔 료칸 매진 → 덴도 숙박</td></tr>
-    </tbody></table></div>
-    <div class="callout" style="margin-top:12px">엄마랑 <b>느긋하게</b>라면 지금 ①~④ 코스가 여전히 편해요. 새로운 곳을 원하면 <b>쿠사츠</b>(도쿄 1박 + 쿠사츠 2박 + 도쿄 1박)가 현실적이고, <b>긴잔</b>은 근처 덴도 온천에 묵는 ⑤ 코스로 정리했어요.</div>
-    <article class="dest" id="d-kusatsu">
-      <div class="cover"><img src="img/p/x_kusatsu.jpg" alt="쿠사츠 온천 (군마)" loading="lazy"><div class="cap"><b>쿠사츠 온천 (군마)</b><span>도쿄에서 북서쪽 · 일본 대표 온천 마을</span></div></div>
-      <div class="dbody"><div class="tagrow"><span class="tag">유바타케</span><span class="tag">료칸 많음</span><span class="tag ok">4박이면 가능</span></div>
-      <div class="facts"><div><small>항공 1인 왕복</small><strong>31.3만~</strong></div><div><small>공항→온천</small><strong>4.5~5시간</strong></div><div><small>2식 료칸 2인</small><strong>¥31,900~</strong></div></div>
-      <dl class="dl2"><dt>✈️ 항공</dt><dd>나리타 왕복 12/8~11 약 31.3만원 (이스타 15:20→17:45 등 저비용 오후편). 하네다는 46만원대부터.</dd><dt>🚃 가는 길</dt><dd>나리타 → 도쿄 우에노(1시간~1시간 반) → 특급 쿠사츠·시마 약 2시간 20분 → 버스 약 30분. 도쿄역·신주쿠에서 직행 고속버스도 있어요(약 4~5시간). 오후 도착편이면 첫날은 도쿄에서 자야 해요.</dd><dt>❄️ 12월</dt><dd>해발 1,200m라 낮에도 영하일 때가 많고 눈이 와요. 미끄럼 방지 신발 필수.</dd></dl>
-      <ul class="im"><li class="ok">유바타케(온천 증기 나는 원천) 야경은 일본 온천 중 최고 볼거리</li><li class="ok">45만원 이하 2식 료칸이 많고 방에서 먹는 곳도 있어요</li><li class="ok">도쿄 1~2박을 붙이면 쇼핑까지</li><li class="lose">인천에서 하루 꼬박 걸려요. 첫날·마지막 날은 도쿄</li><li class="lose">눈길·추위가 엄마한테 부담일 수 있어요</li></ul>
-      <p class="rh">12/9(수) 저녁·아침 포함 · 2인 1실 · 쟈란 조회 (45만원 이하 21곳 중)</p><ul class="rlist"><li><a href="https://www.jalan.net/yad310401/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=1&roomCount=1&adultNum=2&mealType=3" target="_blank" rel="noopener"><b>호텔 사쿠라이</b> <span class="muted">ホテル櫻井</span><span class="rr">¥41,800</span></a><small>쟈란 4.6 (6,623건) · 후기 가장 많음 · 뷔페</small></li><li><a href="https://www.jalan.net/yad385860/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=1&roomCount=1&adultNum=2&mealType=3" target="_blank" rel="noopener"><b>하나야도 벨츠</b> <span class="muted">HANAYADO BAELZ</span><span class="rr">¥39,900</span></a><small>쟈란 4.7 · 침대 방 · 코스 요리</small></li><li><a href="https://www.jalan.net/yad320115/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=1&roomCount=1&adultNum=2&mealType=3" target="_blank" rel="noopener"><b>료칸 미쓰키</b> <span class="muted">旅館美津木</span><span class="rr">¥31,900</span></a><small>쟈란 4.4 · 방에서 저녁(스키야키) · 전세탕 무료</small></li><li><a href="https://www.jalan.net/yad379028/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=1&roomCount=1&adultNum=2&mealType=3" target="_blank" rel="noopener"><b>나가타야</b> <span class="muted">永田屋</span><span class="rr">¥45,620</span></a><small>쟈란 4.9 · 전세탕 무료</small></li><li><a href="https://www.jalan.net/yad340168/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=1&roomCount=1&adultNum=2&mealType=3" target="_blank" rel="noopener"><b>오야도 고노하</b> <span class="muted">お宿 木の葉</span><span class="rr">¥41,298</span></a><small>쟈란 4.3 (3,070건) · 침대 방</small></li></ul></div></article>
-    <article class="dest" id="d-ginzan">
-      <div class="cover"><img src="img/p/x_ginzan.jpg" alt="긴잔 온천 (야마가타)" loading="lazy"><div class="cap"><b>긴잔 온천 (야마가타)</b><span>센과 치히로 분위기 · 눈 오는 다이쇼 시대 온천 거리</span></div></div>
-      <div class="dbody"><div class="tagrow"><span class="tag">사진 명소</span><span class="tag">설경</span><span class="tag mid">⑤ 코스로 (근처 숙박)</span></div>
-      <div class="facts"><div><small>항공 1인 왕복</small><strong>42.2만</strong></div><div><small>공항→온천</small><strong>3시간 반~</strong></div><div><small>2식 료칸 2인</small><strong>거의 매진</strong></div></div>
-      <dl class="dl2"><dt>✈️ 항공</dt><dd>센다이 아시아나 12/9(수) 09:35→11:45, 12/12(토) 12:45→15:20 왕복 42.2만원. 12/8은 직항이 없어요(매일 운항 아님). 야마가타 공항은 국제선 없음.</dd><dt>🚃 가는 길</dt><dd>센다이공항 → 센다이역 → 야마가타(버스 약 1시간) → 오이시다역(신칸센) → 긴잔행 버스 약 36분(¥1,000, 현금만). 환승이 3~4번이에요. 12/19~3/7은 당일 방문객 차량 통제 예정(숙박객은 제외).</dd><dt>❄️ 12월</dt><dd>설경이 제일 예쁜 때지만 길이 얼고 춥고, 인기 료칸은 일찍 차는 편이에요.</dd></dl>
-      <ul class="im"><li class="ok">눈 쌓인 다이쇼 시대 목조 료칸과 가스등 야경은 정말 특별해요</li><li class="lose">온천 거리 료칸이 이 날짜엔 사실상 매진</li><li class="lose">항공편이 주 몇 회뿐이고 가는 길 환승이 많아요</li><li class="ok">덴도 온천에 묵고 긴잔은 해 질 녘에 다녀오는 ⑤ 코스로 만들었어요</li></ul>
-      <p class="rh">12/6~13 저녁·아침 포함 2인 1실 · 쟈란 조회</p><ul class="rlist"><li><b>긴잔 온천 거리 료칸</b><small>쟈란에서 이 기간 2식 플랜이 남은 곳은 다키미칸(12/7·10, ¥110,352)과 후지야(12/8, ¥142,000)뿐이에요. 둘 다 45만원을 훨씬 넘어요</small></li><li><a href="https://www.jalan.net/yad352235/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=1&roomCount=1&adultNum=2&mealType=3" target="_blank" rel="noopener"><b>히가시네 온천 노노카 혼고칸</b> <span class="muted">東根温泉 のゝか本郷館</span><span class="rr">¥37,400</span></a><small>쟈란 4.7 · 긴잔까지 차로 40분쯤 · 대안 숙소</small></li><li><a href="https://www.jalan.net/yad323753/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=1&roomCount=1&adultNum=2&mealType=3" target="_blank" rel="noopener"><b>히지오리 온천 간쇼칸</b> <span class="muted">ゆめみの宿 観松館</span><span class="rr">¥24,750</span></a><small>쟈란 4.5 (1,909건) · 근처 다른 온천 · 대안 숙소</small></li></ul></div></article>
-    <article class="dest" id="d-shirakawa">
-      <div class="cover"><img src="img/p/x_shirakawa.jpg" alt="시라카와고 + 게로 온천 (기후)" loading="lazy"><div class="cap"><b>시라카와고 + 게로 온천 (기후)</b><span>초가지붕 합장 마을 + 일본 3대 명천 게로</span></div></div>
-      <div class="dbody"><div class="tagrow"><span class="tag">세계유산</span><span class="tag">명천</span><span class="tag mid">나고야 코스로 가능</span></div>
-      <div class="facts"><div><small>항공 1인 왕복</small><strong>41.0만~</strong></div><div><small>공항→게로</small><strong>약 2시간 반</strong></div><div><small>2식 료칸 2인</small><strong>¥33,600~</strong></div></div>
-      <dl class="dl2"><dt>✈️ 항공</dt><dd>나고야 왕복 12/8~11 약 41.0만원부터(진에어 17:10→19:00). 고마쓰 51.3만원, 도야마는 이 날짜 직항 없음.</dd><dt>🚃 가는 길</dt><dd>나고야역 → JR 특급 히다로 게로 약 1시간 40분 → 다카야마 약 45분 → 시라카와고 버스 약 50분. 게로 료칸에서 자고 다카야마·시라카와고는 하루 나들이로 다녀오는 식이에요.</dd><dt>❄️ 12월</dt><dd>시라카와고 라이트업은 1~2월 예약제라 12월엔 없어요. 12월 초는 눈이 올 수도, 안 쌓였을 수도 있어요.</dd></dl>
-      <ul class="im"><li class="ok">게로는 물이 매끈한 명천이고 료칸 값이 합리적</li><li class="ok">다카야마 옛 거리까지 묶으면 볼거리 많음</li><li class="lose">시라카와고 자체는 온천 마을이 아니에요</li><li class="lose">나고야 항공권이 규슈보다 10만원 이상 비싸요</li><li class="lose">기차·버스 이동이 길어요</li></ul>
-      <p class="rh">12/9(수) 저녁·아침 포함 · 2인 1실 · 쟈란 조회</p><ul class="rlist"><li><a href="https://www.jalan.net/yad318838/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=1&roomCount=1&adultNum=2&mealType=3" target="_blank" rel="noopener"><b>게로 관광 호텔</b> <span class="muted">湯あそびの宿 下呂観光ホテル</span><span class="rr">¥33,600</span></a><small>쟈란 4.6 (5,639건) · 석식·접객 평 좋음</small></li><li><a href="https://www.jalan.net/yad337870/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=1&roomCount=1&adultNum=2&mealType=3" target="_blank" rel="noopener"><b>사사라</b> <span class="muted">アートな館 紗々羅</span><span class="rr">¥35,200</span></a><small>쟈란 4.5 (3,172건) · 게로</small></li><li><a href="https://www.jalan.net/yad369057/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=1&roomCount=1&adultNum=2&mealType=3" target="_blank" rel="noopener"><b>오가와야</b> <span class="muted">下呂温泉 小川屋</span><span class="rr">¥38,940</span></a><small>쟈란 4.3 (6,650건) · 후기가 가장 많은 큰 료칸</small></li><li><a href="https://www.jalan.net/yad315920/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=1&roomCount=1&adultNum=2&mealType=3" target="_blank" rel="noopener"><b>에이타로 (오쿠히다)</b> <span class="muted">お宿 栄太郎</span><span class="rr">¥31,900</span></a><small>쟈란 4.8 · 노천 전세탕 · 산속 온천</small></li><li><a href="https://www.jalan.net/yad329576/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=1&roomCount=1&adultNum=2&mealType=3" target="_blank" rel="noopener"><b>하타고 하쿠산칸 (시라카와고)</b> <span class="muted">はたご 白山館</span><span class="rr">¥33,000</span></a><small>평점 없음 · 시라카와고 지역 숙소</small></li></ul></div></article>
-    <article class="dest" id="d-beppu">
-      <div class="cover"><img src="img/beppu.jpg" alt="벳푸 + 유후인 (오이타)" loading="lazy"><div class="cap"><b>벳푸 + 유후인 (오이타)</b><span>① 코스에 이미 들어 있어요</span></div></div>
-      <div class="dbody"><div class="tagrow"><span class="tag">지옥 순례</span><span class="tag">바닷가 온천</span><span class="tag ok">① 코스로 OK</span></div>
-      <div class="facts"><div><small>항공 1인 왕복</small><strong>32.4만~</strong></div><div><small>공항→온천</small><strong>1~2시간</strong></div><div><small>2식 료칸 2인</small><strong>¥35,460~</strong></div></div>
-      <dl class="dl2"><dt>✈️ 항공</dt><dd>후쿠오카(① 코스) 또는 오이타 직항(7C1811 11:05→13:00). ① 코스 항공편 옵션 E가 오이타로 들어가는 방법이에요.</dd><dt>🚃 가는 길</dt><dd>유후인에서 벳푸까지 버스 약 1시간. ① 코스 DAY 3에 "선택: 벳푸 지옥 순례"로 들어 있어요. 벳푸에서 1박 하려면 유후인 2박 중 1박을 벳푸로 바꾸면 돼요.</dd><dt>❄️ 12월</dt><dd>규슈라 위 세 곳보다 덜 추워요.</dd></dl>
-      <ul class="im"><li class="ok">비행 1시간 반, 이동이 제일 짧아요</li><li class="ok">유후인(조용한 료칸)과 벳푸(바다·지옥 순례) 분위기가 달라 같이 보기 좋아요</li></ul>
-      <p class="rh">벳푸 12/9(수) 저녁·아침 포함 · 2인 1실 · 쟈란 조회</p><ul class="rlist"><li><a href="https://www.jalan.net/yad344350/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=1&roomCount=1&adultNum=2&mealType=3" target="_blank" rel="noopener"><b>스기노이 호텔</b> <span class="muted">杉乃井ホテル</span><span class="rr">¥48,200</span></a><small>쟈란 4.7 (16,249건) · 바다 전망 계단식 노천탕 · 큰 호텔</small></li><li><a href="https://www.jalan.net/yad339956/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=1&roomCount=1&adultNum=2&mealType=3" target="_blank" rel="noopener"><b>그랑빌리오 호텔 와쿠라</b> <span class="muted">グランヴィリオホテル別府湾 和蔵</span><span class="rr">¥35,460</span></a><small>쟈란 4.7 (1,217건) · 벳푸만 전망</small></li><li><a href="https://www.jalan.net/yad399732/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=1&roomCount=1&adultNum=2&mealType=3" target="_blank" rel="noopener"><b>REX 호텔 벳푸</b> <span class="muted">REX HOTEL 別府</span><span class="rr">¥38,500</span></a><small>쟈란 4.7 · 평점 높은 호텔</small></li></ul></div></article>
-    <p class="note">항공은 Google 항공권, 료칸은 쟈란에서 11/26~27 조회했어요. 료칸 이름을 누르면 그 날짜·2식 조건의 쟈란 플랜 페이지가 열려요.</p>
+  <!-- ================= 항공 가격 ================= -->
+  <section class="view" id="v-fly">
+    <h2>✈️ 항공 가격</h2>
+    <p class="lead">매일 아침 Google 항공권에서 직항 가격을 다시 확인해 여기에 올려요. 조건은 <b>가는 날 낮 출발(10:00~16:30)</b>, <b>오는 날 10:00~18:00 출발</b>이에요. 1인 편도 가격이에요.</p>
+    <div class="box fwtop" id="fwTop"><p class="muted">불러오는 중…</p></div>
+    <h3 id="fwOutH">가는 편</h3>
+    <div class="tw"><table class="fwt"><thead><tr><th>편명</th><th>시간</th><th class="r">오늘</th><th class="r">어제 대비</th></tr></thead><tbody id="fwOut"></tbody></table></div>
+    <h3 id="fwRetH">오는 편</h3>
+    <div class="tw"><table class="fwt"><thead><tr><th>편명</th><th>시간</th><th class="r">오늘</th><th class="r">어제 대비</th></tr></thead><tbody id="fwRet"></tbody></table></div>
+    <h3>확정 조합 가격 흐름</h3>
+    <div class="box"><div id="fwChart"></div><p class="note" id="fwHist" style="margin:6px 0 0"></p></div>
+    <p class="note" id="fwSrc"></p>
   </section>
 
   <!-- ================= 숙소 ================= -->
@@ -724,28 +424,6 @@ footer a{color:var(--muted)}
     <div class="callout" style="margin-top:12px"><b>1박 2인 45만원 이하</b>만 남겼어요. 료칸은 코스 일정 날짜(12월 둘째 주 평일)에 실제로 남은 <b>저녁·아침 포함</b> 플랜 가격을 쟈란에서 조회했어요. 도시 호텔은 밥 없이 밖에서 먹는 날이라 방값(Google 참고가)이에요.</div>
     <p class="note">카드를 누르면 사진·설명과 예약 링크가 열려요. ⭐ 표시가 엄마랑 가기 제일 무난한 곳이에요. 환율 100엔=844원 기준, ¥53,300 넘으면 45만원 초과예요.</p>
 
-    <div class="rgn"><h3>① 유후인 료칸 · 2박</h3><small>12/8(화)~10(목)<br>2식 포함</small></div>
-    <div class="hg" data-r="yufuin"></div>
-    <div class="rgn"><h3>① 하카타 호텔 · 첫날·넷째 날</h3><small>12/7 · 12/10<br>방값만</small></div>
-    <div class="hg" data-r="hakata"></div>
-
-    <div class="rgn"><h3>② 아리마 료칸 · 1박</h3><small>12/10(목)<br>2식 포함</small></div>
-    <div class="hg" data-r="arima"></div>
-    <div class="rgn"><h3>② 오사카 우메다 · 2박</h3><small>12/8~10<br>방값만</small></div>
-    <div class="hg" data-r="umeda"></div>
-    <p class="note">DAY 4 난바 1박은 우메다 호텔을 3박으로 늘려도 돼요(난바까지 지하철 10분). 짐 옮기는 횟수가 줄어요.</p>
-
-    <div class="rgn"><h3>③ 이부스키 료칸 · 1박</h3><small>12/9(수)<br>2식 포함</small></div>
-    <div class="hg" data-r="ibusuki"></div>
-    <div class="rgn"><h3>③ 가고시마 시내 · 2박</h3><small>12/8 · 12/10<br>방값만</small></div>
-    <div class="hg" data-r="kagoshima"></div>
-
-    <div class="rgn"><h3>④ 도고 료칸 · 3박</h3><small>12/8(화)~11(금)<br>2식 포함</small></div>
-    <div class="hg" data-r="dogo"></div>
-
-    <div class="rgn"><h3>⑤ 덴도 온천 · 3박</h3><small>12/9(수)~12(토)<br>2식 포함</small></div>
-    <div class="hg" data-r="tendo"></div>
-
     <h3>💳 우리 WON트래블 비교</h3>
     <div class="box"><p class="muted" style="margin:0;font-size:13.5px">사파 때처럼 같은 방을 WON트래블이 더 싸게 파는지 비교하려면 앱 로그인이 필요해서 여기서는 못 봐요. 날짜와 후보 2~3곳이 정해지면 WON트래블 앱에서 같은 날짜로 검색한 화면을 캡처해 보내주세요. 아고다·Google 가격과 나란히 표로 넣어 드릴게요.</p></div>
   </section>
@@ -756,7 +434,7 @@ footer a{color:var(--muted)}
     <p class="lead">체크 표시는 이 휴대폰에만 저장돼요.</p>
     <ul class="check" id="check">
       <li><label><input type="checkbox" data-k="course"><span><b>코스 정하기</b><small>엄마랑 상의</small></span></label></li>
-      <li><label><input type="checkbox" data-k="air"><span><b>항공권 예약 (2명)</b><small>가는 편 12/7(월) RS457 14:25 · 오는 편 12/11(금) LJ448 11:20 · 2인 약 66.7만원</small></span></label></li>
+      <li><label><input type="checkbox" data-k="air"><span><b>항공권 예약 (2명)</b><small>가는 편 12/7(월) RS457 14:25 · 오는 편 12/11(금) LJ448 11:20 · 오늘 가격은 ✈️ 항공 가격 탭</small></span></label></li>
       <li><label><input type="checkbox" data-k="ryokan"><span><b>유후인 료칸 12/8~10 (2박) · 하카타 호텔 12/7 · 12/10</b><small>숙소 탭 ⭐ 추천 참고 · 저녁·아침 포함(2食付) 플랜으로</small></span></label></li>
       <li><label><input type="checkbox" data-k="bus"><span><b>특급 유후 지정석</b><small>12/8 하카타 → 히타 (09:30쯤) · 히타 → 유후인 (15:30쯤) · 12/10 유후인 → 하카타 (11:00쯤). JR큐슈 앱·역에서, 시간은 예약할 때 확인</small></span></label></li>
       <li><label><input type="checkbox" data-k="vjw"><span><b>Visit Japan Web 등록 (2명)</b></span></label></li>
@@ -782,15 +460,6 @@ const P={
   mugiya:{img:'hita',n:'무기야 카페 麦屋カフェ',k:'히타 · 카페',d:'마메다마치 안의 레트로 다방 분위기 카페. 커피 평이 좋고, 히타 배·유자후추 소프트아이스크림, 1,000엔대 점심 세트도 있어요.',h:'11:00~17:00 · 목요일 휴무',q:'麦屋カフェ 日田'},
   bowl:{img:'hita',n:'BOWL 마메다 ボウル豆田',k:'히타 · 점심',d:'히타 요릿집이 하는 덮밥 전문점. 해산물·와규·장어 등 다섯 가지를 조금씩 맛보는 세트가 인기.',h:'11:00~14:00 · 월요일 휴무',tip:'예약을 안 받아서 11시쯤 가면 덜 기다려요.',q:'BOWL 豆田 日田'},
   kazetone:{img:'hita',n:'카제토네 風と根',k:'히타 · 점심',d:'지역 채소·생선으로 만드는 정식 한 가지 코스. 조용하고 정갈해서 엄마랑 가기 좋아요.',h:'11:00~16:00 · 일·월 휴무',q:'食感農園 風と根 日田'},
- kiyomizu:{img:'p/kiyomizu',n:'기요미즈데라',k:'교토 · 절',d:'절벽 위 나무 무대에서 교토 시내가 내려다보이는 절. 교토에서 가장 유명한 곳.',h:'6:00~18:00',tip:'입장 ¥500 · 택시에 "서비스 도로로 위까지" 부탁하면 거의 꼭대기까지 가요 · 평일 오전이 덜 붐벼요',q:'Kiyomizu-dera'},
- ninenzaka:{img:'p/ninenzaka',n:'산넨자카 · 니넨자카',k:'교토 · 옛 골목',d:'돌계단과 목조 상가가 이어진 옛 골목. 기요미즈데라에서 내려오는 길이라 내리막으로 걸으면 편해요.',tip:'계단이 몇 군데 있어요. 천천히.',q:'Ninenzaka Kyoto'},
- okutan:{img:'p/okutan',n:'오쿠탄 기요미즈',k:'교토 · 유도후',d:'300년 넘은 두부 요리집. 정원이 보이는 다다미방에서 유도후(따뜻한 두부) 코스를 먹어요.',h:'11:00~16:00 무렵 (요일·시즌마다 다르고 목요일 휴무가 많음)',tip:'출발 전 영업일 확인 필수.',q:'Okutan Kiyomizu'},
- gion:{img:'p/gion',n:'기온 하나미코지',k:'교토 · 산책',d:'옛 찻집과 요정이 늘어선 기온의 대표 거리. 저녁엔 등불이 켜져요.',tip:'사유지 골목 사진 촬영 금지 표지판이 있어요.',q:'Hanamikoji Kyoto'},
- nishiki:{img:'p/nishiki',n:'니시키 시장',k:'교토 · 시장',d:'"교토의 부엌". 교토 채소 절임, 두부 도넛, 꼬치, 디저트를 조금씩 맛보는 좁은 시장 골목.',tip:'오후엔 아주 붐벼요. 가게는 저녁 5~6시면 닫는 곳이 많아요.',q:'Nishiki Market'},
- inoda:{img:'p/inoda',n:'이노다 커피 본점',k:'교토 · 카페',d:'1940년대부터 이어온 교토 대표 레트로 다방. 정원이 보이는 자리, 진한 핸드드립과 클럽 샌드위치.',h:'7:00~18:00 · 매일',tip:'아침이나 오후 늦게가 덜 기다려요.',q:'Inoda Coffee Honten'},
- arashiyama:{img:'p/arashiyama',n:'아라시야마 대나무숲',k:'교토 · 산책',d:'키 큰 대나무가 양옆으로 선 짧은 평지 길. 무료, 24시간.',tip:'오전 일찍이 덜 붐벼요. 덴류지·도게쓰교와 묶어서.',q:'Arashiyama Bamboo Grove'},
- tenryuji:{img:'p/tenryuji',n:'덴류지',k:'교토 · 절 정원',d:'산을 배경으로 한 연못 정원이 아름다운 아라시야마의 큰 절. 대나무숲 바로 옆.',h:'8:30~17:00',q:'Tenryu-ji'},
- arabica:{img:'p/arabica',n:'% 아라비카 아라시야마',k:'교토 · 카페',d:'도게쓰교 다리와 강이 보이는 하얀 커피 스탠드. 라테가 유명해요.',h:'9:00~18:00',tip:'앉을 자리가 거의 없어 테이크아웃해서 강가 벤치에서.',q:'% ARABICA Kyoto Arashiyama'},
 
  uogashi:{img:'p/uogashi',n:'하카타 우오가시',k:'후쿠오카 · 스시',d:'하카타역 지하 회전초밥. 레일에 돌지 않고 주문하면 바로 쥐어줘요. QR로 한국어·영어 주문.',h:'11:00~21:30 · 매일',tip:'줄이 생기니 식사시간 조금 피해서.',q:'博多魚がし 博多駅'},
  hana:{img:'p/hana',n:'스시 하카타 하나',k:'후쿠오카 · 스시 코스',d:'하카타역 동쪽 작은 스시집. 코스 3가지 중 고르고 1시간 반쯤 천천히 먹어요. 영어 메뉴, 무알콜 맥주 있음.',h:'평일 16:00~23:30 · 주말 12:00~23:30',tip:'자리가 적어 예약 추천.',q:'Sushi Hakata Hana'},
@@ -798,21 +467,15 @@ const P={
  laruche:{n:'카페 라뤼슈',k:'유후인 · 카페',img:'kinrin',d:'긴린코 호숫가 2층 카페. 호수 전망, 토스트·아침 식사, 말차. 샐러드 드레싱이 맛있다는 후기가 많아요.',h:'9:00~16:30 · 수요일 휴무',q:'Cafe La Ruche Yufuin'},
  tenjo:{img:'kinrin',n:'카페 텐조사지키',k:'유후인 · 카페',d:'긴린코 옆 옛 나무집 카페. 조용한 음악, 돈가스 샌드위치와 케이크. 자리가 적어요.',h:'9:00~17:00 · 매일',tip:'아침 일찍 가면 덜 기다려요.',q:'茶房 天井棧敷 由布院'},
  alaskan:{img:'p/alaskan',n:'알래스칸 카페',k:'히타 · 카페',d:'운하가 보이는 작은 카페. 곰돌이 라테아트 말차라테가 인기, 주인이 친절해요.',h:'11:00~18:00 · 화·수 휴무',q:'Alaskan Cafe Hita'},
- shimaya:{img:'p/shimaya',n:'미트카페 시마야',k:'히타 · 점심',d:'150년 된 옛집에서 직접 키운 흑모와규로 로스트비프 샌드위치, 비프스튜를 내는 곳.',h:'11:00~16:00 · 화·수 휴무',q:'天領日田ミートカフェ 嶋屋'},
- harukoma:{img:'p/harukoma',n:'하루코마 본점',k:'오사카 · 스시',d:'현지인이 줄 서는 가성비 스시집. 참치 뱃살, 장어가 인기. 영어 메뉴.',h:'11:00~21:30 · 화요일 휴무',tip:'오픈 15분 전이나 오후 2시쯤 가면 덜 기다려요.',q:'春駒 本店 天神橋'},
- mekkemon:{img:'p/mekkemon',n:'멧케몬 회전초밥 (돌핀포트)',k:'가고시마 · 스시',d:'가고시마 근해 생선이 나오는 회전초밥. 줄 서도 먹는다는 곳. 사쿠라지마 페리 터미널 근처.',h:'11:00~15:00, 17:00~21:00 · 매일',tip:'번호표 받고 기다려요. 오픈 시간에 가기.',q:'回転寿司 めっけもん ドルフィンポート'},
- kaoru:{img:'p/kaoru',n:'스시 카오루',k:'가고시마 · 스시 코스',d:'셰프가 친절한 작은 오마카세 스시집. 회·스시 코스.',h:'점심 12:00~14:00, 저녁 18:00~22:00 · 월요일 휴무 (화요일은 저녁만)',tip:'예약 추천.',q:'鮨 薫 鹿児島'},
  hankyu:{img:'p/hankyu',n:'하카타 한큐 백화점',k:'후쿠오카 · 쇼핑',d:'하카타역과 바로 붙은 백화점. 지하 식품관에 과자·차·도시락 선물이 모여 있고, 낱개 포장 과자를 조금씩 사기 좋아요.',h:'10:00~20:00 · 매일',tip:'면세 줄이 길 때가 있어요. 시간 여유 두기.',q:'Hakata Hankyu'},
  fukuya:{img:'p/fukuya',n:'후쿠야 명란젓 (하카타역 지하상가)',k:'후쿠오카 · 쇼핑',d:'명란젓(멘타이코)을 처음 만들어 판 곳으로 알려진 오래된 가게. 집에서 먹을 실속 포장도 있어요.',h:'10:00~18:30 · 매일',tip:'냉장 보관이 필요해서 마지막 날 사는 게 좋아요.',q:'味の明太子 ふくや 博多駅地下街店'},
  motsu:{n:'모츠나베',k:'후쿠오카 · 저녁',img:'motsu',d:'소곱창, 양배추, 부추를 간장이나 된장 국물에 끓이는 후쿠오카 대표 전골. 마지막에 짬뽕면을 넣어요.',tip:'하카타역·텐진 근처에 전문점이 많아요. 2인분부터 주문받는 곳이 많아요.',q:'もつ鍋 博多駅'},
  issou:{img:'p/issou',n:'하카타 잇소우 본점',k:'후쿠오카 · 라멘',d:'진하고 크리미한 돈코츠 라멘으로 유명한 가게. 현지인도 줄 서요.',h:'11:00~24:00 · 매일',tip:'국물이 아주 진해요. 엄마 입맛엔 순한 가게가 나을 수도.',q:'博多一双 博多駅東本店'},
- yatai:{n:'나카스 야타이',k:'후쿠오카 · 포장마차',img:'yatai',d:'나카강 변에 저녁마다 서는 포장마차 거리. 라멘·꼬치·오뎅을 가볍게.',tip:'12월 밤엔 강바람이 차요. 자리가 좁고 현금만 받는 곳이 많아요.',q:'Nakasu Yatai'},
  canal:{img:'p/canal',n:'캐널시티 하카타',k:'후쿠오카 · 쇼핑몰',d:'건물 사이로 인공 운하가 흐르는 쇼핑몰. 30분마다 분수쇼가 있고 5층에 라멘 스타디움이 있어요.',h:'10:00~21:00 · 매일',q:'Canal City Hakata'},
  mameda:{n:'마메다마치 (히타 옛 거리)',k:'히타 · 산책',img:'hita',d:'에도 시대 막부 직할지(天領)였던 히타의 상인 거리. 흰 벽 창고와 목조 상가가 남아 있어요. 간장·된장·사케·나무 공예 가게가 모여 있어요.',tip:'거리는 평지라 걷기 편해요. 천천히 1~2시간.',q:'Mamedamachi Hita'},
  hinagoten:{n:'히타쇼유 · 텐료 히나고텐',k:'히타 · 간장',img:'hina',d:'여러 간장·다시·된장을 시음하고 살 수 있는 간장 가게. 간장 아이스크림이 있고, 안쪽은 엄청난 양의 히나 인형 전시관이에요.',h:'9:30~16:30 · 매일',q:'Hita Shoyu Hina-goten'},
  kuncho:{img:'p/harajiro',n:'쿤초 사케 양조장',k:'히타 · 사케',d:'에도~다이쇼 시대 창고를 쓰는 사케 양조장. 시음, 작은 자료관, 카페가 있어요. 사케 소프트아이스크림도.',h:'9:00~16:30 · 매일',q:'薫長酒造 日田'},
  chiya:{img:'p/chiya',n:'센야 (히타마부시)',k:'히타 · 점심',d:'장어구이를 밥에 섞은 히타마부시가 명물. 그냥 한 번, 양념 더해 한 번, 오차즈케로 한 번 세 가지로 먹어요.',h:'10:30~16:30 · 매일 (Google 기준)',q:'日田まぶし 千屋 豆田店'},
- sofuren:{img:'p/sofuren',n:'소후렌 본점 (히타 야키소바)',k:'히타 · 점심',d:'생면을 철판에 바삭하게 구운 히타식 야키소바. 숙주와 바삭한 면이 잘 어울려요. 다다미 자리 있음.',h:'11:00~21:30 · 매일',tip:'마메다마치에서 조금 떨어져 있어 택시 추천.',q:'想夫恋 本店 日田'},
  harajiro:{img:'p/harajiro',n:'하라지로자에몬 原次郎左衛門',k:'히타 · 간장·된장',d:'오래된 된장·간장 양조장. 은어 간장, 폰즈가 인기고 무지개색 라무네도 팔아요. 본점은 나카혼마치, 마메다마치에 지점이 있어요.',h:'본점 9:00~17:00 매일 · 마메다마치점 10:00~17:00 수·목 휴무',q:'原次郎左衛門 日田'},
  marumata:{img:'p/marumata',n:'마루마타쇼유 マルマタしょう油',k:'히타 · 간장',d:'현지 사람들이 사러 가는 곳이라는 후기가 많은 간장 가게. 회 간장, 연한 간장, 쌀된장.',h:'8:00~17:00 · 토·일 휴무',tip:'주말엔 닫아요. 평일 일정일 때만.',q:'マルマタしょう油 日田'},
  kinrin:{n:'긴린코 호수',k:'유후인 · 산책',img:'kinrin',d:'온천수가 흘러드는 작은 호수. 추운 아침엔 수면 위로 물안개가 피어올라요.',tip:'물안개는 이른 아침 기온이 낮을 때 잘 보여요.',q:'Kinrinko Lake Yufuin'},
@@ -822,35 +485,7 @@ const P={
  floral:{img:'p/floral',n:'유후인 플로럴 빌리지',k:'유후인 · 구경',d:'영국 시골 마을 콘셉트의 작은 상점가. 지브리 소품 가게 등. 규모가 작아 금방 봐요.',h:'9:30~17:00 (주말 17:30)',q:'Yufuin Floral Village'},
  umijigoku:{n:'벳푸 우미지고쿠',k:'벳푸 · 지옥순례',img:'beppu',d:'코발트빛 파란 온천 연못. 무료 족욕, 온실, 온천 찜 푸딩. 지옥순례는 이런 온천 연못을 구경하는 거예요(입욕은 안 해요).',h:'8:00~17:00 · 매일',tip:'7곳 공통권은 ¥2,000~2,400 안팎(자료마다 달라요). 다 돌기 힘들면 우미지고쿠 하나만도 충분.',q:'Umi Jigoku Beppu'},
  yufust:{img:'p/yufust',n:'유후인역',k:'유후인 · 교통',d:'작은 역. 옆 관광안내소 2층이 깨끗한 대기 공간이에요. 코인로커 있음.',q:'Yufuin Station'},
- dazaifu:{img:'p/dazaifu',n:'다자이후 덴만구',k:'후쿠오카 근교',d:'학문의 신을 모신 신사. 붉은 다리, 참배길의 매화떡(우메가에모치)이 유명.',h:'6:00~19:00',tip:'낮엔 아주 붐벼요. 아침 일찍이 좋아요.',q:'Dazaifu Tenmangu'},
- ohori:{img:'p/ohori',n:'오호리 공원',k:'후쿠오카 · 산책',d:'시내 한가운데 큰 호수 공원. 다리로 섬을 건너며 산책하기 좋아요.',h:'24시간',q:'Ohori Park Fukuoka'},
- kurokawa:{n:'쿠로카와 온천 마을',k:'구마모토 · 온천',img:'kuro',d:'계곡을 따라 료칸 30여 곳이 모인 산속 온천 마을. 간판과 건물 색을 맞춰 마을 전체가 한 료칸 같아요.',tip:'하카타 09:53 직행버스 → 12:29 도착, ¥4,000, 예약 필수.',q:'Kurokawa Onsen'},
- roten:{n:'쿠로카와 입탕 패스',k:'쿠로카와 · 온천',img:'roten',d:'나무 패찰(테가타) 하나로 마을 료칸 노천탕 3곳에 들어갈 수 있어요.',h:'료칸마다 당일 입욕 시간 다름',tip:'¥1,500 · 6개월 유효',q:'黒川温泉 旅館組合 入湯手形'},
- sky:{img:'p/sky',n:'우메다 스카이빌딩 공중정원',k:'오사카 · 전망대',d:'두 빌딩을 잇는 173m 원형 전망대. 밤 야경이 예뻐요. 유리 터널 에스컬레이터는 티켓 없이도 탈 수 있어요.',h:'9:30~22:30 · 매일',q:'Umeda Sky Building'},
- yumoto:{n:'유모토자카 (아리마 메인 거리)',k:'아리마 · 산책',img:'arima',d:'언덕길을 따라 가게·찻집·작은 신사가 이어지는 아리마 온천 중심 거리.',tip:'언덕이라 엄마랑은 천천히. 동전 화장실 있음.',q:'Arima Onsen Yumotozaka'},
- tansan:{img:'p/tansan',n:'미쓰모리 혼포 (탄산 센베이)',k:'아리마 · 과자',d:'탄산 온천수로 구운 얇고 바삭한 센베이 원조 가게. 시식 가능, 12장 상자 ¥900 정도.',h:'9:00~17:00 · 매일',q:'三ツ森本舗 有馬'},
- toys:{img:'p/toys',n:'아리마 장난감 박물관',k:'아리마 · 구경',d:'유럽 나무 장난감과 오토마타(움직이는 인형) 박물관. 직접 만져볼 수 있는 층도 있어요.',h:'10:00~17:00 · 수요일 휴무',q:'Arima Toys and Automata Museum'},
- kinnoyu:{n:'킨노유 (금탕)',k:'아리마 · 공중탕',img:'arima',d:'철분과 소금기가 많아 붉은 갈색인 금천(킨센) 공중탕. 뜨거운 탕(약 44도)과 미지근한 탕(약 42도)이 있어요.',h:'8:00~22:00',tip:'입욕료 ¥800 정도. 은탕과 세트권(평일, 수건 포함)이 이득.',q:'Arima Onsen Kin no Yu'},
- ginnoyu:{img:'p/ginnoyu',n:'긴노유 (은탕)',k:'아리마 · 공중탕',d:'투명한 탄산천·라돈천 은천(긴센) 공중탕. 언덕 위라 덜 붐벼요. 사우나 있음.',h:'9:00~21:00',tip:'입욕료 ¥700 정도, 수건 ¥500이라 챙겨가기.',q:'Arima Onsen Gin no Yu'},
- kuromon:{img:'p/kuromon',n:'구로몬 시장',k:'오사카 · 시장',d:'"오사카의 부엌"이라 불리는 시장. 회, 와규 꼬치, 게, 과일을 조금씩 사 먹어요.',h:'9:00~17:00',tip:'오후엔 붐비고 가게가 일찍 닫아요. 점심 전이 좋아요.',q:'Kuromon Market Osaka'},
- osakajo:{img:'p/osakajo',n:'오사카성 공원',k:'오사카 · 산책',d:'거대한 성벽과 해자, 넓은 정원. 천수각 안은 박물관이에요.',h:'공원 24시간',q:'Osaka Castle'},
- dotonbori:{img:'p/dotonbori',n:'도톤보리 · 신사이바시',k:'오사카 · 쇼핑·먹거리',d:'글리코 간판의 운하 거리와 지붕 있는 신사이바시 상점가. 타코야키·오코노미야키, 드럭스토어·돈키호테.',q:'Dotonbori Osaka'},
- amu:{img:'p/amu',n:'아뮤플라자 가고시마',k:'가고시마 · 쇼핑',d:'가고시마중앙역과 붙은 쇼핑몰. 지하 식품관, 기념품, 옥상 관람차(¥500)에서 사쿠라지마가 보여요.',h:'10:00~20:00 · 매일',q:'Amu Plaza Kagoshima'},
- ajimori:{img:'p/ajimori',n:'아지모리 (흑돼지 샤브샤브)',k:'가고시마 · 저녁',d:'가고시마 흑돼지 샤브샤브·돈가스 전문점. 기모노 입은 직원이 먹는 법을 알려줘요. 개별실 있음.',h:'11:30~14:30, 17:00~21:30 · 수요일 휴무',tip:'예약 권장.',q:'あぢもり 鹿児島'},
- mujaki:{img:'p/mujaki',n:'텐몬칸 무자키 (시로쿠마)',k:'가고시마 · 디저트',d:'흰곰 얼굴 모양 연유 빙수 \'시로쿠마\'의 원조 가게. 2층 좌석, 엘리베이터 있음. 추우면 담요도 줘요.',h:'11:00~19:00 · 매일',tip:'1인 1메뉴. 큰 사이즈는 둘이 나눠 먹기 좋아요.',q:'天文館むじゃき'},
- sengan:{img:'p/sengan',n:'센간엔',k:'가고시마 · 정원',d:'사쓰마 번주 시마즈 가문의 별장 정원. 바다 건너 사쿠라지마를 정원 배경으로 삼았어요. 저택·박물관·가게·간식.',h:'9:00~17:00 · 매일',tip:'가고시마중앙역에서 버스로 갈 수 있어요. 1~2시간 잡기.',q:'Sengan-en'},
- saraku:{n:'모래찜질 회관 사라쿠',k:'이부스키 · 온천',img:'ibusuki',d:'바닷가 따뜻한 모래에 유카타 입고 누워 10분쯤 찜질해요. 나와서 실내 온천으로.',h:'8:30~20:00 (평일 12~13시 쉼) · 12월 정비 휴관일 있음',tip:'¥1,500 (유카타 포함) · 엄마 심장·혈압이 걱정되면 짧게.',q:'砂むし会館 砂楽'},
- ibuinfo:{img:'p/ibuinfo',n:'이부스키 관광안내소',k:'이부스키 · 안내',d:'이부스키역 관광안내소. 영어 가능 직원, 짐 호텔 배달 서비스, 전기자전거 대여.',h:'9:00~17:00',q:'Ibusuki Information Center'},
- nagasakibana:{img:'p/nagasakibana',n:'나가사키바나',k:'이부스키 · 바다 곶',d:'가이몬다케 산이 정면으로 보이는 바다 끝 곶과 작은 등대. 무료, 24시간.',tip:'바람이 세요. 관광택시가 편해요.',q:'Nagasakibana Ibusuki'},
- ikeda:{img:'p/ikeda',n:'이케다호',k:'이부스키 · 호수',d:'규슈에서 가장 큰 칼데라 호수. 호숫가 카페에서 쉬기 좋아요.',q:'Lake Ikeda Ibusuki'},
- ferry:{n:'사쿠라지마 페리',k:'가고시마 · 페리',img:'sakura',d:'시내 항구에서 화산섬 사쿠라지마까지 15분쯤. 24시간 운항, 15~20분 간격. 배 안 우동이 명물.',tip:'갈 때는 그냥 타고, 섬에 내려서 요금을 내요.',q:'Sakurajima Ferry Kagoshima'},
- karakuri:{n:'봇짱 가라쿠리 시계',k:'도고 · 구경',img:'dogo',d:'정각마다(주말·성수기엔 30분마다) 음악과 함께 소설 \'봇짱\' 인물 인형이 나오는 시계탑. 바로 옆이 무료 족욕(호조엔).',h:'8:00~22:00',q:'Botchan Karakuri Clock'},
- haikara:{img:'p/haikara',n:'도고 하이카라 거리',k:'도고 · 쇼핑',d:'도고온천역에서 본관까지 이어지는 L자 아케이드. 이마바리 타월, 귤 제품, 봇짱당고, 도미밥 가게.',q:'道後ハイカラ通り'},
- honkan:{n:'도고 온천 본관',k:'도고 · 온천',img:'dogo',d:'메이지 시대(1894년) 목조 공중목욕탕, 국가 중요문화재. 센과 치히로 목욕탕의 모티브 중 하나로 알려져 있어요. 밤 조명이 예뻐요.',h:'6:00~23:00 · 월 1회 휴관일',tip:'1층 입욕 ¥460부터 · 3층 개인실 플랜은 차와 봇짱당고 포함 · 아침이 덜 붐벼요 · 수건 대여 ¥110',q:'Dogo Onsen Honkan'},
- asuka:{img:'p/asuka',n:'아스카노유',k:'도고 · 온천',d:'2017년에 지은 도고 온천 별관. 깨끗하고 본관보다 덜 붐벼요. 2층 휴게실 플랜은 유카타·차·과자 포함.',h:'6:00~23:00 · 월 1회 휴관일',tip:'개인 욕실 방은 2개뿐이라 미리 예약.',q:'Dogo Onsen Asuka no Yu'},
- ishite:{img:'p/ishite',n:'이시테지',k:'마쓰야마 · 절',d:'시코쿠 88개 사찰 순례의 51번 절. 3층탑과 본당 뒤 불상이 늘어선 작은 동굴길이 있어요. 절 고양이도.',h:'경내 24시간',q:'Ishiteji Temple'},
- castle:{img:'p/castle',n:'마쓰야마성',k:'마쓰야마 · 성',d:'에도 시대부터 남은 진짜 천수각 12곳 중 하나. 꼭대기에서 시내가 내려다보여요.',h:'9:00~16:30',tip:'입장 ¥520 정도 · 성 안 계단이 가팔라요',q:'Matsuyama Castle'},
- ropeway:{img:'p/ropeway',n:'마쓰야마성 로프웨이·리프트',k:'마쓰야마 · 교통',d:'산 아래에서 로프웨이(곤돌라) 또는 1인 리프트로 올라가요. 내려서 성까지 조금 걸어요.',h:'8:30~17:00',tip:'리프트는 안전벨트가 없어요. 엄마는 로프웨이가 편해요.',q:'松山城ロープウェイ'}
+ ohori:{img:'p/ohori',n:'오호리 공원',k:'후쿠오카 · 산책',d:'시내 한가운데 큰 호수 공원. 다리로 섬을 건너며 산책하기 좋아요.',h:'24시간',q:'Ohori Park Fukuoka'}
 };
 const Q=s=>document.querySelector(s),QA=s=>[...document.querySelectorAll(s)];
 let RATE=8.45;
@@ -866,7 +501,7 @@ function annotate(root){
 function refreshWon(){QA('.yw').forEach(e=>e.textContent=' ('+wonTxt(+e.dataset.y)+')');calc()}
 // 탭
 const chips=QA('#chips button');
-function show(v,sc){if(!Q('#v-'+v))v='all';chips.forEach(b=>b.classList.toggle('on',b.dataset.v===v));QA('.view').forEach(s=>s.classList.toggle('on',s.id==='v-'+v));try{history.replaceState(null,'','#'+v)}catch(e){}if(sc)window.scrollTo({top:Q('nav').offsetTop-4})}
+function show(v,sc){if(!Q('#v-'+v))v='kyushu';chips.forEach(b=>b.classList.toggle('on',b.dataset.v===v));QA('.view').forEach(s=>s.classList.toggle('on',s.id==='v-'+v));try{history.replaceState(null,'','#'+v)}catch(e){}if(sc)window.scrollTo({top:Q('nav').offsetTop-4})}
 chips.forEach(b=>b.addEventListener('click',()=>show(b.dataset.v,true)));
 QA('[data-go]').forEach(b=>b.addEventListener('click',()=>show(b.dataset.go,true)));
 QA('[data-go2]').forEach(b=>b.addEventListener('click',()=>show(b.dataset.go2,true)));
@@ -890,49 +525,12 @@ const H={
  yufugarden:{r:'yufuin',n:'유후인 가든 호텔',jp:'湯布院ガーデンホテル',q:'湯布院ガーデンホテル',jr:4.5,jc:'53',y:45100,ni:2,tot:90200,meal:'저녁·아침 포함',room:'화양실(침대)',dt:'12/8(화)~10(목) 2박',t:['뷔페', '유후다케 뷰'],pick:0,d:'저녁이 와규 샤부샤부·스테이크 뷔페라 이것저것 조금씩 드시기 좋아요.',tip:'기본 플랜(석식·조식 뷔페).',jl:'https://www.jalan.net/yad356060/plan/?stayYear=2026&stayMonth=12&stayDay=8&stayCount=2&roomCount=1&adultNum=2&mealType=3'},
  kou:{r:'yufuin',n:'KOU 미야비노사토',jp:'ＫＯＵ雅之郷',q:'ＫＯＵ雅之郷',jr:4.8,jc:'276',y:29260,ni:2,tot:58520,meal:'저녁·아침 포함',room:'화실',dt:'12/8(화)~10(목) 2박',t:['전세탕 3곳', '4실뿐', '가성비'],pick:0,d:'객실이 4개뿐인 작은 숙소예요. 자가 원천 온천 3곳이 모두 전세 가족탕이라 둘이서만 온천해요.',tip:'고르는 전골 2식 플랜. 스키야키 플랜은 2박 ¥70,400.',jl:'https://www.jalan.net/yad390265/plan/?stayYear=2026&stayMonth=12&stayDay=8&stayCount=2&roomCount=1&adultNum=2&mealType=3'},
  daikichi:{r:'yufuin',n:'다이키치 료칸',jp:'大吉旅館',q:'大吉旅館',jr:4.8,jc:'61',y:27500,ni:2,tot:55000,meal:'저녁·아침 포함',room:'화실',dt:'12/8(화)~10(목) 2박',t:['가성비', '저녁 평 좋음'],pick:0,d:'분고규 도반야키와 산천어 소금구이가 나오는 소박한 료칸. 쟈란 4.8에 저녁·접객 평이 높아요.',tip:'스탠다드 2식 플랜.',jl:'https://www.jalan.net/yad336836/plan/?stayYear=2026&stayMonth=12&stayDay=8&stayCount=2&roomCount=1&adultNum=2&mealType=3'},
- kotori:{r:'arima',n:'아리마 고토리',jp:'有馬温泉 小都里 KOTORI',q:'有馬温泉 小都里 KOTORI',jr:4.7,jc:'375',y:52030,ni:1,tot:52030,meal:'저녁·아침 포함',room:'화실',dt:'12/10(목) 1박',t:['금천·은천', '전세탕 포함', '평점 높음'],pick:1,d:'금천(갈색 온천)과 은천을 둘 다 즐기는 료칸이에요. 쟈란 4.7로 아리마에서 평이 가장 좋은 편이고, 이 플랜엔 전세탕이 들어 있어요.',tip:'"고토리 인기 No.1" 제철 가이세키 플랜 · 전세탕 포함.',jl:'https://www.jalan.net/yad355612/plan/?stayYear=2026&stayMonth=12&stayDay=10&stayCount=1&roomCount=1&adultNum=2&mealType=3'},
- yamato:{r:'arima',n:'아리마 료칸 야마토',jp:'有馬温泉 旅館やまと',q:'有馬温泉 旅館やまと',jr:null,jc:'',y:34100,ni:1,tot:34100,meal:'저녁·아침 포함',room:'화실',dt:'12/10(목) 1박',t:['방에서 저녁', '전세탕', '외탕 무료권'],pick:1,d:'저녁을 방에서 먹는 헤야쇼쿠 플랜이에요. 전세탕과 킨노유·긴노유 외탕 무료권이 같이 있어요.',tip:'흑모와규 스키야키 냄비 · 방에서 식사 · 전세탕 · 외탕 무료권 포함.',jl:'https://www.jalan.net/yad353956/plan/?stayYear=2026&stayMonth=12&stayDay=10&stayCount=1&roomCount=1&adultNum=2&mealType=3'},
- arimaroyal:{r:'arima',n:'아리마 로열 호텔',jp:'有馬ロイヤルホテル',q:'有馬ロイヤルホテル',jr:4.4,jc:'186',y:45100,ni:1,tot:45100,meal:'저녁·아침 포함',room:'화실',dt:'12/10(목) 1박',t:['와규 샤부 가이세키', '접객 평 좋음'],pick:0,d:'아리마 중심가 호텔식 료칸. 조식·접객·석식 평이 높아요.',tip:'흑모와규 샤부샤부 가이세키 2식.',jl:'https://www.jalan.net/yad312610/plan/?stayYear=2026&stayMonth=12&stayDay=10&stayCount=1&roomCount=1&adultNum=2&mealType=3'},
- merveille:{r:'arima',n:'메르베르 아리마',jp:'メルヴェール有馬',q:'メルヴェール有馬',jr:4.2,jc:'1,266',y:39100,ni:1,tot:39100,meal:'저녁·아침 포함',room:'트윈(침대)',dt:'12/10(목) 1박',t:['침대 방', '후기 많음'],pick:0,d:'후기 1,200건이 넘는 숙소. 침대 방에 국산 소고기 스키야키 냄비가 나오는 가이세키예요.',tip:'"가장 인기" 1박 2식 플랜.',jl:'https://www.jalan.net/yad321801/plan/?stayYear=2026&stayMonth=12&stayDay=10&stayCount=1&roomCount=1&adultNum=2&mealType=3'},
- suminobo:{r:'arima',n:'아리마 스미노보',jp:'有馬温泉 角の坊',q:'有馬温泉 角の坊',jr:3.9,jc:'258',y:47300,ni:1,tot:47300,meal:'저녁·아침 포함',room:'화실',dt:'12/10(목) 1박',t:['고베규 스키야키'],pick:0,d:'제철 가이세키에 고베규 스키야키 한 접시를 더한 플랜.',tip:'',jl:'https://www.jalan.net/yad335884/plan/?stayYear=2026&stayMonth=12&stayDay=10&stayCount=1&roomCount=1&adultNum=2&mealType=3'},
- kamenoi:{r:'arima',n:'가메노이 호텔 아리마',jp:'亀の井ホテル 有馬',q:'亀の井ホテル 有馬',jr:4.2,jc:'90',y:51720,ni:1,tot:51720,meal:'저녁·아침 포함',room:'트윈(침대)',dt:'12/10(목) 1박',t:['침대 방', '깔끔'],pick:0,d:'리뉴얼한 호텔형 료칸. 조식·청결 평이 좋아요.',tip:'"토지의 은혜" 가이세키 2식.',jl:'https://www.jalan.net/yad339259/plan/?stayYear=2026&stayMonth=12&stayDay=10&stayCount=1&roomCount=1&adultNum=2&mealType=3'},
- hakusuikan:{r:'ibusuki',n:'이부스키 하쿠스이칸',jp:'指宿白水館',q:'指宿白水館',jr:4.4,jc:'2,986',y:40480,ni:1,tot:40480,meal:'저녁·아침 포함',room:'화양실(침대)',dt:'12/9(수) 1박',t:['관내 모래찜질', '침대 방', '후기 3천'],pick:1,d:'호텔 안에 모래찜질과 큰 대욕장이 있어 밖에 안 나가도 돼요. 바닷가 소나무 정원. 쟈란 후기 3천 건에 욕장·객실 평이 높아요.',tip:'가고시마 제철 가이세키 스탠다드 플랜 · 침대 있는 화양실.',jl:'https://www.jalan.net/yad357348/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=1&roomCount=1&adultNum=2&mealType=3'},
- tsukimiso:{r:'ibusuki',n:'료칸 쓰키미소',jp:'旅館月見荘',q:'旅館月見荘',jr:5.0,jc:'848',y:35200,ni:1,tot:35200,meal:'저녁·아침 포함',room:'화실',dt:'12/9(수) 1박',t:['쟈란 5.0', '저녁 평 좋음'],pick:1,d:'쟈란 평점 5.0(후기 848건). 조식·석식·접객 평이 모두 높은 작은 료칸이에요.',tip:'스탠다드 플랜 · 가고시마 요리.',jl:'https://www.jalan.net/yad336088/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=1&roomCount=1&adultNum=2&mealType=3'},
- kokoro:{r:'ibusuki',n:'이부스키 고코로노야도',jp:'指宿こころの宿',q:'指宿こころの宿',jr:4.1,jc:'1,497',y:31634,ni:1,tot:31634,meal:'저녁·아침 포함',room:'기타',dt:'12/9(수) 1박',t:['가성비', '저녁 평 좋음'],pick:0,d:'제철 가이세키 평이 좋은 료칸.',tip:'스탠다드 제철 와가이세키 플랜.',jl:'https://www.jalan.net/yad362396/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=1&roomCount=1&adultNum=2&mealType=3'},
- phoenix:{r:'ibusuki',n:'이부스키 피닉스 호텔',jp:'指宿フェニックスホテル',q:'指宿フェニックスホテル',jr:3.9,jc:'1,513',y:37620,ni:1,tot:37620,meal:'저녁·아침 포함',room:'화실',dt:'12/9(수) 1박',t:['모래찜질권', '음료 무료'],pick:0,d:'흑돼지 샤부 냄비 가이세키에 프리드링크·모래찜질권이 붙은 플랜.',tip:'',jl:'https://www.jalan.net/yad329490/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=1&roomCount=1&adultNum=2&mealType=3'},
- seaside:{r:'ibusuki',n:'이부스키 시사이드 호텔',jp:'指宿シーサイドホテル',q:'指宿シーサイドホテル',jr:3.8,jc:'1,025',y:33800,ni:1,tot:33800,meal:'저녁·아침 포함',room:'화실',dt:'12/9(수) 1박',t:['모래찜질 무료', '바다 앞'],pick:0,d:'바닷가 호텔. 모래찜질 무료와 저녁 90분 음료 무제한 플랜.',tip:'',jl:'https://www.jalan.net/yad341097/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=1&roomCount=1&adultNum=2&mealType=3'},
- tsubaki:{r:'dogo',n:'도고 온천 호텔 쓰바키칸',jp:'道後温泉 ホテル椿館',q:'道後温泉 ホテル椿館',jr:4.6,jc:'2,331',y:46200,ni:3,tot:138600,meal:'저녁·아침 포함',room:'화양실(침대)',dt:'12/8(화)~11(금) 3박',t:['뷔페', '후기 2천', '침대 방'],pick:1,d:'도고 본관 바로 근처, 쟈란 후기 2,300건에 평점 4.6. 3박이면 매일 고를 수 있는 뷔페가 오히려 편해요.',tip:'스탠다드 뷔페 플랜(쟈란 한정).',jl:'https://www.jalan.net/yad349770/plan/?stayYear=2026&stayMonth=12&stayDay=8&stayCount=3&roomCount=1&adultNum=2&mealType=3'},
- nigitatsu:{r:'dogo',n:'도고 온천 니기타쓰 회관',jp:'道後温泉 にぎたつ会館',q:'道後温泉 にぎたつ会館',jr:4.2,jc:'1,031',y:35000,ni:3,tot:105000,meal:'저녁·아침 포함',room:'화실',dt:'12/8(화)~11(금) 3박',t:['가이세키', '넓은 정원'],pick:1,d:'와규 도반야키가 들어간 에히메 가이세키. 석식·접객·욕장 평이 좋아요.',tip:'와규 도반야키 가이세키 플랜.',jl:'https://www.jalan.net/yad305288/plan/?stayYear=2026&stayMonth=12&stayDay=8&stayCount=3&roomCount=1&adultNum=2&mealType=3'},
- yamanote:{r:'dogo',n:'올드 잉글랜드 도고 야마노테 호텔',jp:'オールドイングランド道後山の手ホテル',q:'オールドイングランド道後山の手ホテル',jr:4.5,jc:'114',y:42000,ni:3,tot:126000,meal:'저녁·아침 포함',room:'트윈(침대)',dt:'12/8(화)~11(금) 3박',t:['침대 방', '코스 디너'],pick:0,d:'영국풍 작은 호텔. 이 호텔에서 가장 좋은 코스 디너 플랜이에요.',tip:'"야마노테 삼성 요리" 최상급 디너 플랜.',jl:'https://www.jalan.net/yad322184/plan/?stayYear=2026&stayMonth=12&stayDay=8&stayCount=3&roomCount=1&adultNum=2&mealType=3'},
- hanayuzuki:{r:'dogo',n:'도고 온천 하나유즈키',jp:'道後温泉 花ゆづき',q:'道後温泉 花ゆづき',jr:4.1,jc:'2,062',y:35640,ni:3,tot:106920,meal:'저녁·아침 포함',room:'화실',dt:'12/8(화)~11(금) 3박',t:['뷔페', '후기 많음'],pick:0,d:'지역 재료로 매일 바뀌는 뷔페.',tip:'심플 뷔페 2식 플랜.',jl:'https://www.jalan.net/yad311689/plan/?stayYear=2026&stayMonth=12&stayDay=8&stayCount=3&roomCount=1&adultNum=2&mealType=3'},
- katsuragi:{r:'dogo',n:'호텔 가쓰라기',jp:'ホテル葛城',q:'ホテル葛城',jr:4.1,jc:'1,234',y:28710,ni:3,tot:86130,meal:'저녁·아침 포함',room:'화실',dt:'12/8(화)~11(금) 3박',t:['뷔페', '가성비'],pick:0,d:'욕장·접객 평이 좋은 가성비 숙소.',tip:'심플 뷔페 2식 플랜.',jl:'https://www.jalan.net/yad301458/plan/?stayYear=2026&stayMonth=12&stayDay=8&stayCount=3&roomCount=1&adultNum=2&mealType=3'},
- ooedo:{r:'dogo',n:'오에도 온센 모노가타리 도고',jp:'大江戸温泉物語 道後',q:'大江戸温泉物語 道後',jr:4.0,jc:'1,147',y:27067,ni:3,tot:81200,meal:'저녁·아침 포함',room:'화실',dt:'12/8(화)~11(금) 3박',t:['뷔페', '최저가'],pick:0,d:'뷔페형 대형 온천 호텔. 제일 싸요.',tip:'기본 뷔페 2식 플랜.',jl:'https://www.jalan.net/yad373116/plan/?stayYear=2026&stayMonth=12&stayDay=8&stayCount=3&roomCount=1&adultNum=2&mealType=3'},
- azumaso:{r:'tendo',n:'덴도 온천 아즈마소',jp:'天童温泉 松伯亭 あづま荘',q:'天童温泉 松伯亭 あづま荘',jr:4.7,jc:'888',y:46200,ni:3,tot:138600,meal:'저녁·아침 포함',room:'화실',dt:'12/9(수)~12(토) 3박',t:['청결 평 좋음','석식 평 좋음'],pick:1,d:'덴도 온천의 평점 높은 료칸. 청결·석식·접객 평이 좋아요. ⑤ 코스 3박 숙소 추천.',tip:'긴잔까지는 기차·버스로 1시간 남짓이에요.',jl:'https://www.jalan.net/yad311870/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=3&roomCount=1&adultNum=2&mealType=3'},
- anda:{r:'tendo',n:'호텔 안다노모리 야마가타 덴도',jp:'ホテル アンダの森 山形天童店',q:'ホテル アンダの森 山形天童店',jr:4.7,jc:'797',y:44600,ni:3,tot:133800,meal:'저녁·아침 포함',room:'',dt:'12/9(수)~12(토) 3박',t:['접객·욕장 평 좋음'],pick:0,d:'접객·욕장·객실 평이 좋은 덴도의 호텔형 숙소.',tip:'',jl:'https://www.jalan.net/yad375989/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=3&roomCount=1&adultNum=2&mealType=3'},
- tendohotel:{r:'tendo',n:'덴도 호텔',jp:'美味求真の宿 天童ホテル',q:'天童ホテル',jr:4.6,jc:'906',y:37026,ni:2,tot:74052,meal:'저녁·아침 포함',room:'',dt:'12/9(수)~11(금) 2박',t:['요리 평 좋음'],pick:0,d:'이름처럼 요리에 힘을 주는 료칸. 3박 조건으로는 조회되지 않아 2박 가격이에요.',tip:'',jl:'https://www.jalan.net/yad352092/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=2&roomCount=1&adultNum=2&mealType=3'},
- nonoka:{r:'tendo',n:'히가시네 온천 노노카 혼고칸',jp:'東根温泉 のゝか本郷館',q:'東根温泉 のゝか本郷館',jr:4.7,jc:'84',y:37400,ni:2,tot:74800,meal:'저녁·아침 포함',room:'',dt:'12/9(수)~11(금) 2박',t:['긴잔에 더 가까움'],pick:0,d:'덴도보다 긴잔 쪽에 가까운 히가시네 온천의 료칸.',tip:'',jl:'https://www.jalan.net/yad352235/plan/?stayYear=2026&stayMonth=12&stayDay=9&stayCount=2&roomCount=1&adultNum=2&mealType=3'},
  oriental:{r:'hakata',n:'오리엔탈 호텔 후쿠오카 하카타스테이션',q:'Oriental Hotel Fukuoka Hakata Station',g:3.9,c:'3,600',p:233078,pick:1,t:['하카타역 앞','4성급'],
   d:'하카타역 바로 앞 4성급 호텔이에요. 공항에서 지하철 두 정거장이고, 다음 날 유후인 가는 열차도 역에서 바로 타요.',tip:'Google 호텔에서 아고다 조식 포함 ₩275,344, 부킹닷컴 ₩285,594 (2인 1박)로 나와요.'},
  greenannex:{r:'hakata',n:'하카타 그린 호텔 아넥스',q:'Hakata Green Hotel Annex',p:150427,t:['역 근처','실속'],
   d:'하카타역 근처 깔끔한 비즈니스호텔. 잠만 자는 날이면 충분해요.'},
  lohas:{r:'hakata',n:'슈퍼호텔 로하스 하카타에키',q:'Super Hotel Lohas Hakataeki',p:110026,t:['역 근처','가성비'],
-  d:'하카타역 근처 실속형 호텔. 가격을 아끼고 료칸에 더 쓰고 싶을 때.'},
- respire:{r:'umeda',n:'호텔 한큐 레스파이어 오사카',q:'Hotel Hankyu Respire Osaka',g:4.3,c:'4,600',p:155587,pick:1,t:['오사카역 직결','깨끗함'],
-  d:'오사카역(우메다)과 이어진 건물에 있는 호텔이에요. 비 와도 우산 없이 역으로 가고, 교토 가는 JR도 바로 타요.',
-  ag:'https://www.agoda.com/ko-kr/hotel-hankyu-respire-osaka/hotel/osaka-jp.html',bk:'https://www.booking.com/hotel/jp/hankyu-respire-osaka.ko.html'},
- granrespire:{r:'umeda',n:'한큐 그란 레스파이어 오사카',q:'Hankyu Gran Respire Osaka',p:138956,t:['우메다'],
-  d:'우메다 호텔. 레스파이어보다 조금 싸게 나와요.'},
- intergate:{r:'umeda',n:'호텔 인터게이트 오사카 우메다',q:'Hotel Intergate Osaka Umeda',g:4.3,p:120448,t:['우메다'],
-  d:'평이 좋은 우메다 호텔이에요.'},
- villafontaine:{r:'umeda',n:'빌라 퐁텐 그랜드 오사카 우메다',q:'Villa Fontaine Grand Osaka Umeda',g:4.4,p:118472,t:['우메다','가성비'],
-  d:'우메다 북쪽 신축 대형 호텔. 가격 대비 평점이 좋아요.'},
- shiroyama:{r:'kagoshima',n:'시로야마 호텔 가고시마',jp:'SHIROYAMA HOTEL kagoshima',q:'Shiroyama Hotel Kagoshima',p:147479,pick:1,t:['사쿠라지마 뷰 온천','언덕 위'],
-  d:'시내가 내려다보이는 언덕 위 호텔이에요. 사쿠라지마를 보면서 들어가는 노천 온천이 유명해요. 엄마가 제일 좋아하실 시내 숙소.',
-  bk:'https://www.booking.com/hotel/jp/castle-park.ko.html',tr:'https://kr.trip.com/hotels/kagoshima-hotel-detail-705443/hotel/'},
- dormykago:{r:'kagoshima',n:'도미 인 가고시마',q:'Dormy Inn Kagoshima',p:168893,t:['대욕장','시내 중심'],
-  d:'체인 비즈니스호텔인데 꼭대기에 온천 대욕장이 있어요. 텐몬칸 번화가가 가까워요.'},
- sunroyal:{r:'kagoshima',n:'가고시마 선 로열 호텔',q:'Kagoshima Sun Royal Hotel',p:119653,t:['바다 전망','실속'],
-  d:'바닷가 쪽 호텔. 사쿠라지마가 보이는 대욕장.'}
+  d:'하카타역 근처 실속형 호텔. 가격을 아끼고 료칸에 더 쓰고 싶을 때.'}
 };
 const wonH=n=>'₩'+n.toLocaleString('ko-KR');
 const RG={yufuin:'① 유후인',hakata:'① 하카타',arima:'② 아리마',umeda:'② 오사카 우메다',ibusuki:'③ 이부스키',kagoshima:'③ 가고시마',dogo:'④ 도고 온천',tendo:'⑤ 덴도 온천'};
@@ -969,6 +567,45 @@ function calc(){const v=Number(String(yen.value).replace(/[^0-9]/g,''))||0;won.t
 yen.addEventListener('input',()=>{const v=String(yen.value).replace(/[^0-9]/g,'');yen.value=v?Number(v).toLocaleString('ko-KR'):'';calc()});
 annotate(document.querySelector('.wrap'));calc();
 fetch('https://open.er-api.com/v6/latest/JPY').then(r=>r.json()).then(j=>{if(j&&j.rates&&j.rates.KRW){RATE=j.rates.KRW;Q('#rateSrc').textContent='100엔 = '+(RATE*100).toFixed(1)+'원 (실시간)';refreshWon()}}).catch(()=>{});
+
+// 항공 가격 모니터링 (flight-watch.json)
+(function(){
+  const fmt=n=>'₩'+Number(n).toLocaleString('ko-KR');
+  const man=n=>(Math.round(n/1000)/10).toFixed(1)+'만원';
+  fetch('flight-watch.json?'+Date.now()).then(r=>r.json()).then(fw=>{
+    const H=fw.history||[];const last=H[H.length-1]||{out:{},ret:{}};const prev=H.length>1?H[H.length-2]:null;
+    const price=(side,c)=>(fw[side].find(x=>x.c===c)||{}).p;
+    // 일정 탭 가격 채우기
+    QA('[data-fw]').forEach(el=>{const [side,c]=el.dataset.fw.split(':');const v=price(side,c);if(v)el.textContent=fmt(v)});
+    const sum=spec=>spec.split(',').reduce((a,x)=>{const [side,c]=x.split(':');return a+(price(side,c)||0)},0);
+    QA('[data-fwsum]').forEach(el=>{const v=sum(el.dataset.fwsum);if(v)el.textContent=fmt(v)});
+    QA('[data-fwsum2]').forEach(el=>{const v=sum(el.dataset.fwsum2);if(v)el.textContent=fmt(v*2)});
+    QA('[data-fwman]').forEach(el=>{const v=sum(el.dataset.fwman);if(v)el.textContent=man(v)});
+    QA('[data-fwdate]').forEach(el=>el.textContent=fw.updatedAt.slice(5,10).replace('-','/'));
+    // 상단 요약
+    const po=fw.picked.out,pr=fw.picked.ret;const cur=(price('out',po)||0)+(price('ret',pr)||0);
+    const pv=prev?((prev.out[po]||0)+(prev.ret[pr]||0)):0;const d=pv?cur-pv:0;
+    const minO=[...fw.out].sort((a,b)=>a.p-b.p)[0],minR=[...fw.ret].sort((a,b)=>a.p-b.p)[0];
+    const dtxt=d>0?'<span class="up">▲ '+fmt(d)+'</span>':d<0?'<span class="dn">▼ '+fmt(-d)+'</span>':'<span class="eq">변동 없음</span>';
+    Q('#fwTop').innerHTML='<div class="row"><div><div class="sub">확정 조합 1인 ('+po+' + '+pr+')</div><div class="big">'+fmt(cur)+'</div></div><div style="text-align:right"><div class="sub">어제 대비</div>'+dtxt+'<div class="sub">2인 '+fmt(cur*2)+'</div></div></div>'+
+      '<p class="sub" style="margin:8px 0 0">조건 안 최저 조합: '+minO.c+' '+minO.d+' ('+fmt(minO.p)+') + '+minR.c+' '+minR.d+' ('+fmt(minR.p)+') = <b>'+fmt(minO.p+minR.p)+'</b></p>'+
+      '<p class="sub" style="margin:4px 0 0">마지막 확인 '+fw.updatedAt+' (한국 시간)</p>';
+    const rows=(side,pick)=>[...fw[side]].sort((a,b)=>a.p-b.p).map(x=>{const pvv=prev&&prev[side][x.c];const dd=pvv?x.p-pvv:null;
+      const dt=dd==null?'<span class="eq">새로 보임</span>':Math.abs(dd)<1000?'<span class="eq">–</span>':dd>0?'<span class="up">▲'+(dd/1000).toFixed(1)+'천</span>':dd<0?'<span class="dn">▼'+(-dd/1000).toFixed(1)+'천</span>':'<span class="eq">–</span>';
+      return '<tr'+(x.c===pick?' class="fwpk"':'')+'><td class="code"><b>'+x.c+(x.c===pick?' ⭐':'')+'</b><small>'+x.a+'</small></td><td>'+x.d+' → '+x.r+'</td><td class="r"><b>'+fmt(x.p)+'</b></td><td class="r">'+dt+'</td></tr>'}).join('');
+    Q('#fwOut').innerHTML=rows('out',po);Q('#fwRet').innerHTML=rows('ret',pr);
+    Q('#fwOutH').textContent='가는 편 · '+fw.rules.out.label+' · '+fw.rules.out.from+'~'+fw.rules.out.to+' 출발';
+    Q('#fwRetH').textContent='오는 편 · '+fw.rules.ret.label+' · '+fw.rules.ret.from+'~'+fw.rules.ret.to+' 출발';
+    // 차트
+    const pts=H.map(h=>({d:h.date.slice(5).replace('-','/'),v:(h.out[po]||0)+(h.ret[pr]||0)})).filter(x=>x.v);
+    if(pts.length){const W=320,Hh=120,P=24;const vs=pts.map(x=>x.v);let mn=Math.min(...vs),mx=Math.max(...vs);if(mx-mn<20000){mn-=10000;mx+=10000}
+      const X=i=>P+(pts.length===1?(W-2*P)/2:i*(W-2*P)/(pts.length-1)),Y=v=>Hh-P-(v-mn)/(mx-mn)*(Hh-2*P);
+      const line=pts.map((p,i)=>(i?'L':'M')+X(i).toFixed(1)+' '+Y(p.v).toFixed(1)).join(' ');
+      Q('#fwChart').innerHTML='<svg viewBox="0 0 '+W+' '+Hh+'" role="img" aria-label="확정 조합 가격 흐름"><path d="'+line+'" fill="none" stroke="var(--accent)" stroke-width="2.5"/>'+pts.map((p,i)=>'<circle cx="'+X(i)+'" cy="'+Y(p.v)+'" r="3.5" fill="var(--accent)"/><text x="'+X(i)+'" y="'+(Hh-6)+'" font-size="10" text-anchor="middle" fill="currentColor" opacity=".6">'+p.d+'</text><text x="'+X(i)+'" y="'+(Y(p.v)-8)+'" font-size="10" text-anchor="middle" fill="currentColor">'+(p.v/10000).toFixed(1)+'만</text>').join('')+'</svg>';
+      Q('#fwHist').textContent='날짜별 1인 합계 ('+po+' + '+pr+'). 매일 아침 한 점씩 늘어나요.'}
+    Q('#fwSrc').textContent='출처: '+fw.source+'. 표시 가격은 Google 항공권 검색 결과로, 항공사 앱·결제 단계 가격과 다를 수 있어요.';
+  }).catch(()=>{const t=Q('#fwTop');if(t)t.innerHTML='<p class="muted">가격 파일을 불러오지 못했어요. 잠시 후 새로고침해 주세요.</p>'});
+})();
 // 체크리스트
 (function(){const K='mom-onsen';let st={};try{st=JSON.parse(localStorage.getItem(K)||'{}')}catch(e){}QA('#check input').forEach(i=>{i.checked=!!st[i.dataset.k];i.addEventListener('change',()=>{st[i.dataset.k]=i.checked;try{localStorage.setItem(K,JSON.stringify(st))}catch(e){}})})})();
 </script>
