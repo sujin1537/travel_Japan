@@ -1,6 +1,6 @@
 import requests,json,re,time,os,sys
 S=requests.Session();S.headers['User-Agent']='TripbookBot/1.0 (https://github.com/sujin1537)'
-os.makedirs('p',exist_ok=True);cred={}
+os.makedirs('p',exist_ok=True);cred=json.load(open('p/credits.json'))
 for line in open('q.txt'):
     if '|' not in line: continue
     k,q=line.strip().split('|',1)

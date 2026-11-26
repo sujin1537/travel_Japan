@@ -1,52 +1,12 @@
-kiyomizu|Kiyomizu-dera Kyoto
-ninenzaka|Ninenzaka Kyoto
-okutan|Yudofu
-gion|Hanamikoji Gion
-nishiki|Nishiki Market Kyoto
-inoda|Inoda Coffee
-arashiyama|Arashiyama bamboo grove
-tenryuji|Tenryu-ji garden Sogenchi
-arabica|Togetsukyo Arashiyama
-uogashi|Conveyor belt sushi
-hana|Nigirizushi
-hyotan|Sushi platter
-tenjo|Kinrinko Yufuin
-alaskan|Mameda-machi Hita
-shimaya|Hita Oita townscape
-harukoma|Tenjinbashi-suji shopping street
-mekkemon|Kaimondake
-kaoru|Sushi counter Japan
-hankyu|Hakata Station
-fukuya|Mentaiko
-issou|Hakata ramen tonkotsu
-canal|Canal City Hakata
-kuncho|Sake brewery Japan
-chiya|Hitsumabushi
-sofuren|Yakisoba
-harajiro|Sake barrels
-marumata|Soy sauce brewery barrels
-bspeak|Roll cake
-kinsho|Korokke
-floral|Yufuin Floral Village
-yufust|Yufu limited express
-dazaifu|Dazaifu Tenmangu
-ohori|Ohori Park Fukuoka
-sky|Umeda Sky Building
-tansan|Tansan senbei
-toys|Arima Onsen town
-ginnoyu|Gin no Yu Arima
-kuromon|Kuromon Market Osaka
-osakajo|Osaka Castle
-dotonbori|Dotonbori
-amu|Amu Plaza Kagoshima
-ajimori|Kurobuta Kagoshima
-mujaki|Shirokuma dessert
-sengan|Sengan-en
-ibuinfo|Ibusuki Station
-nagasakibana|Nagasakibana
-ikeda|Lake Ikeda Kagoshima
-haikara|Dogo Onsen shopping arcade
-asuka|Dogo Onsen Asuka-no-Yu
-ishite|Ishite-ji
-castle|Matsuyama Castle
-ropeway|Matsuyama Castle ropeway
+arabica|Togetsu-kyo bridge Arashiyama autumn
+castle|Matsuyama Castle Ehime tenshu
+fukuya|Karashi mentaiko
+gion|Gion Hanamikoji street
+ikeda|Lake Ikeda Kaimondake
+ishite|Ishite-ji Matsuyama
+kuromon|Kuromon Ichiba Nipponbashi
+okutan|Yudofu tofu hot pot
+shimaya|Mamedamachi Hita
+mujaki|Shirokuma kakigori Kagoshima
+toys|Arima Onsen street Kobe
+sky|Umeda Sky Building Floating Garden
