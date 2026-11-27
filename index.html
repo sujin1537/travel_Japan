@@ -11,6 +11,7 @@
 <meta name="theme-color" content="#f4f5f8">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <style>
 :root{
   --bg:#f4f5f8;--paper:#fff;--ink:#1a2130;--muted:#6f7889;--line:#e3e6ee;
@@ -240,6 +241,52 @@ td small{display:block;color:var(--muted);font-size:11.5px}
 .fwt tr.fwpk td{background:var(--best)}
 .up{color:var(--accent);font-weight:800}.dn{color:var(--good);font-weight:800}.eq{color:var(--muted)}
 #fwChart svg{width:100%;height:auto;display:block}
+/* 지도 + 장소 목록 */
+.seg{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin:4px 0 8px}
+.seg button{flex:0 0 auto;border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font:800 13px var(--f);cursor:pointer;color:var(--ink)}
+.seg button.on{background:var(--black);color:#fff;border-color:var(--black)}
+.seg.sm button{padding:6px 12px;font-size:12.5px}
+.seg.sm button.on{background:var(--soft-ink);border-color:var(--soft-ink)}
+.map{height:300px;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);background:var(--soft);z-index:0}
+@media (min-width:620px){.map{height:360px}}
+.mk span{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;color:#fff;font:900 12px var(--f);border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.35)}
+.leaflet-popup-content{font:13px/1.45 var(--f);margin:10px 12px}
+.leaflet-popup-content b{display:block;font-size:14px}
+.leaflet-popup-content button{margin-top:6px;border:0;border-radius:8px;background:var(--black);color:#fff;font:800 12px var(--f);padding:6px 10px;cursor:pointer}
+.plg{margin:16px 2px 6px;display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.plg b{font-size:15px;font-weight:900}.plg small{font-size:11.5px;color:var(--muted);font-weight:700;text-align:right}
+.pls{background:var(--paper);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+.pli{display:grid;grid-template-columns:56px minmax(0,1fr) 22px;gap:11px;align-items:center;width:100%;border:0;background:none;text-align:left;font:inherit;color:inherit;padding:10px 12px;cursor:pointer}
+.pli+.pli{border-top:1px solid var(--line)}
+.pli .pt{position:relative;width:56px;height:56px;border-radius:12px;overflow:hidden;background:var(--soft);display:grid;place-items:center;font-size:24px}
+.pli .pt img{width:100%;height:100%;object-fit:cover}
+.pli .pt i{position:absolute;left:3px;top:3px;width:19px;height:19px;border-radius:50%;display:grid;place-items:center;color:#fff;font:900 10.5px var(--f);font-style:normal;border:1.5px solid #fff}
+.pli b{display:block;font-size:14.5px;font-weight:900;letter-spacing:-.02em;line-height:1.3}
+.pli small{display:block;font-size:12px;color:var(--muted);margin-top:1px}
+.pli .h{font-size:11.5px;color:var(--good);font-weight:800}
+.pli .w{display:inline-block;font-size:11px;font-weight:800;border-radius:5px;padding:0 6px;margin-top:3px;background:var(--accent-bg);color:var(--accent)}
+.pli .w.x{background:#3b3f4a;color:#fff}
+.pli .go{color:#9aa3b5;font-size:20px}
+/* 교통 */
+.leg{display:grid;grid-template-columns:62px minmax(0,1fr) auto;gap:4px 10px;padding:11px 0;border-top:1px dashed var(--line);align-items:baseline}
+.leg:first-of-type{border-top:0}
+.leg .t{font-size:12px;font-weight:800;color:var(--muted)}
+.leg b{font-size:14px;font-weight:900}.leg span{display:block;font-size:12.5px;color:var(--muted)}
+.leg .c{font-size:13.5px;font-weight:900;text-align:right;white-space:nowrap}
+.dayh{display:flex;justify-content:space-between;align-items:baseline;margin:0 0 4px}
+.dayh b{font-size:15px;font-weight:900}.dayh small{font-size:12px;color:var(--muted);font-weight:800}
+.tot{display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid var(--ink);margin-top:6px;padding-top:9px;font-weight:900}
+.tot b{font-size:18px}
+.steps{margin:6px 0 0;padding-left:20px;font-size:13.5px}.steps li{margin:4px 0}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.vs div{border-radius:14px;padding:11px 12px;background:var(--soft)}
+.vs div.win{background:#e3f4ea}
+.vs small{display:block;font-size:11.5px;color:var(--muted);font-weight:800}
+.vs b{font-size:17px;font-weight:900}
+.buy{display:grid;gap:8px}
+.buy li{list-style:none;background:var(--paper);border-radius:14px;box-shadow:var(--shadow);padding:11px 13px;font-size:13.5px}
+.buy li b{font-weight:900}.buy li small{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+.buy{padding:0;margin:0}
 /* modal */
 .mb{position:fixed;inset:0;background:rgba(10,12,18,.55);z-index:100;display:none;align-items:flex-end;justify-content:center}
 .mb.on{display:flex}
@@ -273,7 +320,7 @@ footer a{color:var(--muted)}
 </head>
 <body>
 <div class="wrap">
-  <div class="top"><div class="brand">TRIPBOOK<span>.</span></div><div class="upd">2026-11-26 업데이트</div></div>
+  <div class="top"><div class="brand">TRIPBOOK<span>.</span></div><div class="upd">2026-11-27 업데이트</div></div>
 
   <header class="hero">
     <img src="img/yufu.jpg" alt="유후인 온천 마을과 유후다케">
@@ -292,6 +339,10 @@ footer a{color:var(--muted)}
   <nav><div class="chips" id="chips">
     <button data-v="kyushu" class="on">📅 일정</button>
     <button data-v="stay">🏨 숙소</button>
+    <button data-v="move">🚆 교통</button>
+    <button data-v="food">🍣 먹거리</button>
+    <button data-v="see">⛩️ 볼거리</button>
+    <button data-v="shop">🛍️ 쇼핑</button>
     <button data-v="fly">✈️ 항공 가격</button>
     <button data-v="prep">✅ 준비</button>
   </div></nav>
@@ -438,6 +489,145 @@ footer a{color:var(--muted)}
   </section>
 
   <!-- ================= 준비 ================= -->
+  <section class="view" id="v-move">
+    <h2>🚆 교통</h2>
+    <p class="lead">교통패스는 안 사도 돼요. 특급 열차 세 구간만 표를 사면 되고, 나머지는 버스·지하철 몇 번이에요.</p>
+
+    <div class="callout">1인 교통비 합계 <b>¥13,340</b> (지정석 기준) · 2인 ¥26,680<br><small style="opacity:.8">택시·벳푸 버스는 빼고 계산했어요.</small></div>
+
+    <h3>날짜별 이동</h3>
+    <div class="box">
+      <div class="dayh"><b>12/7(월) 공항 → 하카타</b><small>D1</small></div>
+      <div class="leg"><span class="t">16:00쯤</span><div><b>국제선 터미널 → 하카타역</b><span>니시테쓰 직행버스, 국제선 1층 6·7번 승강장. 하카타역 지쿠시 출구 쪽에 내려요. 짐 들고 갈아탈 필요가 없어 제일 편해요.</span></div><span class="c">¥400</span></div>
+      <div class="leg"><span class="t">저녁</span><div><b>호텔 → 저녁 식당</b><span>하카타역 근처 호텔이면 걸어서. 기온 쪽 호텔은 지하철 1정거장.</span></div><span class="c">0~¥210</span></div>
+    </div>
+    <div class="box" style="margin-top:10px">
+      <div class="dayh"><b>12/8(화) 하카타 → 히타 → 유후인</b><small>D2</small></div>
+      <div class="leg"><span class="t">09:30쯤</span><div><b>하카타 → 히타 · 특급 유후</b><span>약 1시간 30분. 지정석 추천(평일 오전이라 자유석도 대개 앉지만 엄마랑이면 지정석).</span></div><span class="c">¥3,660</span></div>
+      <div class="leg"><span class="t">11:00쯤</span><div><b>히타역 → 마메다마치</b><span>역 북쪽으로 약 1km, 걸어서 15분쯤 평지. 엄마가 힘들면 역 앞 택시로 5분.</span></div><span class="c">0~택시</span></div>
+      <div class="leg"><span class="t">15:30쯤</span><div><b>히타 → 유후인 · 특급 유후</b><span>약 1시간. 큰 짐은 히타역 코인로커에 넣어 두고 다녀요.</span></div><span class="c">¥2,830</span></div>
+      <div class="leg"><span class="t">16:30쯤</span><div><b>유후인역 → 료칸</b><span>료칸 송영(픽업)이 있는지 예약할 때 확인. 없으면 역 앞 택시(대부분 5~10분 거리).</span></div><span class="c">0~택시</span></div>
+    </div>
+    <div class="box" style="margin-top:10px">
+      <div class="dayh"><b>12/9(수) 유후인에서 쉬는 날</b><small>D3</small></div>
+      <div class="leg"><span class="t">종일</span><div><b>걸어서 다녀요</b><span>유후인역 → 유노쓰보 거리 → 긴린코가 약 1.5km 한 줄이에요. 료칸이 멀면 료칸에 역·긴린코까지 태워다 주는지 물어보세요.</span></div><span class="c">0</span></div>
+      <div class="leg"><span class="t">선택</span><div><b>벳푸 지옥순례 다녀오기</b><span>유후인역 앞에서 가메노이 버스 36번, 50분~1시간. 탈 때 정리권 뽑고 내릴 때 현금. 정확한 요금은 버스 안 요금표로.</span></div><span class="c">왕복 수천엔</span></div>
+    </div>
+    <div class="box" style="margin-top:10px">
+      <div class="dayh"><b>12/10(목) 유후인 → 하카타</b><small>D4</small></div>
+      <div class="leg"><span class="t">11:00쯤</span><div><b>유후인 → 하카타 · 특급 유후</b><span>약 2시간 10분. 하카타역에서 내려 호텔에 짐 맡기기.</span></div><span class="c">¥5,630</span></div>
+      <div class="leg"><span class="t">오후</span><div><b>하카타 ↔ 텐진·기온 지하철</b><span>하카타역 → 기온·나카스카와바타·텐진미나미 모두 ¥210. 교통카드(스이카·하야카켄 등)나 신용카드 터치로도 돼요.</span></div><span class="c">¥210×2</span></div>
+    </div>
+    <div class="box" style="margin-top:10px">
+      <div class="dayh"><b>12/11(금) 하카타 → 공항</b><small>D5 · LJ448 11:20</small></div>
+      <div class="leg"><span class="t">08:30</span><div><b>호텔 출발 → 국제선 직행버스</b><span>하카타역 지쿠시 출구 쪽 정류장에서 국제선 터미널까지 약 20분. 9시 전후 도착 → 출발 2시간 전.</span></div><span class="c">¥400</span></div>
+      <div class="leg"><span class="t">대안</span><div><b>지하철 + 무료 셔틀</b><span>지하철 하카타 → 공항(국내선) ¥260, 거기서 국제선 무료 셔틀(약 10분). 공항이 셔틀 혼잡을 공지하고 있어서 짐 많은 날은 직행버스가 나아요.</span></div><span class="c">¥260</span></div>
+      <div class="tot"><span>1인 합계 (택시 빼고)</span><b>¥13,340</b></div>
+    </div>
+
+    <h3>특급 유후 요금 (1인)</h3>
+    <div class="tw"><table>
+      <thead><tr><th>구간</th><th class="r">자유석</th><th class="r">지정석</th><th>날짜</th></tr></thead>
+      <tbody>
+        <tr><td>하카타 → 히타</td><td class="r">¥3,130</td><td class="r"><b>¥3,660</b></td><td>12/8</td></tr>
+        <tr><td>히타 → 유후인</td><td class="r">¥2,300</td><td class="r"><b>¥2,830</b></td><td>12/8</td></tr>
+        <tr><td>유후인 → 하카타</td><td class="r">¥5,100</td><td class="r"><b>¥5,630</b></td><td>12/10</td></tr>
+        <tr><td><b>합계</b></td><td class="r">¥10,530</td><td class="r"><b>¥12,120</b></td><td></td></tr>
+      </tbody></table></div>
+    <p class="note">지정석은 시기에 따라 −¥200(한산기) / +¥200(성수기) / +¥400(최성수기)로 조금 달라져요. 히타에서 내렸다 다시 타면 표가 둘로 나뉘어서, 하카타→유후인 한 번에 사는 것보다 조금 비싸요.</p>
+
+    <h3>북큐슈 레일패스, 살까?</h3>
+    <div class="box">
+      <div class="vs">
+        <div class="win"><small>표 따로 사기 (지정석)</small><b>¥12,120</b></div>
+        <div><small>북큐슈 레일패스 3일</small><b>¥15,000</b></div>
+      </div>
+      <p style="margin:10px 0 0;font-size:13.5px">이번 일정은 특급을 타는 날이 12/8, 12/10 이틀뿐이라 <b>패스가 ¥2,880 더 비싸요.</b> 5일권(¥17,000)은 더 손해예요. 벳푸까지 기차로 왕복한다면 그때 다시 계산해 볼게요.</p>
+    </div>
+
+    <h3>표 사는 법</h3>
+    <div class="box">
+      <ol class="steps">
+        <li><b>JR큐슈 인터넷 열차 예약</b>(한국어 있음)에서 날짜·구간·지정석을 고르고 카드 결제. 보통 한 달 전부터 예약할 수 있어요.</li>
+        <li>당일 하카타역 지정석 발권기에 예약 번호·카드를 넣고 종이 표를 받아요. 히타→유후인, 유후인→하카타 표도 같이 한 번에 뽑을 수 있어요.</li>
+        <li>역 창구(미도리노 마도구치)에서 사도 돼요. 메모를 보여주면 쉬워요: <b>「特急ゆふ 指定席 大人2枚」</b></li>
+      </ol>
+      <p class="note" style="margin-top:8px">유후인노모리(관광열차)는 인기라 금방 차요. 우리 시간대엔 일반 특급 유후로 계획했어요.</p>
+    </div>
+
+    <h3>공항 ↔ 하카타 3가지</h3>
+    <div class="tw"><table>
+      <thead><tr><th>방법</th><th style="white-space:nowrap">시간</th><th class="r">1인</th></tr></thead>
+      <tbody>
+        <tr><td><b>니시테쓰 직행버스</b> ⭐<small>국제선 6·7번 승강장 · 하카타역 지쿠시 출구</small></td><td style="white-space:nowrap">약 20분</td><td class="r">¥400</td></tr>
+        <tr><td><b>HEARTS 버스</b><small>국제선 11번 승강장</small></td><td style="white-space:nowrap">약 20분</td><td class="r">¥600</td></tr>
+        <tr><td><b>무료 셔틀 + 지하철</b><small>국제선 5번 승강장 → 국내선역 → 지하철 2정거장</small></td><td style="white-space:nowrap">약 25분</td><td class="r">¥260</td></tr>
+        <tr><td><b>택시</b><small>2명이 짐 많을 때</small></td><td style="white-space:nowrap">약 15분</td><td class="r">미터</td></tr>
+      </tbody></table></div>
+    <p class="note">출처: JR큐슈 특급 유후 운임표, JR큐슈 레일패스 안내, 후쿠오카공항 교통 안내, 후쿠오카시 지하철 운임 (2026-11 조회).</p>
+  </section>
+
+  <section class="view" id="v-food">
+    <h2>🍣 먹거리</h2>
+    <p class="lead">우리가 그 동네에 있는 날짜에 맞춰 휴무를 표시했어요. 눌러서 자세히 보기, 지도 번호는 목록 번호와 같아요.</p>
+    <div id="foodBox">
+      <div class="seg"><button data-cat="meal" class="on">🍣 식사</button><button data-cat="snack">🍡 간식</button><button data-cat="coffee">☕ 커피</button></div>
+      <div class="seg sm"><button data-rg="fuk" class="on">후쿠오카</button><button data-rg="hita">히타 (12/8)</button><button data-rg="yufu">유후인 (12/8~10)</button><button data-rg="all">전체</button></div>
+      <div class="map"></div>
+      <div class="plw"></div>
+    </div>
+    <div class="kai" style="margin-top:14px"><b>저녁은 어디서?</b> 12/8·12/9 저녁은 료칸 가이세키. 밖에서 먹는 저녁은 <b>12/7(월)</b>, <b>12/10(목)</b> 두 번이에요. 한 번은 스시, 한 번은 모츠나베 추천. 12/10은 오스시마치·마에다야 같은 작은 가게라 예약하면 편해요.</div>
+  </section>
+
+  <section class="view" id="v-see">
+    <h2>⛩️ 볼거리</h2>
+    <p class="lead">걷는 거리가 짧은 곳 위주예요. 지도 번호는 목록 번호와 같아요.</p>
+    <div id="seeBox">
+      <div class="seg sm"><button data-rg="fuk" class="on">후쿠오카</button><button data-rg="hita">히타</button><button data-rg="yufu">유후인</button><button data-rg="beppu">벳푸 (선택)</button></div>
+      <div class="map"></div>
+      <div class="plw"></div>
+    </div>
+  </section>
+
+  <section class="view" id="v-shop">
+    <h2>🛍️ 쇼핑</h2>
+    <p class="lead">무거운 건 마지막 날 하카타에서. 히타 간장·유후인 롤케이크는 그 동네에서만 사요.</p>
+
+    <div class="callout"><b>11월부터 면세가 바뀌었어요</b><br>가게에서 세금 포함 가격으로 결제하고, 출국할 때 공항에서 돌려받는 방식이에요.</div>
+    <div class="box">
+      <ol class="steps">
+        <li>한 가게에서 하루 <b>세전 ¥5,000 이상</b> 사면 대상. 계산할 때 여권 보여주기.</li>
+        <li>출국 날 공항에서 <b>짐 부치기 전에</b> 세관 키오스크에 여권을 대고 산 물건을 확인받아요.</li>
+        <li>수출이 확인되면 결제한 카드로 세금이 돌아와요.</li>
+      </ol>
+      <ul class="im" style="margin-top:10px">
+        <li class="lose">영수증 하나에 있는 물건 중 하나라도 빠지면 그 영수증 전체가 환급 안 돼요. 다 들고 가기.</li>
+        <li class="lose">일본에서 먹거나 쓴 물건은 환급 안 돼요.</li>
+        <li class="ok">예전 소모품 ¥50만 한도는 없어졌어요.</li>
+        <li class="ok">한큐 백화점 면세 카운터는 30분~1시간 줄이 생길 수 있어요. 12/10 오후에 여유 있게.</li>
+      </ul>
+    </div>
+
+    <h3>뭘 살까</h3>
+    <ul class="buy">
+      <li><b>명란젓 · 다시팩</b> · 하카타<small>후쿠야(데이토스, 8:00~21:00), 쇼보안·가야노야 다시팩(데이토스 1층). 명란은 보냉 포장, 마지막 날 사기.</small></li>
+      <li><b>낱개 포장 과자 · 야메차</b> · 하카타<small>한큐 백화점 지하. 조금씩 골라 담기 좋아요.</small></li>
+      <li><b>약 · 화장품 · 과자</b> · 하카타<small>돈키호테 나카스점(24시간).</small></li>
+      <li><b>간장 · 폰즈 · 은어간장</b> · 히타<small>하라지로자에몬(마메다마치점은 수·목 휴무, 우리 날짜 화요일 OK), 히나고텐 시음. 마루마타쇼유는 현지인이 사는 집, 평일만.</small></li>
+      <li><b>사케</b> · 히타<small>쿤초 양조장에서 시음하고 고르기.</small></li>
+      <li><b>유자후추 · 롤케이크 · 쿠키</b> · 유후인<small>유노쓰보 거리. B-speak 롤케이크(보냉팩), 링곤 쿠키(개별 포장, 수 휴무).</small></li>
+    </ul>
+    <p class="note">간장·사케 같은 액체는 기내에 못 들고 타요. 공항 세관 확인을 받은 뒤 부치는 짐에 넣기.</p>
+
+    <h3>어디서 살까</h3>
+    <div id="shopBox">
+      <div class="seg sm"><button data-rg="fuk" class="on">후쿠오카</button><button data-rg="hita">히타</button><button data-rg="yufu">유후인</button></div>
+      <div class="map"></div>
+      <div class="plw"></div>
+    </div>
+    <p class="note">면세 제도 출처: 일본 관광청 「免税制度の見直し」, nippon.com (2026-11 조회).</p>
+  </section>
+
   <section class="view" id="v-prep">
     <h2>✅ 준비</h2>
     <p class="lead">체크 표시는 이 휴대폰에만 저장돼요.</p>
@@ -464,6 +654,7 @@ footer a{color:var(--muted)}
 <!-- 팝업 -->
 <div class="mb" id="mb" role="dialog" aria-modal="true"><div class="md" id="md"></div></div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script>
 const P={
   mugiya:{img:'hita',n:'무기야 카페 麦屋カフェ',k:'히타 · 카페',d:'마메다마치 안의 레트로 다방 분위기 카페. 커피 평이 좋고, 히타 배·유자후추 소프트아이스크림, 1,000엔대 점심 세트도 있어요.',h:'11:00~17:00 · 목요일 휴무',q:'麦屋カフェ 日田'},
@@ -477,7 +668,7 @@ const P={
  tenjo:{img:'kinrin',n:'카페 텐조사지키',k:'유후인 · 카페',d:'긴린코 옆 옛 나무집 카페. 조용한 음악, 돈가스 샌드위치와 케이크. 자리가 적어요.',h:'9:00~17:00 · 매일',tip:'아침 일찍 가면 덜 기다려요.',q:'茶房 天井棧敷 由布院'},
  alaskan:{img:'p/alaskan',n:'알래스칸 카페',k:'히타 · 카페',d:'운하가 보이는 작은 카페. 곰돌이 라테아트 말차라테가 인기, 주인이 친절해요.',h:'11:00~18:00 · 화·수 휴무',q:'Alaskan Cafe Hita'},
  hankyu:{img:'p/hankyu',n:'하카타 한큐 백화점',k:'후쿠오카 · 쇼핑',d:'하카타역과 바로 붙은 백화점. 지하 식품관에 과자·차·도시락 선물이 모여 있고, 낱개 포장 과자를 조금씩 사기 좋아요.',h:'10:00~20:00 · 매일',tip:'면세 줄이 길 때가 있어요. 시간 여유 두기.',q:'Hakata Hankyu'},
- fukuya:{img:'p/fukuya',n:'후쿠야 명란젓 (하카타역 지하상가)',k:'후쿠오카 · 쇼핑',d:'명란젓(멘타이코)을 처음 만들어 판 곳으로 알려진 오래된 가게. 집에서 먹을 실속 포장도 있어요.',h:'10:00~18:30 · 매일',tip:'냉장 보관이 필요해서 마지막 날 사는 게 좋아요.',q:'味の明太子 ふくや 博多駅地下街店'},
+ fukuya:{img:'p/fukuya',n:'후쿠야 명란젓 (하카타역 데이토스)',k:'후쿠오카 · 쇼핑',d:'명란젓(멘타이코)을 처음 만들어 판 곳으로 알려진 오래된 가게. 집에서 먹을 실속 포장도 있어요.',h:'8:00~21:00 · 매일',tip:'냉장 보관이 필요해서 마지막 날 사는 게 좋아요.',q:'味の明太子 ふくや 博多駅地下街店'},
  motsu:{n:'모츠나베',k:'후쿠오카 · 저녁',img:'motsu',d:'소곱창, 양배추, 부추를 간장이나 된장 국물에 끓이는 후쿠오카 대표 전골. 마지막에 짬뽕면을 넣어요.',tip:'하카타역·텐진 근처에 전문점이 많아요. 2인분부터 주문받는 곳이 많아요.',q:'もつ鍋 博多駅'},
  issou:{img:'p/issou',n:'하카타 잇소우 본점',k:'후쿠오카 · 라멘',d:'진하고 크리미한 돈코츠 라멘으로 유명한 가게. 현지인도 줄 서요.',h:'11:00~24:00 · 매일',tip:'국물이 아주 진해요. 엄마 입맛엔 순한 가게가 나을 수도.',q:'博多一双 博多駅東本店'},
  canal:{img:'p/canal',n:'캐널시티 하카타',k:'후쿠오카 · 쇼핑몰',d:'건물 사이로 인공 운하가 흐르는 쇼핑몰. 30분마다 분수쇼가 있고 5층에 라멘 스타디움이 있어요.',h:'10:00~21:00 · 매일',q:'Canal City Hakata'},
@@ -496,6 +687,51 @@ const P={
  yufust:{img:'p/yufust',n:'유후인역',k:'유후인 · 교통',d:'작은 역. 옆 관광안내소 2층이 깨끗한 대기 공간이에요. 코인로커 있음.',q:'Yufuin Station'},
  ohori:{img:'p/ohori',n:'오호리 공원',k:'후쿠오카 · 산책',d:'시내 한가운데 큰 호수 공원. 다리로 섬을 건너며 산책하기 좋아요.',h:'24시간',q:'Ohori Park Fukuoka'}
 };
+// 먹거리·볼거리·쇼핑 장소 (영업시간: Google 지도 2026-11-27 조회)
+Object.assign(P,{
+ osushimachi:{n:'하카타 오스시마치 (JRJP 빌딩)',k:'후쿠오카 · 스시',d:'하카타역 바로 옆 JRJP 빌딩 2층 스시 이자카야. 눈앞에서 쥐어 주고, 참치와 고마사바(참깨 고등어) 평이 좋아요. 가격 부담이 적은 편이에요.',h:'평일 12:00~15:00 · 17:00~22:00 · 주말 12:00~22:00',tip:'금방 차요. 평일이라도 예약하는 게 좋아요.',q:'博多オスシマチ 博多JR JPビル店'},
+ sashisu:{n:'스시사카바 사시스 (하카타 마잉)',k:'후쿠오카 · 스시',d:'하카타역 마잉 골목의 스시 술집. 한국 손님이 많아요. 가격 대비 신선하다는 평.',h:'11:00~22:00 · 매일',tip:'줄이 길어요(30분~1시간). 오픈 전에 서면 덜 기다려요.',q:'すし酒場 さしすせそ 博多マイング横丁'},
+ rakutenchi:{img:'motsu',n:'라쿠텐치 모츠나베 (하카타역앞)',k:'후쿠오카 · 모츠나베',d:'후기 2만 5천 건이 넘는 모츠나베 집. 마지막에 넣는 짬뽕면이 무제한. 영어 응대도 잘해요.',h:'17:00~01:00 · 매일',tip:'하카타역 동쪽 요도바시 1층 지점은 12:00~03:00이라 낮에도 먹을 수 있어요.',q:'博多もつ鍋 楽天地 博多駅前店'},
+ maedaya:{img:'motsu',n:'마에다야 (하카타역앞)',k:'후쿠오카 · 모츠나베',d:'작은 모츠나베 가게. 된장(미소) 국물이 깔끔하다는 평이 많아요. 점심도 해요.',h:'11:00~14:30 · 17:00~24:00 · 매일',tip:'자리가 적어 예약 추천. 한 테이블은 같은 국물로 시켜야 해요.',q:'博多もつ鍋 前田屋 博多駅前店'},
+ ooyama:{img:'motsu',n:'오오야마 모츠나베 (KITTE 9층)',k:'후쿠오카 · 모츠나베',d:'하카타역 KITTE 9층. 칸막이 방이 있고 점심 예약이 쉬워요. 미소 국물이 대표.',h:'11:00~23:00 · 매일',q:'博多もつ鍋おおやま KITTE博多'},
+ shinshin:{n:'하카타 라멘 신신 (데이토스)',k:'후쿠오카 · 라멘',d:'하카타역 데이토스 2층 라멘 골목. 돈코츠 국물이 진하지만 무겁지 않다는 평. 명란 볶음밥도 인기.',h:'11:00~23:00 · 화요일 휴무',tip:'줄이 있어도 회전이 빨라요. 잇소우보다 순한 편이라 엄마도 무난.',q:'博多らーめん ShinShin 博多デイトス店'},
+ shoboan:{n:'멘타이 요리 쇼보안 (하카타역 9층)',k:'후쿠오카 · 명란 정식',d:'명란 회사(쿠바라혼케)가 하는 식당. 명란과 도미를 올린 마부시 덮밥을 세 가지 방법으로 먹어요.',h:'11:00~16:00 · 17:00~22:00 · 매일',tip:'번호표 대기. 같은 회사 다시팩(가야노야)은 데이토스 1층에서 팔아요.',q:'めんたい料理 博多 椒房庵'},
+ kisuimaru:{n:'키스이마루 (하카타역 지하)',k:'후쿠오카 · 생선 정식',d:'하카타역 지하 생선 정식집. 밥·된장국·명란·다카나가 무한 리필. 아침 7:30부터 열어요.',h:'7:30~10:00 · 10:30~23:00 · 매일',tip:'아침엔 7:30 전에 번호표를 받아야 첫 회차에 앉아요.',q:'博多 喜水丸 博多一番街'},
+ sonoda:{n:'식사의 가게 소노다',k:'히타 · 야키소바',d:'히타식 바삭한 야키소바를 하는 작은 가족 식당. 숙주가 듬뿍, 영어 메뉴 있어요. 직접 끓인 우롱차도 평이 좋아요.',h:'11:00~16:00 · 수요일 휴무',tip:'현금만 받아요.',q:'お食事の店 そのだ 日田'},
+ tomarigi:{n:'토마리기 마메다마치 본점',k:'히타 · 정식',d:'마메다마치 안의 15석쯤 되는 작은 식당. 1,000엔 안팎 점심 정식, QR 주문(영어 번역).',h:'11:00~14:30 · 18:00~22:30',q:'とまり木 豆田町本店'},
+ shin:{img:'kinrin',n:'유후마부시 신',k:'유후인 · 점심',d:'긴린코 근처. 분고규·닭·장어를 솥밥에 올려 그냥, 양념 더해, 오차즈케로 세 번 먹어요.',h:'10:30~17:30 · 매일',tip:'30분~1시간 줄 서요. 문 여는 10:30에 맞춰 가기.',q:'由布まぶし 心 金鱗湖本店'},
+ yufushokudo:{img:'yunotsubo',n:'유후 식당',k:'유후인 · 점심',d:'유노쓰보 거리 골목 2층 작은 식당. 스테이크를 테이블에서 마저 구워 먹어요. 신발 벗고 앉는 자리.',h:'10:00~16:00 · 매일',q:'ユフ食堂 由布院'},
+ yomoyama:{img:'yunotsubo',n:'요모야마 (이로리 구이)',k:'유후인 · 점심·저녁',d:'유노쓰보 거리 옆. 토종닭(샤모)을 화로에 직접 구워 먹는 집. 직원이 영어로 굽는 법을 알려줘요.',h:'11:00~20:00 (수 ~17:00) · 목요일 휴무',q:'湯布院囲炉裏焼き 四方山'},
+ milch:{img:'yunotsubo',n:'밀히 Milch',k:'유후인 · 디저트',d:'치즈케이크·푸딩 가게. 따뜻한 치즈케이크, 차가운 포장 치즈케이크 둘 다 인기. 푸딩은 덜 달아요.',h:'10:30~17:30 · 매일',q:'Milch 由布院'},
+ snoopy:{img:'yunotsubo',n:'스누피 차야 유후인',k:'유후인 · 카페·굿즈',d:'스누피 테마 카페와 굿즈 가게. 음식과 디저트가 캐릭터 모양이에요.',h:'9:30~17:30 · 매일',q:'SNOOPY茶屋 由布院店'},
+ lingon:{img:'yunotsubo',n:'링곤 쿠키',k:'유후인 · 과자',d:'쿠키 하나하나 개별 포장. 대부분 ¥200 이하라 선물용으로 조금씩 사기 좋아요.',h:'10:00~16:00 · 수요일 휴무',q:'LINGON COOKIES 由布院'},
+ caravan:{img:'kinrin',n:'캐러밴 커피',k:'유후인 · 커피',d:'긴린코 옆 골목, 정원 있는 오래된 커피집. 원두 종류가 많고 앤티크 잔에 내려줘요. 스콘도 맛있다는 평.',h:'9:30~17:00 · 매일',tip:'관광객 붐비는 거리에서 살짝 비켜나 있어 조용해요.',q:'キャラバンコーヒー 由布院'},
+ senke:{img:'yufu',n:'유후인 센케',k:'유후인 · 카페',d:'유후다케와 논이 통창으로 보이는 카페. 라테아트, 프렌치토스트, 푸딩. 역 남쪽이라 북적이는 거리와 떨어져 있어요.',h:'8:30~17:00 · 목요일 휴무',q:'由布院 千家'},
+ nooice:{n:'누아이스 하카타 NOOICE',k:'후쿠오카 · 브런치',d:'하카타역 근처 호주식 브런치 카페. 아침 8시부터. 1인 1음료 주문이 규칙이에요.',h:'8:00~17:00 · 매일',q:'NOOICE Hakata'},
+ rec:{n:'렉 커피 하카타 마루이',k:'후쿠오카 · 커피',d:'하카타역 KITTE 6층 스페셜티 커피. 원두 종류가 많고 푸딩도 있어요.',h:'10:00~21:00 · 매일',q:'REC COFFEE 博多マルイ店'},
+ kushida:{n:'구시다 신사',k:'후쿠오카 · 신사',d:'하카타의 수호 신사. 7월 야마카사 축제 때 쓰는 커다란 장식 가마(가자리야마)를 경내에 세워 둬요. 캐널시티에서 걸어서 5분.',h:'9:00~17:00 (Google 기준)',q:'櫛田神社 博多'},
+ donki:{n:'돈키호테 나카스점',k:'후쿠오카 · 쇼핑',d:'과자·화장품·약 잡화 할인점. 2층 구조라 층을 옮길 때 고른 물건을 계산대에 맡기고 번호표를 받아요.',h:'24시간',tip:'캐널시티·구시다 신사에서 가까워요.',q:'ドン・キホーテ 中洲店'}
+});
+// [key, 분류, 지역, 위도, 경도, 휴무 요일(0=일)]
+const G=[
+ ['osushimachi','meal','fuk',33.58818,130.41900],['uogashi','meal','fuk',33.59045,130.41986],['sashisu','meal','fuk',33.59067,130.42072],['hana','meal','fuk',33.58916,130.42268],['hyotan','meal','fuk',33.58975,130.39898],
+ ['rakutenchi','meal','fuk',33.58880,130.41598],['maedaya','meal','fuk',33.58919,130.41647],['ooyama','meal','fuk',33.58885,130.41973],['shoboan','meal','fuk',33.58997,130.42005],['kisuimaru','meal','fuk',33.59049,130.42000],['shinshin','meal','fuk',33.59096,130.42110,[2]],['issou','meal','fuk',33.58638,130.42510],
+ ['chiya','meal','hita',33.32728,130.93733],['bowl','meal','hita',33.32747,130.93600,[1]],['kazetone','meal','hita',33.32609,130.93576,[0,1]],['tomarigi','meal','hita',33.32762,130.93726],['sonoda','meal','hita',33.32475,130.93516,[3]],
+ ['shin','meal','yufu',33.26719,131.36785],['yufushokudo','meal','yufu',33.26722,131.36440],['yomoyama','meal','yufu',33.26774,131.36442,[4]],
+ ['bspeak','snack','yufu',33.26539,131.35938],['kinsho','snack','yufu',33.26756,131.36572],['milch','snack','yufu',33.26623,131.36159],['lingon','snack','yufu',33.26765,131.36530,[3]],['snoopy','snack','yufu',33.26657,131.36562],
+ ['hinagoten','snack','hita',33.32831,130.93589],['kuncho','snack','hita',33.32888,130.93736],
+ ['nooice','coffee','fuk',33.58908,130.41464],['rec','coffee','fuk',33.58906,130.41946],
+ ['mugiya','coffee','hita',33.32648,130.93683,[4]],
+ ['tenjo','coffee','yufu',33.26607,131.36835],['caravan','coffee','yufu',33.26783,131.36889],['laruche','coffee','yufu',33.26737,131.36885,[3]],['senke','coffee','yufu',33.26099,131.36115,[4]],
+ ['kushida','sight','fuk',33.59295,130.41046],['canal','sight','fuk',33.58963,130.41095],['ohori','sight','fuk',33.58621,130.37646],
+ ['mameda','sight','hita',33.32660,130.93638],['hinagoten','sight','hita',33.32831,130.93589],['kuncho','sight','hita',33.32888,130.93736],
+ ['kinrin','sight','yufu',33.26666,131.36903],['yunotsubo','sight','yufu',33.26674,131.36306],['floral','sight','yufu',33.26749,131.36554],['yufust','sight','yufu',33.26267,131.35510],
+ ['umijigoku','sight','beppu',33.31681,131.46874],
+ ['hankyu','shop','fuk',33.58936,130.41984],['fukuya','shop','fuk',33.59056,130.42139],['canal','shop','fuk',33.58963,130.41095],['donki','shop','fuk',33.59399,130.40585],
+ ['harajiro','shop','hita',33.32643,130.93605,[3,4]],['hinagoten','shop','hita',33.32831,130.93589],['kuncho','shop','hita',33.32888,130.93736],['marumata','shop','hita',33.31376,130.93144,[0,6]],
+ ['yunotsubo','shop','yufu',33.26674,131.36306],['bspeak','shop','yufu',33.26539,131.35938],['lingon','shop','yufu',33.26765,131.36530,[3]],['snoopy','shop','yufu',33.26657,131.36562]
+];
+
 const Q=s=>document.querySelector(s),QA=s=>[...document.querySelectorAll(s)];
 let RATE=8.45;
 const wonTxt=y=>{const w=y*RATE;return w>=100000?'약 '+(Math.round(w/1000)/10).toLocaleString('ko-KR')+'만원':'약 '+(Math.round(w/100)*100).toLocaleString('ko-KR')+'원'};
@@ -510,7 +746,7 @@ function annotate(root){
 function refreshWon(){QA('.yw').forEach(e=>e.textContent=' ('+wonTxt(+e.dataset.y)+')');calc()}
 // 탭
 const chips=QA('#chips button');
-function show(v,sc){if(!Q('#v-'+v))v='kyushu';chips.forEach(b=>b.classList.toggle('on',b.dataset.v===v));QA('.view').forEach(s=>s.classList.toggle('on',s.id==='v-'+v));try{history.replaceState(null,'','#'+v)}catch(e){}if(sc)window.scrollTo({top:Q('nav').offsetTop-4})}
+function show(v,sc){if(!Q('#v-'+v))v='kyushu';chips.forEach(b=>b.classList.toggle('on',b.dataset.v===v));QA('.view').forEach(s=>s.classList.toggle('on',s.id==='v-'+v));try{history.replaceState(null,'','#'+v)}catch(e){}if(sc)window.scrollTo({top:Q('nav').offsetTop-4});if(window.onShow)onShow(v)}
 chips.forEach(b=>b.addEventListener('click',()=>show(b.dataset.v,true)));
 QA('[data-go]').forEach(b=>b.addEventListener('click',()=>show(b.dataset.go,true)));
 QA('[data-go2]').forEach(b=>b.addEventListener('click',()=>show(b.dataset.go2,true)));
@@ -620,6 +856,50 @@ fetch('https://open.er-api.com/v6/latest/JPY').then(r=>r.json()).then(j=>{if(j&&
     Q('#fwSrc').textContent='출처: '+fw.source+'. 표시 가격은 Google 항공권 검색 결과로, 항공사 앱·결제 단계 가격과 다를 수 있어요.';
   }).catch(()=>{const t=Q('#fwTop');if(t)t.innerHTML='<p class="muted">가격 파일을 불러오지 못했어요. 잠시 후 새로고침해 주세요.</p>'});
 })();
+// 지도 + 장소 목록 (먹거리·볼거리·쇼핑)
+(function(){
+  const RGN={fuk:{n:'후쿠오카 · 하카타',when:'12/7(월) 저녁 · 12/10(목) 오후 · 12/11(금) 아침',days:[1,4,5]},
+    hita:{n:'히타',when:'12/8(화) 낮',days:[2]},
+    yufu:{n:'유후인',when:'12/8(화) 저녁 ~ 12/10(목) 오전',days:[2,3,4]},
+    beppu:{n:'벳푸 (선택)',when:'12/9(수) 가고 싶으면',days:[3]}};
+  const CAT={meal:['#c8553d','🍣'],snack:['#b7791f','🍡'],coffee:['#6b4f3a','☕'],sight:['#2c3a63','⛩️'],shop:['#2f7d55','🛍️']};
+  const WD='일월화수목금토',DT={1:'12/7',2:'12/8',3:'12/9',4:'12/10',5:'12/11'};
+  function warn(r,off){if(!off)return '';const hit=RGN[r].days.filter(d=>off.includes(d));if(!hit.length)return '';
+    if(hit.length===RGN[r].days.length)return '<span class="w x">우리 날짜엔 휴무</span>';
+    return '<span class="w">'+hit.map(d=>DT[d]+'('+WD[d]+')').join('·')+' 휴무 · 그날은 피하기</span>'}
+  const BOX={};
+  function build(id,cats){const root=Q('#'+id);if(!root)return;
+    const r0=root.querySelector('[data-rg].on');const st={cat:cats[0],r:r0?r0.dataset.rg:'all'};BOX[id]={root,st,cats,map:null,layer:null};
+    root.querySelectorAll('[data-cat]').forEach(b=>b.addEventListener('click',()=>{st.cat=b.dataset.cat;root.querySelectorAll('[data-cat]').forEach(x=>x.classList.toggle('on',x===b));render(id)}));
+    root.querySelectorAll('[data-rg]').forEach(b=>b.addEventListener('click',()=>{st.r=b.dataset.rg;root.querySelectorAll('[data-rg]').forEach(x=>x.classList.toggle('on',x===b));render(id)}));
+    render(id)}
+  function items(id){const {st}=BOX[id];return G.filter(g=>g[1]===st.cat&&(st.r==='all'||g[2]===st.r))}
+  function render(id){const B=BOX[id],list=B.root.querySelector('.plw');const it=items(id);
+    const byR={};it.forEach((g,i)=>{(byR[g[2]]=byR[g[2]]||[]).push([g,i+1])});
+    if(!it.length){list.innerHTML='<p class="note" style="margin:14px 2px">이 동네에는 따로 골라둔 곳이 없어요.'+(B.st.cat==='snack'&&B.st.r==='fuk'?' 하카타 간식은 🛍️ 쇼핑 탭의 한큐 백화점 지하 식품관에 모여 있어요.':'')+'</p>';drawMap(id);return}
+    list.innerHTML=Object.keys(RGN).filter(r=>byR[r]).map(r=>'<div class="plg"><b>'+RGN[r].n+'</b><small>'+RGN[r].when+'</small></div><div class="pls">'+byR[r].map(([g,no])=>{const p=P[g[0]]||{n:g[0],k:''};const c=CAT[g[1]][0];
+      return '<button class="pli" data-p="'+g[0]+'"><span class="pt">'+(p.img?'<img src="img/'+p.img+'.jpg" alt="" loading="lazy">':CAT[g[1]][1])+'<i style="background:'+c+'">'+no+'</i></span><span><b>'+p.n+'</b><small>'+(p.k||'').replace(/^[^·]*· /,'')+(p.h?' · <span class="h">'+p.h+'</span>':'')+'</small>'+warn(g[2],g[5])+'</span><span class="go">›</span></button>'}).join('')+'</div>').join('');
+    annotate(list);drawMap(id)}
+  function drawMap(id){const B=BOX[id];if(!B.map||typeof L==='undefined')return;const it=items(id);
+    if(B.layer)B.layer.remove();B.layer=L.layerGroup().addTo(B.map);const pts=[];
+    it.forEach((g,i)=>{const p=P[g[0]]||{n:g[0]};const c=CAT[g[1]][0];pts.push([g[3],g[4]]);
+      L.marker([g[3],g[4]],{icon:L.divIcon({className:'mk',html:'<span style="background:'+c+'">'+(i+1)+'</span>',iconSize:[26,26],iconAnchor:[13,13]})})
+       .bindPopup('<b>'+p.n+'</b>'+(p.h?p.h:'')+'<br><button data-p="'+g[0]+'">자세히 보기</button>').addTo(B.layer)});
+    if(!pts.length)return;
+    // 지역이 여러 곳이면 넓게, 한 곳이면 그 동네로
+    const rs=[...new Set(it.map(g=>g[2]))];
+    if(pts.length===1)B.map.setView(pts[0],15);else B.map.fitBounds(pts,{padding:[28,28],maxZoom:16});
+    if(rs.length>1&&B.st.r==='all'){/* 전체 보기 */}}
+  function initMap(id){const B=BOX[id];if(!B||typeof L==='undefined')return;
+    if(!B.map){const el=B.root.querySelector('.map');B.map=L.map(el,{scrollWheelZoom:false,tap:true});
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap'}).addTo(B.map);drawMap(id)}
+    else{B.map.invalidateSize();drawMap(id)}}
+  build('foodBox',['meal','snack','coffee']);build('seeBox',['sight']);build('shopBox',['shop']);
+  const V={food:'foodBox',see:'seeBox',shop:'shopBox'};
+  window.onShow=v=>{if(V[v])setTimeout(()=>initMap(V[v]),30)};
+  const cur=(Q('.view.on')||{}).id;if(cur)onShow(cur.slice(2));
+})();
+
 // 체크리스트
 (function(){const K='mom-onsen';let st={};try{st=JSON.parse(localStorage.getItem(K)||'{}')}catch(e){}QA('#check input').forEach(i=>{i.checked=!!st[i.dataset.k];i.addEventListener('change',()=>{st[i.dataset.k]=i.checked;try{localStorage.setItem(K,JSON.stringify(st))}catch(e){}})})})();
 </script>
