@@ -239,6 +239,7 @@ td small{display:block;color:var(--muted);font-size:11.5px}
 .fwtop .sub{font-size:12.5px;color:var(--muted)}
 .fwt td.code b{display:block}.fwt td.code small{color:var(--muted);font-size:11px}
 .fwt tr.fwpk td{background:var(--best)}
+.fwt td.code small.bg{display:block;font-size:10.5px;color:var(--accent);font-weight:700;margin-top:2px;white-space:normal}.fwt td.code small.bg.ok{color:var(--good)}
 .up{color:var(--accent);font-weight:800}.dn{color:var(--good);font-weight:800}.eq{color:var(--muted)}
 #fwChart svg{width:100%;height:auto;display:block}
 /* 지도 + 장소 목록 */
@@ -354,7 +355,7 @@ footer a{color:var(--muted)}
     <div class="cover"><img src="img/hita.jpg" alt="히타 마메다마치"><div class="cap"><b>① 후쿠오카 · 히타 · 유후인</b><span>12/7(월)~11(금) 4박 5일 · 하카타 1박 + 유후인 료칸 2박 + 하카타 1박</span></div></div>
     <div class="facts"><div><small>항공 1인 (확정)</small><strong data-fwman="out:RS457,ret:LJ448">34.3만원</strong></div><div><small>숙소 이동</small><strong>1번</strong></div><div><small>1인 예산</small><strong>95만~130만</strong></div></div>
     <p class="note" style="margin:-4px 2px 10px">1인 예산 = 항공 약 34만 + 유후인 료칸 2박 23만~45만 + 하카타 호텔 2박 11만~23만 + 특급 열차 약 8만 + 식비·쇼핑 20만 안팎</p>
-    <div class="fly"><div class="hd"><b>✈️ 항공편 · 인천 ↔ 후쿠오카</b><small>직항 · 1인 편도 합계 · <span data-fwdate>11/27</span> 기준</small></div><div class="fo pick"><div class="ft"><b>A. 4박 5일 · 12/7(월)~12/11(금)</b><span class="bd rec">⭐ 확정 일정</span></div><div class="lg"><span class="dir">가는 편</span><span class="tm">14:25→15:55</span><span class="cd">RS457 에어서울</span><span class="dt">12/7 월</span><span class="pz" data-fw="out:RS457">₩153,100</span></div><div class="lg"><span class="dir">오는 편</span><span class="tm">11:20→12:55</span><span class="cd">LJ448 진에어</span><span class="dt">12/11 금</span><span class="pz" data-fw="ret:LJ448">₩190,140</span></div><div class="sum">1인 <b data-fwsum="out:RS457,ret:LJ448">₩343,240</b> · 2인 <span data-fwsum2="out:RS457,ret:LJ448">₩686,480</span></div><ul class="im"><li class="ok">낮에 출발해 오후에 도착하고, 금요일 낮에 귀국해서 주말 이틀 쉬고 출근해요. 유후인 료칸은 12/8~10(화·수 밤).</li><li class="lose">마지막 날 오호리 공원 산책은 빠져요 (8시 반쯤 호텔에서 출발)</li></ul></div><div class="fo"><div class="ft"><b>B. 같은 날짜 · 저녁 귀국</b><span class="bd long">🌇 마지막 날 여유</span></div><div class="lg"><span class="dir">가는 편</span><span class="tm">14:25→15:55</span><span class="cd">RS457 에어서울</span><span class="dt">12/7 월</span><span class="pz" data-fw="out:RS457">₩153,100</span></div><div class="lg"><span class="dir">오는 편</span><span class="tm">17:50→19:30</span><span class="cd">7C1406 제주항공</span><span class="dt">12/11 금</span><span class="pz" data-fw="ret:7C1406">₩239,089</span></div><div class="sum">1인 <b data-fwsum="out:RS457,ret:7C1406">₩392,189</b> · 2인 <span data-fwsum2="out:RS457,ret:7C1406">₩784,378</span></div><ul class="im"><li class="ok">마지막 날 오호리 공원·점심까지 하고 와요. A보다 1인 5만원쯤 비싸요.</li></ul></div><p class="note" style="margin:8px 0 0">가격은 매일 아침 다시 확인해서 <b>✈️ 항공 가격</b> 탭에 올려요. 결제 전에 항공사 앱에서도 한 번 더 확인하세요.</p><button class="morelink" data-go2="fly">✈️ 오늘 항공 가격 보기</button></div>
+    <div class="fly"><div class="hd"><b>✈️ 항공편 · 인천 ↔ 후쿠오카</b><small>직항 · 1인 편도 합계 · <span data-fwdate>11/27</span> 기준</small></div><div class="fo pick"><div class="ft"><b>A. 4박 5일 · 12/7(월)~12/11(금)</b><span class="bd rec">⭐ 확정 일정</span></div><div class="lg"><span class="dir">가는 편</span><span class="tm">14:25→15:55</span><span class="cd">RS457 에어서울</span><span class="dt">12/7 월</span><span class="pz" data-fw="out:RS457">₩153,100</span></div><div class="lg"><span class="dir">오는 편</span><span class="tm">11:20→12:55</span><span class="cd">LJ448 진에어</span><span class="dt">12/11 금</span><span class="pz" data-fw="ret:LJ448">₩190,140</span></div><div class="sum">1인 <b data-fwsum="out:RS457,ret:LJ448">₩343,240</b> · 2인 <span data-fwsum2="out:RS457,ret:LJ448">₩686,480</span></div><ul class="im"><li class="ok">낮에 출발해 오후에 도착하고, 금요일 낮에 귀국해서 주말 이틀 쉬고 출근해요. 유후인 료칸은 12/8~10(화·수 밤).</li><li class="lose">마지막 날 오호리 공원 산책은 빠져요 (8시 반쯤 호텔에서 출발)</li><li class="ok">🧳 오는 편 진에어는 부치는 짐 15kg가 운임에 포함돼요. 간장·사케 사 와도 OK.</li><li class="lose">🧳 가는 편 에어서울 특가엔 부치는 짐이 없어요. 기내 짐만으로 충분하면 그대로, 부칠 거면 15kg ₩40,000 사전구매.</li></ul></div><div class="fo"><div class="ft"><b>B. 같은 날짜 · 저녁 귀국</b><span class="bd long">🌇 마지막 날 여유</span></div><div class="lg"><span class="dir">가는 편</span><span class="tm">14:25→15:55</span><span class="cd">RS457 에어서울</span><span class="dt">12/7 월</span><span class="pz" data-fw="out:RS457">₩153,100</span></div><div class="lg"><span class="dir">오는 편</span><span class="tm">17:50→19:30</span><span class="cd">7C1406 제주항공</span><span class="dt">12/11 금</span><span class="pz" data-fw="ret:7C1406">₩239,089</span></div><div class="sum">1인 <b data-fwsum="out:RS457,ret:7C1406">₩392,189</b> · 2인 <span data-fwsum2="out:RS457,ret:7C1406">₩784,378</span></div><ul class="im"><li class="ok">마지막 날 오호리 공원·점심까지 하고 와요. A보다 1인 5만원쯤 비싸요.</li><li class="lose">🧳 제주항공 가장 싼 운임엔 부치는 짐이 없을 수 있어요. 결제 전에 확인.</li></ul></div><p class="note" style="margin:8px 0 0">가격은 매일 아침 다시 확인해서 <b>✈️ 항공 가격</b> 탭에 올려요. 결제 전에 항공사 앱에서도 한 번 더 확인하세요.</p><button class="morelink" data-go2="fly">✈️ 오늘 항공 가격 보기</button></div>
     <div class="why"><b>이 코스가 좋은 이유</b><ul><li>비행 1시간 반, 일본에서 온천 마을이 가장 많이 모인 곳</li><li>유후인 료칸에 2박 해서 짐 풀고 푹 쉬어요. 가이세키도 두 번</li><li>가는 길 중간 히타에서 에도 시대 옛 거리 구경과 쇼핑</li></ul></div>
 
     <h3>일정 · 느긋한 4박 5일</h3>
@@ -452,11 +453,11 @@ footer a{color:var(--muted)}
     <p class="lead">매일 아침 Google 항공권에서 직항 가격을 다시 확인해 여기에 올려요. 조건은 <b>가는 날 낮 출발(10:00~16:30)</b>, <b>오는 날 10:00~18:00 출발</b>이에요. 1인 편도 가격이에요.</p>
     <div class="box fwtop" id="fwTop"><p class="muted">불러오는 중…</p></div>
     <h3 id="fwOutH">가는 편</h3>
-    <div class="tw"><table class="fwt"><thead><tr><th>편명</th><th>시간</th><th class="r">오늘</th><th class="r">어제 대비</th></tr></thead><tbody id="fwOut"></tbody></table></div>
+    <div class="tw"><table class="fwt"><thead><tr><th>편명</th><th>시간</th><th class="r">오늘<br><small>운임만</small></th><th class="r">짐 15kg<br><small>1개 포함</small></th><th class="r">어제 대비</th></tr></thead><tbody id="fwOut"></tbody></table></div>
     <h3 id="fwRetH">오는 편</h3>
-    <div class="tw"><table class="fwt"><thead><tr><th>편명</th><th>시간</th><th class="r">오늘</th><th class="r">어제 대비</th></tr></thead><tbody id="fwRet"></tbody></table></div>
+    <div class="tw"><table class="fwt"><thead><tr><th>편명</th><th>시간</th><th class="r">오늘<br><small>운임만</small></th><th class="r">짐 15kg<br><small>1개 포함</small></th><th class="r">어제 대비</th></tr></thead><tbody id="fwRet"></tbody></table></div>
     <h3>다른 날짜로 가면? (4박)</h3>
-    <div class="tw"><table class="fwt"><thead><tr><th>날짜</th><th>가장 싼 편 (가는 / 오는)</th><th class="r">1인 합계</th></tr></thead><tbody id="fwCombo"></tbody></table></div>
+    <div class="tw"><table class="fwt"><thead><tr><th>날짜</th><th>가장 싼 편 (가는 / 오는)</th><th class="r">1인 합계<br><small>운임만</small></th></tr></thead><tbody id="fwCombo"></tbody></table></div>
     <p class="note" id="fwComboNote"></p>
     <h3>확정 조합 가격 흐름</h3>
     <div class="box"><div id="fwChart"></div><p class="note" id="fwHist" style="margin:6px 0 0"></p></div>
@@ -817,6 +818,12 @@ fetch('https://open.er-api.com/v6/latest/JPY').then(r=>r.json()).then(j=>{if(j&&
 (function(){
   const fmt=n=>'₩'+Number(n).toLocaleString('ko-KR');
   const man=n=>(Math.round(n/1000)/10).toFixed(1)+'만원';
+  // 부치는 짐 15kg 1개 (항공사 규정 · 2026-11-27 확인)
+  const BAG={LJ:{inc:1,t:'15kg 포함 (모든 운임)'},KE:{inc:1,t:'포함'},OZ:{inc:1,t:'포함'},
+    ZE:{fee:30000,t:'특가엔 없음 · 15kg 사전구매 ₩30,000'},RS:{fee:40000,t:'특가엔 없음 · 15kg 사전구매 ₩40,000'},
+    BX:{fee:null,t:'특가엔 없음 · 사전구매 가격은 예약 후 확인'},'7C':{fee:null,t:'가장 싼 운임엔 보통 없음 · 확인 필요'},TW:{fee:null,t:'가장 싼 운임엔 보통 없음 · 확인 필요'}};
+  const bag=c=>BAG[c.slice(0,2)]||{fee:null,t:'확인 필요'};
+  const withBag=x=>{const b=bag(x.c);return b.inc?x.p:(b.fee!=null?x.p+b.fee:null)};
   fetch('flight-watch.json?'+Date.now()).then(r=>r.json()).then(fw=>{
     const H=fw.history||[];const last=H[H.length-1]||{out:{},ret:{}};const prev=H.length>1?H[H.length-2]:null;
     const price=(side,c)=>(fw[side].find(x=>x.c===c)||{}).p;
@@ -833,11 +840,11 @@ fetch('https://open.er-api.com/v6/latest/JPY').then(r=>r.json()).then(j=>{if(j&&
     const minO=[...fw.out].sort((a,b)=>a.p-b.p)[0],minR=[...fw.ret].sort((a,b)=>a.p-b.p)[0];
     const dtxt=d>0?'<span class="up">▲ '+fmt(d)+'</span>':d<0?'<span class="dn">▼ '+fmt(-d)+'</span>':'<span class="eq">변동 없음</span>';
     Q('#fwTop').innerHTML='<div class="row"><div><div class="sub">확정 조합 1인 ('+po+' + '+pr+')</div><div class="big">'+fmt(cur)+'</div></div><div style="text-align:right"><div class="sub">어제 대비</div>'+dtxt+'<div class="sub">2인 '+fmt(cur*2)+'</div></div></div>'+
-      '<p class="sub" style="margin:8px 0 0">조건 안 최저 조합: '+minO.c+' '+minO.d+' ('+fmt(minO.p)+') + '+minR.c+' '+minR.d+' ('+fmt(minR.p)+') = <b>'+fmt(minO.p+minR.p)+'</b></p>'+
-      '<p class="sub" style="margin:4px 0 0">마지막 확인 '+fw.updatedAt+' (한국 시간)</p>';
+      '<p class="sub" style="margin:8px 0 0">운임만 보면 최저 조합: '+minO.c+' '+minO.d+' ('+fmt(minO.p)+') + '+minR.c+' '+minR.d+' ('+fmt(minR.p)+') = <b>'+fmt(minO.p+minR.p)+'</b></p>'+
+      (()=>{const o=fw.out.find(x=>x.c===po),r=fw.ret.find(x=>x.c===pr);if(!o||!r)return '';const wr=withBag(r),wo=withBag(o);const rb=[...fw.ret].filter(x=>withBag(x)).sort((a,b)=>withBag(a)-withBag(b))[0];return '<p class="sub" style="margin:8px 0 0">🧳 짐 15kg 1개씩 부치면: 가는 편 '+(wo?fmt(wo):'확인')+' + 오는 편 '+(wr?fmt(wr):'확인')+(wo&&wr?' = <b>'+fmt(wo+wr)+'</b>':'')+'<br>오는 편은 짐 포함 기준 '+rb.c+' '+rb.d+' ('+fmt(withBag(rb))+')가 가장 싸요. 가는 편은 짐을 안 부치면 '+fmt(o.p)+' 그대로.</p>'})()+'<p class="sub" style="margin:4px 0 0">마지막 확인 '+fw.updatedAt+' (한국 시간)</p>';
     const rows=(side,pick)=>[...fw[side]].sort((a,b)=>a.p-b.p).map(x=>{const pvv=prev&&prev[side][x.c];const dd=pvv?x.p-pvv:null;
       const dt=dd==null?'<span class="eq">새로 보임</span>':Math.abs(dd)<1000?'<span class="eq">–</span>':dd>0?'<span class="up">▲'+(dd/1000).toFixed(1)+'천</span>':dd<0?'<span class="dn">▼'+(-dd/1000).toFixed(1)+'천</span>':'<span class="eq">–</span>';
-      return '<tr'+(x.c===pick?' class="fwpk"':'')+'><td class="code"><b>'+x.c+(x.c===pick?' ⭐':'')+'</b><small>'+x.a+'</small></td><td>'+x.d+' → '+x.r+'</td><td class="r"><b>'+fmt(x.p)+'</b></td><td class="r">'+dt+'</td></tr>'}).join('');
+      const b=bag(x.c),wb=withBag(x);return '<tr'+(x.c===pick?' class="fwpk"':'')+'><td class="code"><b>'+x.c+(x.c===pick?' ⭐':'')+'</b><small>'+x.a+'</small><small class="bg'+(b.inc?' ok':'')+'">🧳 '+b.t+'</small></td><td>'+x.d+' → '+x.r+'</td><td class="r">'+fmt(x.p)+'</td><td class="r"><b>'+(wb?fmt(wb):'확인')+'</b></td><td class="r">'+dt+'</td></tr>'}).join('');
     Q('#fwOut').innerHTML=rows('out',po);Q('#fwRet').innerHTML=rows('ret',pr);
     Q('#fwOutH').textContent='가는 편 · '+fw.rules.out.label+' · '+fw.rules.out.from+'~'+fw.rules.out.to+' 출발';
     Q('#fwRetH').textContent='오는 편 · '+fw.rules.ret.label+' · '+fw.rules.ret.from+'~'+fw.rules.ret.to+' 출발';
@@ -853,7 +860,7 @@ fetch('https://open.er-api.com/v6/latest/JPY').then(r=>r.json()).then(j=>{if(j&&
       const line=pts.map((p,i)=>(i?'L':'M')+X(i).toFixed(1)+' '+Y(p.v).toFixed(1)).join(' ');
       Q('#fwChart').innerHTML='<svg viewBox="0 0 '+W+' '+Hh+'" role="img" aria-label="확정 조합 가격 흐름"><path d="'+line+'" fill="none" stroke="var(--accent)" stroke-width="2.5"/>'+pts.map((p,i)=>'<circle cx="'+X(i)+'" cy="'+Y(p.v)+'" r="3.5" fill="var(--accent)"/><text x="'+X(i)+'" y="'+(Hh-6)+'" font-size="10" text-anchor="middle" fill="currentColor" opacity=".6">'+p.d+'</text><text x="'+X(i)+'" y="'+(Y(p.v)-8)+'" font-size="10" text-anchor="middle" fill="currentColor">'+(p.v/10000).toFixed(1)+'만</text>').join('')+'</svg>';
       Q('#fwHist').textContent='날짜별 1인 합계 ('+po+' + '+pr+'). 매일 아침 한 점씩 늘어나요.'}
-    Q('#fwSrc').textContent='출처: '+fw.source+'. 표시 가격은 Google 항공권 검색 결과로, 항공사 앱·결제 단계 가격과 다를 수 있어요.';
+    Q('#fwSrc').textContent='출처: '+fw.source+'. 표시 가격은 Google 항공권 검색 결과로, 항공사 앱·결제 단계 가격과 다를 수 있어요. 짐 규정: 이스타항공 위탁수하물 사전구매 안내(공식), 진에어 전 운임 15kg 포함(시사저널e 2024-10), 에어서울 특가 15kg ₩40,000(2023-11 규정 변경 기사), 에어부산 특가 무료 수하물 없음(2026-08). 가장 싼 운임 기준이라 결제 화면에서 한 번 더 확인하세요.';
   }).catch(()=>{const t=Q('#fwTop');if(t)t.innerHTML='<p class="muted">가격 파일을 불러오지 못했어요. 잠시 후 새로고침해 주세요.</p>'});
 })();
 // 지도 + 장소 목록 (먹거리·볼거리·쇼핑)
