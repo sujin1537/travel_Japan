@@ -297,6 +297,16 @@ td small{display:block;color:var(--muted);font-size:11.5px}
 .md{background:var(--paper);width:100%;max-width:560px;max-height:88vh;overflow:auto;border-radius:22px 22px 0 0;padding-bottom:max(18px,env(safe-area-inset-bottom))}
 @media (min-width:600px){.mb{align-items:center}.md{border-radius:22px}}
 .md img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.gal{position:relative}
+.gs{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.gs::-webkit-scrollbar{display:none}
+.gs img{flex:0 0 100%;scroll-snap-align:start;display:block}
+.gal .gd{position:absolute;left:0;right:0;bottom:8px;display:flex;justify-content:center;gap:5px;pointer-events:none}
+.gal .gd i{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.55);box-shadow:0 0 2px rgba(0,0,0,.4)}
+.gal .gd i.on{background:#fff;width:16px;border-radius:3px}
+.gal .ga{position:absolute;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;border:0;background:rgba(0,0,0,.38);color:#fff;font-size:18px;cursor:pointer;display:grid;place-items:center}
+.gal .ga.l{left:8px}.gal .ga.r{right:8px}
+@media (hover:none){.gal .ga{display:none}}
 .md .in{padding:16px 18px 6px}
 .md .k{font-size:12px;font-weight:800;color:var(--accent)}
 .md h4{margin:2px 0 8px;font-size:21px;font-weight:900;letter-spacing:-.03em}
@@ -580,7 +590,7 @@ footer a{color:var(--muted)}
   <section class="view" id="v-food">
     <h2>🍣 먹거리</h2>
     <p class="lead">우리가 그 동네에 있는 날짜에 맞춰 휴무를 표시했어요. 눌러서 자세히 보기, 지도 번호는 목록 번호와 같아요.</p>
-    <div class="callout">👭 <b>예슬·연하·지영 추천 5곳</b>을 넣었어요. 목록 맨 위 분홍 표시예요.<br><small style="opacity:.85">12/7(월) 저녁 → 스시 타가미(예약) 또는 히츠마부시 빈초 · 12/9(수) 점심 → 코하루 우동 · 12/10(목) 점심 → 이치무진 치킨난반, 저녁 → 카구라 스키야키</small></div>
+    <div class="callout">👭 <b>예슬·연하·지영 추천 6곳</b>을 넣었어요. 목록 맨 위 분홍 표시예요.<br><small style="opacity:.85">12/7(월) 저녁 → 스시 타가미(예약) 또는 히츠마부시 빈초 · 12/9(수) 점심 → 코하루 우동 · 아침에 짬 나면 코메다 커피 모닝세트 · 12/10(목) 점심 → 이치무진 치킨난반, 저녁 → 카구라 스키야키</small></div>
     <div id="foodBox">
       <div class="seg"><button data-cat="meal" class="on">🍣 식사</button><button data-cat="snack">🍡 간식</button><button data-cat="coffee">☕ 커피</button></div>
       <div class="seg sm"><button data-rg="fuk" class="on">후쿠오카</button><button data-rg="hita">히타 (12/8)</button><button data-rg="yufu">유후인 (12/8~10)</button><button data-rg="all">전체</button></div>
@@ -747,9 +757,10 @@ Object.assign(P,{
  ichimujin:{img:'f/ichimujin',n:'돈코츠 라멘 이치무진 (고후쿠마치)',k:'후쿠오카 · 라멘·치킨난반',fr:'예슬 추천 · "치킨난반이 살면서 먹은 치킨 중 제일"',d:'명란 라멘과 치킨난반이 유명한 집. 식권 자판기로 주문, 영어 메뉴 있고 테이블에 명란·절임이 무료로 놓여 있어요.',h:'11:00~14:50 · 17:00~20:50 · 매일',tip:'자판기는 현금 위주로 생각하고 가기.',q:'とんこつらーめん 一無尽 呉服町店'},
  tagami:{img:'f/tagami',n:'스시 타가미',k:'후쿠오카 · 오마카세 스시',fr:'연하 추천 (예슬 전달)',d:'나카스 강가 건물 3층 카운터 오마카세. 통창으로 강 야경이 보이고, 셰프가 번역 앱·아이패드로 재료를 설명해줘서 외국인 손님 평이 좋아요.',h:'11:00~15:00 · 18:00~22:00 · 일요일 휴무',tip:'고급 오마카세라 미리 예약해야 해요. 우리 저녁(12/7 월, 12/10 목)은 둘 다 영업일.',q:'鮨 たがみ 福岡'},
  kagura:{img:'f/kagura',n:'와규 스키야키·샤부샤부 카구라 (텐진)',k:'후쿠오카 · 스키야키·샤부샤부',fr:'예슬 추천',d:'와규 스키야키·샤부샤부 집. 와규 마부시(덮밥) 점심도 인기. 조용한 분위기라 엄마랑 천천히 먹기 좋아요.',h:'11:00~23:00 · 매일',q:'和牛すきやき・しゃぶしゃぶ 神楽 天神店'},
+ komeda:{img:'f/komeda',n:'코메다 커피 (하카타역 동쪽)',k:'후쿠오카 · 아침 커피',fr:'지영 추천 · "아침에 모닝세트, 600엔에 커피랑 빵"',d:'나고야식 체인 카페. 오전에 음료를 시키면 토스트와 삶은 달걀(또는 팥)이 같이 나오는 모닝 서비스가 있어요. 현지인 아침 손님이 많아요.',h:'7:00~22:00 · 매일',tip:'하카타역 버스터미널 3층 지점, 숙소 후보인 크룸 하카타 1층 지점도 있어요.',q:'コメダ珈琲店 博多駅東店'},
  koharu:{img:'f/koharu',n:'코하루 우동',k:'유후인 · 우동',fr:'지영 추천 · "우동 먹고 처음으로 맛있다고 느낀 곳"',d:'유노쓰보 거리 끝쪽 우동집. 쫄깃한 면이 평이 좋고, 대표 메뉴는 코하루 우동. 점심 장사만 해요.',h:'11:00~14:30 · 매일',tip:'12/9(수) 점심에 가기 좋아요. 줄이 생길 수 있어요.',q:'こはるうどん 由布院'}
 });
-G.push(['tagami','meal','fuk',33.59175,130.40510,[0]],['bincho','meal','fuk',33.59576,130.40625],['kagura','meal','fuk',33.58704,130.39998],['ichimujin','meal','fuk',33.59800,130.41134],['koharu','meal','yufu',33.26829,131.36578]);
+G.push(['tagami','meal','fuk',33.59175,130.40510,[0]],['bincho','meal','fuk',33.59576,130.40625],['kagura','meal','fuk',33.58704,130.39998],['ichimujin','meal','fuk',33.59800,130.41134],['koharu','meal','yufu',33.26829,131.36578],['komeda','coffee','fuk',33.58818,130.42343]);
 
 
 const Q=s=>document.querySelector(s),QA=s=>[...document.querySelectorAll(s)];
@@ -779,9 +790,19 @@ QA('.daynav').forEach(nv=>{const c=nv.dataset.for,bs=[...nv.querySelectorAll('bu
 QA('.day[data-d="1"]').forEach(d=>d.classList.add('open'));
 // 팝업
 const mb=Q('#mb'),md=Q('#md');
+// 팝업 사진 넘겨보기 (구글 지도 사진 · 2026-11-27)
+const GAL={"bincho":3,"bowl":3,"bspeak":3,"canal":3,"caravan":3,"chiya":3,"donki":1,"floral":3,"fukuya":3,"h_croom":1,"h_dormygion":2,"h_green1":3,"h_hakataplace":3,"h_prezio":2,"hana":3,"hankyu":3,"harajiro":3,"hinagoten":2,"hyotan":3,"ichimujin":3,"issou":1,"kagura":3,"kazetone":3,"kinrin":1,"kinsho":1,"kisuimaru":3,"koharu":3,"komeda":3,"kuncho":3,"kushida":3,"laruche":3,"lingon":3,"maedaya":3,"mameda":3,"marumata":3,"milch":2,"mugiya":3,"nooice":3,"ohori":3,"ooyama":3,"osushimachi":3,"r_daikichi":3,"r_hachisu":3,"r_kotobuki":3,"r_kou":3,"r_mimatsu":3,"r_nono":3,"r_oniyama":3,"r_ryochiku":3,"r_sakuratei":3,"r_seikaiso":3,"r_shikisai":3,"r_springs":3,"r_wakura":3,"r_yufuclub":3,"r_yufugarden":3,"rakutenchi":3,"rec":3,"sashisu":3,"senke":3,"shin":3,"shinshin":3,"shoboan":3,"snoopy":3,"sonoda":3,"tagami":3,"tenjo":3,"tomarigi":3,"umijigoku":3,"uogashi":3,"yomoyama":3,"yufushokudo":3,"yufust":3};
+function gal(first,key){const n=(typeof GAL!=='undefined'&&GAL[key])||0;const srcs=[first].concat(Array.from({length:n},(_,i)=>'img/g/'+key+'_'+(i+1)+'.jpg'));
+  if(srcs.length<2)return '<img src="'+first+'" alt="">';
+  return '<div class="gal"><div class="gs">'+srcs.map((u,i)=>'<img src="'+u+'" alt="" '+(i?'loading="lazy"':'')+'>').join('')+'</div><button class="ga l" aria-label="이전 사진">‹</button><button class="ga r" aria-label="다음 사진">›</button><div class="gd">'+srcs.map((_,i)=>'<i'+(i?'':' class="on"')+'></i>').join('')+'</div></div>'}
+function galInit(){const g=md.querySelector('.gal');if(!g)return;const s=g.querySelector('.gs'),d=[...g.querySelectorAll('.gd i')];
+  const cur=()=>Math.round(s.scrollLeft/s.clientWidth);s.addEventListener('scroll',()=>{const c=cur();d.forEach((x,i)=>x.classList.toggle('on',i===c))},{passive:true});
+  g.querySelector('.l').onclick=e=>{e.stopPropagation();s.scrollTo({left:Math.max(0,cur()-1)*s.clientWidth,behavior:'smooth'})};
+  g.querySelector('.r').onclick=e=>{e.stopPropagation();s.scrollTo({left:Math.min(d.length-1,cur()+1)*s.clientWidth,behavior:'smooth'})}}
+
 function openP(k){const p=P[k];if(!p)return;const map='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(p.q||p.n);
-  md.innerHTML='<button class="x" aria-label="닫기">✕</button>'+(p.img?'<img src="img/'+p.img+'.jpg" alt="">':'')+'<div class="in"'+(p.img?'':' style="padding-top:22px"')+'><div class="k">'+p.k+'</div><h4>'+p.n+'</h4>'+(p.fr?'<div class="tip" style="background:#ffe9f1;color:#b0245c;margin:0 0 8px">👭 '+p.fr+'</div>':'')+'<p>'+p.d+'</p>'+(p.h?'<dl><dt>시간</dt><dd>'+p.h+'</dd></dl>':'')+(p.tip?'<div class="tip">💡 '+p.tip+'</div>':'')+'</div><div class="acts"><a href="'+map+'" target="_blank" rel="noopener">구글 지도 열기</a><button class="x2">닫기</button></div>';
-  annotate(md);mb.classList.add('on');document.body.style.overflow='hidden'}
+  md.innerHTML='<button class="x" aria-label="닫기">✕</button>'+(p.img?gal('img/'+p.img+'.jpg',k):'')+'<div class="in"'+(p.img?'':' style="padding-top:22px"')+'><div class="k">'+p.k+'</div><h4>'+p.n+'</h4>'+(p.fr?'<div class="tip" style="background:#ffe9f1;color:#b0245c;margin:0 0 8px">👭 '+p.fr+'</div>':'')+'<p>'+p.d+'</p>'+(p.h?'<dl><dt>시간</dt><dd>'+p.h+'</dd></dl>':'')+(p.tip?'<div class="tip">💡 '+p.tip+'</div>':'')+'</div><div class="acts"><a href="'+map+'" target="_blank" rel="noopener">구글 지도 열기</a><button class="x2">닫기</button></div>';
+  annotate(md);mb.classList.add('on');document.body.style.overflow='hidden';galInit()}
 // 숙소 데이터 (Google 호텔 2인 1박 최저가 · 2027-01-13 표시값 · 2026-11-26 조회)
 const H={
  dormygion:{r:'hakata',n:'도미 인 하카타 기온',jp:'天然温泉 御笠の湯 ドーミーイン博多祇園',q:'天然温泉 御笠の湯 ドーミーイン博多祇園',jr:4.6,jc:'6,311',y:29000,y2:36900,meal:'조식 포함',room:'',dt:'12/7(월) ¥29,000 · 12/10(목) ¥36,900',t:['온천 대욕장', '밤 라멘 무료'],pick:1,d:'천연온천 대욕장이 있어서 료칸 가기 전·후에도 온천을 해요. 밤 9시 반쯤 무료 라멘(요나키 소바)이 나오는 체인이에요. 지하철 기온역 바로 앞, 하카타역에서 지하철 1정거장.',tip:'12/10은 가격이 올라 2인 ¥36,900이에요.',jl:'https://www.jalan.net/yad396138/plan/?stayYear=2026&stayMonth=12&stayDay=7&stayCount=1&roomCount=1&adultNum=2&mealType=1',jl2:'https://www.jalan.net/yad396138/plan/?stayYear=2026&stayMonth=12&stayDay=10&stayCount=1&roomCount=1&adultNum=2&mealType=1'},
@@ -808,12 +829,12 @@ function openH(k){const h=H[k];if(!h)return;const map='https://www.google.com/ma
   L.push(['구글 지도',map,'alt']);
   const price=h.y2?'12/7(월) ¥'+h.y.toLocaleString('ko-KR')+'<br>12/10(목) ¥'+h.y2.toLocaleString('ko-KR')+'<br><small class="muted">2인 1실 1박 · 조식 포함 · 쟈란 11/27 조회</small>':h.y?'¥'+h.y.toLocaleString('ko-KR')+' (2인 1박)<br><small class="muted">'+h.dt+(h.ni>1?' 합계 ¥'+h.tot.toLocaleString('ko-KR'):'')+' · 쟈란 11/27 조회</small>'
     :(h.p?wonH(h.p)+' (2인 1박)<br><small class="muted">Google 최저가 참고값 · 날짜에 따라 달라져요</small>':'');
-  md.innerHTML='<button class="x" aria-label="닫기">✕</button><img src="img/stay/'+k+'.jpg" alt=""><div class="in"><div class="k">'+RG[h.r]+(h.jp?' · '+h.jp:'')+'</div><h4>'+h.n+'</h4><p>'+h.d+'</p>'+
+  md.innerHTML='<button class="x" aria-label="닫기">✕</button>'+gal('img/stay/'+k+'.jpg','h_'+k)+'<div class="in"><div class="k">'+RG[h.r]+(h.jp?' · '+h.jp:'')+'</div><h4>'+h.n+'</h4><p>'+h.d+'</p>'+
    '<dl>'+(h.jr?'<dt>평점</dt><dd>쟈란 ★ '+h.jr+(h.jc?' · 후기 '+h.jc+'건':'')+'</dd>':h.g?'<dt>평점</dt><dd>Google ★ '+h.g+(h.c?' · 후기 '+h.c+'건':'')+'</dd>':'')+
    '<dt>가격</dt><dd>'+price+'</dd><dt>식사</dt><dd>'+(h.meal==='조식 포함'?'<b style="color:var(--good)">조식 포함</b> · 저녁은 밖에서':h.y?'<b style="color:var(--good)">저녁·아침 포함</b> (1박 2식)':'저녁 없음 · 밖에서 먹는 날 (조식은 플랜마다 달라요)')+'</dd>'+(h.room?'<dt>방</dt><dd>'+h.room+'</dd>':'')+'<dt>특징</dt><dd>'+h.t.join(' · ')+'</dd></dl>'+
    (h.tip?'<div class="tip">💡 '+h.tip+'</div>':'')+'<div class="tip" style="background:var(--best);color:#5a4500">💳 같은 날짜로 우리 WON트래블 앱 가격도 비교해 보세요. 캡처 보내주면 표에 넣어 드릴게요.</div></div>'+
    '<div class="acts hacts">'+L.map(([t,u,c])=>'<a'+(c?' class="'+c+'"':'')+' href="'+u+'" target="_blank" rel="noopener">'+t+'</a>').join('')+'<button class="x2">닫기</button></div>';
-  annotate(md);mb.classList.add('on');document.body.style.overflow='hidden'}
+  annotate(md);mb.classList.add('on');document.body.style.overflow='hidden';galInit()}
 
 // 료칸 2박 12/8~10 · 2인 1실 · 저녁·아침 포함 · 2026-11-27 조회 (쟈란 = 엔 합계, 부킹닷컴 = 원 합계·세금 포함)
 const YEN=8.44; // 100엔=844원 (open.er-api 11/27)
@@ -849,8 +870,8 @@ function openR(k){const h=R[k];if(!h)return;const ps=rN(h);const map='https://ww
   const L=ps.map(p=>[p[0]+' 12/8~10 2식 플랜',p[3],''] );L.push(['구글 지도',map,'alt']);L.push(['가격 비교 (Google)','https://www.google.com/travel/search?q='+encodeURIComponent(h.jp)+'&hl=ko&gl=kr&curr=KRW','alt']);
   const pt='<table class="rpt"><tbody>'+ps.map((p,i)=>'<tr'+(i===0?' class="lo"':'')+'><td>'+p[0]+'</td><td class="r">'+p[2]+'</td><td class="r"><b>약 '+man1(p[1])+'</b></td></tr>').join('')+'</tbody></table><small class="muted">2인 1실 · 저녁·아침 포함 · 12/8~10 2박 기준 1박 · 11/27 조회'+(h.jlT?' · 쟈란 2박 합계 ¥'+h.jlT.toLocaleString('ko-KR'):'')+(h.bkT?' · 부킹 2박 합계 ₩'+h.bkT.toLocaleString('ko-KR'):'')+'</small>';
   const rv=[h.jr?'쟈란 ★ '+h.jr+' ('+h.jc+')':'',h.bs?'부킹닷컴 '+h.bs+' ('+h.bc+')':'',h.g?'구글 ★ '+h.g+' ('+h.gc+')':''].filter(Boolean).join(' · ');
-  md.innerHTML='<button class="x" aria-label="닫기">✕</button><img src="img/stay/'+k+'.jpg" alt=""><div class="in"><div class="k">'+(h.r==='beppu'?'벳푸':'유후인')+' · '+h.jp+'</div><h4>'+h.n+'</h4><p>'+h.d+'</p><dl><dt>가격</dt><dd>'+pt+'</dd><dt>식사</dt><dd><b style="color:var(--good)">저녁·아침 포함</b> (1박 2식)</dd><dt>침대</dt><dd>'+BEDI[h.bed][0]+' · '+h.bedT+'</dd>'+(h.acc?'<dt>위치</dt><dd>'+h.acc+'</dd>':'')+'<dt>평점</dt><dd>'+rv+(h.hi?'<br><small class="muted">쟈란에서 높게 평가된 항목: '+h.hi+'</small>':'')+'</dd></dl>'+(h.tip?'<div class="tip">💡 '+h.tip+'</div>':'')+'</div><div class="acts hacts">'+L.map(([t,u,c])=>'<a'+(c?' class="'+c+'"':'')+' href="'+u+'" target="_blank" rel="noopener">'+t+'</a>').join('')+'<button class="x2">닫기</button></div>';
-  mb.classList.add('on');document.body.style.overflow='hidden'}
+  md.innerHTML='<button class="x" aria-label="닫기">✕</button>'+gal('img/stay/'+k+'.jpg','r_'+k)+'<div class="in"><div class="k">'+(h.r==='beppu'?'벳푸':'유후인')+' · '+h.jp+'</div><h4>'+h.n+'</h4><p>'+h.d+'</p><dl><dt>가격</dt><dd>'+pt+'</dd><dt>식사</dt><dd><b style="color:var(--good)">저녁·아침 포함</b> (1박 2식)</dd><dt>침대</dt><dd>'+BEDI[h.bed][0]+' · '+h.bedT+'</dd>'+(h.acc?'<dt>위치</dt><dd>'+h.acc+'</dd>':'')+'<dt>평점</dt><dd>'+rv+(h.hi?'<br><small class="muted">쟈란에서 높게 평가된 항목: '+h.hi+'</small>':'')+'</dd></dl>'+(h.tip?'<div class="tip">💡 '+h.tip+'</div>':'')+'</div><div class="acts hacts">'+L.map(([t,u,c])=>'<a'+(c?' class="'+c+'"':'')+' href="'+u+'" target="_blank" rel="noopener">'+t+'</a>').join('')+'<button class="x2">닫기</button></div>';
+  mb.classList.add('on');document.body.style.overflow='hidden';galInit()}
 // 일정 탭 료칸 요약
 (()=>{const el=Q('#ryoSum');if(!el)return;el.innerHTML='<div class="tw"><table><thead><tr><th>료칸 (유후인)</th><th class="r">1박 2인 2식</th></tr></thead><tbody>'+Object.entries(R).filter(([k,h])=>h.r==='yufuin').sort((a,b)=>rN(a[1])[0][1]-rN(b[1])[0][1]).map(([k,h])=>{const lo=rN(h)[0];return '<tr data-r2="'+k+'" style="cursor:pointer"><td><b>'+h.n+'</b><small>'+BEDI[h.bed][0]+' · '+h.t.join(' · ')+'</small></td><td class="r">약 '+man1(lo[1])+'<small>'+lo[0]+'</small></td></tr>'}).join('')+'</tbody></table></div>'})();
 function closeP(){mb.classList.remove('on');document.body.style.overflow=''}
