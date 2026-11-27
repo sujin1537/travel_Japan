@@ -1,0 +1,5 @@
+h_alphabed	ALPHABED INN 博多駅前	0	4
+h_dreaminn	호텔 드림 인 하카타	0	4
+h_koko	코코 호텔 하카타 에키마에	0	4
+h_vista	Hotel Vista Fukuoka Nakasu-Kawabata	0	4
+h_tokyustay	도큐스테이 하카타	0	4
