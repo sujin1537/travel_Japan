@@ -164,6 +164,8 @@ td small{display:block;color:var(--muted);font-size:11.5px}
 .hc .rt small{font-weight:700}
 .hc b{display:block;font-size:14px;font-weight:900;line-height:1.3;margin:2px 0 4px;letter-spacing:-.02em;min-height:2.6em}
 .hc .pr{font-size:13.5px;font-weight:900;line-height:1.35}
+.hc .ml.bd{display:inline-block;align-self:flex-start;padding:1px 7px;border-radius:6px;background:#eef0f5;color:var(--muted)}.hc .ml.bd.ok{background:#e3f4ea;color:var(--good)}.hc .ml.bd.mid{background:#fff3d6;color:#8a5a00}
+.rpt{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:3px}.rpt td{padding:4px 0;border-bottom:1px dashed var(--line)}.rpt td.r{text-align:right;padding-left:8px}.rpt tr.lo td{color:var(--good)}
 .hc .pr small{font-weight:700;color:var(--muted);font-size:11px}
 .hc .pr .yw{display:block;font-size:11.5px}
 .hc .ml{display:block;font-size:11px;font-weight:800;color:var(--muted);margin-top:4px}
@@ -408,8 +410,8 @@ footer a{color:var(--muted)}
       </ul></div></article>
 
     <h3>가이세키 료칸 · 유후인</h3>
-    <p class="note" style="margin-top:0">12/8(화)~10(목) 2박 · 2인 1실 · <b>저녁·아침 포함</b> 1박 가격 (쟈란 11/27 조회, 1박 45만원 이하만)</p>
-    <div class="tw"><table><thead><tr><th>료칸</th><th class="r">2인 1박 2식</th></tr></thead><tbody><tr><td><b>유후인 하나무라 <span style="font-weight:600">かほりの郷 はな村</span></b><small>침대 방 · 유노쓰보 거리 · 여성 인기 · 쟈란 4.8(557)</small></td><td class="r">¥53,000</td></tr><tr><td><b>와노야도 사기리테이 <span style="font-weight:600">和の宿 狭霧亭</span></b><small>온천 딸린 별채 · 어른 전용 · 체크아웃 12시 · 쟈란 4.4(1,330)</small></td><td class="r">¥53,000</td></tr><tr><td><b>KOU 미야비노사토 <span style="font-weight:600">ＫＯＵ雅之郷</span></b><small>전세탕 3곳 · 4실뿐 · 가성비 · 쟈란 4.8(276)</small></td><td class="r">¥29,260</td></tr><tr><td><b>다이키치 료칸 <span style="font-weight:600">大吉旅館</span></b><small>가성비 · 저녁 평 좋음 · 쟈란 4.8(61)</small></td><td class="r">¥27,500</td></tr><tr><td><b>유후인 가든 호텔 <span style="font-weight:600">湯布院ガーデンホテル</span></b><small>뷔페 · 유후다케 뷰 · 쟈란 4.5(53)</small></td><td class="r">¥45,100</td></tr><tr><td><b>유후인 고토부키 하나노쇼 <span style="font-weight:600">由布院ことぶき花の庄</span></b><small>역 걸어서 5분 · 넓은 정원 · 쟈란 3.9(550)</small></td><td class="r">¥44,154</td></tr></tbody></table></div>
+    <p class="note" style="margin-top:0">12/8(화)~10(목) 2박 · 2인 1실 · <b>저녁·아침 포함</b> · 1박 40만원 이하 (쟈란·부킹닷컴 중 싼 쪽, 11/27 조회)</p>
+    <div id="ryoSum"></div>
     <button class="morelink" data-go2="stay">🏨 숙소 사진 · 예약 링크 보기</button>
     <p class="note">유후인은 icotto 1인 참고가, 히타는 쟈란 표시가. 날짜·플랜마다 다르고 방에서 먹는지는 플랜마다 확인해야 해요.</p>
 
@@ -476,11 +478,17 @@ footer a{color:var(--muted)}
       <li><b>연박</b> · 같은 료칸에 2박이면 짐 풀고 푹 쉬어요. 둘째 날 가이세키 메뉴를 바꿔주는 곳이 많아요</li>
     </ul></div>
 
-    <div class="callout" style="margin-top:12px"><b>1박 2인 45만원 이하</b>만 남겼어요. 료칸은 12/8~10에 실제로 남은 <b>저녁·아침 포함</b> 플랜, 하카타 호텔은 12/7·12/10 <b>조식 포함</b> 가격을 쟈란에서 조회했어요(11/27). 하카타 저녁은 밖에서 먹어요.</div>
-    <p class="note">카드를 누르면 사진·설명과 예약 링크가 열려요. ⭐ 표시가 엄마랑 가기 제일 무난한 곳이에요. 환율 100엔=844원 기준, ¥53,300 넘으면 45만원 초과예요.</p>
+    <div class="callout" style="margin-top:12px"><b>1박 2인 40만원 이하 · 저녁·아침 포함</b>만 남겼어요. 12/8~10 2박에 실제로 남은 방을 <b>쟈란과 부킹닷컴</b>에서 같이 찾고, 두 곳 다 있으면 싼 쪽을 크게 적었어요(11/27 조회). 아고다는 같은 날짜 유후인 숙소가 78% 마감이라 2식 포함 방이 거의 안 떠서 뺐어요.</div>
+    <p class="note">카드를 누르면 사이트별 가격·침대·위치가 나와요. 100엔=844원 기준(쟈란 엔 가격 환산). 하카타 저녁은 밖에서 먹어요.</p>
+    <div class="seg sm" style="margin-top:6px"><button data-bedf="0" class="on">전체</button><button data-bedf="1">🛏️ 침대 있는 방만</button></div>
 
     <div class="rgn"><h3>유후인 료칸 · 2박</h3><small>12/8(화)~10(목)<br>2식 포함</small></div>
-    <div class="hg" data-r="yufuin"></div>
+    <div class="hg hg2" data-r="yufuin"></div>
+    <p class="note">유후인은 이 날짜에 2식 포함 + 40만원 이하 매물이 적어요(쟈란 10곳, 부킹 6곳). 전에 넣었던 하나무라·사기리테이는 1박 약 44.7만원이라 뺐어요.</p>
+
+    <div class="rgn"><h3>벳푸로 바꾸면 · 2박</h3><small>12/8(화)~10(목)<br>2식 포함</small></div>
+    <div class="box" style="margin-bottom:10px"><ul class="im" style="margin:0"><li class="ok">같은 가격대에 평점 높은 큰 숙소·침대 방이 훨씬 많아요. 바다 전망도 있어요.</li><li class="lose">히타 → 벳푸는 특급 유후로 오이타까지 간 뒤 갈아타야 해서 유후인보다 1시간쯤 더 걸려요. 유후인은 버스로 50분~1시간 당일치기.</li><li class="lose">돌아오는 12/10은 벳푸 → 하카타 특급 소닉(약 2시간). 일정·교통 탭은 아직 유후인 기준이라, 벳푸로 정하면 같이 바꿔 드릴게요.</li></ul></div>
+    <div class="hg hg2" data-r="beppu"></div>
 
     <div class="rgn"><h3>하카타 호텔 · 12/7 · 12/10</h3><small>2인 1실<br>조식 포함</small></div>
     <div class="hg" data-r="hakata"></div>
@@ -765,13 +773,6 @@ function openP(k){const p=P[k];if(!p)return;const map='https://www.google.com/ma
   annotate(md);mb.classList.add('on');document.body.style.overflow='hidden'}
 // 숙소 데이터 (Google 호텔 2인 1박 최저가 · 2027-01-13 표시값 · 2026-11-26 조회)
 const H={
- hanamura:{r:'yufuin',n:'유후인 하나무라',jp:'かほりの郷 はな村',q:'かほりの郷 はな村',jr:4.8,jc:'557',y:53000,ni:2,tot:106000,meal:'저녁·아침 포함',room:'트윈(침대)',dt:'12/8(화)~10(목) 2박',t:['침대 방', '유노쓰보 거리', '여성 인기'],pick:1,d:'유후인 한가운데 유노쓰보 거리에 있어 걸어서 구경 다니기 좋아요. 쟈란 4.8에 접객·청결·조식 평이 높고 "여성에게 인기"인 숙소예요.',tip:'스탠다드 2식 플랜. 침대 방(트윈)이라 바닥 이불이 불편한 엄마께 좋아요. 역에서 걸어서 10분, 택시 2분.',jl:'https://www.jalan.net/yad328454/plan/?stayYear=2026&stayMonth=12&stayDay=8&stayCount=2&roomCount=1&adultNum=2&mealType=3'},
- sagiritei:{r:'yufuin',n:'와노야도 사기리테이',jp:'和の宿 狭霧亭',q:'和の宿 狭霧亭',jr:4.4,jc:'1,330',y:53000,ni:2,tot:106000,meal:'저녁·아침 포함',room:'화양실(침대)',dt:'12/8(화)~10(목) 2박',t:['온천 딸린 별채', '어른 전용', '체크아웃 12시'],pick:1,d:'10채가 모두 온천 딸린 별채예요. 방에서 언제든 온천하고, 체크아웃이 12시라 아침이 느긋해요. 목욕 후 생맥주·아이스크림이 무료예요.',tip:'오이타 와규·토종닭 숯불 가이세키 플랜. 침대 있는 화양실. 역에서 차로 5분.',jl:'https://www.jalan.net/yad315568/plan/?stayYear=2026&stayMonth=12&stayDay=8&stayCount=2&roomCount=1&adultNum=2&mealType=3'},
- kotobuki:{r:'yufuin',n:'유후인 고토부키 하나노쇼',jp:'由布院ことぶき花の庄',q:'由布院ことぶき花の庄',jr:3.9,jc:'550',y:44154,ni:2,tot:88308,meal:'저녁·아침 포함',room:'화실',dt:'12/8(화)~10(목) 2박',t:['역 걸어서 5분', '넓은 정원'],pick:0,d:'유후다케가 보이는 2천 평 정원에 초가지붕 건물과 노가쿠 무대가 있어요. 역에서 걸어서 5분이라 짐 들고 이동하기 편해요.',tip:'큐슈산 흑모와규 도반야키 "제철 가이세키" 플랜.',jl:'https://www.jalan.net/yad392120/plan/?stayYear=2026&stayMonth=12&stayDay=8&stayCount=2&roomCount=1&adultNum=2&mealType=3'},
- yufugarden:{r:'yufuin',n:'유후인 가든 호텔',jp:'湯布院ガーデンホテル',q:'湯布院ガーデンホテル',jr:4.5,jc:'53',y:45100,ni:2,tot:90200,meal:'저녁·아침 포함',room:'화양실(침대)',dt:'12/8(화)~10(목) 2박',t:['뷔페', '유후다케 뷰'],pick:0,d:'저녁이 와규 샤부샤부·스테이크 뷔페라 이것저것 조금씩 드시기 좋아요.',tip:'기본 플랜(석식·조식 뷔페).',jl:'https://www.jalan.net/yad356060/plan/?stayYear=2026&stayMonth=12&stayDay=8&stayCount=2&roomCount=1&adultNum=2&mealType=3'},
- yufuclub:{r:'yufuin',n:'유후인 클럽',jp:'由布院倶楽部',q:'由布院倶楽部',jr:4.2,jc:'168',y:32400,ni:2,tot:64800,meal:'저녁·아침 포함',room:'트윈(침대)',dt:'12/8(화)~10(목) 2박',t:['침대 방','창작 가이세키'],pick:0,d:'제철 재료 창작 가이세키 플랜이 인기인 료칸. 침대 방(트윈)이라 엄마가 편해요.',tip:'"인기 No.1" 2식 플랜 기준.',jl:'https://www.jalan.net/yad308342/plan/?stayYear=2026&stayMonth=12&stayDay=8&stayCount=2&roomCount=1&adultNum=2&mealType=3'},
- kou:{r:'yufuin',n:'KOU 미야비노사토',jp:'ＫＯＵ雅之郷',q:'ＫＯＵ雅之郷',jr:4.8,jc:'276',y:29260,ni:2,tot:58520,meal:'저녁·아침 포함',room:'화실',dt:'12/8(화)~10(목) 2박',t:['전세탕 3곳', '4실뿐', '가성비'],pick:0,d:'객실이 4개뿐인 작은 숙소예요. 자가 원천 온천 3곳이 모두 전세 가족탕이라 둘이서만 온천해요.',tip:'고르는 전골 2식 플랜. 스키야키 플랜은 2박 ¥70,400.',jl:'https://www.jalan.net/yad390265/plan/?stayYear=2026&stayMonth=12&stayDay=8&stayCount=2&roomCount=1&adultNum=2&mealType=3'},
- daikichi:{r:'yufuin',n:'다이키치 료칸',jp:'大吉旅館',q:'大吉旅館',jr:4.8,jc:'61',y:27500,ni:2,tot:55000,meal:'저녁·아침 포함',room:'화실',dt:'12/8(화)~10(목) 2박',t:['가성비', '저녁 평 좋음'],pick:0,d:'분고규 도반야키와 산천어 소금구이가 나오는 소박한 료칸. 쟈란 4.8에 저녁·접객 평이 높아요.',tip:'스탠다드 2식 플랜.',jl:'https://www.jalan.net/yad336836/plan/?stayYear=2026&stayMonth=12&stayDay=8&stayCount=2&roomCount=1&adultNum=2&mealType=3'},
  dormygion:{r:'hakata',n:'도미 인 하카타 기온',jp:'天然温泉 御笠の湯 ドーミーイン博多祇園',q:'天然温泉 御笠の湯 ドーミーイン博多祇園',jr:4.6,jc:'6,311',y:29000,y2:36900,meal:'조식 포함',room:'',dt:'12/7(월) ¥29,000 · 12/10(목) ¥36,900',t:['온천 대욕장', '밤 라멘 무료'],pick:1,d:'천연온천 대욕장이 있어서 료칸 가기 전·후에도 온천을 해요. 밤 9시 반쯤 무료 라멘(요나키 소바)이 나오는 체인이에요. 지하철 기온역 바로 앞, 하카타역에서 지하철 1정거장.',tip:'12/10은 가격이 올라 2인 ¥36,900이에요.',jl:'https://www.jalan.net/yad396138/plan/?stayYear=2026&stayMonth=12&stayDay=7&stayCount=1&roomCount=1&adultNum=2&mealType=1',jl2:'https://www.jalan.net/yad396138/plan/?stayYear=2026&stayMonth=12&stayDay=10&stayCount=1&roomCount=1&adultNum=2&mealType=1'},
  croom:{r:'hakata',n:'니시테쓰 호텔 크룸 하카타',jp:'西鉄ホテル クルーム 博多 天然温泉博多駅前の湯',q:'西鉄ホテル クルーム 博多 天然温泉博多駅前の湯',jr:4.3,jc:'6,808',y:28600,y2:33200,meal:'조식 포함',room:'',dt:'12/7(월) ¥28,600 · 12/10(목) ¥33,200',t:['천연온천', '하카타역 앞'],pick:1,d:'하카타역 앞, 천연온천 대욕장이 있는 호텔. 첫날 비행기 타고 와서 바로 온천하기 좋아요.',tip:'',jl:'https://www.jalan.net/yad387970/plan/?stayYear=2026&stayMonth=12&stayDay=7&stayCount=1&roomCount=1&adultNum=2&mealType=1',jl2:'https://www.jalan.net/yad387970/plan/?stayYear=2026&stayMonth=12&stayDay=10&stayCount=1&roomCount=1&adultNum=2&mealType=1'},
  green1:{r:'hakata',n:'하카타 그린 호텔 1호관',jp:'博多グリーンホテル 1号館',q:'博多グリーンホテル 1号館',jr:4.4,jc:'2,145',y:28400,y2:29400,meal:'조식 포함',room:'',dt:'12/7(월) ¥28,400 · 12/10(목) ¥29,400',t:['역 바로 앞', '2024 리뉴얼'],pick:0,d:'하카타역 지쿠시 출구 바로 앞. 2024년 8월에 전 객실 리뉴얼했어요. 이틀 다 비슷한 가격.',tip:'',jl:'https://www.jalan.net/yad397160/plan/?stayYear=2026&stayMonth=12&stayDay=7&stayCount=1&roomCount=1&adultNum=2&mealType=1',jl2:'https://www.jalan.net/yad397160/plan/?stayYear=2026&stayMonth=12&stayDay=10&stayCount=1&roomCount=1&adultNum=2&mealType=1'},
@@ -781,7 +782,7 @@ const H={
 const wonH=n=>'₩'+n.toLocaleString('ko-KR');
 const RG={yufuin:'유후인',hakata:'하카타',arima:'② 아리마',umeda:'② 오사카 우메다',ibusuki:'③ 이부스키',kagoshima:'③ 가고시마',dogo:'④ 도고 온천',tendo:'⑤ 덴도 온천'};
 const gh=h=>'https://www.google.com/travel/search?q='+encodeURIComponent(h.q)+'&hl=ko&gl=kr&curr=KRW';
-QA('.hg').forEach(box=>{box.innerHTML=Object.entries(H).filter(([k,h])=>h.r===box.dataset.r).sort((a,b)=>(b[1].pick||0)-(a[1].pick||0)||((b[1].jr||b[1].g||0)-(a[1].jr||a[1].g||0))).map(([k,h])=>{
+QA('.hg:not(.hg2)').forEach(box=>{box.innerHTML=Object.entries(H).filter(([k,h])=>h.r===box.dataset.r).sort((a,b)=>(b[1].pick||0)-(a[1].pick||0)||((b[1].jr||b[1].g||0)-(a[1].jr||a[1].g||0))).map(([k,h])=>{
   const rt=h.jr?'<i>★</i> '+h.jr+(h.jc?' <small>('+h.jc+')</small>':'')+' 쟈란':(h.g?'<i>★</i> '+h.g+(h.c?' <small>('+h.c+')</small>':'')+' 구글':'평점 없음');
   const pr=h.y?'¥'+h.y.toLocaleString('ko-KR')+(h.y2?' <small>12/7</small><br>¥'+h.y2.toLocaleString('ko-KR')+' <small>12/10</small>':' <small>2인 1박</small>'):(h.p?wonH(h.p)+' <small>2인 1박</small>':'');
   const ml=h.meal==='조식 포함'?'<span class="ml ok">🍳 조식 포함</span>':(h.y?'<span class="ml ok">🍱 저녁·아침 포함</span>':'<span class="ml">방값 · 저녁 없음</span>');
@@ -802,8 +803,47 @@ function openH(k){const h=H[k];if(!h)return;const map='https://www.google.com/ma
    (h.tip?'<div class="tip">💡 '+h.tip+'</div>':'')+'<div class="tip" style="background:var(--best);color:#5a4500">💳 같은 날짜로 우리 WON트래블 앱 가격도 비교해 보세요. 캡처 보내주면 표에 넣어 드릴게요.</div></div>'+
    '<div class="acts hacts">'+L.map(([t,u,c])=>'<a'+(c?' class="'+c+'"':'')+' href="'+u+'" target="_blank" rel="noopener">'+t+'</a>').join('')+'<button class="x2">닫기</button></div>';
   annotate(md);mb.classList.add('on');document.body.style.overflow='hidden'}
+
+// 료칸 2박 12/8~10 · 2인 1실 · 저녁·아침 포함 · 2026-11-27 조회 (쟈란 = 엔 합계, 부킹닷컴 = 원 합계·세금 포함)
+const YEN=8.44; // 100엔=844원 (open.er-api 11/27)
+const JLU=id=>'https://www.jalan.net/yad'+id+'/plan/?stayYear=2026&stayMonth=12&stayDay=8&stayCount=2&roomCount=1&adultNum=2&mealType=3';
+const BKU=u=>'https://www.booking.com/hotel/jp/'+u+'.ko.html?checkin=2026-12-08&checkout=2026-12-10&group_adults=2&no_rooms=1&group_children=0&selected_currency=KRW';
+const R={
+ yufuclub:{r:'yufuin',n:'유후인 클럽',jp:'由布院倶楽部',jl:'308342',jlT:64800,jr:'4.2',jc:'167',bed:'bed',bedT:'트윈 (싱글 침대 2개)',acc:'유후인역 걸어서 5분 · 유노쓰보 거리 5분',hi:'저녁 · 접객 · 방',pick:1,t:['침대 방','방 40㎡','노천탕'],d:'객실이 40㎡로 넓고, 유후다케가 보이는 자가원천 노천탕과 사계절 온수풀이 있어요. 역과 유노쓰보 거리가 모두 걸어서 5분이라 짐 들고 다니기 편하고, 체크아웃이 11시예요.'},
+ hachisu:{r:'yufuin',n:'료칸 하치스노이토',jp:'旅館 はちすの糸',bk:'lu-guan-hatisunomi',bkT:670849,bs:'9.1',bc:'169',g:'4.7',gc:'66',bed:'mix',bedT:'싱글 침대 2개 + 이불 2채 (디럭스 4인실)',acc:'유후인역 서쪽 가와카미',pick:1,t:['침대 방','전세 온천','무료 세탁'],d:'실내탕·노천탕이 딸린 전세 온천이 있어 둘이서만 온천할 수 있어요. 구글 후기에 접객 칭찬이 특히 많고, 라운지와 무료 세탁기가 있어요. 부킹닷컴 9.1점.',tip:'부킹닷컴 무료 취소 요금.'},
+ kou:{r:'yufuin',n:'KOU 미야비노사토',jp:'ＫＯＵ雅之郷',jl:'390265',jlT:58520,jr:'4.8',jc:'276',bed:'futon',bedT:'화실 (바닥 이불)',t:['전세탕 3곳','4실뿐','가성비'],d:'객실이 4개뿐인 작은 숙소예요. 자가원천 온천 3곳이 모두 전세 가족탕이라 둘이서만 온천해요.',tip:'고르는 전골 2식 플랜.'},
+ daikichi:{r:'yufuin',n:'다이키치 료칸',jp:'大吉旅館',jl:'336836',jlT:55000,jr:'4.8',jc:'61',bed:'mix',bedT:'화실 이불 (화양실 플랜도 있음)',t:['가성비','저녁 평 좋음'],d:'분고규 도반야키와 산천어 소금구이가 나오는 소박한 료칸. 쟈란 4.8에 저녁·접객 평이 높아요.'},
+ shikisai:{r:'yufuin',n:'유후인 벳소 시키사이 호텔',jp:'湯布院別荘 四季彩ホテル',jl:'331600',jlT:78000,jr:'3.7',jc:'329',bk:'yufuin-besso-sikisai',bkT:662422,bs:'8.0',bc:'566',bed:'bed',bedT:'싱글 1 + 대형 더블 1 (수페리어 트윈)',acc:'유후인역 차 5분 (걸어서 25분)',t:['침대 방','부킹 8.0'],d:'침대 방에 저녁·아침이 포함된 플랜이 부킹닷컴·쟈란 둘 다 남아 있어요. 거리에서 조금 떨어져 있어 조용한 대신 오갈 땐 택시나 송영을 써야 해요.'},
+ kotobuki:{r:'yufuin',n:'유후인 고토부키 하나노쇼',jp:'由布院ことぶき花の庄',jl:'392120',jlT:88308,jr:'3.9',jc:'550',bk:'yufuin-kotobuki-hananosho',bkT:835359,bs:'8.6',bc:'441',bed:'mix',bedT:'화실 이불 또는 트윈 (부킹: 싱글 2 + 소파베드)',acc:'유후인역 걸어서 5분',t:['역 5분','넓은 정원'],d:'유후다케가 보이는 2천 평 정원에 초가지붕 건물과 노가쿠 무대가 있어요. 역에서 걸어서 5분이라 짐 들고 이동하기 편해요.',tip:'쟈란이 더 싸요. 부킹닷컴 가격은 1박 41만원대로 기준을 조금 넘어요.'},
+ yufugarden:{r:'yufuin',n:'유후인 가든 호텔',jp:'湯布院ガーデンホテル',jl:'356060',jlT:90200,jr:'4.5',jc:'53',bed:'mix',bedT:'화실 또는 트윈',t:['뷔페','유후다케 뷰'],d:'저녁이 와규 샤부샤부·스테이크 뷔페라 이것저것 조금씩 드시기 좋아요.'},
+ springs:{r:'yufuin',n:'더 스프링스 밸리 유후',jp:'THE SPRINGS VALLEY yufu',jl:'302604',jlT:93000,jr:'3.8',jc:'9',bk:'the-springs-valley-yufu',bkT:733908,bs:'7.8',bc:'16',bed:'bed',bedT:'트윈 (싱글 2)',acc:'유후인역 걸어서 4분',t:['침대 방','역 4분'],d:'역에서 가장 가까운 축의 침대 방 숙소. 후기 수가 적어서(쟈란 9건, 부킹 16건) 평가는 아직 참고만.'},
+ sakuratei:{r:'beppu',n:'젯케이노야도 사쿠라테이',jp:'絶景の宿 さくら亭',jl:'314361',jlT:76080,jr:'4.5',jc:'3,199',bed:'futon',bedT:'화실 (바닥 이불)',acc:'벳푸역 택시 15분',hi:'온천 · 아침 · 저녁',pick:1,t:['쟈란 후기 3천+','전망'],d:'이름 그대로 "절경의 숙소". 쟈란 후기가 3천 건이 넘는데 온천·아침·저녁이 모두 높게 평가돼요.'},
+ seikaiso:{r:'beppu',n:'텐쿠유보 세이카이소',jp:'天空湯房 清海荘',jl:'316572',jlT:62680,jr:'4.4',jc:'1,701',bk:'tenku-yubo-seikaiso',bkT:591136,bs:'8.4',bc:'555',bed:'futon',bedT:'화실 이불 (바다 전망)',acc:'벳푸역 걸어서 10분 · 기타하마',hi:'저녁 · 접객 · 아침',t:['바다 전망','역 10분'],d:'벳푸역에서 걸어서 10분, 기타하마 바닷가 쪽. 바다가 보이는 화실이고 저녁·접객 평이 좋아요.'},
+ ryochiku:{r:'beppu',n:'비유노야도 료치쿠 벳테이',jp:'美湯の宿 両築別邸',jl:'347672',jlT:62680,jr:'4.4',jc:'1,019',bed:'futon',bedT:'화실 (바닥 이불)',acc:'벳푸역 차 10분',hi:'접객 · 방 · 아침',t:['가성비','접객'],d:'쟈란 후기 1천 건 이상에 접객·방·아침 평이 높아요. 가격은 벳푸 후보 중 낮은 편.'},
+ wakura:{r:'beppu',n:'그랑비리오 호텔 벳푸완 와쿠라',jp:'グランヴィリオホテル別府湾 和蔵',jl:'339956',jlT:79560,jr:'4.7',jc:'1,217',bk:'grandvrio-beppuwan-wakura-route-inn-hotels',bkT:642195,bs:'9.0',bc:'424',bed:'bed',bedT:'트윈 + 소파베드 (산 전망)',acc:'벳푸역 무료 송영버스 (예약)',hi:'접객 · 청결 · 아침',pick:1,t:['침대 방','쟈란 4.7','송영'],d:'침대 방에 2식 포함, 쟈란 4.7·부킹 9.0으로 평가가 고르게 높아요. 벳푸역에서 무료 송영버스(예약제)가 있어요.'},
+ rex:{r:'beppu',n:'렉스 호텔 벳푸',jp:'REX HOTEL 別府',jl:'399732',jlT:77000,jr:'4.6',jc:'711',bk:'rex-hotel-beppu',bkT:657365,bs:'9.1',bc:'503',bed:'bed',bedT:'트윈 싱글 2 (부킹·바다 전망) · 쟈란은 화양실',acc:'벳푸역 차 5분',hi:'방 · 온천 · 청결',t:['침대 방','바다 전망'],d:'바다가 보이는 트윈 방에 2식 포함. 방·온천·청결 평가가 높아요.'},
+ nono:{r:'beppu',n:'벳푸 핫토 온야도 노노',jp:'御宿 野乃 別府',bk:'bie-fu-ba-tang-yu-su-ye-nai-bie-fu',bkT:646200,bs:'9.0',bc:'2,811',g:'4.5',gc:'1,078',bed:'bed',bedT:'싱글 2 + 더블 1 (체크인 때 배정)',acc:'벳푸역 바로 앞',t:['역 앞','침대 방','전세탕'],d:'벳푸역 바로 앞이라 이동이 제일 편해요. 다다미 바닥에 침대를 둔 방, 대욕장과 전세탕, 무료 아이스크림·야쿠르트가 있어요. 단체 손님이 많아 아침 대기가 있다는 후기도 있어요.'},
+ mimatsu:{r:'beppu',n:'시사이드 호텔 미마츠 오에테이',jp:'シーサイドホテル美松 大江亭',jl:'323519',jlT:52250,jr:'4.1',jc:'95',bk:'seaside-mimatsu-ooetei',bkT:422076,bs:'8.4',bc:'1,192',bed:'futon',bedT:'화실 (바닥 이불)',acc:'벳푸 타워 근처 바닷가',hi:'온천 · 저녁 · 방',t:['최저가','바닷가'],d:'벳푸 후보 중 가장 싸요(1박 20만원대). 바닷가 쪽, 온천·저녁 평이 좋아요.'},
+ oniyama:{r:'beppu',n:'오니야마 호텔',jp:'おにやまホテル',jl:'314914',jlT:72600,jr:'4.5',jc:'67',bk:'oniyama',bkT:770937,bs:'8.8',bc:'77',bed:'futon',bedT:'화실 (바닥 이불)',acc:'칸나와 온천 · 벳푸역 택시 15분',hi:'청결 · 접객 · 저녁',t:['칸나와','큰 노천탕'],d:'지옥순례가 모여 있는 칸나와 온천에 있어요. "벳푸 최대급 노천탕"을 내세우는 곳이라 걸어서 지옥 구경 가기 좋아요.'}
+};
+const rN=h=>{const a=[];if(h.jlT)a.push(['쟈란',Math.round(h.jlT/2*YEN),'¥'+(h.jlT/2).toLocaleString('ko-KR')+' /박',JLU(h.jl)]);if(h.bkT)a.push(['부킹닷컴',Math.round(h.bkT/2),'₩'+Math.round(h.bkT/2).toLocaleString('ko-KR')+' /박',BKU(h.bk)]);return a.sort((x,y)=>x[1]-y[1])};
+const man1=w=>(Math.round(w/1000)/10).toFixed(1)+'만원';
+const BEDI={bed:['🛏️ 침대','ok'],mix:['🛏️ 침대/이불','mid'],futon:['🧺 바닥 이불','']};
+function renderR(){QA('.hg2').forEach(box=>{const only=box.dataset.bedonly==='1';box.innerHTML=Object.entries(R).filter(([k,h])=>h.r===box.dataset.r&&(!only||h.bed!=='futon')).sort((a,b)=>(b[1].pick||0)-(a[1].pick||0)||rN(a[1])[0][1]-rN(b[1])[0][1]).map(([k,h])=>{const ps=rN(h);const lo=ps[0];
+  const rt=[h.jr?'쟈란 <i>★</i>'+h.jr:'',h.bs?'부킹 '+h.bs:'',(!h.jr&&!h.bs&&h.g)?'구글 <i>★</i>'+h.g:''].filter(Boolean).join(' · ');
+  return '<div class="hcw">'+(h.pick?'<span class="pk">⭐ 추천</span>':'')+'<button class="hc'+(h.pick?' pick':'')+'" data-r2="'+k+'"><img src="img/stay/'+k+'.jpg" alt="" loading="lazy"><div class="in"><div class="rt">'+rt+'</div><b>'+h.n+'</b><div class="pr">1박 '+man1(lo[1])+' <small>'+lo[0]+'</small></div><span class="ml ok">🍱 저녁·아침 포함</span><span class="ml bd '+BEDI[h.bed][1]+'">'+BEDI[h.bed][0]+'</span><div class="mt">'+h.t.map(x=>'<span>'+x+'</span>').join('')+'</div></div></button></div>'}).join('')})}
+renderR();
+QA('[data-bedf]').forEach(b=>b.addEventListener('click',()=>{const on=b.dataset.bedf==='1';QA('[data-bedf]').forEach(x=>x.classList.toggle('on',x===b));QA('.hg2').forEach(x=>x.dataset.bedonly=on?'1':'0');renderR()}));
+function openR(k){const h=R[k];if(!h)return;const ps=rN(h);const map='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(h.jp);
+  const L=ps.map(p=>[p[0]+' 12/8~10 2식 플랜',p[3],''] );L.push(['구글 지도',map,'alt']);L.push(['가격 비교 (Google)','https://www.google.com/travel/search?q='+encodeURIComponent(h.jp)+'&hl=ko&gl=kr&curr=KRW','alt']);
+  const pt='<table class="rpt"><tbody>'+ps.map((p,i)=>'<tr'+(i===0?' class="lo"':'')+'><td>'+p[0]+'</td><td class="r">'+p[2]+'</td><td class="r"><b>약 '+man1(p[1])+'</b></td></tr>').join('')+'</tbody></table><small class="muted">2인 1실 · 저녁·아침 포함 · 12/8~10 2박 기준 1박 · 11/27 조회'+(h.jlT?' · 쟈란 2박 합계 ¥'+h.jlT.toLocaleString('ko-KR'):'')+(h.bkT?' · 부킹 2박 합계 ₩'+h.bkT.toLocaleString('ko-KR'):'')+'</small>';
+  const rv=[h.jr?'쟈란 ★ '+h.jr+' ('+h.jc+')':'',h.bs?'부킹닷컴 '+h.bs+' ('+h.bc+')':'',h.g?'구글 ★ '+h.g+' ('+h.gc+')':''].filter(Boolean).join(' · ');
+  md.innerHTML='<button class="x" aria-label="닫기">✕</button><img src="img/stay/'+k+'.jpg" alt=""><div class="in"><div class="k">'+(h.r==='beppu'?'벳푸':'유후인')+' · '+h.jp+'</div><h4>'+h.n+'</h4><p>'+h.d+'</p><dl><dt>가격</dt><dd>'+pt+'</dd><dt>식사</dt><dd><b style="color:var(--good)">저녁·아침 포함</b> (1박 2식)</dd><dt>침대</dt><dd>'+BEDI[h.bed][0]+' · '+h.bedT+'</dd>'+(h.acc?'<dt>위치</dt><dd>'+h.acc+'</dd>':'')+'<dt>평점</dt><dd>'+rv+(h.hi?'<br><small class="muted">쟈란에서 높게 평가된 항목: '+h.hi+'</small>':'')+'</dd></dl>'+(h.tip?'<div class="tip">💡 '+h.tip+'</div>':'')+'</div><div class="acts hacts">'+L.map(([t,u,c])=>'<a'+(c?' class="'+c+'"':'')+' href="'+u+'" target="_blank" rel="noopener">'+t+'</a>').join('')+'<button class="x2">닫기</button></div>';
+  mb.classList.add('on');document.body.style.overflow='hidden'}
+// 일정 탭 료칸 요약
+(()=>{const el=Q('#ryoSum');if(!el)return;el.innerHTML='<div class="tw"><table><thead><tr><th>료칸 (유후인)</th><th class="r">1박 2인 2식</th></tr></thead><tbody>'+Object.entries(R).filter(([k,h])=>h.r==='yufuin').sort((a,b)=>rN(a[1])[0][1]-rN(b[1])[0][1]).map(([k,h])=>{const lo=rN(h)[0];return '<tr data-r2="'+k+'" style="cursor:pointer"><td><b>'+h.n+'</b><small>'+BEDI[h.bed][0]+' · '+h.t.join(' · ')+'</small></td><td class="r">약 '+man1(lo[1])+'<small>'+lo[0]+'</small></td></tr>'}).join('')+'</tbody></table></div>'})();
 function closeP(){mb.classList.remove('on');document.body.style.overflow=''}
-document.addEventListener('click',e=>{const hb=e.target.closest('[data-h]');if(hb){e.stopPropagation();openH(hb.dataset.h);return}const b=e.target.closest('[data-p]');if(b){e.stopPropagation();openP(b.dataset.p);return}if(e.target===mb||e.target.closest('.x,.x2'))closeP()});
+document.addEventListener('click',e=>{const rb=e.target.closest('[data-r2]');if(rb){e.stopPropagation();openR(rb.dataset.r2);return}const hb=e.target.closest('[data-h]');if(hb){e.stopPropagation();openH(hb.dataset.h);return}const b=e.target.closest('[data-p]');if(b){e.stopPropagation();openP(b.dataset.p);return}if(e.target===mb||e.target.closest('.x,.x2'))closeP()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeP()});
 // D-day (12/7 출발 기준)
 (function(){const now=new Date(),k=new Date(now.getTime()+(now.getTimezoneOffset()+540)*6e4);const t=Date.UTC(k.getFullYear(),k.getMonth(),k.getDate()),s=Date.UTC(2026,11,7),e=Date.UTC(2026,11,11);const n=Math.round((s-t)/864e5);Q('#badge').innerHTML=n>0?'<b>D-'+n+'</b><small>12/7 출발</small>':t<=e?'<b>ON</b><small>여행 기간</small>':'<b>END</b><small>다녀왔어요</small>'})();
