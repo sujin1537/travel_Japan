@@ -268,6 +268,7 @@ td small{display:block;color:var(--muted);font-size:11.5px}
 .pli small{display:block;font-size:12px;color:var(--muted);margin-top:1px}
 .pli .h{font-size:11.5px;color:var(--good);font-weight:800}
 .pli .w{display:inline-block;font-size:11px;font-weight:800;border-radius:5px;padding:0 6px;margin-top:3px;background:var(--accent-bg);color:var(--accent)}
+.pli .w.fr{background:#ffe9f1;color:#b0245c;display:block;width:fit-content;max-width:100%}
 .pli .w.x{background:#3b3f4a;color:#fff}
 .pli .go{color:#9aa3b5;font-size:20px}
 /* 교통 */
@@ -579,6 +580,7 @@ footer a{color:var(--muted)}
   <section class="view" id="v-food">
     <h2>🍣 먹거리</h2>
     <p class="lead">우리가 그 동네에 있는 날짜에 맞춰 휴무를 표시했어요. 눌러서 자세히 보기, 지도 번호는 목록 번호와 같아요.</p>
+    <div class="callout">👭 <b>친구들 추천 5곳</b>을 넣었어요. 목록 맨 위 분홍 표시예요.<br><small style="opacity:.85">12/7(월) 저녁 → 스시 타가미(예약) 또는 히츠마부시 빈초 · 12/9(수) 점심 → 코하루 우동 · 12/10(목) 점심 → 이치무진 치킨난반, 저녁 → 카구라 스키야키</small></div>
     <div id="foodBox">
       <div class="seg"><button data-cat="meal" class="on">🍣 식사</button><button data-cat="snack">🍡 간식</button><button data-cat="coffee">☕ 커피</button></div>
       <div class="seg sm"><button data-rg="fuk" class="on">후쿠오카</button><button data-rg="hita">히타 (12/8)</button><button data-rg="yufu">유후인 (12/8~10)</button><button data-rg="all">전체</button></div>
@@ -740,6 +742,15 @@ const G=[
  ['harajiro','shop','hita',33.32643,130.93605,[3,4]],['hinagoten','shop','hita',33.32831,130.93589],['kuncho','shop','hita',33.32888,130.93736],['marumata','shop','hita',33.31376,130.93144,[0,6]],
  ['yunotsubo','shop','yufu',33.26674,131.36306],['bspeak','shop','yufu',33.26539,131.35938],['lingon','shop','yufu',33.26765,131.36530,[3]],['snoopy','shop','yufu',33.26657,131.36562]
 ];
+Object.assign(P,{
+ bincho:{n:'히츠마부시 빈초 (나카스카와바타)',k:'후쿠오카 · 장어덮밥',fr:'친구 추천 · "도쿄 장어집보다 여기가 제일 맛있었어"',d:'숯불에 구운 장어를 밥에 올려 그냥, 양념 더해, 오차즈케로 먹는 나고야식 히츠마부시. 칸막이 있는 자리도 있어요.',h:'11:30~14:30 · 17:00~20:30 · 매일',tip:'현금·교통카드만 돼요(애플페이 같은 터치 결제 안 됨).',q:'ひつまぶし 備長 中洲川端店'},
+ ichimujin:{n:'돈코츠 라멘 이치무진 (고후쿠마치)',k:'후쿠오카 · 라멘·치킨난반',fr:'친구 추천 · "치킨난반이 살면서 먹은 치킨 중 제일"',d:'명란 라멘과 치킨난반이 유명한 집. 식권 자판기로 주문, 영어 메뉴 있고 테이블에 명란·절임이 무료로 놓여 있어요.',h:'11:00~14:50 · 17:00~20:50 · 매일',tip:'자판기는 현금 위주로 생각하고 가기.',q:'とんこつらーめん 一無尽 呉服町店'},
+ tagami:{n:'스시 타가미',k:'후쿠오카 · 오마카세 스시',fr:'친구 추천',d:'나카스 강가 건물 3층 카운터 오마카세. 통창으로 강 야경이 보이고, 셰프가 번역 앱·아이패드로 재료를 설명해줘서 외국인 손님 평이 좋아요.',h:'11:00~15:00 · 18:00~22:00 · 일요일 휴무',tip:'고급 오마카세라 미리 예약해야 해요. 우리 저녁(12/7 월, 12/10 목)은 둘 다 영업일.',q:'鮨 たがみ 福岡'},
+ kagura:{n:'와규 스키야키·샤부샤부 카구라 (텐진)',k:'후쿠오카 · 스키야키·샤부샤부',fr:'친구 추천',d:'와규 스키야키·샤부샤부 집. 와규 마부시(덮밥) 점심도 인기. 조용한 분위기라 엄마랑 천천히 먹기 좋아요.',h:'11:00~23:00 · 매일',q:'和牛すきやき・しゃぶしゃぶ 神楽 天神店'},
+ koharu:{n:'코하루 우동',k:'유후인 · 우동',fr:'친구 추천 · "우동 먹고 처음으로 맛있다고 느낀 곳"',d:'유노쓰보 거리 끝쪽 우동집. 쫄깃한 면이 평이 좋고, 대표 메뉴는 코하루 우동. 점심 장사만 해요.',h:'11:00~14:30 · 매일',tip:'12/9(수) 점심에 가기 좋아요. 줄이 생길 수 있어요.',q:'こはるうどん 由布院'}
+});
+G.push(['tagami','meal','fuk',33.59175,130.40510,[0]],['bincho','meal','fuk',33.59576,130.40625],['kagura','meal','fuk',33.58704,130.39998],['ichimujin','meal','fuk',33.59800,130.41134],['koharu','meal','yufu',33.26829,131.36578]);
+
 
 const Q=s=>document.querySelector(s),QA=s=>[...document.querySelectorAll(s)];
 let RATE=8.45;
@@ -769,7 +780,7 @@ QA('.day[data-d="1"]').forEach(d=>d.classList.add('open'));
 // 팝업
 const mb=Q('#mb'),md=Q('#md');
 function openP(k){const p=P[k];if(!p)return;const map='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(p.q||p.n);
-  md.innerHTML='<button class="x" aria-label="닫기">✕</button>'+(p.img?'<img src="img/'+p.img+'.jpg" alt="">':'')+'<div class="in"'+(p.img?'':' style="padding-top:22px"')+'><div class="k">'+p.k+'</div><h4>'+p.n+'</h4><p>'+p.d+'</p>'+(p.h?'<dl><dt>시간</dt><dd>'+p.h+'</dd></dl>':'')+(p.tip?'<div class="tip">💡 '+p.tip+'</div>':'')+'</div><div class="acts"><a href="'+map+'" target="_blank" rel="noopener">구글 지도 열기</a><button class="x2">닫기</button></div>';
+  md.innerHTML='<button class="x" aria-label="닫기">✕</button>'+(p.img?'<img src="img/'+p.img+'.jpg" alt="">':'')+'<div class="in"'+(p.img?'':' style="padding-top:22px"')+'><div class="k">'+p.k+'</div><h4>'+p.n+'</h4>'+(p.fr?'<div class="tip" style="background:#ffe9f1;color:#b0245c;margin:0 0 8px">👭 '+p.fr+'</div>':'')+'<p>'+p.d+'</p>'+(p.h?'<dl><dt>시간</dt><dd>'+p.h+'</dd></dl>':'')+(p.tip?'<div class="tip">💡 '+p.tip+'</div>':'')+'</div><div class="acts"><a href="'+map+'" target="_blank" rel="noopener">구글 지도 열기</a><button class="x2">닫기</button></div>';
   annotate(md);mb.classList.add('on');document.body.style.overflow='hidden'}
 // 숙소 데이터 (Google 호텔 2인 1박 최저가 · 2027-01-13 표시값 · 2026-11-26 조회)
 const H={
@@ -920,12 +931,12 @@ fetch('https://open.er-api.com/v6/latest/JPY').then(r=>r.json()).then(j=>{if(j&&
     root.querySelectorAll('[data-cat]').forEach(b=>b.addEventListener('click',()=>{st.cat=b.dataset.cat;root.querySelectorAll('[data-cat]').forEach(x=>x.classList.toggle('on',x===b));render(id)}));
     root.querySelectorAll('[data-rg]').forEach(b=>b.addEventListener('click',()=>{st.r=b.dataset.rg;root.querySelectorAll('[data-rg]').forEach(x=>x.classList.toggle('on',x===b));render(id)}));
     render(id)}
-  function items(id){const {st}=BOX[id];return G.filter(g=>g[1]===st.cat&&(st.r==='all'||g[2]===st.r))}
+  function items(id){const {st}=BOX[id];return G.filter(g=>g[1]===st.cat&&(st.r==='all'||g[2]===st.r)).sort((a,b)=>(P[b[0]]&&P[b[0]].fr?1:0)-(P[a[0]]&&P[a[0]].fr?1:0))}
   function render(id){const B=BOX[id],list=B.root.querySelector('.plw');const it=items(id);
     const byR={};it.forEach((g,i)=>{(byR[g[2]]=byR[g[2]]||[]).push([g,i+1])});
     if(!it.length){list.innerHTML='<p class="note" style="margin:14px 2px">이 동네에는 따로 골라둔 곳이 없어요.'+(B.st.cat==='snack'&&B.st.r==='fuk'?' 하카타 간식은 🛍️ 쇼핑 탭의 한큐 백화점 지하 식품관에 모여 있어요.':'')+'</p>';drawMap(id);return}
     list.innerHTML=Object.keys(RGN).filter(r=>byR[r]).map(r=>'<div class="plg"><b>'+RGN[r].n+'</b><small>'+RGN[r].when+'</small></div><div class="pls">'+byR[r].map(([g,no])=>{const p=P[g[0]]||{n:g[0],k:''};const c=CAT[g[1]][0];
-      return '<button class="pli" data-p="'+g[0]+'"><span class="pt">'+(p.img?'<img src="img/'+p.img+'.jpg" alt="" loading="lazy">':CAT[g[1]][1])+'<i style="background:'+c+'">'+no+'</i></span><span><b>'+p.n+'</b><small>'+(p.k||'').replace(/^[^·]*· /,'')+(p.h?' · <span class="h">'+p.h+'</span>':'')+'</small>'+warn(g[2],g[5])+'</span><span class="go">›</span></button>'}).join('')+'</div>').join('');
+      return '<button class="pli" data-p="'+g[0]+'"><span class="pt">'+(p.img?'<img src="img/'+p.img+'.jpg" alt="" loading="lazy">':CAT[g[1]][1])+'<i style="background:'+c+'">'+no+'</i></span><span><b>'+p.n+'</b><small>'+(p.k||'').replace(/^[^·]*· /,'')+(p.h?' · <span class="h">'+p.h+'</span>':'')+'</small>'+(p.fr?'<span class="w fr">👭 '+p.fr+'</span>':'')+warn(g[2],g[5])+'</span><span class="go">›</span></button>'}).join('')+'</div>').join('');
     annotate(list);drawMap(id)}
   function drawMap(id){const B=BOX[id];if(!B.map||typeof L==='undefined')return;const it=items(id);
     if(B.layer)B.layer.remove();B.layer=L.layerGroup().addTo(B.map);const pts=[];
