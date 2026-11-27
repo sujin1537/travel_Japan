@@ -1,0 +1,75 @@
+osushimachi	博多オスシマチ 博多JR JPビル店	1	0
+uogashi	하카타 우오가시	1	0
+sashisu	스시 사카바(마잉구점)	1	0
+hana	Sushi Hakata Hana	0	0
+hyotan	효탄 노 카이텐 스시	1	0
+rakutenchi	원조 모츠나베 라쿠텐지 하카타 역앞점	1	0
+maedaya	하카타 모츠나베 마에다야 하카타점	1	0
+ooyama	하카타 모츠나베 오오야마 킷테 하카타점	0	0
+shoboan	멘타이요리 하카타 쇼보안 명란덮밥	1	0
+kisuimaru	키스이마루 하카타점	1	0
+shinshin	신신라멘 하카타데이토스점	1	0
+issou	하카타 잇소우 본점	2	1
+chiya	히타마부시 센야	1	0
+bowl	BOWL (ボウル) 豆田	1	0
+kazetone	食感農園 Kaze to Ne(風と根)	1	0
+tomarigi	とまり木 豆田町本店	1	0
+sonoda	소노다	1	0
+shin	Yufumabushi Shin	1	0
+yufushokudo	ユフ食堂	1	0
+yomoyama	요모야마	1	0
+bspeak	비스피크	1	0
+kinsho	유후인 금상고로케	2	1
+milch	유후인 미르히	1	0
+lingon	ＬＩＮＧＯＮ ＣＯＯＫＩＥＳ	1	0
+snoopy	스누피차야 유후인점	1	0
+hinagoten	히타 쇼유 히나고텐	3	2
+kuncho	쿤쵸 술 저장고 - 양조장 (약300년)	1	0
+nooice	NOOICE Hakata	1	0
+rec	REC COFFEE Hakata Marui Shop	1	0
+mugiya	무기야카페	1	0
+tenjo	사보 텐조사지키	4	3
+caravan	카라반커피 유후인	1	0
+laruche	카페 라 루슈	1	0
+senke	센케	1	0
+kushida	구시다 신사	16	3
+canal	캐널시티 하카타	5	3
+ohori	오호리 공원	1	0
+mameda	마메다마치	1	0
+kinrin	긴린코	2	1
+yunotsubo	Yunotubo St	1	0
+floral	유후인 플로랄빌리지	13	3
+yufust	유후인역	0	0
+umijigoku	우미 지고쿠 (바다지옥)	5	3
+hankyu	한큐 하카타	5	3
+fukuya	Aji no Mentaiko Fukuya Hakata DEITOS Shop	1	0
+donki	돈키호테 나카스점	5	3
+harajiro	原次郎左衛門の豆田店	1	0
+marumata	マルマタしょう油合資会社	1	0
+tagami	스시 타가미	1	0
+bincho	히츠마부시 빈쵸	1	0
+kagura	和牛すきやき・しゃぶしゃぶ 神楽 天神店	1	0
+ichimujin	돈코츠라멘 이치무진 고후쿠마치점	1	0
+koharu	코하루우동	1	0
+komeda	코메다커피점	1	0
+h_dormygion	도미 인 하카타기온	11	3
+h_croom	니시테츠 호텔 크룸 하카타	2	1
+h_green1	하카타 그린호텔 1호관	12	3
+h_prezio	시즈테츠 호텔 프레지오 하카타에키마에	7	3
+h_hakataplace	Hotel Hakata Place	5	3
+r_yufuclub	회원제호텔 유후인클럽	7	3
+r_hachisu	Traditional Japanese inn Ryokan Hachisunoito	9	3
+r_kou	KOU雅之郷	7	3
+r_daikichi	Daikichi Hotel	9	3
+r_shikisai	유후인벳소 시키사이호텔	6	3
+r_kotobuki	유후인 코토부키 하나노쇼	7	3
+r_yufugarden	Yufuin Garden Hotel	9	3
+r_springs	THE SPRINGS VALLEY yufu	1	0
+r_sakuratei	사쿠라테이	6	3
+r_seikaiso	세이카이소	8	3
+r_ryochiku	료치쿠 벳테이	4	3
+r_wakura	그랑빌리오 호텔 벳부만	7	3
+r_rex	〒874-0925 Oita, Beppu, Wakakusachō, 13 Rex Hotel 別府	1	0
+r_nono	온야도 노노 벳푸	9	3
+r_mimatsu	시사이드 호텔 미마츠 오에테이	8	3
+r_oniyama	Oniyama Hotel	8	3
