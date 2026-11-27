@@ -590,7 +590,7 @@ footer a{color:var(--muted)}
   <section class="view" id="v-food">
     <h2>🍣 먹거리</h2>
     <p class="lead">우리가 그 동네에 있는 날짜에 맞춰 휴무를 표시했어요. 눌러서 자세히 보기, 지도 번호는 목록 번호와 같아요.</p>
-    <div class="callout">👭 <b>예슬·연하·지영 추천 6곳</b>을 넣었어요. 목록 맨 위 분홍 표시예요.<br><small style="opacity:.85">12/7(월) 저녁 → 스시 타가미(예약) 또는 히츠마부시 빈초 · 12/9(수) 점심 → 코하루 우동 · 아침에 짬 나면 코메다 커피 모닝세트 · 12/10(목) 점심 → 이치무진 치킨난반, 저녁 → 카구라 스키야키</small></div>
+    <div class="callout">👭 <b>예슬·연하·지영 추천 맛집</b>은 목록 맨 위 분홍 표시예요. 예슬 지도 목록 30곳 중 우리 동선에 맞는 곳을 다 넣었어요.<br><small style="opacity:.85">예슬 한마디: 미즈타키(닭백숙)는 "돈 아까워" · 텐진 지하상가는 굳이 안 가도 됨</small><br><br><small style="opacity:.85">12/7(월) 저녁 → 스시 타가미(예약) 또는 히츠마부시 빈초 · 12/9(수) 점심 → 코하루 우동 · 아침에 짬 나면 코메다 커피 모닝세트 · 12/10(목) 점심 → 이치무진 치킨난반, 저녁 → 카구라 스키야키</small></div>
     <div id="foodBox">
       <div class="seg"><button data-cat="meal" class="on">🍣 식사</button><button data-cat="snack">🍡 간식</button><button data-cat="coffee">☕ 커피</button></div>
       <div class="seg sm"><button data-rg="fuk" class="on">후쿠오카</button><button data-rg="hita">히타 (12/8)</button><button data-rg="yufu">유후인 (12/8~10)</button><button data-rg="all">전체</button></div>
@@ -711,7 +711,7 @@ const P={
 // 먹거리·볼거리·쇼핑 장소 (영업시간: Google 지도 2026-11-27 조회)
 Object.assign(P,{
  osushimachi:{img:'f/osushimachi',n:'하카타 오스시마치 (JRJP 빌딩)',k:'후쿠오카 · 스시',d:'하카타역 바로 옆 JRJP 빌딩 2층 스시 이자카야. 눈앞에서 쥐어 주고, 참치와 고마사바(참깨 고등어) 평이 좋아요. 가격 부담이 적은 편이에요.',h:'평일 12:00~15:00 · 17:00~22:00 · 주말 12:00~22:00',tip:'금방 차요. 평일이라도 예약하는 게 좋아요.',q:'博多オスシマチ 博多JR JPビル店'},
- sashisu:{img:'f/sashisu',n:'스시사카바 사시스 (하카타 마잉)',k:'후쿠오카 · 스시',d:'하카타역 마잉 골목의 스시 술집. 한국 손님이 많아요. 가격 대비 신선하다는 평.',h:'11:00~22:00 · 매일',tip:'줄이 길어요(30분~1시간). 오픈 전에 서면 덜 기다려요.',q:'すし酒場 さしすせそ 博多マイング横丁'},
+ sashisu:{img:'f/sashisu',n:'스시사카바 사시스 (하카타 마잉)',k:'후쿠오카 · 스시',d:'하카타역 마잉 골목의 스시 술집. 한국 손님이 많아요. 가격 대비 신선하다는 평.',h:'11:00~22:00 · 매일',tip:'줄이 길어요(30분~1시간). 지영은 "그저 그랬다"고 해서 다른 스시집을 먼저 보세요.',q:'すし酒場 さしすせそ 博多マイング横丁'},
  rakutenchi:{img:'f/rakutenchi',n:'라쿠텐치 모츠나베 (하카타역앞)',k:'후쿠오카 · 모츠나베',d:'후기 2만 5천 건이 넘는 모츠나베 집. 마지막에 넣는 짬뽕면이 무제한. 영어 응대도 잘해요.',h:'17:00~01:00 · 매일',tip:'하카타역 동쪽 요도바시 1층 지점은 12:00~03:00이라 낮에도 먹을 수 있어요.',q:'博多もつ鍋 楽天地 博多駅前店'},
  maedaya:{img:'f/maedaya',n:'마에다야 (하카타역앞)',k:'후쿠오카 · 모츠나베',d:'작은 모츠나베 가게. 된장(미소) 국물이 깔끔하다는 평이 많아요. 점심도 해요.',h:'11:00~14:30 · 17:00~24:00 · 매일',tip:'자리가 적어 예약 추천. 한 테이블은 같은 국물로 시켜야 해요.',q:'博多もつ鍋 前田屋 博多駅前店'},
  ooyama:{img:'f/ooyama',n:'오오야마 모츠나베 (KITTE 9층)',k:'후쿠오카 · 모츠나베',d:'하카타역 KITTE 9층. 칸막이 방이 있고 점심 예약이 쉬워요. 미소 국물이 대표.',h:'11:00~23:00 · 매일',q:'博多もつ鍋おおやま KITTE博多'},
@@ -757,10 +757,33 @@ Object.assign(P,{
  ichimujin:{img:'f/ichimujin',n:'돈코츠 라멘 이치무진 (고후쿠마치)',k:'후쿠오카 · 라멘·치킨난반',fr:'예슬 추천 · "치킨난반이 살면서 먹은 치킨 중 제일"',d:'명란 라멘과 치킨난반이 유명한 집. 식권 자판기로 주문, 영어 메뉴 있고 테이블에 명란·절임이 무료로 놓여 있어요.',h:'11:00~14:50 · 17:00~20:50 · 매일',tip:'자판기는 현금 위주로 생각하고 가기.',q:'とんこつらーめん 一無尽 呉服町店'},
  tagami:{img:'f/tagami',n:'스시 타가미',k:'후쿠오카 · 오마카세 스시',fr:'연하 추천 (예슬 전달)',d:'나카스 강가 건물 3층 카운터 오마카세. 통창으로 강 야경이 보이고, 셰프가 번역 앱·아이패드로 재료를 설명해줘서 외국인 손님 평이 좋아요.',h:'11:00~15:00 · 18:00~22:00 · 일요일 휴무',tip:'고급 오마카세라 미리 예약해야 해요. 우리 저녁(12/7 월, 12/10 목)은 둘 다 영업일.',q:'鮨 たがみ 福岡'},
  kagura:{img:'f/kagura',n:'와규 스키야키·샤부샤부 카구라 (텐진)',k:'후쿠오카 · 스키야키·샤부샤부',fr:'예슬 추천',d:'와규 스키야키·샤부샤부 집. 와규 마부시(덮밥) 점심도 인기. 조용한 분위기라 엄마랑 천천히 먹기 좋아요.',h:'11:00~23:00 · 매일',q:'和牛すきやき・しゃぶしゃぶ 神楽 天神店'},
+ yayoiken:{img:'f/yayoiken',n:'야요이켄 (고후쿠마치)',k:'후쿠오카 · 아침 정식',fr:'예슬 추천 · "아침에 여는 곳이 없어서 추가, 김밥천국 같은 곳"',d:'아침 7시부터 여는 정식 체인. 태블릿 주문(영어), 밥 리필 무료. 화려하진 않지만 빠르고 싸게 일본식 아침을 먹을 수 있어요.',h:'7:00~23:00 · 매일',q:'やよい軒 呉服町店'},
+ japanbeef:{img:'f/japanbeef',n:'재팬 비프 센터 (고후쿠마치)',k:'후쿠오카 · 야키니쿠',fr:'예슬 추천 (예약해서 감)',d:'와규 야키니쿠 집. 와규 무한리필 코스가 가격 대비 좋다는 평. 저녁만 해요.',h:'17:00~21:15 · 매일',tip:'인기라 예약 추천(타베로그 예약은 짝수 인원만 돼요).',q:'ジャパンビーフセンター 呉服町'},
+ sabataro:{img:'f/sabataro',n:'사바타로',k:'후쿠오카 · 고등어 아침 정식',fr:'예슬 추천',d:'아카사카의 작은 아침 정식집(20석쯤). 구운 고등어에 솥밥, 남은 밥은 주먹밥으로 싸줘요. 양이 많아요.',h:'아침 7:30~9:30 · 점심 11:30~15:30 · 일요일 휴무',tip:'아침은 예약제라 한 달 전쯤 예약해야 해요.',q:'SABATARO 赤坂 福岡'},
+ motsusho:{img:'f/motsusho',n:'하카타 모츠쇼',k:'후쿠오카 · 모츠나베',fr:'예슬 추천',d:'30년 가까이 한 작은 모츠나베 집. 사장님과 직원이 친절하고, 한국어로 소통하려고 애써준다는 후기가 많아요. 구글 4.7.',h:'17:00~24:00 · 수요일 휴무',q:'博多もつしょう 警固'},
+ oyamahon:{img:'f/oyamahon',n:'모츠나베 오오야마 본점',k:'후쿠오카 · 모츠나베',fr:'예슬 추천 (예약해서 감)',d:'오오야마 모츠나베의 본점. 신발 벗고 2층 개별룸에서 먹어요. 미소 국물이 대표, 말고기 회도 있어요.',h:'16:00~23:00 · 매일',tip:'예약 추천. KITTE 9층 지점보다 분위기가 좋다는 평.',q:'博多もつ鍋 おおやま 本店'},
+ ninoni:{img:'f/ninoni',n:'교자야 니노니 (가와바타)',k:'후쿠오카 · 교자·중식',fr:'예슬 추천',d:'교자와 볶음 요리를 싸게 먹는 중식 이자카야. 영어 메뉴 있어요. 구시다 신사 근처.',h:'11:30~23:00 · 매일',q:'餃子屋 弐ノ弐 川端店'},
+ uoden:{img:'f/uoden',n:'우오덴 (나카스)',k:'후쿠오카 · 해산물 정식',fr:'예슬 추천',d:'아침 7시부터 하는 해산물 덮밥·정식집. 솥밥 무한, 반찬 셀프. 명란·연어알·계란말이 덮밥이 인기. 스시 타가미와 같은 건물 1층.',h:'7:00~15:00 · 17:00~21:00 · 매일',tip:'인기라 예약 추천. 12/11 아침 대안으로도 가능(8:30 출발 전).',q:'魚伝 博多 西中洲'},
+ ichimujin2:{img:'f/ichimujin2',n:'이치무진 와타나베도리점',k:'후쿠오카 · 라멘·치킨난반',fr:'예슬 추천 · 치킨난반 사진 보내준 곳',d:'이치무진 다른 지점. 늦게까지 하고(23:30) 구글 4.7. 명란 타르타르 치킨난반, 명란 라멘. 식권기는 카드도 돼요.',h:'11:00~23:30 · 매일',q:'一無尽 渡辺通り店'},
+ boulange:{img:'f/boulange',n:'불랑주 BOUL\'ANGE',k:'후쿠오카 · 빵집',fr:'예슬 추천',d:'하카타역 근처 빵집. 크루아상·명란 바게트가 인기, 토스터로 데워 먹을 수 있고 20석쯤 있어요. 아침 7:30부터.',h:'7:30~21:00 (주말 8:00~20:00)',q:'BOUL\'ANGE 博多'},
+ whiteglass:{img:'f/whiteglass',n:'화이트 글래스 커피',k:'후쿠오카 · 커피',fr:'예슬 추천',d:'하카타역 근처 카페. "후쿠오카에서 마신 커피 중 최고"라는 후기가 많고 아침 메뉴(10시까지)도 있어요. 귀리우유 가능.',h:'8:00~20:00 · 매일',q:'WHITE GLASS COFFEE 福岡'},
+ harmo:{img:'f/harmo',n:'카페&다이닝 하르모 (텐진)',k:'후쿠오카 · 카페·식사',fr:'예슬 추천',d:'텐진 이마이즈미의 카페. 300g 돼지고기 스테이크와 A5 와규 덮밥, 디저트 평이 좋아요. 구글 4.8.',h:'10:00~18:00 · 매일',q:'Cafe&Dining ハルモ 天神今泉公園前店'},
+ mitsukoshi:{img:'f/mitsukoshi',n:'후쿠오카 미쓰코시 (텐진)',k:'후쿠오카 · 백화점',fr:'예슬 추천',d:'텐진 역과 붙은 백화점. 지하 식품관, 7층 면세 카운터. 저녁 8시쯤부터 식품 할인.',h:'10:00~20:00 · 매일',q:'福岡三越'},
+ stdprod:{img:'f/stdprod',n:'스탠다드 프로덕츠 (하카타)',k:'후쿠오카 · 생활잡화',fr:'예슬 추천',d:'다이소의 조금 더 세련된 생활잡화 브랜드. 하카타 버스터미널 안, 큰 다이소와 같이 있어요. 수건 질이 좋다는 평.',h:'9:00~21:00 · 매일',q:'Standard Products 博多'},
+ natkitchen:{img:'f/natkitchen',n:'내추럴 키친 (텐진 지하상가)',k:'후쿠오카 · 주방 소품',fr:'예슬 추천',d:'작고 귀여운 그릇·젓가락·주방 소품을 싸게 파는 가게. 텐진 지하상가 서쪽 1번가.',h:'10:00~20:00 · 매일',tip:'예슬: 텐진 지하상가는 굳이 안 가도 될 것 같다고. 텐진 갈 일 있을 때만.',q:'NATURAL KITCHEN 天神地下街'},
+ riverain:{img:'f/riverain',n:'하카타 리버레인 몰',k:'후쿠오카 · 쇼핑몰',fr:'예슬 추천',d:'나카스카와바타역과 붙은 조용한 쇼핑몰. 고급 생활용품·가구·기모노 가게, 꼭대기층에 호빵맨 박물관. 지하에 코메다 커피도 있어요(지영 피셜).',h:'10:00~19:00 · 매일',q:'博多リバレイン'},
+ tokineri:{img:'f/tokineri',n:'토키네리 (리버레인 1층)',k:'후쿠오카 · 공예·생활용품',fr:'예슬 추천',d:'일본 공예품·그릇·주방용품·수건 같은 생활용품 편집숍. 흔한 기념품보다 특별한 선물 고르기 좋아요.',h:'10:00~19:00 · 매일',tip:'면세 안 돼요.',q:'tokineri 博多リバレイン'},
+ sunny:{img:'f/sunny',n:'서니 슈퍼 (고후쿠마치)',k:'후쿠오카 · 24시간 슈퍼',fr:'예슬 추천',d:'24시간 슈퍼마켓. 편의점보다 싸고 회·도시락이 다양해요. 저녁 7시 이후 반찬·도시락 할인.',h:'24시간',q:'サニー 呉服町店'},
+ parco:{img:'f/parco',n:'후쿠오카 파르코 (텐진)',k:'후쿠오카 · 쇼핑몰',fr:'예슬 추천',d:'텐진 한가운데 젊은 쇼핑몰. 패션·캐릭터 숍(원피스 등)·푸드. 건물이 둘이라 조금 헷갈려요.',h:'10:00~20:30 · 매일',q:'福岡パルコ'},
+ marineworld:{img:'f/marineworld',n:'마린월드 우미노나카미치',k:'후쿠오카 · 수족관',fr:'예슬 추천',d:'하카타만 건너편 큰 수족관. 돌고래 쇼, 큰 수조, 해파리관. 하카타 부두에서 배로 가거나 전철·버스로 가요(멀어서 반나절 코스).',h:'9:30~17:30 (12/1~3은 10:00~17:00)',tip:'이번 일정엔 시간이 빠듯해요. 일정 늘리면 고려.',q:'マリンワールド海の中道'},
  komeda:{img:'f/komeda',n:'코메다 커피 (하카타역 동쪽)',k:'후쿠오카 · 아침 커피',fr:'지영 추천 · "아침에 모닝세트, 600엔에 커피랑 빵"',d:'나고야식 체인 카페. 오전에 음료를 시키면 토스트와 삶은 달걀(또는 팥)이 같이 나오는 모닝 서비스가 있어요. 현지인 아침 손님이 많아요.',h:'7:00~22:00 · 매일',tip:'하카타역 버스터미널 3층 지점, 숙소 후보인 크룸 하카타 1층 지점도 있어요.',q:'コメダ珈琲店 博多駅東店'},
  koharu:{img:'f/koharu',n:'코하루 우동',k:'유후인 · 우동',fr:'지영 추천 · "우동 먹고 처음으로 맛있다고 느낀 곳"',d:'유노쓰보 거리 끝쪽 우동집. 쫄깃한 면이 평이 좋고, 대표 메뉴는 코하루 우동. 점심 장사만 해요.',h:'11:00~14:30 · 매일',tip:'12/9(수) 점심에 가기 좋아요. 줄이 생길 수 있어요.',q:'こはるうどん 由布院'}
 });
-G.push(['tagami','meal','fuk',33.59175,130.40510,[0]],['bincho','meal','fuk',33.59576,130.40625],['kagura','meal','fuk',33.58704,130.39998],['ichimujin','meal','fuk',33.59800,130.41134],['koharu','meal','yufu',33.26829,131.36578],['komeda','coffee','fuk',33.58818,130.42343]);
+G.push(['tagami','meal','fuk',33.59175,130.40510,[0]],['bincho','meal','fuk',33.59576,130.40625],['kagura','meal','fuk',33.58704,130.39998],['ichimujin','meal','fuk',33.59800,130.41134],['koharu','meal','yufu',33.26829,131.36578],['komeda','coffee','fuk',33.58818,130.42343],
+ ['uoden','meal','fuk',33.59175,130.40510],['oyamahon','meal','fuk',33.59667,130.40971],['motsusho','meal','fuk',33.58363,130.39600,[3]],['japanbeef','meal','fuk',33.59797,130.41027],['ichimujin2','meal','fuk',33.58691,130.40592],['ninoni','meal','fuk',33.59282,130.40995],['sabataro','meal','fuk',33.58644,130.39063,[0]],['yayoiken','meal','fuk',33.59855,130.41000],
+ ['boulange','snack','fuk',33.59261,130.41573],['whiteglass','coffee','fuk',33.58891,130.41341],['harmo','coffee','fuk',33.58517,130.39950],
+ ['mitsukoshi','shop','fuk',33.58870,130.39996],['stdprod','shop','fuk',33.59135,130.41919],['riverain','shop','fuk',33.59510,130.40584],['tokineri','shop','fuk',33.59495,130.40601],['sunny','shop','fuk',33.59795,130.41027],['parco','shop','fuk',33.59074,130.39867],['natkitchen','shop','fuk',33.59244,130.39845],
+ ['marineworld','sight','fuk',33.66085,130.36341]);
 
 
 const Q=s=>document.querySelector(s),QA=s=>[...document.querySelectorAll(s)];
@@ -791,7 +814,7 @@ QA('.day[data-d="1"]').forEach(d=>d.classList.add('open'));
 // 팝업
 const mb=Q('#mb'),md=Q('#md');
 // 팝업 사진 넘겨보기 (구글 지도 사진 · 2026-11-27)
-const GAL={"bincho":3,"bowl":3,"bspeak":3,"canal":3,"caravan":3,"chiya":3,"donki":1,"floral":3,"fukuya":3,"h_croom":1,"h_dormygion":2,"h_green1":3,"h_hakataplace":3,"h_prezio":2,"hana":3,"hankyu":3,"harajiro":3,"hinagoten":2,"hyotan":3,"ichimujin":3,"issou":1,"kagura":3,"kazetone":3,"kinrin":1,"kinsho":1,"kisuimaru":3,"koharu":3,"komeda":3,"kuncho":3,"kushida":3,"laruche":3,"lingon":3,"maedaya":3,"mameda":3,"marumata":3,"milch":2,"mugiya":3,"nooice":3,"ohori":3,"ooyama":3,"osushimachi":3,"r_daikichi":3,"r_hachisu":3,"r_kotobuki":3,"r_kou":3,"r_mimatsu":3,"r_nono":3,"r_oniyama":3,"r_ryochiku":3,"r_sakuratei":3,"r_seikaiso":3,"r_shikisai":3,"r_springs":3,"r_wakura":3,"r_yufuclub":3,"r_yufugarden":3,"rakutenchi":3,"rec":3,"sashisu":3,"senke":3,"shin":3,"shinshin":3,"shoboan":3,"snoopy":3,"sonoda":3,"tagami":3,"tenjo":3,"tomarigi":3,"umijigoku":3,"uogashi":3,"yomoyama":3,"yufushokudo":3,"yufust":3};
+const GAL={"bincho":3,"bowl":3,"bspeak":3,"canal":3,"caravan":3,"chiya":3,"donki":1,"floral":3,"fukuya":3,"h_croom":1,"h_dormygion":2,"h_green1":3,"h_hakataplace":3,"h_prezio":2,"hana":3,"hankyu":3,"harajiro":3,"hinagoten":2,"hyotan":3,"ichimujin":3,"issou":1,"kagura":3,"kazetone":3,"kinrin":1,"kinsho":1,"kisuimaru":3,"koharu":3,"komeda":3,"kuncho":3,"kushida":3,"laruche":3,"lingon":3,"maedaya":3,"mameda":3,"marumata":3,"milch":2,"mugiya":3,"nooice":3,"ohori":3,"ooyama":3,"osushimachi":3,"r_daikichi":3,"r_hachisu":3,"r_kotobuki":3,"r_kou":3,"r_mimatsu":3,"r_nono":3,"r_oniyama":3,"r_ryochiku":3,"r_sakuratei":3,"r_seikaiso":3,"r_shikisai":3,"r_springs":3,"r_wakura":3,"r_yufuclub":3,"r_yufugarden":3,"rakutenchi":3,"rec":3,"sashisu":3,"senke":3,"shin":3,"shinshin":3,"shoboan":3,"snoopy":3,"sonoda":3,"tagami":3,"tenjo":3,"tomarigi":3,"umijigoku":3,"uogashi":3,"yomoyama":3,"yufushokudo":3,"yufust":3,"boulange":2,"harmo":2,"ichimujin2":2,"japanbeef":2,"marineworld":2,"mitsukoshi":2,"motsusho":2,"natkitchen":2,"ninoni":2,"oyamahon":2,"parco":2,"riverain":2,"sabataro":2,"stdprod":2,"sunny":2,"tokineri":2,"uoden":2,"whiteglass":2,"yayoiken":2};
 function gal(first,key){const n=(typeof GAL!=='undefined'&&GAL[key])||0;const srcs=[first].concat(Array.from({length:n},(_,i)=>'img/g/'+key+'_'+(i+1)+'.jpg'));
   if(srcs.length<2)return '<img src="'+first+'" alt="">';
   return '<div class="gal"><div class="gs">'+srcs.map((u,i)=>'<img src="'+u+'" alt="" '+(i?'loading="lazy"':'')+'>').join('')+'</div><button class="ga l" aria-label="이전 사진">‹</button><button class="ga r" aria-label="다음 사진">›</button><div class="gd">'+srcs.map((_,i)=>'<i'+(i?'':' class="on"')+'></i>').join('')+'</div></div>'}
