@@ -1,6 +1,0 @@
-ogadrug	오가 드럭스토어 하카타구치점	0	4
-donkitenjin	돈키호테 후쿠오카 텐진 본점	0	4
-kayanoya	久原本家（茅乃舎・椒房庵）博多駅デイトス店	0	4
-imokin	이모야 킨지로	0	4
-minatenjin	미나 텐진	0	4
-kaldi	KALDI COFFEE FARM Ming Hakata	0	4
