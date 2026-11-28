@@ -1,0 +1,5 @@
+r_sendo	호타루노야도센도우	0	4
+r_umaru	Migimaru Ryokan	0	4
+r_yamanami	由布院 旅館やまなみ | Yufuin Ryokan Yamanami | 유후인 료칸 야마나미	0	4
+h_viainn	비아인 하카타구치에키마에	0	4
+h_amphotel	&HOTEL HAKATA	0	4
