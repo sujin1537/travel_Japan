@@ -640,7 +640,7 @@ footer a{color:var(--muted)}
     </ul>
     <h3>유튜브에서 많이 산 것 <small style="font-weight:400;font-size:12px;opacity:.7">최근 1년 한국 영상 · 조회수 순</small></h3>
     <div class="box">
-      <p style="margin:0 0 6px"><b>💊 드럭스토어</b> · 오가드럭스토어 하카타구치점 (하카타역 걸어서 3분)</p>
+      <p style="margin:0 0 6px"><b>💊 드럭스토어</b> · 하카타역 걸어서 3분<br><button class="pl" data-p="ogadrug">오가드럭스토어 하카타구치점</button></p>
       <ul class="buy" style="margin:0">
         <li><b>파스</b><small>동전파스는 한국인만 산대요. 일본 사람들이 쓰는 파스는 약사에게 물어보기.</small></li>
         <li><b>오타이산 소화제 · 안약</b><small>안약은 눈 피로용 로토 계열이 인기. 같은 성분 더 싼 제품도 있어요.</small></li>
@@ -651,7 +651,7 @@ footer a{color:var(--muted)}
       <p class="note" style="margin:6px 0 0">종희비행기 「약사왈 그거 관광객만 사는 거예요」(88만) · 후쿠오카 오가드럭스토어 하카타구치점 촬영. 영상 기준 5,000엔 이상 면세, 1만엔당 500엔 쿠폰(가게 인스타).</p>
     </div>
     <div class="box" style="margin-top:10px">
-      <p style="margin:0 0 6px"><b>🛒 돈키호테</b> · 텐진 본점 · 나카스점(24시간)</p>
+      <p style="margin:0 0 6px"><b>🛒 돈키호테</b> · 둘 다 24시간<br><button class="pl" data-p="donkitenjin">돈키호테 텐진 본점</button><button class="pl" data-p="donki">돈키호테 나카스점</button></p>
       <ul class="buy" style="margin:0">
         <li><b>휴족시간</b><small>종아리에 붙이는 쿨링 시트. 많이 걸은 날 밤 료칸·호텔에서.</small></li>
         <li><b>아이봉 · 쿨링 안대</b><small>눈 세정제와 눈 피로용 안대.</small></li>
@@ -660,7 +660,7 @@ footer a{color:var(--muted)}
       <p class="note" style="margin:6px 0 0">10시엔 디붕 돈키호테 추천템(36만) · ILLIT 후쿠오카 돈키호테(343만) · 고소영 돈키호테 추천템(70만).</p>
     </div>
     <div class="box" style="margin-top:10px">
-      <p style="margin:0 0 6px"><b>🎁 기념품 · 브랜드</b></p>
+      <p style="margin:0 0 6px"><b>🎁 기념품 · 브랜드</b><br><button class="pl" data-p="kayanoya">가야노야 (하카타역)</button><button class="pl" data-p="kaldi">칼디 (하카타역)</button><button class="pl" data-p="minatenjin">미나 텐진</button><button class="pl" data-p="stdprod">스탠다드 프로덕츠</button><button class="pl" data-p="imokin">이모야 킨지로</button></p>
       <ul class="buy" style="margin:0">
         <li><b>가야노야 다시팩</b><small>국물용 팩. 하카타역 데이토스 1층. 부모님 선물 1순위로 자주 나와요.</small></li>
         <li><b>소금사이다 캔디 · 칼디</b><small>칼디는 커피·소스·과자 수입 식품점.</small></li>
@@ -811,6 +811,16 @@ Object.assign(P,{
  komeda:{img:'f/komeda',n:'코메다 커피 (하카타역 동쪽)',k:'후쿠오카 · 아침 커피',fr:'지영 추천 · "아침에 모닝세트, 600엔에 커피랑 빵"',d:'나고야식 체인 카페. 오전에 음료를 시키면 토스트와 삶은 달걀(또는 팥)이 같이 나오는 모닝 서비스가 있어요. 현지인 아침 손님이 많아요.',h:'7:00~22:00 · 매일',tip:'하카타역 버스터미널 3층 지점, 숙소 후보인 크룸 하카타 1층 지점도 있어요.',q:'コメダ珈琲店 博多駅東店'},
  koharu:{img:'f/koharu',n:'코하루 우동',k:'유후인 · 우동',fr:'지영 추천 · "우동 먹고 처음으로 맛있다고 느낀 곳"',d:'유노쓰보 거리 끝쪽 우동집. 쫄깃한 면이 평이 좋고, 대표 메뉴는 코하루 우동. 점심 장사만 해요.',h:'11:00~14:30 · 매일',tip:'12/8(화) 점심에 가기 좋아요. 줄이 생길 수 있어요.',q:'こはるうどん 由布院'}
 });
+// 유튜브 인기 쇼핑 장소 (2026-11-28 조회)
+Object.assign(P,{
+ ogadrug:{img:'f/ogadrug',n:'오가드럭스토어 하카타구치점',k:'후쿠오카 · 드럭스토어',yt:'종희비행기 「약사왈 그거 관광객만 사는 거예요」 88만',d:'하카타역 하카타 출구에서 걸어서 3분. 영상에서 약사와 함께 파스·소화제·안약·여성 영양제를 고른 곳이에요. 약사에게 물어보고 사기 좋아요.',h:'9:00~21:00',tip:'영상 기준 5,000엔 이상 면세. 비아 인 하카타구치에서 아주 가까워요.',q:'大賀ドラッグストア 博多口店'},
+ donkitenjin:{img:'f/donkitenjin',n:'돈키호테 텐진 본점',k:'후쿠오카 · 쇼핑',yt:'ILLIT 343만 · 챈미 · 헤르미',d:'텐진의 큰 돈키호테. 휴족시간·아이봉·민티아·과자를 한 번에 사요.',h:'24시간 · 연중무휴',tip:'12/9 오후 텐진 쇼핑 때.',q:'ドン・キホーテ 福岡天神本店'},
+ kayanoya:{img:'f/kayanoya',n:'가야노야·쇼보안 (하카타역 데이토스)',k:'후쿠오카 · 다시팩·명란',yt:'타이거투어 쇼핑리스트 BEST14 70만',d:'국물용 다시팩으로 유명한 가야노야와 명란 쇼보안이 같이 있는 가게. 하카타역 데이토스 1층 미야게몬 시장 안.',h:'8:00~21:00 · 연중무휴',tip:'무거우니 12/9 저녁이나 짐 쌀 때 사기.',q:'久原本家 茅乃舎 椒房庵 博多駅デイトス店'},
+ imokin:{img:'f/imokin',n:'이모야 킨지로 (텐진 지하상가)',k:'후쿠오카 · 고구마 간식',yt:'더들리 189만 · 헤르미 70만',d:'얇게 튀긴 고구마 과자 가게. 갓 튀긴 걸 먹어 보고 선물용 봉지도 사요.',h:'10:00~20:00 · 연중무휴',q:'芋屋金次郎 天神地下街店'},
+ minatenjin:{img:'f/minatenjin',n:'미나 텐진',k:'후쿠오카 · 쇼핑몰',yt:'헤르미 70만',d:'텐진역 근처 쇼핑몰. 유니클로·GU·세리아가 한 건물에 있어요.',h:'10:00~20:00',q:'ミーナ天神'},
+ kaldi:{img:'f/kaldi',n:'칼디 커피팜 (마잉 하카타)',k:'후쿠오카 · 수입 식품',yt:'타이거투어 쇼핑리스트 70만',d:'커피·소스·과자 같은 수입 식품점. 하카타역 안 마잉 상점가에 있어요.',h:'9:00~21:00',q:'カルディコーヒーファーム マイング博多店'}
+});
+G.push(['ogadrug','shop','fuk',33.58956,130.41711],['donkitenjin','shop','fuk',33.58635,130.39802],['kayanoya','shop','fuk',33.59068,130.42138],['imokin','shop','fuk',33.58846,130.40089],['minatenjin','shop','fuk',33.59276,130.39851],['kaldi','shop','fuk',33.59129,130.42048]);
 G.push(['tagami','meal','fuk',33.59175,130.40510,[0]],['bincho','meal','fuk',33.59576,130.40625],['kagura','meal','fuk',33.58704,130.39998],['ichimujin','meal','fuk',33.59800,130.41134],['koharu','meal','yufu',33.26829,131.36578],['komeda','coffee','fuk',33.58818,130.42343],
  ['uoden','meal','fuk',33.59175,130.40510],['oyamahon','meal','fuk',33.59667,130.40971],['motsusho','meal','fuk',33.58363,130.39600,[3]],['japanbeef','meal','fuk',33.59797,130.41027],['ichimujin2','meal','fuk',33.58691,130.40592],['ninoni','meal','fuk',33.59282,130.40995],['sabataro','meal','fuk',33.58644,130.39063,[0]],['yayoiken','meal','fuk',33.59855,130.41000],
  ['boulange','snack','fuk',33.59261,130.41573],['whiteglass','coffee','fuk',33.58891,130.41341],['harmo','coffee','fuk',33.58517,130.39950],
@@ -846,7 +856,7 @@ QA('.day[data-d="1"]').forEach(d=>d.classList.add('open'));
 // 팝업
 const mb=Q('#mb'),md=Q('#md');
 // 팝업 사진 넘겨보기 (구글 지도 사진 · 2026-11-27)
-const GAL={"h_amphotel":1,"h_viainn":1,"r_sendo":2,"r_umaru":3,"r_yamanami":2,"bincho":3,"bowl":3,"bspeak":3,"canal":3,"caravan":3,"chiya":3,"donki":1,"floral":3,"fukuya":3,"h_croom":1,"h_dormygion":2,"h_green1":3,"h_hakataplace":3,"h_prezio":2,"hana":3,"hankyu":3,"harajiro":3,"hinagoten":2,"hyotan":3,"ichimujin":3,"issou":1,"kagura":3,"kazetone":3,"kinrin":1,"kinsho":1,"kisuimaru":3,"koharu":3,"komeda":3,"kuncho":3,"kushida":3,"laruche":3,"lingon":3,"maedaya":3,"mameda":3,"marumata":3,"milch":2,"mugiya":3,"nooice":3,"ohori":3,"ooyama":3,"osushimachi":3,"r_daikichi":3,"r_hachisu":3,"r_kotobuki":3,"r_kou":3,"r_mimatsu":3,"r_nono":3,"r_oniyama":3,"r_ryochiku":3,"r_sakuratei":3,"r_seikaiso":3,"r_shikisai":3,"r_springs":3,"r_wakura":3,"r_yufuclub":3,"r_yufugarden":3,"rakutenchi":3,"rec":3,"sashisu":3,"senke":3,"shin":3,"shinshin":3,"shoboan":3,"snoopy":3,"sonoda":3,"tagami":3,"tenjo":3,"tomarigi":3,"umijigoku":3,"uogashi":3,"yomoyama":3,"yufushokudo":3,"yufust":3,"boulange":2,"harmo":2,"ichimujin2":2,"japanbeef":2,"marineworld":2,"mitsukoshi":2,"motsusho":2,"natkitchen":2,"ninoni":2,"oyamahon":2,"parco":2,"riverain":2,"sabataro":2,"stdprod":2,"sunny":2,"tokineri":2,"uoden":2,"whiteglass":2,"yayoiken":2,"h_alphabed":2,"h_dreaminn":1,"h_koko":2,"h_vista":2,"h_tokyustay":1};
+const GAL={"donkitenjin":1,"imokin":2,"kaldi":2,"kayanoya":2,"minatenjin":1,"ogadrug":1,"h_amphotel":1,"h_viainn":1,"r_sendo":2,"r_umaru":3,"r_yamanami":2,"bincho":3,"bowl":3,"bspeak":3,"canal":3,"caravan":3,"chiya":3,"donki":1,"floral":3,"fukuya":3,"h_croom":1,"h_dormygion":2,"h_green1":3,"h_hakataplace":3,"h_prezio":2,"hana":3,"hankyu":3,"harajiro":3,"hinagoten":2,"hyotan":3,"ichimujin":3,"issou":1,"kagura":3,"kazetone":3,"kinrin":1,"kinsho":1,"kisuimaru":3,"koharu":3,"komeda":3,"kuncho":3,"kushida":3,"laruche":3,"lingon":3,"maedaya":3,"mameda":3,"marumata":3,"milch":2,"mugiya":3,"nooice":3,"ohori":3,"ooyama":3,"osushimachi":3,"r_daikichi":3,"r_hachisu":3,"r_kotobuki":3,"r_kou":3,"r_mimatsu":3,"r_nono":3,"r_oniyama":3,"r_ryochiku":3,"r_sakuratei":3,"r_seikaiso":3,"r_shikisai":3,"r_springs":3,"r_wakura":3,"r_yufuclub":3,"r_yufugarden":3,"rakutenchi":3,"rec":3,"sashisu":3,"senke":3,"shin":3,"shinshin":3,"shoboan":3,"snoopy":3,"sonoda":3,"tagami":3,"tenjo":3,"tomarigi":3,"umijigoku":3,"uogashi":3,"yomoyama":3,"yufushokudo":3,"yufust":3,"boulange":2,"harmo":2,"ichimujin2":2,"japanbeef":2,"marineworld":2,"mitsukoshi":2,"motsusho":2,"natkitchen":2,"ninoni":2,"oyamahon":2,"parco":2,"riverain":2,"sabataro":2,"stdprod":2,"sunny":2,"tokineri":2,"uoden":2,"whiteglass":2,"yayoiken":2,"h_alphabed":2,"h_dreaminn":1,"h_koko":2,"h_vista":2,"h_tokyustay":1};
 function gal(first,key){const n=(typeof GAL!=='undefined'&&GAL[key])||0;const srcs=[first].concat(Array.from({length:n},(_,i)=>'img/g/'+key+'_'+(i+1)+'.jpg'));
   if(srcs.length<2)return '<img src="'+first+'" alt="">';
   return '<div class="gal"><div class="gs">'+srcs.map((u,i)=>'<img src="'+u+'" alt="" '+(i?'loading="lazy"':'')+'>').join('')+'</div><button class="ga l" aria-label="이전 사진">‹</button><button class="ga r" aria-label="다음 사진">›</button><div class="gd">'+srcs.map((_,i)=>'<i'+(i?'':' class="on"')+'></i>').join('')+'</div></div>'}
@@ -856,7 +866,7 @@ function galInit(){const g=md.querySelector('.gal');if(!g)return;const s=g.query
   g.querySelector('.r').onclick=e=>{e.stopPropagation();s.scrollTo({left:Math.min(d.length-1,cur()+1)*s.clientWidth,behavior:'smooth'})}}
 
 function openP(k){const p=P[k];if(!p)return;const map='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(p.q||p.n);
-  md.innerHTML='<button class="x" aria-label="닫기">✕</button>'+(p.img?gal('img/'+p.img+'.jpg',k):'')+'<div class="in"'+(p.img?'':' style="padding-top:22px"')+'><div class="k">'+p.k+'</div><h4>'+p.n+'</h4>'+(p.fr?'<div class="tip" style="background:#ffe9f1;color:#b0245c;margin:0 0 8px">👭 '+p.fr+'</div>':'')+'<p>'+p.d+'</p>'+(p.h?'<dl><dt>시간</dt><dd>'+p.h+'</dd></dl>':'')+(p.tip?'<div class="tip">💡 '+p.tip+'</div>':'')+'</div><div class="acts"><a href="'+map+'" target="_blank" rel="noopener">구글 지도 열기</a><button class="x2">닫기</button></div>';
+  md.innerHTML='<button class="x" aria-label="닫기">✕</button>'+(p.img?gal('img/'+p.img+'.jpg',k):'')+'<div class="in"'+(p.img?'':' style="padding-top:22px"')+'><div class="k">'+p.k+'</div><h4>'+p.n+'</h4>'+(p.fr?'<div class="tip" style="background:#ffe9f1;color:#b0245c;margin:0 0 8px">👭 '+p.fr+'</div>':'')+(p.yt?'<div class="tip" style="background:#ffeceb;color:#b3261e;margin:0 0 8px">▶️ 유튜브 · '+p.yt+'</div>':'')+'<p>'+p.d+'</p>'+(p.h?'<dl><dt>시간</dt><dd>'+p.h+'</dd></dl>':'')+(p.tip?'<div class="tip">💡 '+p.tip+'</div>':'')+'</div><div class="acts"><a href="'+map+'" target="_blank" rel="noopener">구글 지도 열기</a><button class="x2">닫기</button></div>';
   annotate(md);mb.classList.add('on');document.body.style.overflow='hidden';galInit()}
 // 숙소 데이터 (Google 호텔 2인 1박 최저가 · 2027-01-13 표시값 · 2026-11-26 조회)
 const H={
