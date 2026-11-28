@@ -241,6 +241,7 @@ td small{display:block;color:var(--muted);font-size:11.5px}
 .fwtop .sub{font-size:12.5px;color:var(--muted)}
 .fwt td.code b{display:block}.fwt td.code small{color:var(--muted);font-size:11px}
 .fwt tr.fwpk td{background:var(--best)}
+.sct{min-width:600px}.sct th:first-child,.sct td:first-child{position:sticky;left:0;background:var(--paper);min-width:140px;max-width:160px;z-index:1;box-shadow:1px 0 0 var(--line)}.sct tr.fwpk td:first-child{background:var(--best)}.sct td.lo{color:var(--good);font-weight:800}.sct td.r{white-space:nowrap}.sct td.code a{color:inherit}
 .fwt td.code small.bg{display:block;font-size:10.5px;color:var(--accent);font-weight:700;margin-top:2px;white-space:normal}.fwt td.code small.bg.ok{color:var(--good)}
 .up{color:var(--accent);font-weight:800}.dn{color:var(--good);font-weight:800}.eq{color:var(--muted)}
 #fwChart svg{width:100%;height:auto;display:block}
@@ -364,6 +365,7 @@ footer a{color:var(--muted)}
     <button data-v="see">⛩️ 볼거리</button>
     <button data-v="shop">🛍️ 쇼핑</button>
     <button data-v="fly">✈️ 항공 가격</button>
+    <button data-v="scmp">🏷️ 숙소 가격</button>
     <button data-v="prep">✅ 준비</button>
   </div></nav>
 
@@ -483,6 +485,31 @@ footer a{color:var(--muted)}
     <p class="note" id="fwSrc"></p>
   </section>
 
+
+  <!-- ================= 숙소 가격 비교 ================= -->
+  <section class="view" id="v-scmp">
+    <h2>🏷️ 숙소 가격 비교</h2>
+    <p class="lead">같은 방을 <b>우리 WON트래블 · 아고다 · 부킹닷컴 · 라쿠텐 · 쟈란 · 트립닷컴</b>에서 같은 날짜로 찾아 나란히 놓았어요. 모두 <b>2인 1실 · 세금 포함 총액</b>이에요. 엔 가격은 100엔=844원으로 바꿨어요.</p>
+    <div class="box fwtop" id="scTop"></div>
+    <h3>유후인 료칸 · 12/7(월)~9(수) 2박 · 저녁 포함</h3>
+    <p class="note" style="margin-top:0">저녁은 꼭, 아침은 없어도 되는 기준이라 <b>석식만</b> 플랜과 <b>2식</b> 플랜 중 싼 쪽을 적었어요. 초록색이 사이트 중 가장 싼 값, – 는 그 사이트에 이 조건 방이 없거나 안 파는 곳이에요.</p>
+    <div class="tw"><table class="fwt sct"><thead><tr><th>숙소</th><th class="r">WON<br><small>쿠폰가</small></th><th class="r">아고다</th><th class="r">부킹</th><th class="r">라쿠텐</th><th class="r">쟈란</th><th class="r">트립</th></tr></thead><tbody id="scRyo"></tbody></table></div>
+    <p class="note" id="scRyoNote"></p>
+    <h3>1박씩 나눠 묵으면 (부킹닷컴 · 1박 가격)</h3>
+    <div class="tw"><table class="fwt sct"><thead><tr><th>숙소</th><th>날짜</th><th class="r">1박 2인</th></tr></thead><tbody id="scOne"></tbody></table></div>
+    <h3>하카타 호텔 · 12/6(일) · 12/9(수) · 방만</h3>
+    <p class="note" style="margin-top:0">둘이 자는 방 기준(침대 종류는 이름 밑에). WON은 1박 20만원 이상이면 해외 쿠폰 10%까지 붙고, 그 아래는 기본 5%만 깎여요.</p>
+    <div class="tw"><table class="fwt sct"><thead><tr><th>호텔</th><th class="r">12/6<br><small>WON</small></th><th class="r">12/6<br><small>부킹·쟈란</small></th><th class="r">12/9<br><small>WON</small></th><th class="r">12/9<br><small>부킹·쟈란</small></th></tr></thead><tbody id="scHB"></tbody></table></div>
+    <h3>WON트래블 쿠폰 정리</h3>
+    <div class="box"><ul class="im" style="margin:0">
+      <li class="ok"><b>기본 5%</b>는 모든 방에 자동으로 붙어요.</li>
+      <li class="ok"><b>연말 20%</b> (50만원 이상, 최대 15만) · <b>연박 20%</b> (2박 60만원 이상, 최대 18만) · <b>해외 10%</b> (20만원 이상, 최대 7만) 중 <b>하나만</b> 자동으로 골라 붙어요. 75만원이 넘는 방은 연박 쿠폰이 더 많이 깎여요.</li>
+      <li class="lose">쿠폰가는 거의 <b>환불불가</b>예요. 아고다(12/2까지 무료취소)와 차이가 작으면 취소 되는 쪽이 나을 수 있어요.</li>
+      <li class="lose">쿠폰 받기·예약은 <b>11/30까지</b>. 결제 화면에서 최종 금액을 꼭 다시 보세요.</li>
+    </ul></div>
+    <p class="note">11/29 새벽 조회. 우리 WON트래블은 우리카드 앱 → WON트래블 (웹: wontravel.tourvis.com, 로그인 필요). 가격은 수시로 바뀌어요.</p>
+  </section>
+
   <!-- ================= 숙소 ================= -->
   <section class="view" id="v-stay">
     <h2>🏨 숙소</h2>
@@ -512,7 +539,7 @@ footer a{color:var(--muted)}
     <div class="hg hg3" data-r="hakata"></div>
 
     <h3>💳 우리 WON트래블 비교</h3>
-    <div class="box"><p class="muted" style="margin:0;font-size:13.5px">사파 때처럼 같은 방을 WON트래블이 더 싸게 파는지 비교하려면 앱 로그인이 필요해서 여기서는 못 봐요. 날짜와 후보 2~3곳이 정해지면 WON트래블 앱에서 같은 날짜로 검색한 화면을 캡처해 보내주세요. 아고다·Google 가격과 나란히 표로 넣어 드릴게요.</p></div>
+    <div class="box"><p class="muted" style="margin:0;font-size:13.5px">WON트래블 쿠폰가와 다른 사이트 가격을 나란히 정리했어요.</p><button class="morelink" data-go2="scmp">🏷️ 숙소 가격 비교 보기</button></div>
   </section>
 
   <!-- ================= 준비 ================= -->
@@ -995,6 +1022,55 @@ function calc(){const v=Number(String(yen.value).replace(/[^0-9]/g,''))||0;won.t
 yen.addEventListener('input',()=>{const v=String(yen.value).replace(/[^0-9]/g,'');yen.value=v?Number(v).toLocaleString('ko-KR'):'';calc()});
 annotate(document.querySelector('.wrap'));calc();
 fetch('https://open.er-api.com/v6/latest/JPY').then(r=>r.json()).then(j=>{if(j&&j.rates&&j.rates.KRW){RATE=j.rates.KRW;Q('#rateSrc').textContent='100엔 = '+(RATE*100).toFixed(1)+'원 (실시간)';refreshWon()}}).catch(()=>{});
+
+
+// 숙소 가격 비교 (11/29 조회 · 2인 총액, 원)
+(function(){
+  const Y=y=>Math.round(y*YEN);const W=v=>v==null?'<span class="eq">–</span>':'₩'+v.toLocaleString('ko-KR');
+  const WD=id=>'https://wontravel.tourvis.com/hotel/detail/'+id+'?type=HOTEL&division=hotel&id='+id+'&guests=2&in=2026-12-07&out=2026-12-09&nationCode=JP&pageType=quickSearch';
+  // [키, 이름, 식사, 메모, WON, 아고다, 부킹, 라쿠텐, 쟈란, 트립, WON id]
+  const RY=[
+    ['yaeichi','야에이치 (8A1)','석식','역 7분 · 침대 트윈 · 아고다 9.5',415892,436100,null,null,null,null,1867759],
+    ['hachisu','하치스노이토','2식','역 12분 · 이불 · 라쿠텐 4.81',null,null,null,Y(49600),null,null],
+    ['kou','KOU 미야비노사토','2식','전세탕 3곳 · 쟈란 4.8',null,null,null,null,Y(58520),null],
+    ['shikisai','벳소 시키사이','석식','언덕 위 · 역 걸어서 22분 (셔틀) · 8.4',547030,null,null,null,null,null,30816],
+    ['yufuclub','유후인 클럽','2식','역 5분 · 침대 트윈 · 쟈란 4.2',null,null,null,Y(72000),Y(64800),null],
+    ['shuhokan','호텔 슈호칸','2식','역 10~15분 · 다다미 · 산 전망 · 노천 대욕장',573212,null,null,null,null,null,41519],
+    ['sendo','호타루노야도 센도','2식','역 차 5분 · 쟈란 후기 1,700+',687551,null,null,Y(90000),Y(82200),786148,21555],
+    ['springs','스프링스 밸리','2식','역 4분 · 침대 (WON은 조식만 있어 –)',null,719900,745137,Y(93000),Y(93000),1006320],
+    ['lamp','램프노야도','석식','',817609,null,null,null,Y(120800),null,146766],
+    ['yagura','온주쿠 야구라','2식','방마다 노천탕',827530,null,null,null,null,null,64774],
+    ['yamanami','야마나미','2식','부킹 9.1 · 공용 욕실',839429,863300,792320,Y(124000),null,1092732,1534555],
+    ['kotobuki','고토부키 하나노쇼','2식','',846376,null,null,null,Y(142120),null,41392],
+    ['takeya','료칸 타케야','2식','역 400m · 3인실 · 한국인 사장님',null,null,866468,null,null,null]
+  ].map(r=>{const v=r.slice(4,10);const lo=Math.min(...v.filter(x=>x!=null));return {r,v,lo}}).sort((a,b)=>a.lo-b.lo);
+  Q('#scRyo').innerHTML=RY.map(({r,v,lo},i)=>{const link=R[r[0]]?' data-r2="'+r[0]+'" style="cursor:pointer"':'';
+    const nm=r[10]&&!R[r[0]]?'<a href="'+WD(r[10])+'" target="_blank" rel="noopener">'+r[1]+'</a>':r[1];
+    return '<tr'+(i<2?' class="fwpk"':'')+link+'><td class="code"><b>'+nm+'</b><small>'+(r[2]==='석식'?'🍱 석식만 (아침 없음)':'🍱 저녁+아침')+(r[3]?' · '+r[3]:'')+'</small></td>'+v.map(x=>'<td class="r'+(x===lo?' lo':'')+'">'+W(x)+'</td>').join('')+'</tr>'}).join('');
+  Q('#scRyoNote').innerHTML='WON 쿠폰가는 기본 5% + 연말·연박 쿠폰 20%를 뺀 값이고 <b>환불불가</b>예요. 슈호칸·시키사이·야구라·램프노야도·고토부키는 WON트래블에서만 확인했어요. 하치스노이토·KOU·유후인 클럽·타케야는 WON트래블에 없어요. 같은 숙소 방만 가격은 훨씬 싸요(예: 슈호칸 방만 2박 ₩398,014).';
+  const ONE=[['료칸 유후산','12/7',361230],['사토야마사후','12/8',354588],['료칸 타케야','1박',433234],['키라라','12/7',440698]];
+  Q('#scOne').innerHTML=ONE.map(o=>'<tr><td><b>'+o[0]+'</b></td><td>'+o[1]+'</td><td class="r">'+W(o[2])+'</td></tr>').join('');
+  // [이름, 침대·위치, 12/6 WON, 12/6 타사, 12/9 WON, 12/9 타사, 타사 이름, HB 키]
+  const HT=[
+    ['크로스 라이프 야나기바시','트윈 · 캐널시티 1.1km · 평점 8.7 (2,654)',119277,null,123764,null,'',''],
+    ['호텔 서드플레이스','세미더블 1개 (좁음) · 역 7분',116006,150654,132440,168378,'쟈란','thirdplace'],
+    ['스이호카쿠 호텔','세미더블 1개 (좁음) · 역 3분',null,139513,null,150738,'쟈란','suihokaku'],
+    ['도큐 스테이','더블 · 방에 세탁기 · 역 500m',171346,168634,186317,183327,'부킹','tokyustay'],
+    ['비아 인 하카타구치','12/6 WON은 2인 싱글룸 · 역 400m',175601,173907,174624,170541,'부킹','viainn'],
+    ['KOKO 호텔','세미더블 · 역 450m',171312,155611,null,null,'부킹','koko'],
+    ['그린 호텔 1호관','12/6 트윈 · 12/9 더블 · 역 바로 앞',170772,null,189296,192895,'부킹','green1'],
+    ['&HOTEL 하카타','트윈 · 역 1km',272579,null,146851,137241,'부킹','amphotel'],
+    ['드림 인','더블침대 2~3개 · 역 800m',206975,null,194019,194729,'부킹','dreaminn']
+  ];
+  const HTs=HT.map(h=>{const a=[h[2],h[3]].filter(x=>x!=null),b=[h[4],h[5]].filter(x=>x!=null);return {h,l6:a.length?Math.min(...a):null,l9:b.length?Math.min(...b):null}}).sort((x,y)=>((x.l6||3e5)+(x.l9||3e5))-((y.l6||3e5)+(y.l9||3e5)));
+  Q('#scHB').innerHTML=HTs.map(({h,l6,l9},i)=>{const c=(x,l)=>'<td class="r'+(x!=null&&x===l?' lo':'')+'">'+W(x)+'</td>';
+    return '<tr'+(i===0?' class="fwpk"':'')+(h[7]&&HB[h[7]]?' data-hb="'+h[7]+'" style="cursor:pointer"':'')+'><td class="code"><b>'+h[0]+'</b><small>'+h[1]+'</small></td>'+c(h[2],l6)+c(h[3],l6)+c(h[4],l9)+c(h[5],l9)+'</tr>'}).join('');
+  // 상단 요약
+  const FL=683564,CL=119277+123764;
+  const P=[['야에이치 석식 (WON) + 크로스 라이프 2박',415892+CL],['하치스노이토 2식 (라쿠텐) + 크로스 라이프 2박',Y(49600)+CL],['슈호칸 2식 (WON) + 크로스 라이프 2박',573212+CL],['하치스노이토 + 비아 인 (부킹) 2박',Y(49600)+173907+170541]];
+  Q('#scTop').innerHTML='<div class="row"><div><div class="sub">가장 싼 조합 · 2인 숙소 4박</div><div class="big">₩'+P[0][1].toLocaleString('ko-KR')+'</div></div><div style="text-align:right"><div class="sub">항공(짐 포함) 더하면</div><b>₩'+(P[0][1]+FL).toLocaleString('ko-KR')+'</b><div class="sub">1인 ₩'+Math.round((P[0][1]+FL)/2).toLocaleString('ko-KR')+'</div></div></div>'+
+    '<table class="rpt" style="margin-top:8px"><tbody>'+P.map((p,i)=>'<tr'+(i===0?' class="lo"':'')+'><td>'+p[0]+'</td><td class="r">숙소 ₩'+p[1].toLocaleString('ko-KR')+'</td><td class="r"><b>1인 '+man1((p[1]+FL)/2)+'</b></td></tr>').join('')+'</tbody></table><p class="sub" style="margin:4px 0 0">1인 금액은 항공 ₩683,564(2인, 큰 캐리어 1개)를 더해 반으로 나눈 값. 식비·교통 제외.</p>';
+})();
 
 // 항공 가격 모니터링 (flight-watch.json)
 (function(){
