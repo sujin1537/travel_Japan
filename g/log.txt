@@ -1,0 +1,2 @@
+h_suihokaku	Hotel Suihoukaku	0	4
+h_thirdplace	Hotel 3RD Place Hakata	0	4
